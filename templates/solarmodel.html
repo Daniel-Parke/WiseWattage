@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Solar Model
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body %}
+    {% if name %}
+        You are logged in as {{ name }}. <a href="/logout">Log out</a>
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>
+    {% endif %}
+    <br><br><br>
+    <h1>Model Solar Data 🌞</h1>
+    <form action="/solarmodel" method="post" class="form-grid">
+
+        <!-- <div class="form-group"> --->
+            <!-- <label for="Project Name">Project Name</label> --->
+            <!-- <input id="Project Name" autocomplete="off" autofocus name="Project Name" placeholder="Project Name..." type="text" value=""> --->
+        <!-- </div> --->
+        <!-- <div class="form-group"> --->
+            <!-- <label for="Address">Address</label> --->
+            <!-- <input id="Address" autocomplete="off" autofocus name="Address" placeholder="Address..." type="text" value=""> --->
+        <!-- </div> --->
+
+        <div class="form-group">
+            <label for="Latitude">Latitude</label>
+            <input id="Latitude" autocomplete="off" autofocus name="Latitude" placeholder="Latitude" type="text" value="54.59652">
+        </div>
+        <div class="form-group">
+            <label for="Longitude">Longitude</label>
+            <input id="Longitude" autocomplete="off" name="Longitude" placeholder="Longitude" type="text" value="-5.93003">
+        </div>
+        <div class="form-group">
+            <label for="SolarPV_kWp">Solar PV (kWp)</label>
+            <input id="SolarPV_kWp" autocomplete="off" name="Solar PV kWp" placeholder="Solar PV kWp" type="text" value="3.2">
+        </div>
+
+        <!-- Azimuth Angle -->
+        <div class="form-group">
+            <label for="Solar Azimuth">Solar Azimuth (°W of S, 0=S)</label>
+            <select id="Solar Azimuth" name="Solar Azimuth">
+                {% for degree in range(-180, 181, 5) %}
+                    {% if degree == 0 %}
+                        <option value="{{ degree }}" selected>{{ degree }}°</option>
+                    {% else %}
+                        <option value="{{ degree }}">{{ degree }}°</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Surface Pitch -->
+        <div class="form-group">
+            <label for="Surface Pitch">Surface Pitch (°)</label>
+            <select id="Surface Pitch" name="Surface Pitch">
+                {% for degree in range(0, 90, 5) %}
+                    {% if degree == 35 %}
+                        <option value="{{ degree }}" selected>{{ degree }}°</option>
+                    {% else %}
+                        <option value="{{ degree }}">{{ degree }}°</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Time Freq Tickbox -->
+        <div class="form-group">
+            <label for="freq">Chart Time Interval</label>
+            <select id="freq" name="freq">
+                <option value="hourly">Hourly</option>
+                <option value="daily" selected>Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+            </select>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit">Run Solar Model</button>
+    </form>
+    <br><br><br>
+
+    <h1>Model Parameter Guide</h1>
+    <p>
+        <ul>Latitude - GPS coordinate for location to be modelled</ul>
+        <ul>Longitude - GPS coordinate for location to be modelled</ul>
+        <ul>Solar PV kWp - Peak kilowatt output (size) of solar PV system being modelled in peak kilowatt output</ul>
+        <ul>Solar Azimuth - Orientation/direction that solar PV system is facing. 0 degrees represents southward facing</ul>
+        <ul>Surface Pitch - The angle of which the panel surface is raised off the ground in degrees</ul>
+        <ul>Chart Time Interval - The time frequency of the displayed graph on model results page</ul>
+    </p>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+<head>
+</head>
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
+    {% if name %}
+        You are logged in as {{ name }}. <a href="/logout">Log out</a>
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>
+    {% endif %}
+    <br><br><br>
+
+    <h1> Site Description:</h1>
+    <p>
+        This website was built as the final project in my CS50x journey. It is the beginning of an energy modelling application
+        where users will be able to quickly, and easily complete accurate energy modelling and forecasting
+    </p>
+
+    <p>
+        For now this project has stopped at completing a solar PV <a href="/solarmodel">model</a> and presenting the results to the user, as I plan to continue
+        this during my completion of CS50 web. The long term scope of the project is better suited for django development in my opinion,
+        and there are many aspects I need to understand further before my project can truly realise it's potential.
+    </p>
+
+    <p>
+        If you have any questions regarding development of the application or the underlying mathematics behind the energy
+        <a href="/solarmodel">modelling</a> process don't hesitate to get in touch at parke-d1@ulster.ac.uk
+    </p>
+{% endblock %}
