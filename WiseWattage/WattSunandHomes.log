@@ -19315,3 +19315,55 @@
 2024-02-15 23:03:31,623 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2024-02-15 23:03:36,407 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2024-02-15 23:03:36,413 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-15 23:14:03,972 - INFO - Fetching TMY data for latitude: 54.95, longitude: -5.95
+2024-02-15 23:14:05,204 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.95&lon=-5.95&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-15 23:14:06,389 - INFO - TMY data obtained for: 54.95, longitude: -5.95
+2024-02-15 23:14:06,390 - INFO - *******************
+2024-02-15 23:14:06,390 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 83deg, Lifespan: 25yrs
+2024-02-15 23:14:06,391 - INFO - *******************
+2024-02-15 23:14:06,391 - INFO - *******************
+2024-02-15 23:14:06,391 - INFO - Starting model calculations for SolarPVModel.
+2024-02-15 23:14:06,392 - INFO - *******************
+2024-02-15 23:14:06,392 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at 83 degrees WoS
+2024-02-15 23:14:06,423 - INFO - *******************
+2024-02-15 23:14:06,424 - INFO - Model calculations completed.
+2024-02-15 23:14:06,445 - INFO - Model data aggregated.
+2024-02-15 23:14:06,450 - INFO - Model data summary complete.
+2024-02-15 23:14:06,450 - INFO - *******************
+2024-02-15 23:14:06,452 - INFO - Model statistical analysis completed.
+2024-02-15 23:14:06,469 - INFO - Model statistical grouping completed.
+2024-02-15 23:14:06,470 - INFO - *******************
+2024-02-15 23:14:07,840 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-15 23:14:08,860 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-15 23:14:09,604 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-15 23:14:09,605 - INFO - *******************
+2024-02-15 23:14:10,900 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-15 23:14:10,901 - INFO - *******************
+2024-02-15 23:14:13,770 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-15 23:14:13,771 - INFO - *******************
+2024-02-15 23:14:43,577 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-15 23:14:43,578 - INFO - *******************
+2024-02-15 23:14:43,579 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-15 23:14:43,579 - INFO - *******************
+2024-02-15 23:14:43,579 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-15 23:14:43,580 - INFO - *******************
+2024-02-15 23:14:43,580 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-15 23:14:43,581 - INFO - *******************
+2024-02-15 23:14:43,581 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-15 23:14:43,582 - INFO - *******************
+2024-02-15 23:14:43,583 - INFO - *******************
+2024-02-15 23:14:43,583 - INFO - Starting model calculations for SolarPVModel.
+2024-02-15 23:14:43,584 - INFO - *******************
+2024-02-15 23:14:43,584 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at -90 degrees WoS
+2024-02-15 23:14:43,615 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at -45 degrees WoS
+2024-02-15 23:14:43,644 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at 0 degrees WoS
+2024-02-15 23:14:43,674 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at 45 degrees WoS
+2024-02-15 23:14:43,704 - INFO - Simulating model for 1kWp, 35 degrees pitch & azimuth at 90 degrees WoS
+2024-02-15 23:14:43,733 - INFO - *******************
+2024-02-15 23:14:43,734 - INFO - Model calculations completed.
+2024-02-15 23:14:43,762 - INFO - Model data aggregated.
+2024-02-15 23:14:43,769 - INFO - Model data summary complete.
+2024-02-15 23:14:43,769 - INFO - *******************
+2024-02-15 23:14:43,771 - INFO - Model statistical analysis completed.
+2024-02-15 23:14:43,785 - INFO - Model statistical grouping completed.
+2024-02-15 23:14:43,786 - INFO - *******************
