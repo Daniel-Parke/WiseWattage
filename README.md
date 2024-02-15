@@ -70,7 +70,7 @@ The library will be further expanded after CS50 to include the following feature
 
 ## System Schematic
 **Future System Design Schematic**
-![alt text](<static/2 - Solar Model Technical Diagram - Simple.png>)
+![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
 <br>
 
 
