@@ -1,15 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Dict
 from functools import lru_cache
-
 import logging
 
 import pandas as pd
 import plotly.express as px
 
-from WiseWattage.jrc_tmy import get_jrc_tmy
-from WiseWattage.solar_pv_model import calc_solar_model, combine_array_results
-from WiseWattage.solar_pv_model import total_array_results, pv_stats, pv_stats_grouped, SummaryGrouped
+from meteo.jrc_tmy import get_jrc_tmy
+from solar.solar_pv_model import calc_solar_model, combine_array_results
+from solar.solar_pv_model import total_array_results, pv_stats, pv_stats_grouped, SummaryGrouped
 
 # Configure logging
 logger = logging.getLogger()  # Get the root logger

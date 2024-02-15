@@ -1,0 +1,16 @@
+2024-02-15 19:47:57,164 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-15 19:47:58,345 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-15 19:47:59,131 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-15 19:47:59,131 - INFO - *******************
+2024-02-15 19:47:59,132 - INFO - *******************
+2024-02-15 19:47:59,132 - INFO - Starting model calculations for SolarPVModel.
+2024-02-15 19:47:59,132 - INFO - *******************
+2024-02-15 19:47:59,133 - INFO - Simulating model for 3.2kWp, 35 degrees pitch & azimuth at 83 degrees WoS
+2024-02-15 19:47:59,163 - INFO - *******************
+2024-02-15 19:47:59,164 - INFO - Model calculations completed.
+2024-02-15 19:47:59,182 - INFO - Model data aggregated.
+2024-02-15 19:47:59,187 - INFO - Model data summary complete.
+2024-02-15 19:47:59,188 - INFO - *******************
+2024-02-15 19:47:59,189 - INFO - Model statistical analysis completed.
+2024-02-15 19:47:59,204 - INFO - Model statistical grouping completed.
+2024-02-15 19:47:59,205 - INFO - *******************

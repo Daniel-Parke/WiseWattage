@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from numpy import cos, radians
 
-import WiseWattage.solar_radiation as sr
+import solar.solar_radiation as sr
 
 
 def iam_losses(
