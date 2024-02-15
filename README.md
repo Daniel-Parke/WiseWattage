@@ -8,6 +8,15 @@ For this CS50 project, I will utilize the same codebase to build an online appli
 The library will be further expanded after CS50 to include the following features in the energy model:
 <br>
 
+## System Schematic
+**Future System Model Design Schematic**
+![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
+<br>
+
+**Known Bugs:**
+- [ ] plot_sum incorrectly labelling columns based on input order rather than column name
+
+
 **In development:**
 - [x] Creation of `get_TMY` function to retrieve TMY meteorological data for a given location
 - [x] Creation of solar radiation calculation codebase and integration with TMY data
@@ -65,12 +74,6 @@ The library will be further expanded after CS50 to include the following feature
 - [ ] Lead generation for sales/marketing teams to generate leads ahead of time or inform on the ground data
 - [ ] Value generation for aggregated data generated through platform. Ensure anonymity of users!
 - [ ] Wider app + database with documentation to allow access from external queries through API service without GUI
-<br>
-
-
-## System Schematic
-**Future System Design Schematic**
-![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
 <br>
 
 
