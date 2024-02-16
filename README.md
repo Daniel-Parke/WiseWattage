@@ -13,9 +13,6 @@ The library will be further expanded after CS50 to include the following feature
 ![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
 <br>
 
-**Known Bugs:**
-- [ ] plot_sum incorrectly labelling columns based on input order rather than column name
-
 
 **In development:**
 - [x] Creation of `get_TMY` function to retrieve TMY meteorological data for a given location
@@ -36,6 +33,7 @@ The library will be further expanded after CS50 to include the following feature
 - [x] Storing of individual full model results as well as aggregated data to be accessed separately
 - [x] Enable saving of produced models as CSV file
 - [x] Basic exception handling implemented
+- [x] Ability to save model objects built in to class methods
 <br>
 
 **Planned features:**

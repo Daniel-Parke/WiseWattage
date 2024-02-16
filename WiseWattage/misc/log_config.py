@@ -5,8 +5,6 @@ logging_configured = False  # Flag to check if logging is configured
 
 def configure_logging():
     """
-    Configure logging if it's not already configured.
-
     This function sets up logging to write messages to both a file and the terminal.
     """
     global logging_configured  # Access the global flag
