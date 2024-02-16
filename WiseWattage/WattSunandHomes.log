@@ -1,0 +1,30 @@
+2024-02-16 12:24:58,363 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-16 12:25:00,679 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-16 12:25:01,713 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-16 12:25:01,714 - INFO - *******************
+2024-02-16 12:25:01,714 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-16 12:25:01,715 - INFO - *******************
+2024-02-16 12:25:01,715 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-16 12:25:01,715 - INFO - *******************
+2024-02-16 12:25:01,716 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-16 12:25:01,716 - INFO - *******************
+2024-02-16 12:25:01,716 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-16 12:25:01,717 - INFO - *******************
+2024-02-16 12:25:01,717 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-16 12:25:01,718 - INFO - *******************
+2024-02-16 12:25:01,718 - INFO - *******************
+2024-02-16 12:25:01,718 - INFO - Starting Solar PV model simulations.
+2024-02-16 12:25:01,719 - INFO - *******************
+2024-02-16 12:25:01,719 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-16 12:25:01,751 - INFO - *******************
+2024-02-16 12:25:01,752 - INFO - Solar PV model simulations completed.
+2024-02-16 12:25:01,786 - INFO - Solar PV model data aggregated.
+2024-02-16 12:25:01,791 - INFO - Solar PV model data summary complete.
+2024-02-16 12:25:01,792 - INFO - *******************
+2024-02-16 12:25:01,793 - INFO - Solar PV model statistical analysis completed.
+2024-02-16 12:25:01,810 - INFO - Solar PV model statistical grouping completed.
+2024-02-16 12:25:01,811 - INFO - *******************
+2024-02-16 12:25:01,820 - INFO - Model for  saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-16 12:25:01,821 - INFO - *******************
+2024-02-16 12:25:01,833 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-16 12:25:01,834 - INFO - *******************
