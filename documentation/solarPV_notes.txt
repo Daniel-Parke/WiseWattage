@@ -1,0 +1,30 @@
+PV Panel --> PV Array --> PV System --> PV Model
+
+PV Panel:
+	- 
+	- 
+	- 
+	- 
+
+
+PV Array:
+	- Pitch
+	- Azimuth
+	- Size (m2 or kWp or num_panels)
+	- Albedo
+	- 
+
+
+
+PV System:
+	- 
+	- 
+	- 
+	- 
+
+
+PV Model:
+	- 
+	- 
+	- 
+	- 
