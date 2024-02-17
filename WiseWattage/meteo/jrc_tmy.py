@@ -5,6 +5,54 @@ import pandas as pd
 import numpy as np
 
 
+def main():
+    pass
+
+def get_jrc_tmy(latitude, longitude, start_year=2005, end_year=2015):
+    """Fetches historical weather data for a given site and prepares the dataframe.
+    Args:
+        latitude (float): The latitude of the site.
+        longitude (float): The longitude of the site.
+        start_year (int, optional): The start year for data retrieval. Defaults to 2005.
+        end_year (int, optional): The end year for data retrieval. Defaults to 2015.
+    Returns:
+        DataFrame: A dataframe containing the historical weather data.
+    Raises:
+        ValueError: If the latitude or longitude is out of bounds.
+        SystemExit: If there's a request or server error.
+    """
+    if not -90 <= latitude <= 90 or not -180 <= longitude <= 180:
+        raise ValueError(
+            "Latitude must be between -90 and 90, and longitude between -180 and 180."
+        )
+
+    # Send a GET request to the JRC API
+    try:
+        response = httpx.get(
+            f"https://re.jrc.ec.europa.eu/api/tmy?lat={latitude}&lon={longitude}&startyear={start_year}&endyear={end_year}&outputformat=json",
+            timeout=25,
+        )
+        response.raise_for_status()  # Raises an exception for 4XX/5XX responses
+        data_json = response.json()  # Parse the JSON response here
+    except httpx.RequestError as e:
+        raise SystemExit(f"An error occurred while requesting {e.request.url!r}.") from e
+    except httpx.HTTPStatusError as e:
+        raise SystemExit(f"Error response {e.response.status_code} while requesting {e.request.url!r}.") from e
+
+    # Parse the JSON response & reset the index with a new date range
+    data = pd.DataFrame(data_json["outputs"]["tmy_hourly"])
+    date_range = pd.date_range(start="2023-01-01 00:00:00", periods=8760, freq="H")
+
+    # Directly use date_range to assign time components
+    data["Hour_of_Day"] = date_range.hour
+    data["Day_of_Year"] = date_range.dayofyear
+    data["Week_of_Year"] = ((date_range.dayofyear - 1) // 7 + 1).astype(int)
+    data["Week_of_Year"] = np.where(data["Week_of_Year"] > 52, 52, data["Week_of_Year"])  # Cap at 52 if necessary
+    data["Month_of_Year"] = date_range.month
+
+    return data
+
+
 def get_hour(timestamp):
     """Extracts the hour from a timestamp.
     Args:
@@ -52,57 +100,5 @@ def get_month(timestamp):
     return month
 
 
-def get_jrc_tmy(latitude, longitude, start_year=2005, end_year=2015):
-    """Fetches historical weather data for a given site and prepares the dataframe.
-    Args:
-        latitude (float): The latitude of the site.
-        longitude (float): The longitude of the site.
-        start_year (int, optional): The start year for data retrieval. Defaults to 2005.
-        end_year (int, optional): The end year for data retrieval. Defaults to 2015.
-    Returns:
-        DataFrame: A dataframe containing the historical weather data.
-    Raises:
-        ValueError: If the latitude or longitude is out of bounds.
-        SystemExit: If there's a request or server error.
-    """
-    if not -90 <= latitude <= 90 or not -180 <= longitude <= 180:
-        raise ValueError(
-            "Latitude must be between -90 and 90, and longitude between -180 and 180."
-        )
-
-    # Send a GET request to the JRC API
-    try:
-        request = httpx.get(
-            f"https://re.jrc.ec.europa.eu/api/tmy?lat={latitude}&lon={longitude}&startyear={start_year}&endyear={end_year}&outputformat=json",
-            timeout=25,
-        )
-        request.raise_for_status()  # Raises an exception for 4XX/5XX responses
-
-    except httpx.RequestError as e:
-        raise SystemExit(
-            f"An error occurred while requesting {e.request.url!r}."
-        ) from e
-
-    except httpx.HTTPStatusError as e:
-        raise SystemExit(
-            f"Error response {e.request.status_code} while requesting {e.request.url!r}."
-        ) from e
-
-    # Parse the JSON response
-    response = request.json()
-    data = pd.DataFrame(response["outputs"]["tmy_hourly"])
-
-    # Reset the index with a new date range
-    date_range = pd.date_range(start="2023-01-01 00:00:00", periods=8760, freq="h")
-    formatted_index = date_range.strftime("%Y%m%d:%H%M")
-    data.index = formatted_index
-
-    # Map the index to day of the year and hour of the day
-    # Reset dataframe to remove generated index
-    data["Hour_of_Day"] = data.index.map(get_hour)
-    data["Day_of_Year"] = data.index.map(get_day)
-    data["Week_of_Year"] = data.index.map(get_week)
-    data["Month_of_Year"] = data.index.map(get_month)
-    data.reset_index(drop=True, inplace=True)
-
-    return data
+if __name__ == "__main__":
+    main()

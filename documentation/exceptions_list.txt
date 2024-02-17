@@ -1,0 +1,34 @@
+Index Exception	Description
+0 ArithmeticError	Raised when an error occurs in numeric calculations
+1 AssertionError	Raised when an assert statement fails
+2 AttributeError	Raised when attribute reference or assignment fails
+3 Exception	Base class for all exceptions
+4 EOFError	Raised when the input() method hits an "end of file" condition (EOF)
+5 FloatingPointError	Raised when a floating point calculation fails
+6 GeneratorExit	Raised when a generator is closed (with the close() method)
+7 ImportError	Raised when an imported module does not exist
+8 IndentationError	Raised when indentation is not correct
+9 IndexError	Raised when an index of a sequence does not exist
+10 KeyError	Raised when a key does not exist in a dictionary
+11 KeyboardInterrupt	Raised when the user presses Ctrl+c, Ctrl+z or Delete
+12 LookupError	Raised when errors raised cant be found
+13 MemoryError	Raised when a program runs out of memory
+14 NameError	Raised when a variable does not exist
+15 NotImplementedError	Raised when an abstract method requires an inherited class to override the method
+16 OSError	Raised when a system related operation causes an error
+17 OverflowError	Raised when the result of a numeric calculation is too large
+18 ReferenceError	Raised when a weak reference object does not exist
+19 RuntimeError	Raised when an error occurs that do not belong to any specific exceptions
+20 StopIteration	Raised when the next() method of an iterator has no further values
+21 SyntaxError	Raised when a syntax error occurs
+22 TabError	Raised when indentation consists of tabs or spaces
+23 SystemError	Raised when a system error occurs
+24 SystemExit	Raised when the sys.exit() function is called
+25 TypeError	Raised when two different types are combined
+26 UnboundLocalError	Raised when a local variable is referenced before assignment
+27 UnicodeError	Raised when a unicode problem occurs
+28 UnicodeEncodeError	Raised when a unicode encoding problem occurs
+29 UnicodeDecodeError	Raised when a unicode decoding problem occurs
+30 UnicodeTranslateError	Raised when a unicode translation problem occurs
+31 ValueError	Raised when there is a wrong value in a specified data type
+32 ZeroDivisionError	Raised when the second operator in a division is zero

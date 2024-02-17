@@ -231,7 +231,7 @@ def calc_solar_model(
         "Day_of_Year": day_of_year,
         "Week_of_Year": week_of_year,
         "Month_of_Year": month_of_year,
-        "T2m": hour_of_day,
+        "T2m": T2m,
         # Include all other original columns as necessary
         "Declination_Angle": declination_angle,
         "Solar_Time": solar_time,
