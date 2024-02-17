@@ -20,4 +20,3 @@ def load_pv_model(name="saved_models/Solar_Model_Results.wwm"):
     except Exception as e:
         logging.info(f"Error loading model from '{name}': {e}")
         logging.info("*******************")
-        
