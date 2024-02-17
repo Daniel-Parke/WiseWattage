@@ -1,8 +1,10 @@
 # Wattsun and Homes - Energy Modelling Application
 
-### **NOTE:** These patch notes will not have data removed unless to improve readability and serve as a time capsule of sorts to record development progress and program improvements over time.
+### **NOTE:** These notes will not have any data entries removed unless it is to improve readability. These are to serve as a time capsule of sorts to record development progress and program improvements over time. 
 
 #### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
+
+###### At the time of this projects inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as this project develops, and thought this could be a good way to do it. If you have any feedback or any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try!
 
 ## Patch/Progress Notes:
 
