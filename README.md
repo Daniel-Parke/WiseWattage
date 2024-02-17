@@ -35,22 +35,21 @@ The library will be further expanded after CS50 to include the following feature
 - [x] Basic exception handling implemented
 - [x] Ability to save model objects built in to class methods
 - [x] Vectorised model calculation transforming from dataframes to arrays to utilise numpy speed
-- [x] Further optimisations completed that bring solar model time to around 20ms/model
+- [x] Further optimisations completed that bring solar model time to around 15.8ms/model
 - [x] Added cProfile and pstats benchmarking to identify bottlenecks.
 <br>
 
 **Planned features:**
 - [ ] Inclusion of low irradiance losses
+- [ ] Inclusion of spectral losses
+- [ ] Inclusion of system/conversion losses
+- [ ] Inclusion of base project financials to estimate cost for solar PV project
+- [ ] Further statistical analysis functions to be added that target desired columns
+- [ ] Full range of charts generated based on comparison of important characteristics
 - [ ] Creation of project class in which all other models and data generated will be stored and accessed
 - [ ] Batch processing and asynchronous functions for jrc_tmy when modelling multiple sides. Current
 API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.02s processing).
 - [ ] Enable multiple iterations of models to be completed across sites for site analysis/comparison
-- [ ] Inclusion of base project financials to estimate cost for solar PV project
-- [ ] Further statistical analysis functions to be added that target desired columns
-- [ ] Chart generation based on comparison of important characteristics
-- [ ] Development of Flask web app to enable user to easily generate their own models
-- [ ] Integration of generated statistical analysis and charts from Class object to Flask webpage
-- [ ] Creation of user account and auth process to enable long term storage of models
 - [ ] Creation and integration of SQL database to enable long term storage and easier integration elsewhere
 <br>
 
@@ -68,15 +67,18 @@ API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.
 **MEDIUM TERM GOALS:**
 - [ ] Energy model optimisation procedure
 - [ ] Built-in class methods for sensitivity analysis modelling
-- [ ] Predictive and historical analysis based on user personal demand
+- [ ] Development of Django web app to enable user to easily generate their own models
+- [ ] Creation of user account and auth process to enable long term storage of models
 <br>
 
 **LONG TERM GOALS:**
+- [ ] Predictive and historical analysis based on user personal demand
 - [ ] Real-time forecasting and integration into smart meter/IOT appliances
 - [ ] Lead generation for equipment vendors and installers based on location, price, system, etc.
 - [ ] Lead generation for sales/marketing teams to generate leads ahead of time or inform on the ground data
 - [ ] Value generation for aggregated data generated through platform. Ensure anonymity of users!
 - [ ] Wider app + database with documentation to allow access from external queries through API service without GUI
+- [ ] Increased market participation for platform users informed by shared data and models
 <br>
 
 
@@ -85,11 +87,12 @@ API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.
 **Site**
 ```python
 site = Site()
+site.latitude
+site.longitude
 site.name
 site.address
 site.client
-site.latitude
-site.longitude
+site.size
 site.tmz_hrs_east
 site.tmy_data
 ```
@@ -100,11 +103,13 @@ array_1 = SolarPVArray()
 array_1.pv_kwp
 array_1.surface_pitch
 array_1.surface_azimuth
-array_1.electrical_eff
-array_1.pv_eol_derating
 array_1.lifespan
+array_1.pv_eol_derating
+array_1.cost_per_kwp
+array_1.electrical_eff
 array_1.cell_temp_coeff
 array_1.transmittance_absorptance
+array_1.refraction_index
 array_1.cell_NOCT
 array_1.ambient_NOCT
 array_1.e_poa_NOCT
@@ -128,8 +133,6 @@ pv_model.timestep
 pv_model.array_model(n)
 pv_model.save_model_csv()
 pv_model.model_summary_html_export(freq, grouped)
-pv_model.plot_model(params, model_index, plot_type)
-pv_model.plot_combined(params, plot_type)
-pv_model.plot_sum(params, group, plot_type)
+
 
 ```
