@@ -1,42 +1,16 @@
-# Wattsun and Homes - Solar PV Energy Modelling Application
+# Wattsun and Homes - Energy Modelling Application
 ### Video Demo:  <URL HERE> **WORK IN PROGRESS, APP WILL LAUNCH SOMETIME AFTER COMPLETION OF CS50 WEB**
 ### Description
-This project is an energy modelling application designed to model solar PV potential across a range of sites and system parameters. It's accessed by creating Class objects which conduct the appropriate modelling when initialized. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as dataframes, with the library being built with a focus on using it offline for personal data analysis.
+This project is an energy modelling application designed to model Solar PV potential across a range of sites and system parameters. It's accessed by creating Class objects which conduct the appropriate modelling when initialized. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as dataframes, with the library being built with a focus on using it offline for personal data analysis.
 
-For this CS50 project, I will utilize the same codebase to build an online application where users can generate their own solar PV models. This will be completed using Flask, offering basic functionality for now. Users will be prompted to create an account to save the model results for access later, and they can generate an energy report summarizing the model created.
+Once this project has been completed I will utilize the same codebase to build an online application where users can generate their own solar PV models. This will be completed using Flask, Django and/or FastAPI, offering basic API returns and a browser UI to run the model. Users will be prompted to create an account to save the model results for access later if they want, and they can generate an energy report summarizing the model created.
 
-The library will be further expanded after CS50 to include the following features in the energy model:
+The library will be further expanded to include the following features in the energy model:
 <br>
 
 ## System Schematic
 **Future System Model Design Schematic**
 ![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
-<br>
-
-
-**In development:**
-- [x] Creation of `get_TMY` function to retrieve TMY meteorological data for a given location
-- [x] Creation of solar radiation calculation codebase and integration with TMY data
-- [x] Creation of fundamental solar PV power output calculations
-- [x] Integration of sky model, clamping of beam/diffuse values & timestep adjustment
-- [x] Adjustment of formulas to remove potential erroneous generation calc when AOI/Zenith close to 90 degrees
-- [x] Inclusion of base physical processes affecting solar PV performance (Thermals, derating, etc.)
-- [x] Inclusion of IAM losses to reduce beam insolation
-- [x] Vectorised functionality added to radiation and modelling calculations to improve performance
-- [x] Data aggregation functionality and time series grouping
-- [x] Data logging implemented to assist with debugging and awareness of timescales for large models
-- [x] Creation of `Site` class to allow for storing of TMY and project data
-- [x] Function caching of TMY data enabled for faster reiteration
-- [x] Creation of `SolarPVArray` class to allow for multiple scenarios to be modelled at the same location
-- [x] Creation of `SolarPVModel` class to simulate solar PV performance at location
-- [x] Data aggregation functions added to initial PVModel class that enable easier statistical analysis
-- [x] Storing of individual full model results as well as aggregated data to be accessed separately
-- [x] Enable saving of produced models as CSV file
-- [x] Basic exception handling implemented
-- [x] Ability to save model objects built in to class methods
-- [x] Vectorised model calculation transforming from dataframes to arrays to utilise numpy speed
-- [x] Further optimisations completed that bring solar model time to around 15.8ms/model
-- [x] Added cProfile and pstats benchmarking to identify bottlenecks.
 <br>
 
 **Planned features:**
@@ -133,6 +107,4 @@ pv_model.timestep
 pv_model.array_model(n)
 pv_model.save_model_csv()
 pv_model.model_summary_html_export(freq, grouped)
-
-
 ```
