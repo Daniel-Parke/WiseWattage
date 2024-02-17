@@ -2,7 +2,7 @@
 
 ### **NOTE:** These patch notes will not have data removed unless to improve readability and serve as a time capsule of sorts to record development progress and program improvements over time.
 
-### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
+#### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
 
 ## Patch/Progress Notes:
 
