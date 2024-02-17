@@ -4,7 +4,7 @@
 
 #### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
 
-###### At the time of this projects inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as this project develops, and thought this could be a good way to do it. If you have any feedback or any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try!
+##### At the time of this projects inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try!
 
 ## Patch/Progress Notes:
 
@@ -104,3 +104,13 @@ pv_model.array_model(n)
 pv_model.save_model_csv()
 pv_model.model_summary_html_export(freq, grouped)
 ```
+
+
+### **System Design Schematic Concepts already created:**
+#### **Design 1:**
+![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
+
+<br>
+
+#### **Design 2:**
+![alt text](<static/Solar_Model_Technical_Diagram_1.png>)
