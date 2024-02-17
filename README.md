@@ -34,11 +34,16 @@ The library will be further expanded after CS50 to include the following feature
 - [x] Enable saving of produced models as CSV file
 - [x] Basic exception handling implemented
 - [x] Ability to save model objects built in to class methods
+- [x] Vectorised model calculation transforming from dataframes to arrays to utilise numpy speed
+- [x] Further optimisations completed that bring solar model time to around 20ms/model
+- [x] Added cProfile and pstats benchmarking to identify bottlenecks.
 <br>
 
 **Planned features:**
 - [ ] Inclusion of low irradiance losses
 - [ ] Creation of project class in which all other models and data generated will be stored and accessed
+- [ ] Batch processing and asynchronous functions for jrc_tmy when modelling multiple sides. Current
+API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.02s processing).
 - [ ] Enable multiple iterations of models to be completed across sites for site analysis/comparison
 - [ ] Inclusion of base project financials to estimate cost for solar PV project
 - [ ] Further statistical analysis functions to be added that target desired columns

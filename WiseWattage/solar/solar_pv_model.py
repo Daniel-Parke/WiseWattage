@@ -8,47 +8,6 @@ from numpy import cos, radians
 import solar.solar_radiation as sr
 
 
-def iam_losses(
-    n_day,
-    civil_time,
-    latitude,
-    longitude,
-    surface_azimuth,
-    surface_pitch,
-    timestep,
-    tmz_hrs_east,
-    refraction_index=0.1,
-):
-    """Calculates the incident angle modifier (IAM) losses for solar panels based on the angle of incidence (AOI).
-    Parameters:
-    - n_day: Day of the year.
-    - civil_time: Time of day in hours.
-    - latitude, longitude: Geographic coordinates of the site.
-    - surface_azimuth, surface_pitch: Orientation and tilt of the solar panel.
-    - timestep: Time step in minutes.
-    - tmz_hrs_east: Timezone offset from GMT in hours.
-    - refraction_index: Refractive index of the panel's surface material.
-
-    Returns:
-    - iam_factor: IAM loss factor for each time step.
-    """
-    aoi = sr.calc_aoi(
-        n_day,
-        civil_time,
-        latitude,
-        longitude,
-        surface_azimuth,
-        surface_pitch,
-        timestep,
-        tmz_hrs_east,
-    )
-
-    iam_factor = 1 - refraction_index * ((1 / cos(radians(aoi))) - 1)
-    iam_factor = np.where(aoi > 85, 0, iam_factor)
-
-    return iam_factor
-
-
 def calc_pv_derating(n_day, civil_time, pv_eol_derating, lifespan, year=1):
     """Calculates the derating factor for PV panels over their lifespan.
 
@@ -130,6 +89,26 @@ def calc_cell_temp_coeff(
     temp_coeff = np.minimum(1, (1 + cell_temp_coeff * (cell_temp - cell_temp_STC)))
 
     return temp_coeff
+
+
+def iam_losses(aoi, refraction_index=0.1):
+    """Calculates the incident angle modifier (IAM) losses for solar panels based on the angle of incidence (AOI).
+    Parameters:
+    - n_day: Day of the year.
+    - civil_time: Time of day in hours.
+    - latitude, longitude: Geographic coordinates of the site.
+    - surface_azimuth, surface_pitch: Orientation and tilt of the solar panel.
+    - timestep: Time step in minutes.
+    - tmz_hrs_east: Timezone offset from GMT in hours.
+    - refraction_index: Refractive index of the panel's surface material.
+
+    Returns:
+    - iam_factor: IAM loss factor for each time step.
+    """
+    iam_factor = 1 - refraction_index * ((1 / cos(radians(aoi))) - 1)
+    iam_factor = np.where(aoi > 85, 0, iam_factor)
+
+    return iam_factor
 
 
 def calc_pv_power(
@@ -214,151 +193,65 @@ def calc_solar_model(
     Returns:
         DataFrame: Enhanced TMY data with added columns for solar radiation calculations and PV system performance metrics.
     """
-    # Create copy of TMY_data
-    tmy_data = data.copy()
+    # Convert required DataFrame columns to numpy arrays for calculations
+    hour_of_day = data['Hour_of_Day'].to_numpy()
+    day_of_year = data['Day_of_Year'].to_numpy()
+    week_of_year = data['Week_of_Year'].to_numpy()
+    month_of_year = data['Month_of_Year'].to_numpy()
+    Gb_n = data['Gb(n)'].to_numpy()
+    Gd_h = data['Gd(h)'].to_numpy()
+    G_h = data['G(h)'].to_numpy()
+    T2m = data['T2m'].to_numpy()
 
-    # Declination
-    tmy_data["Declination_Angle"] = sr.calc_declination(tmy_data["Day_of_Year"])
+    # Perform calculations using numpy arrays
+    declination_angle = sr.calc_declination(day_of_year)
+    solar_time = sr.calc_solar_time(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
+    hour_angle = sr.calc_hour_angle(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
+    aoi = sr.calc_aoi(day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
+    zenith_angle = sr.calc_zenith(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    e_beam_kw_m2 = sr.calc_beam_radiation(Gb_n, day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
+    e_diffuse_kw_m2 = sr.calc_diffuse_radiation(Gd_h, G_h, surface_pitch, latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    e_ground_kw_m2 = sr.calc_ground_radiation(G_h, surface_pitch, albedo)
+    e_poa_kw_m2 = e_beam_kw_m2 + e_diffuse_kw_m2 + e_ground_kw_m2
 
-    # Solar Time
-    tmy_data["Solar_Time"] = sr.calc_solar_time(
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        longitude,
-        timestep=60,
-        tmz_hrs_east=0,
-    )
+    # Assuming iam_losses function exists and can operate on numpy arrays
+    panel_poa_kw_m2 = e_beam_kw_m2 * iam_losses(aoi, refraction_index) + e_diffuse_kw_m2 + e_ground_kw_m2
+    iam_loss_kw_m2 = e_poa_kw_m2 - panel_poa_kw_m2
 
-    # Hour Angle
-    tmy_data["Hour_Angle"] = sr.calc_hour_angle(
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        longitude,
-        timestep=60,
-        tmz_hrs_east=0,
-    )
+    et_hrad_kw_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
+    cell_temp_c = calc_cell_temp(panel_poa_kw_m2, T2m, cell_temp_coeff, electrical_eff, cell_NOCT, ambient_NOCT, e_poa_NOCT, cell_temp_STC, transmittance_absorptance)
 
-    # Angle of Incidence
-    tmy_data["AOI"] = sr.calc_aoi(
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        latitude,
-        longitude,
-        surface_azimuth,
-        surface_pitch,
-        timestep=60,
-        tmz_hrs_east=0,
-    )
+    # Assuming calc_pv_power returns two arrays or can be adapted to do so
+    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_kw_m2, T2m, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
 
-    # Zenith Angle
-    tmy_data["Zenith_Angle"] = sr.calc_zenith(
-        latitude,
-        longitude,
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        timestep=60,
-        tmz_hrs_east=0,
-    )
+    # Construct a new DataFrame from the calculated arrays
+    results = pd.DataFrame({
+        "Hour_of_Day": hour_of_day,
+        "Day_of_Year": day_of_year,
+        "Week_of_Year": week_of_year,
+        "Month_of_Year": month_of_year,
+        "T2m": hour_of_day,
+        # Include all other original columns as necessary
+        "Declination_Angle": declination_angle,
+        "Solar_Time": solar_time,
+        "Hour_Angle": hour_angle,
+        "AOI": aoi,
+        "Zenith_Angle": zenith_angle,
+        "E_Beam_kWm2": e_beam_kw_m2,
+        "E_Diffuse_kWm2": e_diffuse_kw_m2,
+        "E_Ground_kWm2": e_ground_kw_m2,
+        "E_POA_kWm2": e_poa_kw_m2,
+        "Panel_POA_kWm2": panel_poa_kw_m2,
+        "IAM_Loss_kWm2": iam_loss_kw_m2,
+        "ET_HRad_kWm2": et_hrad_kw_m2,
+        "PV_Derated_Eff": pv_derated_eff,
+        "Cell_Temp_C": cell_temp_c,
+        "PV_Gen_kWh": pv_gen_kwh,
+        "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh
+    })
 
-    # Beam Radiation
-    tmy_data["E_Beam_kWm2"] = sr.calc_beam_radiation(
-        tmy_data["Gb(n)"],
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        latitude,
-        longitude,
-        surface_azimuth,
-        surface_pitch,
-        timestep,
-        tmz_hrs_east,
-    )
-
-    # Diffuse Radiation
-    tmy_data["E_Diffuse_kWm2"] = sr.calc_diffuse_radiation(
-        tmy_data["Gd(h)"],
-        tmy_data["G(h)"],
-        surface_pitch,
-        latitude,
-        longitude,
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        timestep,
-        tmz_hrs_east,
-    )
-
-    # Ground Radiation
-    tmy_data["E_Ground_kWm2"] = sr.calc_ground_radiation(
-        tmy_data["G(h)"], surface_pitch, albedo
-    )
-
-    # POA Irradiance
-    tmy_data["E_POA_kWm2"] = (
-        tmy_data["E_Beam_kWm2"] + tmy_data["E_Diffuse_kWm2"] + tmy_data["E_Ground_kWm2"]
-    )
-
-    # Adjust E_POA_kWm2 to include IAM losses
-    tmy_data["Panel_POA_kWm2"] = (
-        tmy_data["E_Beam_kWm2"]
-        * (
-            iam_losses(
-                tmy_data["Day_of_Year"],
-                tmy_data["Hour_of_Day"],
-                latitude,
-                longitude,
-                surface_azimuth,
-                surface_pitch,
-                timestep,
-                tmz_hrs_east,
-                refraction_index,
-            )
-        )
-        + tmy_data["E_Diffuse_kWm2"]
-        + tmy_data["E_Ground_kWm2"]
-    )
-
-    # Record IAM losses
-    tmy_data["IAM_Loss_kWm2"] = tmy_data["E_POA_kWm2"] - tmy_data["Panel_POA_kWm2"]
-
-    # Extra Terrestrial Horizontal Irradiation
-    tmy_data["ET_HRad_kWm2"] = sr.calc_et_horizontal_radiation(
-        latitude,
-        longitude,
-        tmy_data["Day_of_Year"],
-        tmy_data["Hour_of_Day"],
-        timestep,
-        tmz_hrs_east,
-    )
-
-    # PV Panel Derating
-    tmy_data["PV_Derated_Eff"] = calc_pv_derating(
-        tmy_data["Day_of_Year"], tmy_data["Hour_of_Day"], pv_derating, lifespan, year=1
-    )
-
-    # Cell Temperature
-    tmy_data["Cell_Temp_C"] = calc_cell_temp(
-        tmy_data["Panel_POA_kWm2"],
-        tmy_data["T2m"],
-        cell_temp_coeff,
-        electrical_eff,
-        cell_NOCT,
-        ambient_NOCT,
-        e_poa_NOCT,
-        cell_temp_STC,
-        transmittance_absorptance,
-    )
-
-    # PV Generation
-    tmy_data["PV_Gen_kWh"], tmy_data["PV_Thermal_Loss_kWh"] = calc_pv_power(
-        pv_kwp,
-        tmy_data["Panel_POA_kWm2"],
-        tmy_data["T2m"],
-        tmy_data["PV_Derated_Eff"],
-        cell_temp_coeff,
-        e_poa_STC,
-        cell_temp_STC,
-    )
-
-    return tmy_data
+    return results
 
 
 def combine_array_results(results):
