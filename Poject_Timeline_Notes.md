@@ -5,7 +5,7 @@
 #### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
 <br>
 
-###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try!
+###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br><br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try!
 
 ## Patch/Progress Notes:
 
