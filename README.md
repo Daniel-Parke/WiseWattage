@@ -147,13 +147,12 @@ pv_model.model_summary_html_export(freq, grouped)
 - [ ] Creation of project Class in which all other models and data generated will be stored and accessed
 - [ ] Batch processing and asynchronous functions for jrc_tmy when modelling multiple sides. Current
 API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.02s processing).
-- [ ] Enable multiple iterations of models to be completed across sites for site analysis/comparison & sensitivity analysis.
 - [ ] Creation and integration of SQL database to enable long term storage and easier integration further down the road.
 ###### **NOTE: We will not store accurate locations for areas being modelled after weather data has been returned, as this information is no longer required once TMY data is obtained. This is to improve user privacy and security in the event of any data breach. Ensuring and protecting user privacy will remain a core principle of this project as long as I am still involved in it's development.
 <br>
 
 **SHORT TERM GOALS (1-3 Months):**
-- [ ] Financial analysis and project Class creation for modelling multiple scenarios.
+- [ ] Financial analysis and project Class creation for modelling multiple scenarios with sensitivity analysis.
 - [ ] Estimated annual consumption and hourly load profile integrated into modelling process.
 - [ ] Electricity Grid Connection with variable import/export tariffs for range of tariffs (day-night, economy 7, EV+, etc.).
 - [ ] Integration of battery technologies optimised for range of services (load balancing, increased renewable %, reduced costs, etc.).
