@@ -1,9 +1,9 @@
-# WattSun & Homes - Energy Modelling Application
+# WiseWattage - Energy Modelling Application
 ### Demo: <URL HERE> **WORK IN PROGRESS, ONLINE APPLICATION WILL LAUNCH SOMETIME IN Q4 2024**
 ### Description
 This project is an energy modeling application designed to model on and off-grid energy generation potential across various sites and system parameters. The long-term goal is to create an all-in-one energy model that will quickly and easily generate accurate model results and statistics. There are many paid energy models on the market that do a similar job, but I have found they almost always add complexity that is not required for the vast majority of scenarios, which adds to the development and modeling timeframes.
 
-Many problems that paid services overcome are also highly specific to unique scenarios, such as those the modeling software PVSyst addresses. This is a fantastic software platform; however, it does require a particular level of industry knowledge and expertise to use effectively. This, in turn, makes it difficult for those curious about optimizing their energy systems but who don't have the time to master all the concepts.
+Solutions offered by paid software, like PVSyst, Homer, and Plexos, typically target challenges inherent to particular and unique scenarios. These are fantastic modelling packages; however, they often require a particular level of industry knowledge and expertise to use effectively. This, in turn, makes it difficult for those curious about optimizing their energy systems but don't have the time to master all the concepts.
 
 It is these issues, among others, that I aim to address for the wider data science and energy community by hopefully providing energy modeling tools that are 99% as powerful as existing libraries but with 99% less complexity when using them. When completed, WiseWattage will hopefully be a complete package that can be used offline to create Class objects representing a range of energy modeling scenarios.
 
@@ -18,12 +18,12 @@ The calculations behind the modeling are based on SAP methodologies, and documen
 
 Once this project has been completed, I will also hopefully utilize the same codebase to build an online application where users can generate their own solar PV models. This will be completed using Flask, Django, and/or FastAPI, offering basic API returns and a browser UI to run the model. Users will be prompted to create an account to save the model results for access later if they want, and they can generate an energy report summarizing the model created.
 
-I am aiming to make the web app a free service indefinitely, with the long-term goal being to reduce the costs and time involved with energy modeling and assessments during the procurement phase of projects. I will initially be focusing on domestic scenarios first, but the model will be built with the ability to scale up or down indefinitely. WattSun & Homes will be the first implementation of an online application, which will hopefully offer me invaluable feedback and insight before the program is scaled up to include more complex scenarios.
+I am aiming to make the web app a free service indefinitely, with the long-term goal being to reduce the costs and time involved with energy modeling and assessments during the procurement phase of projects. I will initially be focusing on domestic scenarios first, but the model will be built with the ability to scale up or down indefinitely. WattSun & Homes will be the first implementation of an online application, which will focus on those in a domestic scenario interested in exploring the potential for rooftop Solar PV, and what other technologies could be incorporated. Hopefully this will offer the chance to gain invaluable feedback before the program is scaled up to include more complex scenarios.
+
+## **Example of current implementation of model:**
 
 The model is created by initializing Class objects which conduct the appropriate modeling when created. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as DataFrames, with the library being built with a focus on using it offline for personal data analysis.
 <br>
-
-#### **Example of current implementation of model:**
 
 ```python
 # Import required packages, assumes location is root of folder containing downloaded scripts.
