@@ -52,7 +52,12 @@ arrays = [array_1, array_2, array_3, array_4, array_5]
 
 # Set up and run model
 pv_model = SolarPVModel(site=site, arrays=arrays)
+```
+<br>
 
+## Accessing Model Results
+
+```python
 # Example on how to access summary of model results
 model_summary_df = pv_model.summary
 model_summary_hourly_df = pv_model.summary_grouped.hourly
@@ -130,6 +135,7 @@ pv_model.model_summary_html_export(freq, grouped)
 ### **The library will be further expanded to include the following features:**
 
 **COMING SOON™ (1 Month):**
+- [ ] Ability to automatically build and simulate models from one single command loading CSV file in root folder. Template and guidance for this will be available online.
 - [ ] Inclusion of low irradiance losses
 - [ ] Inclusion of spectral losses
 - [ ] Inclusion of system/conversion losses
