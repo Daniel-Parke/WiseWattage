@@ -15,6 +15,13 @@ The model is accessed by creating Class objects which conduct the appropriate mo
 #### **Example of current implementation of model:**
 
 ```python
+# Import required packages, assumes location is root of folder containing downloaded scripts.
+from meteo.Site import Site
+from solar.SolarPVArray import SolarPVArray
+from solar.SolarPVModel import SolarPVModel
+
+from misc.log_config import configure_logging
+
 # Set up site and obtain TMY data
 site = Site(latitude=54.60452, longitude=-5.92860)
 
