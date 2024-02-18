@@ -131,7 +131,7 @@ pv_model.array_model(n)
 pv_model.save_model_csv()
 pv_model.model_summary_html_export(freq, grouped)
 ```
-<br><br><br>
+<br><br>
 
 ###### **Updated (18/02/2024 @ 00:17 GMT+00:00):** 
 ### **The library will be further expanded to include the following features:**
