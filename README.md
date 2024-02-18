@@ -35,8 +35,6 @@ from solar.SolarPVModel import SolarPVModel
 from misc.log_config import configure_logging
 ```
 
-<br>
-
 ### **Create and run the model:**
 ```python
 # Set up site and obtain TMY data
@@ -59,10 +57,8 @@ arrays = [array_1, array_2, array_3, array_4, array_5]
 # Set up and run model
 pv_model = SolarPVModel(site=site, arrays=arrays)
 ```
-<br>
 
 ### **Accessing model results:**
-
 ```python
 # Example on how to access summary of model results
 model_summary_df = pv_model.summary
@@ -79,8 +75,9 @@ array_5_model_df = pv_model.models[4]["model_result"]
 # Example on how to access combined model results
 combined_model_df = pv_model.combined_model
 ```
+
 This is an example implementation using basic inputs, however there are many more options for customising the model by adding additional inputs. These can be seen by looking into the specific functions called contained in the solar modelling .py files, and will be further detailed more as the project documentation improves over time.
-<br>
+<br><br>
 
 ### **Current Model Classes & Methods:**
 
