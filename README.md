@@ -1,15 +1,26 @@
 # WattSun & Homes - Energy Modelling Application
-### Demo:  <URL HERE> **WORK IN PROGRESS, ONLINE APPLICATION WILL LAUNCH SOMETIME IN Q4 2024**
+### Demo: <URL HERE> **WORK IN PROGRESS, ONLINE APPLICATION WILL LAUNCH SOMETIME IN Q4 2024**
 ### Description
-This project is an energy modelling application designed to model on and off grid energy generation potential across a range of sites and system parameters. The long term goal is to create an all-in-one energy model that will quickly and easily generate accurate model results and statistics. There are many paid for energy models on the market that do a similar job, but I have found they almost always have a long list of limitations. A lot of the problems this paid for services overcome are also highly specific to unique scenarios, such as the modelling software PVSyst. This is a fantastic software platform, however it does require a particular level of industry knowledge and expertise in order to use effectively. 
+This project is an energy modeling application designed to model on and off-grid energy generation potential across various sites and system parameters. The long-term goal is to create an all-in-one energy model that will quickly and easily generate accurate model results and statistics. There are many paid energy models on the market that do a similar job, but I have found they almost always add complexity that is not required for the vast majority of scenarios, which adds to the development and modeling timeframes.
 
-It is these issues amongst others that I am to address for the wider data science and energy community, by hopefully providing energy modelling tools that are 99% as powerful as existing libraries, but with 99% less complexity when using it. When completed WiseWattage will hopefully be a complete package that can be used offline to initiate class objects that represent energy modelling scenarios. 
+Many problems that paid services overcome are also highly specific to unique scenarios, such as those the modeling software PVSyst addresses. This is a fantastic software platform; however, it does require a particular level of industry knowledge and expertise to use effectively. This, in turn, makes it difficult for those curious about optimizing their energy systems but who don't have the time to master all the concepts.
 
-Once this project has been completed I will also hopefully utilize the same codebase to build an online application where users can generate their own solar PV models. This will be completed using Flask, Django and/or FastAPI, offering basic API returns and a browser UI to run the model. Users will be prompted to create an account to save the model results for access later if they want, and they can generate an energy report summarizing the model created.
+It is these issues, among others, that I aim to address for the wider data science and energy community by hopefully providing energy modeling tools that are 99% as powerful as existing libraries but with 99% less complexity when using them. When completed, WiseWattage will hopefully be a complete package that can be used offline to create Class objects representing a range of energy modeling scenarios.
 
-I am aiming to make the web app a free service indefinitely, with the long term goal being to reduce the costs and time involved with energy modelling and assessments during the procurement phase of projects. I will initially be focusing on domestic scenarios first, but the model will be built with the ability to scale up or down indefinitely. WattSun & Homes will be the first implementation of an online application, which will hopefully offer me invaluable feedback and insight before the program is scaled up to include more complex scenarios.
+My particular personal bias is towards promoting hybrid on and off-grid energy systems, with a focus on optimizing system autonomy and economics in a combined approach. However, the modeling package will be able to be arranged for any system configuration or modeling parameters, whether a system dependent wholly on fossil fuels or renewable technologies.
 
-The model is accessed by creating Class objects which conduct the appropriate modelling when initialized. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as dataframes, with the library being built with a focus on using it offline for personal data analysis.
+## System Schematic
+**Example System Design Hybrid Energy System to be Modeled.**
+![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
+<br>
+
+The calculations behind the modeling are based on SAP methodologies, and documentation and referencing will be added once the project develops and methodologies have been finalized. Since I began experimenting with this project, I have changed the calculation methodology many times, and as such, I am reluctant to start formalizing the academic reporting until these areas are finalized.
+
+Once this project has been completed, I will also hopefully utilize the same codebase to build an online application where users can generate their own solar PV models. This will be completed using Flask, Django, and/or FastAPI, offering basic API returns and a browser UI to run the model. Users will be prompted to create an account to save the model results for access later if they want, and they can generate an energy report summarizing the model created.
+
+I am aiming to make the web app a free service indefinitely, with the long-term goal being to reduce the costs and time involved with energy modeling and assessments during the procurement phase of projects. I will initially be focusing on domestic scenarios first, but the model will be built with the ability to scale up or down indefinitely. WattSun & Homes will be the first implementation of an online application, which will hopefully offer me invaluable feedback and insight before the program is scaled up to include more complex scenarios.
+
+The model is created by initializing Class objects which conduct the appropriate modeling when created. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as DataFrames, with the library being built with a focus on using it offline for personal data analysis.
 <br>
 
 #### **Example of current implementation of model:**
@@ -58,67 +69,9 @@ array_5_model_df = pv_model.models[4]["model_result"]
 combined_model_df = pv_model.combined_model
 ```
 This is an example implementation using basic inputs, however there are many more options for customising the model by adding additional inputs. These can be seen by looking into the specific functions called contained in the solar modelling .py files, and will be further detailed more as the project documentation improves over time.
-
-## System Schematic
-**Example System Design Hybrid Energy System to be Modlled.**
-![alt text](<static/Solar_Model_Technical_Diagram_2.png>)
 <br>
 
-
-###### **Updated (18/02/2024 @ 00:17 GMT+00:00):** 
-<br>
-
-### **The library will be further expanded to include the following features:**
-
-**COMING SOON™ (1 Month):**
-- [ ] Inclusion of low irradiance losses
-- [ ] Inclusion of spectral losses
-- [ ] Inclusion of system/conversion losses
-- [ ] Inclusion of base project financials to estimate cost for solar PV project
-- [ ] Further statistical analysis functions to be added that target desired columns
-- [ ] Full range of charts generated based on comparison of important characteristics
-- [ ] Creation of project class in which all other models and data generated will be stored and accessed
-- [ ] Batch processing and asynchronous functions for jrc_tmy when modelling multiple sides. Current
-API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.02s processing).
-- [ ] Enable multiple iterations of models to be completed across sites for site analysis/comparison & sensitivity analysis.
-- [ ] Creation and integration of SQL database to enable long term storage and easier integration further down the road.
-###### **NOTE: We will not store accurate locations for areas being modelled after weather data has been returned, as this information is no longer required once TMY data is obtained. This is to improve user privacy and security in the event of any data breach. Ensuring and protecting user privacy will remain a core principle of this project as long as I am still involved in it's development.
-<br>
-
-**SHORT TERM GOALS (1-3 Months):**
-- [ ] Financial analysis and project class creation for modelling multiple scenarios.
-- [ ] Estimated annual consumption and hourly load profile integrated into modelling process.
-- [ ] Electricity Grid Connection with variable import/export tariffs for range of tariffs (day-night, economy 7, EV+, etc.).
-- [ ] Integration of battery technologies optimised for range of services (load balancing, increased renewable %, reduced costs, etc.).
-- [ ] Integration of alternative AC power sources such as off-grid generators.
-- [ ] Integration of wind Turbine and other DC energy sources.
-- [ ] System controller for analysis of different energy priorities/scheduling.
-- [ ] Integration of EV battery charge/discharge scheduling.
-- [ ] Integration of EV V2G and/or V2L scenarios (Vehicle to Grid, Vehicle to Load).
-<br>
-
-**MEDIUM TERM GOALS (3-6 Months):**
-- [ ] Energy model optimisation procedure based initially on economics, emissions or renewable penetration %.
-- [ ] Implementation of complex project financials required for even the most in depth procurement plans.
-- [ ] Built-in class methods for sensitivity analysis modelling that integrate with optimisation process.
-- [ ] Development of Django/Flask web app to enable user to easily generate their own models
-- [ ] Creation of user account and auth process to enable long term storage of models
-- [ ] Integration of thermal demand and generation into profiling and modelling
-- [ ] Creation of "mini" model API & apps to also assess other products available in the market (EV's, Insulation, Heat Pumps, Solar Thermal, etc.)
-<br>
-
-**LONG TERM GOALS (6-12 Months):**
-- [ ] Predictive and historical analysis based on user personal demand.
-- [ ] Real-time forecasting and integration into smart meter/IOT appliances.
-- [ ] Lead generation for equipment vendors and installers based on location, price, system, etc.
-- [ ] Lead generation for sales/marketing teams to generate leads ahead of time or inform on the ground data.
-- [ ] Wider app + database with documentation to allow access from external queries through API service without GUI.
-- [ ] Increased market participation for platform users informed by shared data and models.
-- [ ] Exploration of integrating energy modelling/predictive API platform with suppliers to further integrate prosumers engagement in the market.
-<br>
-
-
-## Model Classes
+## Current Model Classes & Methods
 
 **Site**
 ```python
@@ -170,3 +123,56 @@ pv_model.array_model(n)
 pv_model.save_model_csv()
 pv_model.model_summary_html_export(freq, grouped)
 ```
+
+###### **Updated (18/02/2024 @ 00:17 GMT+00:00):** 
+<br>
+
+### **The library will be further expanded to include the following features:**
+
+**COMING SOON™ (1 Month):**
+- [ ] Inclusion of low irradiance losses
+- [ ] Inclusion of spectral losses
+- [ ] Inclusion of system/conversion losses
+- [ ] Inclusion of base project financials to estimate cost for solar PV project
+- [ ] Further statistical analysis functions to be added that target desired columns
+- [ ] Full range of charts generated based on comparison of important characteristics
+- [ ] Creation of project Class in which all other models and data generated will be stored and accessed
+- [ ] Batch processing and asynchronous functions for jrc_tmy when modelling multiple sides. Current
+API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.02s processing).
+- [ ] Enable multiple iterations of models to be completed across sites for site analysis/comparison & sensitivity analysis.
+- [ ] Creation and integration of SQL database to enable long term storage and easier integration further down the road.
+###### **NOTE: We will not store accurate locations for areas being modelled after weather data has been returned, as this information is no longer required once TMY data is obtained. This is to improve user privacy and security in the event of any data breach. Ensuring and protecting user privacy will remain a core principle of this project as long as I am still involved in it's development.
+<br>
+
+**SHORT TERM GOALS (1-3 Months):**
+- [ ] Financial analysis and project Class creation for modelling multiple scenarios.
+- [ ] Estimated annual consumption and hourly load profile integrated into modelling process.
+- [ ] Electricity Grid Connection with variable import/export tariffs for range of tariffs (day-night, economy 7, EV+, etc.).
+- [ ] Integration of battery technologies optimised for range of services (load balancing, increased renewable %, reduced costs, etc.).
+- [ ] Integration of alternative AC power sources such as off-grid generators.
+- [ ] Integration of wind Turbine and other DC energy sources.
+- [ ] System controller for analysis of different energy priorities/scheduling.
+- [ ] Integration of EV battery charge/discharge scheduling.
+- [ ] Integration of EV V2G and/or V2L scenarios (Vehicle to Grid, Vehicle to Load).
+<br>
+
+**MEDIUM TERM GOALS (3-6 Months):**
+- [ ] Energy model optimisation procedure based initially on economics, emissions or renewable penetration %.
+- [ ] Implementation of complex project financials required for even the most in depth procurement plans.
+- [ ] Built-in Class methods for sensitivity analysis modelling that integrate with optimisation process.
+- [ ] Development of Django/Flask web app to enable user to easily generate their own models
+- [ ] Creation of user account and auth process to enable long term storage of models
+- [ ] Integration of thermal demand and generation into profiling and modelling
+- [ ] Creation of "mini" model API & apps to also assess other products available in the market (EV's, Insulation, Heat Pumps, Solar Thermal, etc.)
+<br>
+
+**LONG TERM GOALS (6-12 Months):**
+- [ ] Predictive and historical analysis based on user personal demand.
+- [ ] Real-time forecasting and integration into smart meter/IOT appliances.
+- [ ] Lead generation for equipment vendors and installers based on location, price, system, etc.
+- [ ] Lead generation for sales/marketing teams to generate leads ahead of time or inform on the ground data.
+- [ ] Wider app + database with documentation to allow access from external queries through API service without GUI.
+- [ ] Increased market participation for platform users informed by shared data and models.
+- [ ] Exploration of integrating energy modelling/predictive API platform with suppliers to further integrate prosumers engagement in the market.
+<br>
+
