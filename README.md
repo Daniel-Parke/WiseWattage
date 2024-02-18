@@ -25,7 +25,7 @@ I am aiming to make the web app a free service indefinitely, with the long-term 
 The model is created by initializing Class objects which conduct the appropriate modeling when created. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as DataFrames, with the library being built with a focus on using it offline for personal data analysis.
 <br>
 
-## Import required packages (this will be simplified once project class created):
+### **Import required packages (this will be simplified once project class created):**
 ```python
 # Import required packages, assumes location is root of folder containing downloaded scripts.
 from meteo.Site import Site
@@ -37,6 +37,7 @@ from misc.log_config import configure_logging
 
 <br>
 
+### **Create and run the model:**
 ```python
 # Set up site and obtain TMY data
 site = Site(latitude=54.60452, longitude=-5.92860)
@@ -60,7 +61,7 @@ pv_model = SolarPVModel(site=site, arrays=arrays)
 ```
 <br>
 
-## Accessing Model Results
+### **Accessing model results:**
 
 ```python
 # Example on how to access summary of model results
@@ -81,7 +82,7 @@ combined_model_df = pv_model.combined_model
 This is an example implementation using basic inputs, however there are many more options for customising the model by adding additional inputs. These can be seen by looking into the specific functions called contained in the solar modelling .py files, and will be further detailed more as the project documentation improves over time.
 <br>
 
-## Current Model Classes & Methods
+### **Current Model Classes & Methods:**
 
 **Site**
 ```python
