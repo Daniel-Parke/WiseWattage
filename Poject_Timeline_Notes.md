@@ -3,7 +3,6 @@
 ### **NOTE:** These notes will not have any data entries removed unless it is to improve readability. These are to serve as a time capsule of sorts to record development progress and program improvements over time. 
 
 #### As such, certain class methods or code snippets may become defunct as the project progresses. For specific and up-to-date functionality, please see specific readme files and support documentation for updated methodology on package usage.
-<br>
 
 ###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br><br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. The idea for this project came from my own personal work as a student/energy researcher, and my final project for CS50x where I made a Solar PV calculator. The original code that contains those functions can be seen [here](/old_files/original_energy_modelling.py) if you are interested. <br><br>                                                                                                      If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try! 
 
