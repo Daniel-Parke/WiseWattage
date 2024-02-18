@@ -9,7 +9,7 @@
 ## Patch/Progress Notes:
 
 ### **17/02/2024:**
-- Changed caching process so that `get_jrc_tmy()` is now cached by wrapper function `@cached_func` which can used elsewhere. This was previously done during Site initialisation.
+- Changed caching process so that `get_jrc_tmy()` is now cached by wrapper function `@cached_func` which can be used elsewhere. This was previously done during Site initialisation.
 
 ### **17/02/2024:**
 - Implemented further vectorization of code, reducing pandas DataFrames to numpy arrays before completing model.
