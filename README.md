@@ -25,6 +25,7 @@ I am aiming to make the web app a free service indefinitely, with the long-term 
 The model is created by initializing Class objects which conduct the appropriate modeling when created. The models simulated can then be accessed using `.xxx` notation, with some basic time series data aggregation methods already built in. These models are returned as DataFrames, with the library being built with a focus on using it offline for personal data analysis.
 <br>
 
+## Import required packages (this will be simplified once project class created):
 ```python
 # Import required packages, assumes location is root of folder containing downloaded scripts.
 from meteo.Site import Site
@@ -32,7 +33,11 @@ from solar.SolarPVArray import SolarPVArray
 from solar.SolarPVModel import SolarPVModel
 
 from misc.log_config import configure_logging
+```
 
+<br>
+
+```python
 # Set up site and obtain TMY data
 site = Site(latitude=54.60452, longitude=-5.92860)
 
