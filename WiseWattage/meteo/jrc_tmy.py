@@ -4,10 +4,13 @@ import httpx
 import pandas as pd
 import numpy as np
 
+from misc.util import cached_func
+
 
 def main():
     pass
 
+@cached_func
 def get_jrc_tmy(latitude, longitude, start_year=2005, end_year=2015):
     """Fetches historical weather data for a given site and prepares the dataframe.
     Args:

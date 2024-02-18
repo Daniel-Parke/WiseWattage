@@ -50,4 +50,3 @@ class SolarPVArray:
             f"Solar PV array created: Size: {self.pv_kwp}kW, Pitch: {self.surface_pitch}deg,"
             f" Azimuth: {self.surface_azimuth}deg, Lifespan: {self.lifespan}yrs"
         )
-        logging.info("*******************")

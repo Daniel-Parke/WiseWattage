@@ -59,6 +59,8 @@ class SolarPVModel:
         self.summary_grouped = pv_stats_grouped(self.all_models)
         logging.info("Solar PV model statistical grouping completed.")
         logging.info("*******************")
+        logging.info("Solar PV simulation and modelling completed.")
+        logging.info("*******************")
 
     def model_solar_pv(self):
         """
@@ -104,7 +106,7 @@ class SolarPVModel:
         logging.info("Solar PV model data aggregated.")
         self.combined_model = total_array_results(models)
         logging.info("Solar PV model data summary complete.")
-        logging.info("*******************")
+        logging.info
 
     def save_model_csv(self):
         """

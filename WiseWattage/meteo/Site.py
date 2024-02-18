@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from functools import lru_cache
 import pandas as pd
 import logging
 
@@ -33,15 +32,10 @@ class Site:
         Post-initialization method.
         Fetches TMY data for the site and logs a message.
         """
-        self.tmy_data = get_jrc_tmy_cached(self.latitude, self.longitude)  # Fetch TMY data
-        logging.info(f'TMY data obtained for: {self.latitude}, longitude: {self.longitude}')  # Log message
+        logging.info(f'Fetching TMY data for latitude: {self.latitude}, longitude: {self.longitude}') 
+        # Fetch TMY data
+        self.tmy_data = get_jrc_tmy(self.latitude, self.longitude)
+        logging.info(f'TMY data obtained for: {self.latitude}, longitude: {self.longitude}')
         logging.info("*******************")
 
 
-@lru_cache(maxsize=None)  # Cache TMY results
-def get_jrc_tmy_cached(latitude, longitude):
-    """
-    Fetch TMY data for a given latitude and longitude, with caching.
-    """
-    logging.info(f'Fetching TMY data for latitude: {latitude}, longitude: {longitude}')  # Log message
-    return get_jrc_tmy(latitude, longitude)  # Call function to fetch TMY data
