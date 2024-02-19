@@ -183,3 +183,4 @@ API response time is slowest part of modelling process (0.5s-1.5s API time VS 0.
 - [ ] Exploration of integrating energy modelling/predictive API platform with suppliers to further integrate prosumers engagement in the market.
 <br>
 
+![WiseWattage](https://i.imgur.com/Y7oMz2Y.png)
