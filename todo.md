@@ -9,7 +9,7 @@
 
 ###### **MEDIUM PRIOIRTY**
 - Align SolarPV class variables with minimum details on the worst PV panel technical sheet
-- Cut, Clean & reformat raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source
+- Combine & format raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source
 
 ###### **LOW PRIOIRTY**
 - Move albedo value to array instead of overall site
