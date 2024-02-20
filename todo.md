@@ -6,6 +6,8 @@
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
 - Split SolarPVArray class further (PV Panel --> PV Array --> PV System --> PV Model)
+- Add wind speed and mounting structure into cell temperature calculations
+- Implement low irradiance losses
 
 ###### **MEDIUM PRIOIRTY**
 - Align SolarPV class variables with minimum details on the worst PV panel technical sheet
@@ -13,6 +15,7 @@
 
 ###### **LOW PRIOIRTY**
 - Move albedo value to array instead of overall site
+- Implement one-diode modelling method and compare to current methodology
 
 
 <br><br>

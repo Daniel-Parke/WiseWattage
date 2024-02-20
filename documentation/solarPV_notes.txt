@@ -28,3 +28,90 @@ PV Model:
 	- 
 	- 
 	- 
+
+
+**********************************
+********One Diode Model***********
+
+# Provided parameters from the dataset for the Ablytek 6MN6A270 module
+Isc_ref = 9.34  # Short-circuit current at STC in amperes (I_ph_ref)
+Voc_ref = 38.63  # Open-circuit voltage at STC in volts
+Imp_ref = 8.81  # Current at maximum power point at STC in amperes
+Vmp_ref = 30.72  # Voltage at maximum power point at STC in volts
+Io_ref = 2.51e-10  # Diode reverse saturation current at STC in amperes (I_o_ref)
+Rs = 0.374013  # Series resistance in ohms
+Rsh_ref = 1440.5  # Shunt resistance at STC in ohms
+Ns = 60  # Number of cells in series
+T_NOCT = 47.4  # Nominal Operating Cell Temperature in degrees Celsius
+Gamma = 1.2  # Diode quality factor, assumed
+
+# Constants
+q = 1.602e-19  # Charge of an electron in coulombs
+k = 1.381e-23  # Boltzmann's constant in J/K
+Tc = T_NOCT + 20  # Operating cell temperature in Celsius
+Tc_K = Tc + 273.15  # Convert cell temperature to Kelvin
+
+# Environmental conditions
+G = 1000  # Actual irradiance in W/m^2
+G_ref = 1000  # Reference irradiance in W/m^2
+
+# Adjusted photocurrent (I_ph) calculation under actual conditions
+Iph = (G / G_ref) * Isc_ref  # Photocurrent remains the same since G = G_ref
+
+# Since we are assuming STC conditions and no temperature data variation is given,
+# the reverse saturation current (Io) will use the reference value (Io_ref)
+
+# Define the function to calculate current using the one-diode model
+def calculate_current(V, Iph, Io, Rs, Rsh, Ns, Gamma, Tc_K, q, k):
+    # Iterative calculation for current (I) using Newton-Raphson method
+    # Initial guess for current (I)
+    I = Iph
+    # Convergence criterion and maximum number of iterations
+    epsilon = 1e-6
+    max_iterations = 100
+    for iteration in range(max_iterations):
+        # Calculate the thermal voltage
+        Vt = Ns * Gamma * k * Tc_K / q
+        # Current equation from one-diode model
+        I_new = Iph - Io * (np.exp((V + I * Rs) / Vt) - 1) - (V + I * Rs) / Rsh
+        # Derivative of the current equation with respect to I
+        dI = -Io * Rs / Vt * np.exp((V + I * Rs) / Vt) - 1 / Rsh - Rs / Rsh
+        # Update the current (I) using Newton-Raphson step
+        I = I - (I_new / dI)
+        # Check if the change in I is smaller than the convergence criterion
+        if abs(I_new) < epsilon:
+            break
+    return I
+
+# Calculate the current at maximum power point (Vmp_ref)
+I_mpp = calculate_current(Vmp_ref, Iph, Io_ref, Rs, Rsh_ref, Ns, Gamma, Tc_K, q, k)
+I_mpp
+
+
+**********************************************
+
+The one-diode model is a well-recognized method for modeling the electrical characteristics of photovoltaic (PV) cells and modules. It uses an equivalent circuit with a current source, a diode, a series resistance, and a shunt resistance to describe how a PV cell operates under varying environmental conditions.
+
+Where:
+
+- I is the current supplied by the module [A].
+- V is the voltage at the terminals of the module [V].
+- I_ph is the photocurrent, which is assumed to be proportional to irradiance [A].
+- I_0 is the diode reverse saturation current [A].
+- R_s is the series resistance [Ohm].
+- R_sh is the shunt resistance [Ohm].
+- Gamma is the diode quality factor, theoretically between 1 and 2.
+- q is the charge of the electron = \( 1.602 \times 10^{-19} \) Coulomb.
+- k is the Boltzmann's constant = \( 1.381 \times 10^{-23} \) J/K.
+- N_cs is the number of cells in series.
+- T_c is the effective temperature of the cells [Kelvin].
+
+
+
+Given that the equation is implicit and nonlinear, solving it to get the current I for a given voltage V requires numerical methods, like the Newton-Raphson method. We'll proceed to implement this with the known parameters from your dataset and the given GHI of 1000 W/m², assuming standard conditions.
+
+Using the one-diode model and assuming standard test conditions (STC) with a cell temperature of 25°C (298.15 K) and an irradiance of 1000 W/m², the current at the maximum power point (I_mp) is calculated to be approximately 8.44 A when the voltage is at the maximum power point (V_mp) of 30.72 V.
+
+This calculation is done by solving the one-diode model's implicit equation using the parameters from your dataset, which includes the short-circuit current (I_sc_ref), the open-circuit voltage (V_oc_ref), the series resistance (R_s), and the shunt resistance (R_sh_ref), along with the temperature coefficient of the short-circuit current (mu_ISC) and other constants and factors specific to silicon cells.
+
+Please note that in practice, the actual current would also depend on the actual operating temperature of the cell, which can differ from the STC reference temperature. This model assumes the cell temperature is equal to the STC temperature, which is a common simplification for such calculations. For more accurate real-world predictions, the cell temperature would need to be adjusted based on environmental conditions.

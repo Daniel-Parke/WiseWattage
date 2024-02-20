@@ -91,7 +91,7 @@ def calc_cell_temp_coeff(
     return temp_coeff
 
 
-def iam_losses(aoi, refraction_index=0.1):
+def iam_losses(aoi, refraction_index=0.05):
     """Calculates the incident angle modifier (IAM) losses for solar panels based on the angle of incidence (AOI).
     Parameters:
     - n_day: Day of the year.
@@ -104,6 +104,18 @@ def iam_losses(aoi, refraction_index=0.1):
 
     Returns:
     - iam_factor: IAM loss factor for each time step.
+
+    References
+    ----------
+    .. [1] Souka A.F., Safwat H.H., "Determination of the optimum
+       orientations for the double exposure flat-plate collector and its
+       reflections". Solar Energy vol .10, pp 170-174. 1966.
+
+    .. [2] ASHRAE standard 93-77
+
+    .. [3] PVsyst 7 Help.
+       https://www.pvsyst.com/help/index.html?iam_loss.htm retrieved on
+       January 30, 2024
     """
     iam_factor = 1 - refraction_index * ((1 / cos(radians(aoi))) - 1)
     iam_factor = np.where(aoi > 85, 0, iam_factor)
