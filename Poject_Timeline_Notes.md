@@ -9,6 +9,8 @@
 ## Patch/Progress Notes:
 ### **20/02/2024:**
 - Rearranged class structure to store variables at most relevant stage (I.e. Timestep moved to site so TMY data can be matched accordingly, albedo moved to array to enable sensitivity analysis of variable at same location)
+- Added range of Array temperature calculations to include models from Sandia, Homer, PVSyst and Faiman.
+- Added to documentation and static images, mainly a range of supporting documentation for formulae used.
 
 
 ### **17/02/2024:**

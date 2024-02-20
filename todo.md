@@ -5,17 +5,19 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Split SolarPVArray class further (PV Panel --> PV Array --> PV System --> PV Model)
-- Add wind speed and mounting structure into cell temperature calculations
-- Implement low irradiance losses
+- Split SolarPVArray class further (PV Panel --> PV Array --> PV System --> PV Model).
+- Add new models to calculate diffuse and/or beam radiation (I.e. Simple Sandia Sky Diffuse).
+- Update and expand existing module temperature modelling tools.
+- Add wind speed and mounting structure into cell temperature calculations.
 
 ###### **MEDIUM PRIOIRTY**
-- Align SolarPV class variables with minimum details on the worst PV panel technical sheet
-- Combine & format raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source
+- Align SolarPV class variables with minimum details on the worst PV panel technical sheet, analyse data truly required for range of modelling.
+- Combine & format raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source.
 
 ###### **LOW PRIOIRTY**
-- Move albedo value to array instead of overall site
-- Implement one-diode modelling method and compare to current methodology
+- Move albedo value to array instead of overall site.
+- Implement one-diode modelling method and compare to current methodology.
+- Implement low irradiance and consider spectral losses.
 
 
 <br><br>
