@@ -35,6 +35,7 @@ class SolarPVArray:
     cell_temp_coeff: float = -0.0035
     transmittance_absorptance: float = 0.9
     refraction_index: float = 0.1
+    albedo: float = 0.2
     cell_NOCT: float = 42
     ambient_NOCT: float = 20
     e_poa_NOCT: float = 800
@@ -50,3 +51,5 @@ class SolarPVArray:
             f"Solar PV array created: Size: {self.pv_kwp}kW, Pitch: {self.surface_pitch}deg,"
             f" Azimuth: {self.surface_azimuth}deg, Lifespan: {self.lifespan}yrs"
         )
+
+

@@ -29,8 +29,6 @@ class SolarPVModel:
         combined_model (pd.DataFrame): DataFrame containing combined model results.
         summary (pd.DataFrame): DataFrame containing summary of model results.
         summary_grouped (SummaryGrouped): Object containing grouped summary of model results.
-        albedo (float): Albedo coefficient.
-        timestep (int): Time step for modeling.
     """
 
     site: Site
@@ -40,8 +38,7 @@ class SolarPVModel:
     combined_model: pd.DataFrame = field(default=None, init=False)
     summary: pd.DataFrame = field(default=None, init=False)
     summary_grouped: SummaryGrouped = field(default=None, init=False)
-    albedo: float = 0.2
-    timestep: int = 60
+
 
     def __post_init__(self):
         """
@@ -84,7 +81,7 @@ class SolarPVModel:
                 array.lifespan,
                 array.pv_eol_derating,
                 array.electrical_eff,
-                self.albedo,
+                array.albedo,
                 array.cell_temp_coeff,
                 array.transmittance_absorptance,
                 array.refraction_index,
@@ -93,7 +90,7 @@ class SolarPVModel:
                 array.e_poa_NOCT,
                 array.e_poa_STC,
                 array.cell_temp_STC,
-                self.timestep,
+                self.site.timestep,
                 self.site.tmz_hrs_east,
             )
             models.append({"array_specs": array, "model_result": result})
