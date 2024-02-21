@@ -139,7 +139,6 @@ pv_model.model_summary_html_export(freq, grouped)
 **COMING SOON™ (1 Month):**
 - [ ] Ability to automatically build and simulate models from one single command loading CSV file in root folder. Template and guidance for this will be available online.
 - [ ] Inclusion of low irradiance losses
-- [ ] Inclusion of spectral losses
 - [ ] Inclusion of system/conversion losses
 - [ ] Inclusion of base project financials to estimate cost for solar PV project
 - [ ] Further statistical analysis functions to be added that target desired columns

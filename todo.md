@@ -14,8 +14,7 @@
 - Align SolarPV class variables with minimum details on the worst PV panel technical sheet, analyse data truly required for range of modelling.
 - Combine & format raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source.
 
-###### **LOW PRIOIRTY**
-- Move albedo value to array instead of overall site.
+###### **LOW PRIOIRTY**.
 - Implement one-diode modelling method and compare to current methodology.
 - Implement low irradiance and consider spectral losses.
 
