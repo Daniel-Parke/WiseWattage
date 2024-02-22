@@ -36869,3 +36869,62 @@
 2024-02-22 16:17:12,583 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
 2024-02-22 16:17:12,584 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
 2024-02-22 16:17:12,585 - INFO - *******************
+2024-02-22 16:18:05,612 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 16:18:06,720 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 16:18:07,097 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 16:18:07,098 - INFO - *******************
+2024-02-22 16:18:07,098 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 16:18:07,099 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:07,099 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:07,100 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:07,101 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:07,101 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:07,102 - INFO - *******************
+2024-02-22 16:18:07,102 - INFO - Starting Solar PV model simulations.
+2024-02-22 16:18:07,102 - INFO - *******************
+2024-02-22 16:18:07,103 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:07,111 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:07,118 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:07,125 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:07,133 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:07,140 - INFO - *******************
+2024-02-22 16:18:07,141 - INFO - Solar PV model simulations completed.
+2024-02-22 16:18:07,167 - INFO - Solar PV model data aggregated.
+2024-02-22 16:18:07,174 - INFO - Solar PV model data summary complete.
+2024-02-22 16:18:07,175 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 16:18:07,189 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 16:18:07,190 - INFO - *******************
+2024-02-22 16:18:07,190 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 16:18:07,191 - INFO - *******************
+2024-02-22 16:18:07,206 - INFO - Model for  saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-22 16:18:07,207 - INFO - *******************
+2024-02-22 16:18:07,213 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-22 16:18:07,213 - INFO - *******************
+2024-02-22 16:18:30,807 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 16:18:30,808 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 16:18:30,808 - INFO - *******************
+2024-02-22 16:18:30,817 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 16:18:30,818 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: -90deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:30,819 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: -45deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:30,819 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:30,820 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 45deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:30,821 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2,Azimuth: 90deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.2237%
+2024-02-22 16:18:30,821 - INFO - *******************
+2024-02-22 16:18:30,822 - INFO - Starting Solar PV model simulations.
+2024-02-22 16:18:30,822 - INFO - *******************
+2024-02-22 16:18:30,823 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 16:18:30,830 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 16:18:30,838 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 16:18:30,846 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 16:18:30,854 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 16:18:30,862 - INFO - *******************
+2024-02-22 16:18:30,862 - INFO - Solar PV model simulations completed.
+2024-02-22 16:18:30,889 - INFO - Solar PV model data aggregated.
+2024-02-22 16:18:30,897 - INFO - Solar PV model data summary complete.
+2024-02-22 16:18:30,898 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 16:18:30,917 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 16:18:30,918 - INFO - *******************
+2024-02-22 16:18:30,919 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 16:18:30,920 - INFO - *******************
+2024-02-22 16:18:32,292 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-02-22 16:18:32,296 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
