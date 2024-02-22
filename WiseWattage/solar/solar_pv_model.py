@@ -103,6 +103,25 @@ def iam_losses(aoi, refraction_index=0.05):
     return iam_factor
 
 
+def calc_low_light_losses(pv_kwp, e_poa, k=0.0075, midpoint=25):
+    """
+    Modified logistic function to calculate efficiency based on irradiance,
+    with a minimum efficiency level.
+
+    Parameters:
+    pv_kwp (float): The rated solar PV size (kWp).
+    e_poa (float): The irradiance incident on array (W/m2).
+    k (float): The steepness of the curve.
+    midpoint (float): The irradiance at which the efficiency is at its midpoint.
+
+    Returns:
+    float: The calculated efficiency at the given irradiance.
+    """
+    pv_kwp_min = pv_kwp * 0.6
+    eff = pv_kwp_min + (pv_kwp - pv_kwp_min) / (1 + np.exp(-k * (e_poa - midpoint)))
+    return eff
+
+
 def calc_pv_power(
     pv_kwp,
     e_poa,
@@ -211,8 +230,13 @@ def calc_solar_model(
     pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
     Array_Temp_C = calc_array_temp_sandia(panel_poa_w_m2, Ambient_Temperature_C, wind_speed)
 
+    # Calculate low light efficiency
+    ll_pv_eff = calc_low_light_losses(1, panel_poa_w_m2)
+
     # Assuming calc_pv_power returns two arrays or can be adapted to do so
     pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_w_m2, Ambient_Temperature_C, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
+    ll_pv_gen_kWh = pv_gen_kwh * ll_pv_eff
+    low_light_loss_kWh = pv_gen_kwh - ll_pv_gen_kWh
 
     # Construct a new DataFrame from the calculated arrays
     results = pd.DataFrame({
@@ -237,8 +261,9 @@ def calc_solar_model(
         "ET_HRad_kWm2": et_hrad_w_m2 / 1000,                 # Convert to kW
         "PV_Derated_Eff": pv_derated_eff,
         "Array_Temp_C": Array_Temp_C,
-        "PV_Gen_kWh": pv_gen_kwh,
-        "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh
+        "PV_Gen_kWh": ll_pv_gen_kWh,
+        "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh,
+        "Low_Light_Loss_kWh": low_light_loss_kWh
     })
 
     return results
@@ -259,6 +284,7 @@ def combine_array_results(results):
     columns_to_sum = [
         "PV_Gen_kWh",
         "PV_Thermal_Loss_kWh",
+        "Low_Light_Loss_kWh",
     ]
     
     columns_to_add = ["AOI", "Zenith_Angle"]
@@ -315,6 +341,7 @@ def total_array_results(results):
     columns_to_sum = [
         "PV_Gen_kWh",
         "PV_Thermal_Loss_kWh",
+        "Low_Light_Loss_kWh",
     ]
 
     time_columns = [
@@ -364,6 +391,7 @@ def pv_stats(model_results, arrays):
         "ET_HRad_kWm2_Avg",
         "PV_Gen_kWh_Total",
         "PV_Thermal_Loss_kWh_Total",
+        "Low_Light_Loss_kWh_Total",
         "IAM_Loss_kWm2_Avg",
     ]
 
@@ -394,6 +422,7 @@ def pv_stats(model_results, arrays):
     summary["PV_Gen_kWh_Annual"] = summary["PV_Gen_kWh_Total"]
     summary["PV_Thermal_Loss_kWh_Annual"] = summary["PV_Thermal_Loss_kWh_Total"]
     summary["IAM_Loss_kWm2_Annual"] = summary["IAM_Loss_kWm2_Avg"]
+    summary["Low_Light_Loss_kWh_Annual"] = summary["Low_Light_Loss_kWh_Total"]
     summary["Panel_POA_kWm2_Annual"] = summary["Panel_POA_kWm2_Avg"]
     summary["E_POA_kWm2_Annual"] = summary["E_POA_kWm2_Avg"]
     summary["E_Beam_kWm2_Annual"] = summary["E_Beam_kWm2_Avg"]
@@ -410,6 +439,7 @@ def pv_stats(model_results, arrays):
         "Panel_POA_kWm2_Annual",
         "IAM_Loss_kWm2_Annual",
         "PV_Thermal_Loss_kWh_Annual",
+        "Low_Light_Loss_kWh_Annual",
         "E_Beam_kWm2_Annual",
         "E_Diffuse_kWm2_Annual",
         "E_Ground_kWm2_Annual",
@@ -463,6 +493,7 @@ def pv_stats_grouped(model_results):
         "Panel_POA_kWm2_Avg",
         "IAM_Loss_kWm2_Avg",
         "PV_Thermal_Loss_kWh_Total",
+        "Low_Light_Loss_kWh_Total",
         "E_Beam_kWm2_Avg",
         "E_Diffuse_kWm2_Avg",
         "E_Ground_kWm2_Avg",
