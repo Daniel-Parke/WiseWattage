@@ -34,7 +34,7 @@ class SolarPVPanel:
     cell_NOCT: float = 48
     lifespan: int = 25
     pv_eol_derating: float = 0.88
-    refraction_index: float = 0.05
+    refraction_index: float = 0.1
     I_sc: float = 11.21
     V_oc: float = 48.30
     I_mp: float = 10.70

@@ -148,7 +148,7 @@ class SolarPVModel:
             org_col_grouped = [
                 "PV_Gen_kWh_Total",
                 "Panel_POA_kWm2_Total",
-                "IAM_Loss_kWm2_Total",
+                "IAM_Loss_kWh_Total",
                 "PV_Thermal_Loss_kWh_Total",
                 "Low_Light_Loss_kWh_Total",
                 "ET_HRad_kWm2_Total",
@@ -177,7 +177,7 @@ class SolarPVModel:
                 "PV_Gen_kWh_Lifetime",
                 "E_POA_kWm2_Annual",
                 "Panel_POA_kWm2_Annual",
-                "IAM_Loss_kWm2_Annual",
+                "IAM_Loss_kWh_Annual",
                 "PV_Thermal_Loss_kWh_Annual",
                 "Low_Light_Loss_kWh_Annual",
                 "E_Beam_kWm2_Annual",

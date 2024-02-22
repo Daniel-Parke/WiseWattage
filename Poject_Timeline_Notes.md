@@ -13,7 +13,8 @@ being returned as kWh.
 - Add SolarPVPanel class to further differentiate performance, updated model structure to incorporate this
 - Removed redundant variables no longer being used
 - Finalised Sandia array temperature model, adjusted module dataset to align with parameters required
-- Added wind turbine modelling to short term project scope
+- Added low light loss to solar PV model calculations
+- Updated all loss calculations to return kWh values, and aggregated these during result summaries
 
 ### **21/02/2024:**
 - Refined array temperature calculations, implemented Sandia array temperature model to incorporate
