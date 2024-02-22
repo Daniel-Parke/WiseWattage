@@ -6506,3 +6506,40 @@
 2024-02-22 15:35:06,444 - INFO - *******************
 2024-02-22 15:35:06,444 - INFO - Solar PV simulation and modelling completed.
 2024-02-22 15:35:06,445 - INFO - *******************
+2024-02-22 15:36:06,886 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:36:08,026 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:36:08,406 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:36:08,407 - INFO - *******************
+2024-02-22 15:36:08,407 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:36:08,408 - INFO - Solar PV array created: Size: 3.538kW, Size: 19.9m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.21%
+2024-02-22 15:36:08,409 - INFO - *******************
+2024-02-22 15:36:08,409 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:36:08,410 - INFO - *******************
+2024-02-22 15:36:08,410 - INFO - Simulating model - PV Size: 3.538kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:36:08,419 - INFO - *******************
+2024-02-22 15:36:08,419 - INFO - Solar PV model simulations completed.
+2024-02-22 15:36:08,437 - INFO - Solar PV model data aggregated.
+2024-02-22 15:36:08,442 - INFO - Solar PV model data summary complete.
+2024-02-22 15:36:08,444 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:36:08,459 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:36:08,460 - INFO - *******************
+2024-02-22 15:36:08,460 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:36:08,461 - INFO - *******************
+2024-02-22 15:36:17,063 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:36:17,064 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:36:17,064 - INFO - *******************
+2024-02-22 15:36:17,065 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:36:17,066 - INFO - Solar PV array created: Size: 1kW, Size: Nonem2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.21%
+2024-02-22 15:36:17,066 - INFO - *******************
+2024-02-22 15:36:17,067 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:36:17,067 - INFO - *******************
+2024-02-22 15:36:17,067 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:36:17,076 - INFO - *******************
+2024-02-22 15:36:17,077 - INFO - Solar PV model simulations completed.
+2024-02-22 15:36:17,095 - INFO - Solar PV model data aggregated.
+2024-02-22 15:36:17,100 - INFO - Solar PV model data summary complete.
+2024-02-22 15:36:17,102 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:36:17,117 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:36:17,118 - INFO - *******************
+2024-02-22 15:36:17,118 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:36:17,119 - INFO - *******************
