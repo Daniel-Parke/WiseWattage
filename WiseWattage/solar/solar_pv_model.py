@@ -109,7 +109,7 @@ def calc_pv_power(
     ambient_temp,
     wind_speed,
     pv_derating=1,
-    cell_temp_coeff=-0.0035,
+    cell_temp_coeff=-0.004,
     e_poa_STC=1,
     cell_temp_STC=25,
 ):
@@ -189,7 +189,7 @@ def calc_solar_model(
     Gb_n = data['Gb(n)'].to_numpy()
     Gd_h = data['Gd(h)'].to_numpy()
     G_h = data['G(h)'].to_numpy()
-    T2m = data['T2m'].to_numpy()
+    Ambient_Temperature_C = data['T2m'].to_numpy()
     wind_speed = data["WS10m"]
 
     # Perform calculations using numpy arrays
@@ -209,10 +209,10 @@ def calc_solar_model(
 
     et_hrad_w_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
     pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
-    Array_Temp_C = calc_array_temp_sandia(panel_poa_w_m2, T2m, wind_speed)
+    Array_Temp_C = calc_array_temp_sandia(panel_poa_w_m2, Ambient_Temperature_C, wind_speed)
 
     # Assuming calc_pv_power returns two arrays or can be adapted to do so
-    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_w_m2, T2m, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
+    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_w_m2, Ambient_Temperature_C, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
 
     # Construct a new DataFrame from the calculated arrays
     results = pd.DataFrame({
@@ -220,20 +220,21 @@ def calc_solar_model(
         "Day_of_Year": day_of_year,
         "Week_of_Year": week_of_year,
         "Month_of_Year": month_of_year,
-        "T2m": T2m,
+        "Wind_Speed_ms": wind_speed,
+        "Ambient_Temperature_C": Ambient_Temperature_C,
         # Include all other original columns as necessary
         "Declination_Angle": declination_angle,
         "Solar_Time": solar_time,
         "Hour_Angle": hour_angle,
         "AOI": aoi,
         "Zenith_Angle": zenith_angle,
-        "E_Beam_Wm2": e_beam_w_m2,
-        "E_Diffuse_Wm2": e_diffuse_w_m2,
-        "E_Ground_Wm2": e_ground_w_m2,
-        "E_POA_Wm2": e_poa_w_m2,
-        "Panel_POA_Wm2": panel_poa_w_m2,
-        "IAM_Loss_Wm2": iam_loss_w_m2,
-        "ET_HRad_Wm2": et_hrad_w_m2,
+        "E_Beam_kWm2": e_beam_w_m2 / 1000,                   # Convert to kW
+        "E_Diffuse_kWm2": e_diffuse_w_m2 / 1000,             # Convert to kW
+        "E_Ground_kWm2": e_ground_w_m2 / 1000,               # Convert to kW
+        "E_POA_kWm2": e_poa_w_m2 / 1000,                     # Convert to kW
+        "Panel_POA_kWm2": panel_poa_w_m2 / 1000,             # Convert to kW
+        "IAM_Loss_kWm2": iam_loss_w_m2 / 1000,               # Convert to kW
+        "ET_HRad_kWm2": et_hrad_w_m2 / 1000,                 # Convert to kW
         "PV_Derated_Eff": pv_derated_eff,
         "Array_Temp_C": Array_Temp_C,
         "PV_Gen_kWh": pv_gen_kwh,
@@ -244,33 +245,29 @@ def calc_solar_model(
 
 
 def combine_array_results(results):
-    """Combines results from multiple PV array simulations into a single DataFrame.
-
-    Parameters:
-    - results: List of DataFrames, each representing the output from a single PV array simulation.
-
-    Returns:
-    - Combined DataFrame with metrics from all arrays.
-    """
-    columns_to_combine = [
-        "E_Beam_Wm2",
-        "E_Diffuse_Wm2",
-        "E_Ground_Wm2",
-        "E_POA_Wm2",
-        "Panel_POA_Wm2",
-        "ET_HRad_Wm2",
-        "Array_Temp_C",
+    columns_to_average = [
+        "E_Beam_kWm2",
+        "E_Diffuse_kWm2",
+        "E_Ground_kWm2",
+        "E_POA_kWm2",
+        "Panel_POA_kWm2",
+        "ET_HRad_kWm2",
+        "IAM_Loss_kWm2",
+        "Array_Temp_C"
+    ]
+    
+    columns_to_sum = [
         "PV_Gen_kWh",
         "PV_Thermal_Loss_kWh",
-        "IAM_Loss_Wm2",
     ]
-
+    
     columns_to_add = ["AOI", "Zenith_Angle"]
     time_columns = [
         "Declination_Angle",
         "Solar_Time",
         "Hour_Angle",
-        "T2m",
+        "Ambient_Temperature_C",
+        "Wind_Speed_ms",
         "Hour_of_Day",
         "Day_of_Year",
         "Week_of_Year",
@@ -278,35 +275,26 @@ def combine_array_results(results):
     ]
     array_data = []
 
-    # Extract, label, and append data for each array
     for i, result in enumerate(results, start=1):
-        # Select both types of columns to combine and to add
-        df_to_combine = result["model_result"][columns_to_combine].copy()
+        df_to_combine = result["model_result"][columns_to_average + columns_to_sum].copy()
         df_to_add = result["model_result"][columns_to_add].copy()
 
-        # Rename columns for clarity
-        df_to_combine.columns = [f"{col}_Array_{i}" for col in columns_to_combine]
+        df_to_combine.columns = [f"{col}_Array_{i}" for col in df_to_combine.columns]
         df_to_add.columns = [f"{col}_Array_{i}" for col in columns_to_add]
 
-        # Concatenate horizontally to align the additional columns with the combined ones
         array_df = pd.concat([df_to_combine, df_to_add], axis=1)
         array_data.append(array_df)
 
-    # Concatenate all arrays data side by side
     combined_df = pd.concat(array_data, axis=1)
 
-    # For summing specific columns (excluding Array_Temp_C), and averaging Array_Temp_C
-    for col in columns_to_combine:
-        if col != "Array_Temp_C":
-            combined_df[f"{col}_Total"] = combined_df.filter(
-                regex=f"^{col}_Array_"
-            ).sum(axis=1)
-        else:
-            combined_df["Array_Temp_C_Avg"] = combined_df.filter(
-                regex=f"^{col}_Array_"
-            ).mean(axis=1)
+    for col in columns_to_average:
+        combined_df[f"{col}_Avg"] = combined_df.filter(regex=f"^{col}_Array_").mean(axis=1)
 
-    # Append the time columns from the first result's DataFrame
+    for col in columns_to_sum:
+        combined_df[f"{col}_Total"] = combined_df.filter(regex=f"^{col}_Array_").sum(axis=1)
+
+    combined_df["Array_Temp_C_Avg"] = combined_df.filter(regex="^Array_Temp_C_Array_").mean(axis=1)
+
     for time_col in time_columns:
         combined_df[time_col] = results[0]["model_result"][time_col]
 
@@ -314,32 +302,26 @@ def combine_array_results(results):
 
 
 def total_array_results(results):
-    """Aggregates results from multiple PV array simulations.
-
-    Parameters:
-    - results: List of DataFrames, each representing the output from a single PV array simulation.
-
-    Returns:
-    - DataFrame with aggregated metrics across all arrays.
-    """
-    columns_to_combine = [
-        "E_Beam_Wm2",
-        "E_Diffuse_Wm2",
-        "E_Ground_Wm2",
-        "E_POA_Wm2",
-        "Panel_POA_Wm2",
-        "ET_HRad_Wm2",
-        "Array_Temp_C",
+    columns_to_average = [
+        "E_Beam_kWm2",
+        "E_Diffuse_kWm2",
+        "E_Ground_kWm2",
+        "E_POA_kWm2",
+        "Panel_POA_kWm2",
+        "ET_HRad_kWm2",
+        "IAM_Loss_kWm2",
+    ]
+    
+    columns_to_sum = [
         "PV_Gen_kWh",
         "PV_Thermal_Loss_kWh",
-        "IAM_Loss_Wm2",
     ]
 
     time_columns = [
         "Declination_Angle",
         "Solar_Time",
         "Hour_Angle",
-        "T2m",
+        "Ambient_Temperature_C",
         "Hour_of_Day",
         "Day_of_Year",
         "Week_of_Year",
@@ -348,18 +330,14 @@ def total_array_results(results):
 
     combined_df = pd.DataFrame()
 
-    # Combine specified columns across all arrays, summing or averaging as appropriate
-    for col in columns_to_combine:
-        if col != "Array_Temp_C":
-            combined_df[f"{col}_Total"] = sum(
-                result["model_result"][col] for result in results
-            )
-        else:
-            combined_df["Array_Temp_C_Avg"] = sum(
-                result["model_result"][col] for result in results
-            ) / len(results)
+    for col in columns_to_average:
+        combined_df[f"{col}_Avg"] = sum(result["model_result"][col] for result in results) / len(results)
 
-    # Copy the time columns from the first result's DataFrame without modification
+    for col in columns_to_sum:
+        combined_df[f"{col}_Total"] = sum(result["model_result"][col] for result in results)
+
+    combined_df["Array_Temp_C_Avg"] = sum(result["model_result"]["Array_Temp_C"] for result in results) / len(results)
+
     for time_col in time_columns:
         combined_df[time_col] = results[0]["model_result"][time_col]
 
@@ -378,19 +356,19 @@ def pv_stats(model_results, arrays):
     """
     # Columns to sum
     columns_to_sum = [
-        "E_Beam_Wm2_Total",
-        "E_Diffuse_Wm2_Total",
-        "E_Ground_Wm2_Total",
-        "E_POA_Wm2_Total",
-        "Panel_POA_Wm2_Total",
-        "ET_HRad_Wm2_Total",
+        "E_Beam_kWm2_Avg",
+        "E_Diffuse_kWm2_Avg",
+        "E_Ground_kWm2_Avg",
+        "E_POA_kWm2_Avg",
+        "Panel_POA_kWm2_Avg",
+        "ET_HRad_kWm2_Avg",
         "PV_Gen_kWh_Total",
         "PV_Thermal_Loss_kWh_Total",
-        "IAM_Loss_Wm2_Total",
+        "IAM_Loss_kWm2_Avg",
     ]
 
     # Columns to calculate the mean
-    columns_to_mean = ["Array_Temp_C_Avg", "T2m"]
+    columns_to_mean = ["Array_Temp_C_Avg", "Ambient_Temperature_C"]
 
     # Initialize a dictionary to hold the summary
     summary = {}
@@ -415,29 +393,29 @@ def pv_stats(model_results, arrays):
     summary["PV_Gen_kWh_Lifetime"] = total_gen
     summary["PV_Gen_kWh_Annual"] = summary["PV_Gen_kWh_Total"]
     summary["PV_Thermal_Loss_kWh_Annual"] = summary["PV_Thermal_Loss_kWh_Total"]
-    summary["IAM_Loss_Wm2_Annual"] = summary["IAM_Loss_Wm2_Total"]
-    summary["Panel_POA_Wm2_Annual"] = summary["Panel_POA_Wm2_Total"]
-    summary["E_POA_Wm2_Annual"] = summary["E_POA_Wm2_Total"]
-    summary["E_Beam_Wm2_Annual"] = summary["E_Beam_Wm2_Total"]
-    summary["E_Diffuse_Wm2_Annual"] = summary["E_Diffuse_Wm2_Total"]
-    summary["E_Ground_Wm2_Annual"] = summary["E_Ground_Wm2_Total"]
-    summary["ET_HRad_Wm2_Annual"] = summary["ET_HRad_Wm2_Total"]
-    summary["T2m_Avg"] = summary["T2m"]
+    summary["IAM_Loss_kWm2_Annual"] = summary["IAM_Loss_kWm2_Avg"]
+    summary["Panel_POA_kWm2_Annual"] = summary["Panel_POA_kWm2_Avg"]
+    summary["E_POA_kWm2_Annual"] = summary["E_POA_kWm2_Avg"]
+    summary["E_Beam_kWm2_Annual"] = summary["E_Beam_kWm2_Avg"]
+    summary["E_Diffuse_kWm2_Annual"] = summary["E_Diffuse_kWm2_Avg"]
+    summary["E_Ground_kWm2_Annual"] = summary["E_Ground_kWm2_Avg"]
+    summary["ET_HRad_kWm2_Annual"] = summary["ET_HRad_kWm2_Avg"]
+    summary["Ambient_Temperature_C_Avg"] = summary["Ambient_Temperature_C"]
 
     # Define the desired order of keys
     desired_order = [
         "PV_Gen_kWh_Annual",
         "PV_Gen_kWh_Lifetime",
-        "E_POA_Wm2_Annual",
-        "Panel_POA_Wm2_Annual",
-        "IAM_Loss_Wm2_Annual",
+        "E_POA_kWm2_Annual",
+        "Panel_POA_kWm2_Annual",
+        "IAM_Loss_kWm2_Annual",
         "PV_Thermal_Loss_kWh_Annual",
-        "E_Beam_Wm2_Annual",
-        "E_Diffuse_Wm2_Annual",
-        "E_Ground_Wm2_Annual",
-        "ET_HRad_Wm2_Annual",
+        "E_Beam_kWm2_Annual",
+        "E_Diffuse_kWm2_Annual",
+        "E_Ground_kWm2_Annual",
+        "ET_HRad_kWm2_Annual",
         "Array_Temp_C_Avg",
-        "T2m_Avg",
+        "Ambient_Temperature_C_Avg",
     ]
 
     # Create an OrderedDict with items in the desired order
@@ -481,16 +459,16 @@ def pv_stats_grouped(model_results):
     # Columns to sum and to calculate the mean
     columns_to_sum = [
         "PV_Gen_kWh_Total",
-        "E_POA_Wm2_Total",
-        "Panel_POA_Wm2_Total",
-        "IAM_Loss_Wm2_Total",
+        "E_POA_kWm2_Avg",
+        "Panel_POA_kWm2_Avg",
+        "IAM_Loss_kWm2_Avg",
         "PV_Thermal_Loss_kWh_Total",
-        "E_Beam_Wm2_Total",
-        "E_Diffuse_Wm2_Total",
-        "E_Ground_Wm2_Total",
-        "ET_HRad_Wm2_Total",
+        "E_Beam_kWm2_Avg",
+        "E_Diffuse_kWm2_Avg",
+        "E_Ground_kWm2_Avg",
+        "ET_HRad_kWm2_Avg",
     ]
-    columns_to_mean = ["Array_Temp_C_Avg", "T2m"]
+    columns_to_mean = ["Array_Temp_C_Avg", "Ambient_Temperature_C"]
 
     summaries = {}
 

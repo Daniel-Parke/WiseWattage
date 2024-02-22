@@ -147,15 +147,15 @@ class SolarPVModel:
         try:
             org_col_grouped = [
                 "PV_Gen_kWh_Total",
-                "Panel_POA_Wm2_Total",
-                "IAM_Loss_Wm2_Total",
+                "Panel_POA_kWm2_Total",
+                "IAM_Loss_kWm2_Total",
                 "PV_Thermal_Loss_kWh_Total",
-                "ET_HRad_Wm2_Total",
-                "E_Beam_Wm2_Total",
-                "E_Diffuse_Wm2_Total",
-                "E_Ground_Wm2_Total",
+                "ET_HRad_kWm2_Total",
+                "E_Beam_kWm2_Total",
+                "E_Diffuse_kWm2_Total",
+                "E_Ground_kWm2_Total",
                 "Array_Temp_C_Avg",
-                "T2m",
+                "Ambient_Temperature_C",
             ]
             new_col_grouped = [
                 "PV Generation (kWh)",
@@ -173,16 +173,16 @@ class SolarPVModel:
             org_col_summary = [
                 "PV_Gen_kWh_Annual",
                 "PV_Gen_kWh_Lifetime",
-                "E_POA_Wm2_Annual",
-                "Panel_POA_Wm2_Annual",
-                "IAM_Loss_Wm2_Annual",
+                "E_POA_kWm2_Annual",
+                "Panel_POA_kWm2_Annual",
+                "IAM_Loss_kWm2_Annual",
                 "PV_Thermal_Loss_kWh_Annual",
-                "E_Beam_Wm2_Annual",
-                "E_Diffuse_Wm2_Annual",
-                "E_Ground_Wm2_Annual",
-                "ET_HRad_Wm2_Annual",
+                "E_Beam_kWm2_Annual",
+                "E_Diffuse_kWm2_Annual",
+                "E_Ground_kWm2_Annual",
+                "ET_HRad_kWm2_Annual",
                 "Array_Temp_C_Avg",
-                "T2m_Avg",
+                "Ambient_Temperature_C_Avg",
             ]
             new_col_summary = [
                 "PV Generation (kWh)",
