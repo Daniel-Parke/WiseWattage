@@ -6272,3 +6272,33 @@
 2024-02-22 11:21:55,278 - INFO - *******************
 2024-02-22 11:21:55,285 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
 2024-02-22 11:21:55,286 - INFO - *******************
+2024-02-22 11:40:08,784 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 11:40:09,932 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 11:40:10,563 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 11:40:10,564 - INFO - *******************
+2024-02-22 11:40:10,564 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-22 11:40:10,565 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-22 11:40:10,565 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-22 11:40:10,566 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-22 11:40:10,566 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-22 11:40:10,567 - INFO - *******************
+2024-02-22 11:40:10,567 - INFO - Starting Solar PV model simulations.
+2024-02-22 11:40:10,568 - INFO - *******************
+2024-02-22 11:40:10,568 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 11:40:10,576 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 11:40:10,583 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 11:40:10,591 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 11:40:10,598 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 11:40:10,606 - INFO - *******************
+2024-02-22 11:40:10,607 - INFO - Solar PV model simulations completed.
+2024-02-22 11:40:10,632 - INFO - Solar PV model data aggregated.
+2024-02-22 11:40:10,640 - INFO - Solar PV model data summary complete.
+2024-02-22 11:40:10,642 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 11:40:10,656 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 11:40:10,657 - INFO - *******************
+2024-02-22 11:40:10,657 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 11:40:10,658 - INFO - *******************
+2024-02-22 11:40:10,672 - INFO - Model for  saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-22 11:40:10,673 - INFO - *******************
+2024-02-22 11:40:10,679 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-22 11:40:10,679 - INFO - *******************
