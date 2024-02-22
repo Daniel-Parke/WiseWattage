@@ -6,7 +6,6 @@
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
 - Split SolarPVArray class further (PV Panel --> PV Array --> PV System --> PV Model).
-- Add new models to calculate diffuse and/or beam radiation (I.e. Simple Sandia Sky Diffuse).
 - Update and expand existing module temperature modelling tools.
 - Add wind speed and mounting structure into cell temperature calculations.
 

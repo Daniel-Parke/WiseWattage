@@ -6172,3 +6172,103 @@
 2024-02-22 03:05:13,701 - INFO - *******************
 2024-02-22 03:05:13,708 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
 2024-02-22 03:05:13,708 - INFO - *******************
+2024-02-22 11:13:40,015 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 11:13:41,101 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 11:13:41,895 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 11:13:41,895 - INFO - *******************
+2024-02-22 11:13:41,896 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-22 11:13:41,897 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-22 11:13:41,897 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-22 11:13:41,898 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-22 11:13:41,899 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-22 11:13:41,899 - INFO - *******************
+2024-02-22 11:13:41,900 - INFO - Starting Solar PV model simulations.
+2024-02-22 11:13:41,900 - INFO - *******************
+2024-02-22 11:13:41,901 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 11:13:41,909 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 11:13:41,917 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 11:13:41,924 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 11:13:41,931 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 11:13:41,939 - INFO - *******************
+2024-02-22 11:13:41,939 - INFO - Solar PV model simulations completed.
+2024-02-22 11:13:41,970 - INFO - Solar PV model data aggregated.
+2024-02-22 11:13:41,977 - INFO - Solar PV model data summary complete.
+2024-02-22 11:13:41,979 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 11:13:41,999 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 11:13:41,999 - INFO - *******************
+2024-02-22 11:13:42,000 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 11:13:42,000 - INFO - *******************
+2024-02-22 11:13:42,015 - INFO - Model for  saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-22 11:13:42,015 - INFO - *******************
+2024-02-22 11:13:42,021 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-22 11:13:42,022 - INFO - *******************
+2024-02-22 11:20:53,894 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 11:20:54,783 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 11:20:55,212 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 11:20:55,213 - INFO - *******************
+2024-02-22 11:20:55,213 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-22 11:20:55,214 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-22 11:20:55,214 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-22 11:20:55,215 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-22 11:20:55,216 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-22 11:20:55,216 - INFO - *******************
+2024-02-22 11:20:55,217 - INFO - Starting Solar PV model simulations.
+2024-02-22 11:20:55,217 - INFO - *******************
+2024-02-22 11:20:55,218 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 11:20:55,226 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 11:20:55,233 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 11:20:55,241 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 11:20:55,249 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 11:20:55,257 - INFO - *******************
+2024-02-22 11:20:55,258 - INFO - Solar PV model simulations completed.
+2024-02-22 11:20:55,284 - INFO - Solar PV model data aggregated.
+2024-02-22 11:21:32,455 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 11:21:33,591 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 11:21:34,016 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 11:21:34,017 - INFO - *******************
+2024-02-22 11:21:34,017 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-22 11:21:34,018 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-22 11:21:34,018 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-22 11:21:34,019 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-22 11:21:34,019 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-22 11:21:34,019 - INFO - *******************
+2024-02-22 11:21:34,021 - INFO - Starting Solar PV model simulations.
+2024-02-22 11:21:34,021 - INFO - *******************
+2024-02-22 11:21:34,022 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 11:21:34,029 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 11:21:34,038 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 11:21:34,046 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 11:21:34,054 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 11:21:34,061 - INFO - *******************
+2024-02-22 11:21:34,061 - INFO - Solar PV model simulations completed.
+2024-02-22 11:21:34,089 - INFO - Solar PV model data aggregated.
+2024-02-22 11:21:53,868 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 11:21:54,769 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 11:21:55,153 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 11:21:55,154 - INFO - *******************
+2024-02-22 11:21:55,155 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -90deg, Lifespan: 25yrs
+2024-02-22 11:21:55,155 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: -45deg, Lifespan: 25yrs
+2024-02-22 11:21:55,156 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs
+2024-02-22 11:21:55,157 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 45deg, Lifespan: 25yrs
+2024-02-22 11:21:55,157 - INFO - Solar PV array created: Size: 1kW, Pitch: 35deg, Azimuth: 90deg, Lifespan: 25yrs
+2024-02-22 11:21:55,158 - INFO - *******************
+2024-02-22 11:21:55,159 - INFO - Starting Solar PV model simulations.
+2024-02-22 11:21:55,159 - INFO - *******************
+2024-02-22 11:21:55,159 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-22 11:21:55,168 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-22 11:21:55,176 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 11:21:55,183 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-22 11:21:55,191 - INFO - Simulating model - PV Size: 1kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-22 11:21:55,199 - INFO - *******************
+2024-02-22 11:21:55,200 - INFO - Solar PV model simulations completed.
+2024-02-22 11:21:55,228 - INFO - Solar PV model data aggregated.
+2024-02-22 11:21:55,235 - INFO - Solar PV model data summary complete.
+2024-02-22 11:21:55,237 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 11:21:55,251 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 11:21:55,251 - INFO - *******************
+2024-02-22 11:21:55,252 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 11:21:55,252 - INFO - *******************
+2024-02-22 11:21:55,277 - INFO - Model for  saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-22 11:21:55,278 - INFO - *******************
+2024-02-22 11:21:55,285 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-22 11:21:55,286 - INFO - *******************

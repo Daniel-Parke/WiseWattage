@@ -178,7 +178,7 @@ def calc_et_horizontal_radiation(
         timestep (int, optional): Duration of the timestep in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
     Returns:
-        float: Extraterrestrial horizontal radiation in kW/m^2 for the timestep.
+        float: Extraterrestrial horizontal radiation in W/m^2 for the timestep.
     """
     civil_time_2 = civil_time + (timestep / 60)
 
@@ -208,7 +208,7 @@ def calc_et_horizontal_radiation(
         )
     ) * (60 / timestep)
 
-    et_horizontal_radiation = et_horizontal_radiation / 1000  # Convert to kW/m^2
+    et_horizontal_radiation = et_horizontal_radiation
     et_horizontal_radiation = np.where(
         et_horizontal_radiation > 0, et_horizontal_radiation, 0
     )  # Ensure non-negative values
@@ -239,7 +239,7 @@ def calc_beam_radiation(
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
     Returns:
-        float: Beam irradiance on the surface in kW/m^2.
+        float: Beam irradiance on the surface in W/m^2.
     """
     aoi_rad = radians(
         calc_aoi(
@@ -255,7 +255,7 @@ def calc_beam_radiation(
     )
 
     # Calculate beam irradiance and ensure it is not calculated for angles > 85 degrees
-    e_beam = dni * cos(aoi_rad) / 1000  # Convert to kW/m^2
+    e_beam = dni * cos(aoi_rad)
     e_beam = np.where(degrees(aoi_rad) > 85, 0, e_beam)
     e_beam = np.where(e_beam < 0, 0, e_beam)  # Ensure non-negative values
 
@@ -285,7 +285,7 @@ def calc_diffuse_radiation(
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
     Returns:
-        float: Diffuse irradiance on the surface in kW/m^2.
+        float: Diffuse irradiance on the surface in W/m^2.
     """
     surface_pitch_rad = radians(surface_pitch)
     zenith_rad = radians(
@@ -298,7 +298,7 @@ def calc_diffuse_radiation(
     e_diffuse = np.where(
         degrees(zenith_rad) > 85, 0, e_diffuse
     )  # Ensure irradiance is not calculated for zenith angles > 85 degrees
-    return e_diffuse / 1000  # Convert to kW/m^2
+    return e_diffuse
 
 
 def calc_ground_radiation(ghi, surface_pitch, albedo=0.2):
@@ -308,11 +308,11 @@ def calc_ground_radiation(ghi, surface_pitch, albedo=0.2):
         surface_pitch (float): Tilt angle of the surface from horizontal.
         albedo (float, optional): Ground reflectance factor. Defaults to 0.2.
     Returns:
-        float: Ground-reflected irradiance on the surface in kW/m^2.
+        float: Ground-reflected irradiance on the surface in W/m^2.
     """
     surface_pitch_rad = radians(surface_pitch)
     e_ground = ghi * albedo * ((1 - cos(surface_pitch_rad)) / 2)
-    return e_ground / 1000  # Convert to kW/m^2
+    return e_ground
 
 
 def calc_poa_radiation(
@@ -344,7 +344,7 @@ def calc_poa_radiation(
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
     Returns:
-        float: Total irradiance on the plane of array in kW/m^2.
+        float: Total irradiance on the plane of array in W/m^2.
     """
     # Beam Radiation Calculation
     e_beam = calc_beam_radiation(
@@ -377,6 +377,6 @@ def calc_poa_radiation(
 
     e_poa = (
         e_beam + e_diffuse + e_ground
-    ) / 1000  # Sum components and convert to kW/m^2
+    )
 
     return e_poa
