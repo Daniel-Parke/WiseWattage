@@ -209,7 +209,7 @@ def calc_solar_model(
     Gd_h = data['Gd(h)'].to_numpy()
     G_h = data['G(h)'].to_numpy()
     Ambient_Temperature_C = data['T2m'].to_numpy()
-    wind_speed = data["WS10m"]
+    wind_speed = data["WS10m"].to_numpy()
 
     # Perform calculations using numpy arrays
     declination_angle = sr.calc_declination(day_of_year)
@@ -224,7 +224,7 @@ def calc_solar_model(
 
     # Assuming iam_losses function exists and can operate on numpy arrays
     panel_poa_w_m2 = e_beam_w_m2 * iam_losses(aoi, refraction_index) + e_diffuse_w_m2 + e_ground_w_m2
-    iam_loss_perc = np.divide((e_poa_w_m2 - panel_poa_w_m2), e_poa_w_m2)
+    iam_loss_perc = np.divide((e_poa_w_m2 - panel_poa_w_m2), e_poa_w_m2, where=e_poa_w_m2!=0)
 
     et_hrad_w_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
     pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays

@@ -5,9 +5,7 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Add wind speed into data returned to dataframes
-- Align SolarPV class variables with minimum details on the worst PV panel technical sheet, analyse data truly required for range of modelling.
-- Implement low irradiance losses
+-
 
 ###### **MEDIUM PRIOIRTY**
 - Complete and finalise wind turbine modelling & datasets
@@ -25,7 +23,7 @@
 #### **CURRENTLY BROKEN, NEEDS FIXED:**
 ###### **HIGH PRIOIRTY**
 - Update consistency in column names across different areas data is returned
-- Update Radiation returned values to reflect m2 value, currently it is sum of all array area
+
 
 
 ###### **MEDIUM PRIOIRTY**
