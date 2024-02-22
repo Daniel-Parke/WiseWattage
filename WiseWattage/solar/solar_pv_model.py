@@ -3,7 +3,7 @@ from collections import OrderedDict
 
 import pandas as pd
 import numpy as np
-from numpy import cos, radians
+from numpy import cos, radians, exp
 
 import solar.solar_radiation as sr
 
@@ -32,61 +32,42 @@ def calc_pv_derating(n_day, civil_time, pv_eol_derating, lifespan, year=1):
     return pv_derating
 
 
-def calc_cell_temp(
-    e_poa,
-    ambient_temp,
-    cell_temp_coeff=-0.0035,
-    electrical_eff=0.21,
-    cell_NOCT=42,
-    ambient_NOCT=20,
-    e_poa_NOCT=800,
-    cell_temp_STC=25,
-    transmittance_absorptance=0.9,
-):
-    """Calculates the cell temperature of a PV panel.
-
-    Parameters:
-    - e_poa: Plane of array irradiance in kW/m^2.
-    - ambient_temp: Ambient temperature in degrees Celsius.
-    - cell_temp_coeff: Temperature coefficient of the PV cell.
-    - electrical_eff: Electrical efficiency of the PV panel.
-    - cell_NOCT, ambient_NOCT: Nominal operating cell temperature and the corresponding ambient temperature.
-    - e_poa_NOCT: Irradiance at NOCT conditions in W/m^2.
-    - cell_temp_STC: Cell temperature at standard test conditions in degrees Celsius.
-    - transmittance_absorptance: Transmittance and absorptance product of the PV panel.
-
-    Returns:
-    - Cell temperature of the PV panel.
+def calc_array_temp_sandia(e_poa: float, ambient_temp: float, wind_speed: float, 
+                           a: float = -3.47, b: float = -0.0594) -> float:
     """
-    temp_factor = (cell_NOCT - ambient_NOCT) * ((e_poa * 1000) / e_poa_NOCT)
-    numerator = ambient_temp + temp_factor * (
-        1
-        - (electrical_eff * (1 - cell_temp_coeff * cell_temp_STC))
-        / transmittance_absorptance
-    )
-    denominator = 1 + temp_factor * (
-        cell_temp_coeff * electrical_eff / transmittance_absorptance
-    )
+    Calculate the temperature of a photovoltaic (PV) array based on the Sandia method.
+    
+    Parameters:
+    - e_poa (float): Plane of array irradiance in kW/m^2. Represents the solar irradiance incident on the PV array.
+    - ambient_temp (float): Ambient temperature in degrees Celsius.
+    - wind_speed (float): Wind speed in m/s at the site of the PV array.
+    - a (float): Coefficient a in the exponential model, defaulting to -3.47.
+    - b (float): Coefficient b in the exponential model, defaulting to -0.0594.
+    
+    Returns:
+    - float: Estimated temperature of the PV array in degrees Celsius.
+    """
+    array_temp = e_poa * 1000 * exp(a + b * wind_speed) + ambient_temp
+    return array_temp
 
-    return numerator / denominator
 
-
-def calc_cell_temp_coeff(
-    e_poa, ambient_temp, cell_temp_coeff=-0.0035, cell_temp_STC=25
-):
+def calc_cell_temp_coeff(e_poa, ambient_temp, wind_speed,
+                         cell_temp_coeff=-0.0035, cell_temp_STC=25):
     """Adjusts the temperature coefficient based on current conditions.
 
     Parameters:
     - e_poa: Plane of array irradiance in kW/m^2.
     - ambient_temp: Ambient temperature in degrees Celsius.
+    - wind_speed: Wind speed in m/s measured at site.
     - cell_temp_coeff: Temperature coefficient of the PV cell.
     - cell_temp_STC: Cell temperature at standard test conditions in degrees Celsius.
 
     Returns:
     - Adjusted temperature coefficient.
     """
-    cell_temp = calc_cell_temp(e_poa, ambient_temp, cell_temp_coeff)
-    temp_coeff = np.minimum(1, (1 + cell_temp_coeff * (cell_temp - cell_temp_STC)))
+    array_temp = calc_array_temp_sandia(e_poa, ambient_temp, wind_speed)
+    temp_coeff = np.minimum(1, (1 + cell_temp_coeff * (array_temp - cell_temp_STC)))
+    print(temp_coeff)
 
     return temp_coeff
 
@@ -127,6 +108,7 @@ def calc_pv_power(
     pv_kwp,
     e_poa,
     ambient_temp,
+    wind_speed,
     pv_derating=1,
     cell_temp_coeff=-0.0035,
     e_poa_STC=1,
@@ -147,7 +129,7 @@ def calc_pv_power(
     - Tuple of (pv_power, temp_diff), where pv_power is the power output in W, and temp_diff is the temperature difference effect on power output.
     """
     temp_coeff = calc_cell_temp_coeff(
-        e_poa, ambient_temp, cell_temp_coeff, cell_temp_STC
+        e_poa, ambient_temp, wind_speed, cell_temp_coeff, cell_temp_STC
     )
 
     pv_power = (pv_kwp * pv_derating * (e_poa / e_poa_STC) * temp_coeff) * 1000
@@ -165,14 +147,9 @@ def calc_solar_model(
     surface_azimuth=0,
     lifespan=25,
     pv_derating=0.88,
-    electrical_eff=0.21,
     albedo=0.2,
     cell_temp_coeff=-0.0035,
-    transmittance_absorptance=0.9,
     refraction_index=0.1,
-    cell_NOCT=42,
-    ambient_NOCT=20,
-    e_poa_NOCT=800,
     e_poa_STC=1000,
     cell_temp_STC=25,
     timestep=60,
@@ -214,6 +191,7 @@ def calc_solar_model(
     Gd_h = data['Gd(h)'].to_numpy()
     G_h = data['G(h)'].to_numpy()
     T2m = data['T2m'].to_numpy()
+    wind_speed = data["WS10m"]
 
     # Perform calculations using numpy arrays
     declination_angle = sr.calc_declination(day_of_year)
@@ -232,10 +210,10 @@ def calc_solar_model(
 
     et_hrad_kw_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
     pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
-    cell_temp_c = calc_cell_temp(panel_poa_kw_m2, T2m, cell_temp_coeff, electrical_eff, cell_NOCT, ambient_NOCT, e_poa_NOCT, cell_temp_STC, transmittance_absorptance)
+    cell_temp_c = calc_array_temp_sandia(panel_poa_kw_m2, T2m, wind_speed)
 
     # Assuming calc_pv_power returns two arrays or can be adapted to do so
-    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_kw_m2, T2m, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
+    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_kw_m2, T2m, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
 
     # Construct a new DataFrame from the calculated arrays
     results = pd.DataFrame({
