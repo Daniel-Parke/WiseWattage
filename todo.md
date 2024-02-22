@@ -5,23 +5,27 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Split SolarPVArray class further (PV Panel --> PV Array --> PV System --> PV Model).
-- Update and expand existing module temperature modelling tools.
-- Add wind speed and mounting structure into cell temperature calculations.
+- Add wind speed into data returned to dataframes
+- Align SolarPV class variables with minimum details on the worst PV panel technical sheet, analyse data truly required for range of modelling.
+- Implement low irradiance losses
 
 ###### **MEDIUM PRIOIRTY**
-- Align SolarPV class variables with minimum details on the worst PV panel technical sheet, analyse data truly required for range of modelling.
-- Combine & format raw module data for use in model. Ideally one csv sheet for each module type (solar, battery, etc.) regardless of data source.
+- Complete and finalise wind turbine modelling & datasets
+- Update documentation for all formulae and methods used
+- Formula variable type declarations to be added to functions
 
 ###### **LOW PRIOIRTY**.
 - Implement one-diode modelling method and compare to current methodology.
-- Implement low irradiance and consider spectral losses.
+- Consider spectral losses.
+- Implement full physical solar PV model, more to benchmark performance than model timeseries results.
 
 
 <br><br>
 
 #### **CURRENTLY BROKEN, NEEDS FIXED:**
 ###### **HIGH PRIOIRTY**
+- Update consistency in column names across different areas data is returned
+- Update Radiation returned values to reflect m2 value, currently it is sum of all array area
 
 
 ###### **MEDIUM PRIOIRTY**
