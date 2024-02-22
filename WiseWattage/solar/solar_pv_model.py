@@ -403,8 +403,8 @@ def pv_stats(model_results, arrays):
     for col in columns_to_mean:
         summary[col] = model_results[col].mean()
 
-    lifespan = arrays[0].lifespan
-    eol_derating = arrays[0].pv_eol_derating
+    lifespan = arrays[0].pv_panel.lifespan
+    eol_derating = arrays[0].pv_panel.pv_eol_derating
     yearly_derating = (1 - eol_derating) / lifespan
     total_gen = 0
 

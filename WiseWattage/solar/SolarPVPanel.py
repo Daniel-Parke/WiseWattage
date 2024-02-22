@@ -15,6 +15,7 @@ class SolarPVPanel:
         cell_NOCT (float): Nominal Operating Cell Temperature (NOCT) of the solar cells.
         lifespan (float): Lifespan of the array in years.
         pv_eol_derating (float): End-of-life derating factor.
+        refraction_index (float): Refraction index of the solar cells.
         I_sc (float): Short-circuit current of the solar cells.
         V_oc (float): Open-circuit voltage of the solar cells.
         I_mp (float): Maximum power current of the solar cells.
@@ -31,8 +32,9 @@ class SolarPVPanel:
     eff: float = 0.2237
     cell_temp_coeff: float = -0.004
     cell_NOCT: float = 48
-    lifespan: float = 25
+    lifespan: int = 25
     pv_eol_derating: float = 0.88
+    refraction_index: float = 0.05
     I_sc: float = 11.21
     V_oc: float = 48.30
     I_mp: float = 10.70
@@ -41,6 +43,8 @@ class SolarPVPanel:
     bifacial: bool = False
     length_m: float = None
     width_m: float = None
+    e_poa_STC: float = 1000
+    cell_temp_STC: float = 25
 
     def __post_init__(self):
         """
