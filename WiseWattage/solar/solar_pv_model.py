@@ -148,7 +148,7 @@ def calc_solar_model(
     pv_derating=0.88,
     albedo=0.2,
     cell_temp_coeff=-0.0035,
-    refraction_index=0.1,
+    refraction_index=0.05,
     e_poa_STC=1000,
     cell_temp_STC=25,
     timestep=60,

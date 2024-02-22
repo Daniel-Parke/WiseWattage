@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Dict
+from typing import List, Dict, Union
 import logging
 import os
 import pandas as pd
@@ -32,7 +32,7 @@ class SolarPVModel:
     """
 
     site: Site
-    arrays: List[SolarPVArray]
+    arrays: Union[SolarPVArray, List[SolarPVArray]]
     models: List[Dict] = field(default_factory=list)
     all_models: pd.DataFrame = field(default=None, init=False)
     combined_model: pd.DataFrame = field(default=None, init=False)
@@ -45,6 +45,10 @@ class SolarPVModel:
         Post-initialization method.
         Runs model_solar_pv method to perform solar PV modeling and generate summaries.
         """
+        # Normalise self.arrays to be list if not already
+        if not isinstance(self.arrays, list):
+            self.arrays = [self.arrays]
+
         # Run solar PV model
         self.model_solar_pv()
 

@@ -6302,3 +6302,207 @@
 2024-02-22 11:40:10,673 - INFO - *******************
 2024-02-22 11:40:10,679 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
 2024-02-22 11:40:10,679 - INFO - *******************
+2024-02-22 15:12:01,477 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:12:02,521 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:12:03,256 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:12:03,256 - INFO - *******************
+2024-02-22 15:12:03,257 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:12:24,552 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:12:24,553 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:12:24,553 - INFO - *******************
+2024-02-22 15:12:24,554 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:12:28,986 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:12:30,034 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:12:30,469 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:12:30,469 - INFO - *******************
+2024-02-22 15:12:30,470 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:15:21,092 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:15:22,052 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:15:22,438 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:15:22,439 - INFO - *******************
+2024-02-22 15:15:22,439 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:15:45,985 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:15:47,148 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:15:47,534 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:15:47,535 - INFO - *******************
+2024-02-22 15:15:47,535 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:17:58,822 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:17:59,880 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:18:00,264 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:18:00,265 - INFO - *******************
+2024-02-22 15:18:00,265 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:19:09,331 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:19:10,333 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:19:10,679 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:19:10,680 - INFO - *******************
+2024-02-22 15:19:10,681 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:20:11,364 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:20:12,295 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:20:12,683 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:20:12,683 - INFO - *******************
+2024-02-22 15:20:12,684 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:20:12,685 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25.0yrs, Size: 1.99m2, Efficiencny: 0.2237%
+2024-02-22 15:20:12,685 - INFO - *******************
+2024-02-22 15:20:12,686 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:20:12,686 - INFO - *******************
+2024-02-22 15:21:35,826 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:21:36,858 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:21:37,200 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:21:37,200 - INFO - *******************
+2024-02-22 15:21:37,201 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:21:37,201 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25.0yrs, Size: 1.99m2, Efficiencny: 0.2237%
+2024-02-22 15:21:37,202 - INFO - *******************
+2024-02-22 15:21:37,202 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:21:37,202 - INFO - *******************
+2024-02-22 15:22:02,376 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:22:03,488 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:22:03,828 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:22:03,829 - INFO - *******************
+2024-02-22 15:22:03,829 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:22:03,830 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25.0yrs, Size: 1.99m2, Efficiencny: 0.2237%
+2024-02-22 15:22:03,830 - INFO - *******************
+2024-02-22 15:22:03,831 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:22:03,831 - INFO - *******************
+2024-02-22 15:24:47,536 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:24:48,699 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:24:49,056 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:24:49,057 - INFO - *******************
+2024-02-22 15:24:49,057 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:24:49,058 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25.0yrs, Size: 1.99m2, Efficiencny: 0.2237%
+2024-02-22 15:24:49,058 - INFO - *******************
+2024-02-22 15:24:49,059 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:24:49,060 - INFO - *******************
+2024-02-22 15:28:28,111 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:28:29,151 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:28:29,541 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:28:29,541 - INFO - *******************
+2024-02-22 15:28:29,542 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:29:35,024 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:29:36,041 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:29:36,427 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:29:36,428 - INFO - *******************
+2024-02-22 15:29:36,429 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:29:36,429 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 1.99m2, Efficiency: 0.21%
+2024-02-22 15:29:36,430 - INFO - *******************
+2024-02-22 15:29:36,431 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:29:36,431 - INFO - *******************
+2024-02-22 15:30:48,213 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:30:49,128 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:30:49,473 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:30:49,473 - INFO - *******************
+2024-02-22 15:30:49,474 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:30:49,474 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 1.99m2, Efficiency: 0.21%
+2024-02-22 15:30:49,475 - INFO - *******************
+2024-02-22 15:30:49,476 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:30:49,476 - INFO - *******************
+2024-02-22 15:32:20,854 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:32:20,854 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:32:20,855 - INFO - *******************
+2024-02-22 15:32:20,855 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:32:20,856 - INFO - Solar PV array created: Size: 0.3538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 1.99m2, Efficiency: 0.21%
+2024-02-22 15:32:20,857 - INFO - *******************
+2024-02-22 15:32:20,857 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:32:20,858 - INFO - *******************
+2024-02-22 15:32:20,858 - INFO - Simulating model - PV Size: 0.3538kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:32:20,868 - INFO - *******************
+2024-02-22 15:32:20,869 - INFO - Solar PV model simulations completed.
+2024-02-22 15:32:20,888 - INFO - Solar PV model data aggregated.
+2024-02-22 15:32:20,893 - INFO - Solar PV model data summary complete.
+2024-02-22 15:32:20,895 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:32:20,913 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:32:20,914 - INFO - *******************
+2024-02-22 15:32:20,915 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:32:20,916 - INFO - *******************
+2024-02-22 15:32:51,911 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:32:51,912 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:32:51,912 - INFO - *******************
+2024-02-22 15:32:51,912 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:32:51,913 - INFO - Solar PV array created: Size: 3.5380000000000003kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 19.9m2, Efficiency: 0.21%
+2024-02-22 15:32:51,913 - INFO - *******************
+2024-02-22 15:32:51,914 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:32:51,914 - INFO - *******************
+2024-02-22 15:32:51,914 - INFO - Simulating model - PV Size: 3.5380000000000003kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:32:51,923 - INFO - *******************
+2024-02-22 15:32:51,924 - INFO - Solar PV model simulations completed.
+2024-02-22 15:32:51,940 - INFO - Solar PV model data aggregated.
+2024-02-22 15:32:51,945 - INFO - Solar PV model data summary complete.
+2024-02-22 15:32:51,947 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:32:51,962 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:32:51,963 - INFO - *******************
+2024-02-22 15:32:51,963 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:32:51,964 - INFO - *******************
+2024-02-22 15:33:22,073 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:33:22,074 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:33:22,074 - INFO - *******************
+2024-02-22 15:33:22,075 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:33:22,075 - INFO - Solar PV array created: Size: 3.5380000000000003kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 19.9m2, Efficiency: 0.21%
+2024-02-22 15:33:22,076 - INFO - *******************
+2024-02-22 15:33:22,076 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:33:22,077 - INFO - *******************
+2024-02-22 15:33:22,077 - INFO - Simulating model - PV Size: 3.5380000000000003kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:33:22,085 - INFO - *******************
+2024-02-22 15:33:22,086 - INFO - Solar PV model simulations completed.
+2024-02-22 15:33:22,101 - INFO - Solar PV model data aggregated.
+2024-02-22 15:33:22,106 - INFO - Solar PV model data summary complete.
+2024-02-22 15:33:22,108 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:33:22,122 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:33:22,123 - INFO - *******************
+2024-02-22 15:33:22,124 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:33:22,124 - INFO - *******************
+2024-02-22 15:33:25,660 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:33:26,666 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:33:27,057 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:33:27,058 - INFO - *******************
+2024-02-22 15:33:27,058 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:33:27,059 - INFO - Solar PV array created: Size: 3.538kW, Pitch: 35deg, Azimuth: 0deg, Lifespan: 25yrs, Size: 19.9m2, Efficiency: 0.21%
+2024-02-22 15:33:27,059 - INFO - *******************
+2024-02-22 15:33:27,060 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:33:27,060 - INFO - *******************
+2024-02-22 15:33:27,061 - INFO - Simulating model - PV Size: 3.538kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:33:27,070 - INFO - *******************
+2024-02-22 15:33:27,070 - INFO - Solar PV model simulations completed.
+2024-02-22 15:33:27,088 - INFO - Solar PV model data aggregated.
+2024-02-22 15:33:27,092 - INFO - Solar PV model data summary complete.
+2024-02-22 15:33:27,094 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:33:27,108 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:33:27,109 - INFO - *******************
+2024-02-22 15:33:27,110 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:33:27,110 - INFO - *******************
+2024-02-22 15:33:59,434 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:34:00,435 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:34:00,786 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:34:00,787 - INFO - *******************
+2024-02-22 15:34:00,787 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:34:00,788 - INFO - Solar PV array created: Size: 3.538kW, Size: 19.9m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.21%
+2024-02-22 15:34:00,788 - INFO - *******************
+2024-02-22 15:34:00,789 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:34:00,789 - INFO - *******************
+2024-02-22 15:34:00,790 - INFO - Simulating model - PV Size: 3.538kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:34:00,798 - INFO - *******************
+2024-02-22 15:34:00,798 - INFO - Solar PV model simulations completed.
+2024-02-22 15:34:00,815 - INFO - Solar PV model data aggregated.
+2024-02-22 15:34:00,820 - INFO - Solar PV model data summary complete.
+2024-02-22 15:34:00,822 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:34:00,836 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:34:00,836 - INFO - *******************
+2024-02-22 15:34:00,837 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:34:00,837 - INFO - *******************
+2024-02-22 15:35:04,961 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-22 15:35:05,994 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-22 15:35:06,379 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-22 15:35:06,380 - INFO - *******************
+2024-02-22 15:35:06,380 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 0.2237%, Lifespan: 25yrs
+2024-02-22 15:35:06,381 - INFO - Solar PV array created: Size: 3.538kW, Size: 19.9m2,Azimuth: 0deg, Lifespan: 25yrs,Pitch: 35deg, Efficiency: 0.21%
+2024-02-22 15:35:06,382 - INFO - *******************
+2024-02-22 15:35:06,382 - INFO - Starting Solar PV model simulations.
+2024-02-22 15:35:06,382 - INFO - *******************
+2024-02-22 15:35:06,383 - INFO - Simulating model - PV Size: 3.538kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-22 15:35:06,395 - INFO - *******************
+2024-02-22 15:35:06,396 - INFO - Solar PV model simulations completed.
+2024-02-22 15:35:06,419 - INFO - Solar PV model data aggregated.
+2024-02-22 15:35:06,425 - INFO - Solar PV model data summary complete.
+2024-02-22 15:35:06,427 - INFO - Solar PV model statistical analysis completed.
+2024-02-22 15:35:06,443 - INFO - Solar PV model statistical grouping completed.
+2024-02-22 15:35:06,444 - INFO - *******************
+2024-02-22 15:35:06,444 - INFO - Solar PV simulation and modelling completed.
+2024-02-22 15:35:06,445 - INFO - *******************

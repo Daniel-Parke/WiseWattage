@@ -3,7 +3,7 @@ import logging
 
 
 @dataclass
-class SolarPVArray:
+class SolarPVPanel:
     """
     A class representing a Solar PV Panel.
 
@@ -39,10 +39,8 @@ class SolarPVArray:
     V_mp: float = 41.60
     material: str = "Mono-crystalline"
     bifacial: bool = False
-    ambient_NOCT: float = 20
-    e_poa_NOCT: float = 800
-    e_poa_STC: float = 1000
-    cell_temp_STC: float = 25
+    length_m: float = None
+    width_m: float = None
 
     def __post_init__(self):
         """

@@ -10,6 +10,8 @@
 ### **22/02/2024:**
 - Updated base units to calculate radiation values in W, with only PV Gen, Thermal & Low light losses
 being returned as kWh.
+- Add SolarPVPanel class to further differentiate performance, updated model structure to incorporate this
+- Removed redundant variables no longer being used
 - Finalised Sandia array temperature model, adjusted module dataset to align with parameters required
 - Added wind turbine modelling to short term project scope
 
