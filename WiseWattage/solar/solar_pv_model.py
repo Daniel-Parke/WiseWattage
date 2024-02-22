@@ -67,7 +67,6 @@ def calc_cell_temp_coeff(e_poa, ambient_temp, wind_speed,
     """
     array_temp = calc_array_temp_sandia(e_poa, ambient_temp, wind_speed)
     temp_coeff = np.minimum(1, (1 + cell_temp_coeff * (array_temp - cell_temp_STC)))
-    print(temp_coeff)
 
     return temp_coeff
 
