@@ -5,6 +5,9 @@ PV Panel:
 	- 
 	- 
 	- 
+    -
+    -
+    -
 
 
 PV Array:
@@ -13,6 +16,9 @@ PV Array:
 	- Size (m2 or kWp or num_panels)
 	- Albedo
 	- 
+    -
+    -
+    -
 
 
 
@@ -21,6 +27,8 @@ PV System:
 	- 
 	- 
 	- 
+    -
+    -
 
 
 PV Model:
