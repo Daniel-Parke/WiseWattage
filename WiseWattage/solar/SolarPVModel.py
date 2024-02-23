@@ -4,7 +4,6 @@ import pandas as pd
 import logging
 import pickle
 import os
-
 from functools import cached_property
 
 from meteo.Site import Site
@@ -46,7 +45,7 @@ class SolarPVModel:
         # Normalize self.arrays to be a list if not already
         if not isinstance(self.arrays, list):
             self.arrays = [self.arrays]
-
+            
         # Run solar PV model
         self.model_solar_pv()
 
