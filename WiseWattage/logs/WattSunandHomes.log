@@ -1,1 +1,26 @@
 2024-02-23 19:43:44,753 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-23 19:43:45,704 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-23 19:43:46,057 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-23 19:43:46,058 - INFO - *******************
+2024-02-23 19:43:46,059 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-23 19:43:46,060 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 19:43:46,060 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 19:43:46,061 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 19:43:46,062 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 19:43:46,063 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 19:43:46,063 - INFO - *******************
+2024-02-23 19:43:46,064 - INFO - Starting Solar PV model simulations.
+2024-02-23 19:43:46,065 - INFO - *******************
+2024-02-23 19:43:46,065 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-23 19:43:46,073 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-23 19:43:46,080 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-23 19:43:46,087 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-23 19:43:46,094 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-23 19:43:46,101 - INFO - *******************
+2024-02-23 19:43:46,102 - INFO - Solar PV model simulations completed.
+2024-02-23 19:43:46,132 - INFO - Solar PV model data aggregated.
+2024-02-23 19:43:46,140 - INFO - Solar PV model data summary complete.
+2024-02-23 19:43:46,157 - INFO - Model saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-23 19:43:46,158 - INFO - *******************
+2024-02-23 19:43:46,173 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-23 19:43:46,177 - INFO - *******************
