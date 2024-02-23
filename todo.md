@@ -9,8 +9,6 @@
 
 ###### **MEDIUM PRIOIRTY**
 - Complete and finalise wind turbine modelling & datasets
-- Update documentation for all formulae and methods used
-- Formula variable type declarations to be added to functions
 
 ###### **LOW PRIOIRTY**.
 - Implement one-diode modelling method and compare to current methodology.
@@ -22,8 +20,6 @@
 
 #### **CURRENTLY BROKEN, NEEDS FIXED:**
 ###### **HIGH PRIOIRTY**
-- Update consistency in column names across different areas data is returned
-
 
 
 ###### **MEDIUM PRIOIRTY**

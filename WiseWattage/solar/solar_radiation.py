@@ -3,20 +3,26 @@ from numpy import radians, degrees, cos, sin, arccos, pi
 import numpy as np
 
 
-def calc_declination(n_day):
-    """Calculates the solar declination angle for a given day of the year.
-    Args:
+def calc_declination(n_day: int) -> float:
+    """
+    Calculates the solar declination angle for a given day of the year.
+
+    Parameters:
         n_day (int): Day of the year (1 through 365 or 366).
+
     Returns:
         float: Solar declination angle in degrees.
     """
     return 23.45 * sin(radians((360 / 365) * (284 + n_day)))
 
 
-def calc_time_correction(n_day):
-    """Calculates the equation of time correction factor.
-    Args:
+def calc_time_correction(n_day: int) -> float:
+    """
+    Calculates the equation of time correction factor.
+
+    Parameters:
         n_day (int): Day of the year.
+
     Returns:
         float: Time correction factor in minutes.
     """
@@ -30,14 +36,18 @@ def calc_time_correction(n_day):
     )
 
 
-def calc_solar_time(n_day, civil_time, longitude, timestep=60, tmz_hrs_east=0):
-    """Calculates the solar time at a given location and time.
-    Args:
+def calc_solar_time(n_day: int, civil_time: float, longitude: float, 
+                    timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the solar time at a given location and time.
+
+    Parameters:
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours.
         longitude (float): Longitude of the location.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Solar time in hours.
     """
@@ -50,14 +60,18 @@ def calc_solar_time(n_day, civil_time, longitude, timestep=60, tmz_hrs_east=0):
     )
 
 
-def calc_hour_angle(n_day, civil_time, longitude, timestep=60, tmz_hrs_east=0):
-    """Calculates the solar hour angle at a given time and location.
-    Args:
+def calc_hour_angle(n_day: int, civil_time: float, longitude: float, 
+                    timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the solar hour angle at a given time and location.
+
+    Parameters:
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours.
         longitude (float): Longitude of the location.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Hour angle in degrees.
     """
@@ -66,18 +80,13 @@ def calc_hour_angle(n_day, civil_time, longitude, timestep=60, tmz_hrs_east=0):
     return (solar_time - 12) * 15
 
 
-def calc_aoi(
-    n_day,
-    civil_time,
-    latitude,
-    longitude,
-    surface_azimuth,
-    surface_pitch,
-    timestep=60,
-    tmz_hrs_east=0,
-):
-    """Calculates the angle of incidence of solar radiation on a given surface.
-    Args:
+def calc_aoi(n_day: int, civil_time: float, latitude: float, longitude: float, 
+             surface_azimuth: float, surface_pitch: float, 
+             timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the angle of incidence of solar radiation on a given surface.
+
+    Parameters:
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours.
         latitude (float): Latitude of the location.
@@ -86,6 +95,7 @@ def calc_aoi(
         surface_pitch (float): Tilt angle of the surface from the horizontal.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Angle of incidence in degrees.
     """
@@ -130,15 +140,19 @@ def calc_aoi(
     return degrees(aoi)
 
 
-def calc_zenith(latitude, longitude, n_day, civil_time, timestep=60, tmz_hrs_east=0):
-    """Calculates the solar zenith angle at a given time and location.
-    Args:
+def calc_zenith(latitude: float, longitude: float, n_day: int, civil_time: float, 
+                timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the solar zenith angle at a given time and location.
+
+    Parameters:
         latitude (float): Latitude of the location.
         longitude (float): Longitude of the location.
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Zenith angle in degrees.
     """
@@ -155,10 +169,13 @@ def calc_zenith(latitude, longitude, n_day, civil_time, timestep=60, tmz_hrs_eas
     )
 
 
-def calc_et_normal_radiation(n_day):
-    """Calculates the extraterrestrial normal radiation for a given day of the year.
-    Args:
+def calc_et_normal_radiation(n_day: int) -> float:
+    """
+    Calculates the extraterrestrial normal radiation for a given day of the year.
+
+    Parameters:
         n_day (int): Day of the year.
+
     Returns:
         float: Extraterrestrial normal radiation in W/m^2.
     """
@@ -167,16 +184,19 @@ def calc_et_normal_radiation(n_day):
 
 
 def calc_et_horizontal_radiation(
-    latitude, longitude, n_day, civil_time, timestep=60, tmz_hrs_east=0
-):
-    """Calculates the extraterrestrial horizontal radiation over a specified timestep.
-    Args:
+    latitude: float, longitude: float, n_day: int, civil_time: float, 
+    timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the extraterrestrial horizontal radiation over a specified timestep.
+
+    Parameters:
         latitude (float): Latitude of the location.
         longitude (float): Longitude of the location.
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours at the beginning of the timestep.
         timestep (int, optional): Duration of the timestep in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Extraterrestrial horizontal radiation in W/m^2 for the timestep.
     """
@@ -209,26 +229,22 @@ def calc_et_horizontal_radiation(
     ) * (60 / timestep)
 
     et_horizontal_radiation = et_horizontal_radiation
+
+    # Ensure non-negative values
     et_horizontal_radiation = np.where(
         et_horizontal_radiation > 0, et_horizontal_radiation, 0
-    )  # Ensure non-negative values
+    )  
 
     return et_horizontal_radiation
 
 
-def calc_beam_radiation(
-    dni,
-    n_day,
-    civil_time,
-    latitude,
-    longitude,
-    surface_azimuth,
-    surface_pitch,
-    timestep=60,
-    tmz_hrs_east=0,
-):
-    """Calculates the beam component of solar radiation on a tilted surface.
-    Args:
+def calc_beam_radiation(dni: float, n_day: int, civil_time: float, latitude: float, longitude: float, 
+                        surface_azimuth: float, surface_pitch: float, timestep: int = 60, 
+                        tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the beam component of solar radiation on a tilted surface.
+
+    Parameters:
         dni (float): Direct normal irradiance in W/m^2.
         n_day (int): Day of the year.
         civil_time (float): Civil time in hours.
@@ -238,6 +254,7 @@ def calc_beam_radiation(
         surface_pitch (float): Tilt angle of the surface from horizontal.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Beam irradiance on the surface in W/m^2.
     """
@@ -262,19 +279,13 @@ def calc_beam_radiation(
     return e_beam
 
 
-def calc_diffuse_radiation(
-    dhi,
-    ghi,
-    surface_pitch,
-    latitude,
-    longitude,
-    n_day,
-    civil_time,
-    timestep=60,
-    tmz_hrs_east=0,
-):
-    """Calculates the diffuse component of solar radiation on a tilted surface.
-    Args:
+def calc_diffuse_radiation(dhi: float, ghi: float, surface_pitch: float, latitude: float, 
+                           longitude: float, n_day: int, civil_time: float, timestep: int = 60,
+                           tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the diffuse component of solar radiation on a tilted surface.
+
+    Parameters:
         dhi (float): Diffuse horizontal irradiance in W/m^2.
         ghi (float): Global horizontal irradiance in W/m^2.
         surface_pitch (float): Tilt angle of the surface from horizontal.
@@ -284,6 +295,7 @@ def calc_diffuse_radiation(
         civil_time (float): Civil time in hours.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Diffuse irradiance on the surface in W/m^2.
     """
@@ -301,12 +313,15 @@ def calc_diffuse_radiation(
     return e_diffuse
 
 
-def calc_ground_radiation(ghi, surface_pitch, albedo=0.2):
-    """Calculates the ground-reflected component of solar radiation on a tilted surface.
-    Args:
+def calc_ground_radiation(ghi: float, surface_pitch: float, albedo: float = 0.2) -> float:
+    """
+    Calculates the ground-reflected component of solar radiation on a tilted surface.
+
+    Parameters:
         ghi (float): Global horizontal irradiance in W/m^2.
         surface_pitch (float): Tilt angle of the surface from horizontal.
         albedo (float, optional): Ground reflectance factor. Defaults to 0.2.
+
     Returns:
         float: Ground-reflected irradiance on the surface in W/m^2.
     """
@@ -315,22 +330,13 @@ def calc_ground_radiation(ghi, surface_pitch, albedo=0.2):
     return e_ground
 
 
-def calc_poa_radiation(
-    dni,
-    dhi,
-    ghi,
-    n_day,
-    civil_time,
-    latitude,
-    longitude,
-    surface_azimuth,
-    surface_pitch,
-    albedo=0.2,
-    timestep=60,
-    tmz_hrs_east=0,
-):
-    """Calculates the plane of array (POA) irradiance, considering beam, diffuse, and ground-reflected components.
-    Args:
+def calc_poa_radiation(dni: float, dhi: float, ghi: float, n_day: int, civil_time: float,
+                       latitude: float, longitude: float, surface_azimuth: float, surface_pitch: float,
+                       albedo: float = 0.2, timestep: int = 60, tmz_hrs_east: float = 0) -> float:
+    """
+    Calculates the plane of array (POA) irradiance, considering beam, diffuse, and ground-reflected components.
+
+    Parameters:
         dni (float): Direct normal irradiance in W/m^2.
         dhi (float): Diffuse horizontal irradiance in W/m^2.
         ghi (float): Global horizontal irradiance in W/m^2.
@@ -343,6 +349,7 @@ def calc_poa_radiation(
         albedo (float, optional): Ground reflectance factor. Defaults to 0.2.
         timestep (int, optional): Time step in minutes. Defaults to 60.
         tmz_hrs_east (float, optional): Time zone hours east of GMT. Defaults to 0.
+
     Returns:
         float: Total irradiance on the plane of array in W/m^2.
     """

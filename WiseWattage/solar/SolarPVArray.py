@@ -48,7 +48,7 @@ class SolarPVArray:
         logging.info(
             f"Solar PV array created: Size: {self.pv_kwp}kW, Size: {self.area_m2}m2, "
             f"Azimuth: {self.surface_azimuth}deg, Lifespan: {self.pv_panel.lifespan}yrs, "
-            f"Pitch: {self.surface_pitch}deg, Efficiency: {self.pv_panel.eff}%"
+            f"Pitch: {self.surface_pitch}deg, Efficiency: {self.pv_panel.eff*100}%"
         )
 
 

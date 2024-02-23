@@ -53,7 +53,7 @@ class SolarPVPanel:
         """
         logging.info(
             f"Solar PV Panel created: Size: {self.panel_kwp}kW, Size: {self.size_m2}m2,"
-            f" Efficiency: {self.eff}%, Lifespan: {self.lifespan}yrs"
+            f" Efficiency: {self.eff*100}%, Lifespan: {self.lifespan}yrs"
         )
 
 

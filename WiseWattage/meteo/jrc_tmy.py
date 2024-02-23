@@ -1,8 +1,9 @@
-"""Import functionality required to process TMY data from the JRC API"""
 from datetime import datetime
 import httpx
 import pandas as pd
 import numpy as np
+from typing import Any, Union
+import logging
 
 from misc.util import cached_func
 
@@ -11,15 +12,19 @@ def main():
     pass
 
 @cached_func
-def get_jrc_tmy(latitude, longitude, start_year=2005, end_year=2015):
-    """Fetches historical weather data for a given site and prepares the dataframe.
-    Args:
+def get_jrc_tmy(latitude: float, longitude: float, start_year: int = 2005, end_year: int = 2015) -> pd.DataFrame:
+    """
+    Fetches historical weather data for a given site and prepares the dataframe.
+
+    Parameters:
         latitude (float): The latitude of the site.
         longitude (float): The longitude of the site.
         start_year (int, optional): The start year for data retrieval. Defaults to 2005.
         end_year (int, optional): The end year for data retrieval. Defaults to 2015.
+
     Returns:
-        DataFrame: A dataframe containing the historical weather data.
+        pd.DataFrame: A dataframe containing the historical weather data.
+
     Raises:
         ValueError: If the latitude or longitude is out of bounds.
         SystemExit: If there's a request or server error.
@@ -56,21 +61,26 @@ def get_jrc_tmy(latitude, longitude, start_year=2005, end_year=2015):
     return data
 
 
-def get_hour(timestamp):
-    """Extracts the hour from a timestamp.
-    Args:
+def get_hour(timestamp: str) -> int:
+    """
+    Extracts the hour from a timestamp.
+
+    Parameters:
         timestamp (str): The timestamp in "%Y%m%d:%H%M" format.
+
     Returns:
         int: The hour extracted from the timestamp.
     """
-    hour = datetime.strptime(timestamp, "%Y%m%d:%H%M").hour
-    return hour
+    return datetime.strptime(timestamp, "%Y%m%d:%H%M").hour
 
 
-def get_day(timestamp):
-    """Extracts the day of the year from a timestamp.
-    Args:
+def get_day(timestamp: str) -> int:
+    """
+    Extracts the day of the year from a timestamp.
+
+    Parameters:
         timestamp (str): The timestamp in "%Y%m%d:%H%M" format.
+
     Returns:
         int: The day of the year extracted from the timestamp.
     """
@@ -78,12 +88,16 @@ def get_day(timestamp):
     return day_of_year
 
 
-def get_week(timestamp):
-    """Calculates the week of the year from a timestamp.
-    Args:
+def get_week(timestamp: str) -> int:
+    """
+    Calculates the week of the year from a timestamp.
+
+    Parameters:
         timestamp (str): The timestamp in "%Y%m%d:%H%M" format.
+
     Returns:
-        int: The week of the year, with a maximum value of 52.
+        int: The week of the year, with a maximum value of 52. This calculation
+             assumes the week starts on January 1st and does not conform to ISO week date.
     """
     date_object = datetime.strptime(timestamp, "%Y%m%d:%H%M")
     day_of_year = date_object.timetuple().tm_yday
@@ -92,10 +106,13 @@ def get_week(timestamp):
     return week_of_year
 
 
-def get_month(timestamp):
-    """Extracts the month from a timestamp.
-    Args:
+def get_month(timestamp: str) -> int:
+    """
+    Extracts the month from a timestamp.
+
+    Parameters:
         timestamp (str): The timestamp in "%Y%m%d:%H%M" format.
+
     Returns:
         int: The month extracted from the timestamp.
     """

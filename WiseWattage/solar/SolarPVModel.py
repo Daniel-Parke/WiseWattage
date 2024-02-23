@@ -6,6 +6,7 @@ import pandas as pd
 import pickle
 
 from meteo.Site import Site
+from solar.SolarPVPanel import SolarPVPanel
 from solar.SolarPVArray import SolarPVArray
 from solar.solar_pv_model import calc_solar_model, combine_array_results
 from solar.solar_pv_model import (
@@ -63,6 +64,7 @@ class SolarPVModel:
         logging.info("Solar PV simulation and modelling completed.")
         logging.info("*******************")
 
+
     def model_solar_pv(self):
         """
         Method to perform solar PV modeling and generate model results.
@@ -104,6 +106,7 @@ class SolarPVModel:
         logging.info("Solar PV model data summary complete.")
         logging.info
 
+
     def save_model_csv(self):
         """
         Method to save model results to a CSV file.
@@ -116,34 +119,40 @@ class SolarPVModel:
             logging.info("Model data NOT saved, no model results found.")
             logging.info("*******************")
 
+
     # Returns model for # array at # index location in results
-    def array_model(self, n):
+    def array_model(self, n: int) -> pd.DataFrame:
         """
         Returns model for a specific array at a given index location in results.
 
-        Args:
+        Parameters:
             n (int): Index of the array.
 
         Returns:
-            str or dict: Model result for the array.
-        """
+            Dataframe: Model result for the array modelled as DataFrame.
+            
+        Raises:
+            IndexError: If there is no model at the given index.
+    """
         try:
             return self.models[n]["model_result"]
         except IndexError:
             return f"There was no model at index {n}, check the number of arrays modelled and try again."
 
 
-    def model_summary_html_export(self, freq=None, grouped=True):
+    def model_summary_html_export(self, freq: str = None, grouped: bool = True) -> str:
         """
         Export model summary to HTML format.
 
-        Args:
-            freq (str): Frequency for grouped summary (e.g., 'daily', 'monthly').
-            grouped (bool): Whether to export grouped summary or not.
+        Parameters:
+            freq (str, optional): Frequency for grouped summary (e.g., 'daily', 'monthly').
+                Defaults to None, indicating no specific frequency grouping is applied.
+            grouped (bool): Whether to export a grouped summary or not. Defaults to True.
 
         Returns:
-            str or dict: HTML-formatted summary data or dictionary of summary data.
+            str or dict: HTML-formatted summary data if ungrouped, dict is grouped.
         """
+        # Defined groups to organise from modelled data
         try:
             org_col_grouped = [
                 "PV_Gen_kWh_Total",
@@ -202,6 +211,7 @@ class SolarPVModel:
                 "Average Ambient Temp (C)",
             ]
 
+            # If grouped convert to HTML, if not return as one dict
             if grouped:
                 data = getattr(self.summary_grouped, freq, None)
                 if data is None:
@@ -223,23 +233,36 @@ class SolarPVModel:
             return None
 
 
-    def save_model(self, name="Solar_Model_Results.wwm"):
-        # Replace whitespace in site name with underscores and ensure the file name ends with ".wwm"
+    def save_model(self, name: str = "Solar_Model_Results.wwm") -> None:
+        """
+        Serializes and saves the model to a file using pickle, ensuring it ends with ".wwm".
+
+        Parameters:
+            name (str): The base name for the file to save the model results to, with a default
+                        of "Solar_Model_Results.wwm".
+
+        Returns:
+            None: This method does not return a value but saves a serialized version of the model to disk 
+            in a folder titled saved_models.
+        """
+        # Format input name to remove whitespace
         site_name_formatted = self.site.name.replace(" ", "_") if self.site.name else ""
+
+        # Add .wmm naming convention to saved file
         if not name.endswith(".wwm"):
             name = os.path.splitext(name)[0] + ".wwm"
-        # Conditionally construct full_name to avoid leading underscore when site_name_formatted is empty
         full_name = f"saved_models/{site_name_formatted + '_' if site_name_formatted else ''}{name}"
 
+        # Try saving model as pickled file, return error if not possible
         try:
             abs_path = os.path.abspath(full_name)
             os.makedirs(os.path.dirname(abs_path), exist_ok=True)
             
-            # Open the file in binary write mode
             with open(abs_path, 'wb') as filehandler_save:
                 pickle.dump(self, filehandler_save)
-            logging.info(f"Model for {self.site.name} saved successfully to '{abs_path}'")
+                
+            logging.info(f"Model saved successfully to '{abs_path}'")
             logging.info("*******************")
         except Exception as e:
-            logging.info(f"Error saving model to '{full_name}': {e}")
-            logging.info("*******************")
+            logging.error(f"Error saving model to '{full_name}': {e}")
+            logging.error("*******************")
