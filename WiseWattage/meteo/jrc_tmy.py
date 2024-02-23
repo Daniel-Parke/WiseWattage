@@ -2,8 +2,6 @@ from datetime import datetime
 import httpx
 import pandas as pd
 import numpy as np
-from typing import Any, Union
-import logging
 
 from misc.util import cached_func
 
