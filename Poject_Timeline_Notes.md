@@ -9,6 +9,7 @@
 ## Patch/Progress Notes:
 ### **23/02/2024:**
 - Updated docstrings, added documentation notes throughout functions, added typehints to all functions.
+- Further function caching, vectorisation and optimisation done to reduce modelling time by 20%. Model of 5 arrays went from original time of 100ms, to 80ms. Timed on local machine, user results may vary
 
 ### **22/02/2024:**
 - Updated base units to calculate radiation values in W, with only PV Gen, Thermal & Low light losses
