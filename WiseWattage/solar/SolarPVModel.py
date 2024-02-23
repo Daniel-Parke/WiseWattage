@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Dict, Union
-import logging
-import os
 import pandas as pd
+import logging
 import pickle
+import os
+
+from functools import cached_property
 
 from meteo.Site import Site
 from solar.SolarPVPanel import SolarPVPanel
@@ -28,41 +30,25 @@ class SolarPVModel:
         models (List[Dict]): List of dictionaries containing model results for each array.
         all_models (pd.DataFrame): DataFrame containing all model results.
         combined_model (pd.DataFrame): DataFrame containing combined model results.
-        summary (pd.DataFrame): DataFrame containing summary of model results.
-        summary_grouped (SummaryGrouped): Object containing grouped summary of model results.
     """
 
-    site: Site
-    arrays: Union[SolarPVArray, List[SolarPVArray]]
+    site: 'Site'
+    arrays: Union['SolarPVArray', List['SolarPVArray']]
     models: List[Dict] = field(default_factory=list)
     all_models: pd.DataFrame = field(default=None, init=False)
     combined_model: pd.DataFrame = field(default=None, init=False)
-    summary: pd.DataFrame = field(default=None, init=False)
-    summary_grouped: SummaryGrouped = field(default=None, init=False)
-
 
     def __post_init__(self):
         """
         Post-initialization method.
-        Runs model_solar_pv method to perform solar PV modeling and generate summaries.
+        Runs model_solar_pv method to perform solar PV modeling.
         """
-        # Normalise self.arrays to be list if not already
+        # Normalize self.arrays to be a list if not already
         if not isinstance(self.arrays, list):
             self.arrays = [self.arrays]
 
         # Run solar PV model
         self.model_solar_pv()
-
-        # Generate summary statistics
-        self.summary = pv_stats(self.all_models, self.arrays)
-        logging.info("Solar PV model statistical analysis completed.")
-
-        # Generate grouped summary statistics
-        self.summary_grouped = pv_stats_grouped(self.all_models)
-        logging.info("Solar PV model statistical grouping completed.")
-        logging.info("*******************")
-        logging.info("Solar PV simulation and modelling completed.")
-        logging.info("*******************")
 
 
     def model_solar_pv(self):
@@ -105,6 +91,35 @@ class SolarPVModel:
         self.combined_model = total_array_results(models)
         logging.info("Solar PV model data summary complete.")
         logging.info
+
+
+    @cached_property
+    def summary(self) -> pd.DataFrame:
+        """
+        Generates a summary of model results the first time it is called and caches the result.
+
+        Returns:
+            pd.DataFrame: DataFrame containing summary of model results.
+        """
+        logging.info("Generating Solar PV model statistical analysis.")
+        summary = pv_stats(self.all_models, self.arrays)
+        logging.info("Solar PV model statistical analysis completed.")
+        return summary
+    
+
+    @cached_property
+    def summary_grouped(self) -> 'SummaryGrouped':
+        """
+        Generates a grouped summary of model results the first time it is called and caches the result.
+
+        Returns:
+            SummaryGrouped: Object containing grouped summary of model results.
+        """
+        logging.info("Generating Solar PV model statistical grouping.")
+        summary_grouped = pv_stats_grouped(self.all_models)
+        logging.info("Solar PV model statistical grouping completed.")
+        return summary_grouped
+
 
 
     def save_model_csv(self):
