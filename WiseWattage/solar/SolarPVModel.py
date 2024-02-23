@@ -9,8 +9,9 @@ from functools import cached_property
 from meteo.Site import Site
 from solar.SolarPVPanel import SolarPVPanel
 from solar.SolarPVArray import SolarPVArray
-from solar.solar_pv_model import calc_solar_model, combine_array_results
 from solar.solar_pv_model import (
+    calc_solar_model,
+    combine_array_results,
     total_array_results,
     pv_stats,
     pv_stats_grouped,
