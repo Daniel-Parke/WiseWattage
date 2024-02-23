@@ -273,3 +273,64 @@
 2024-02-23 14:35:24,104 - INFO - *******************
 2024-02-23 14:35:24,118 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
 2024-02-23 14:35:24,119 - INFO - *******************
+2024-02-23 14:54:42,345 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-23 14:54:43,578 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-23 14:54:44,346 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-23 14:54:44,346 - INFO - *******************
+2024-02-23 14:54:44,347 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-23 14:54:44,348 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:44,348 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:44,349 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:44,349 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:44,350 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:44,350 - INFO - *******************
+2024-02-23 14:54:44,351 - INFO - Starting Solar PV model simulations.
+2024-02-23 14:54:44,351 - INFO - *******************
+2024-02-23 14:54:44,352 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-23 14:54:44,359 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-23 14:54:44,366 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-23 14:54:44,372 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-23 14:54:44,379 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-23 14:54:44,386 - INFO - *******************
+2024-02-23 14:54:44,386 - INFO - Solar PV model simulations completed.
+2024-02-23 14:54:44,416 - INFO - Solar PV model data aggregated.
+2024-02-23 14:54:44,424 - INFO - Solar PV model data summary complete.
+2024-02-23 14:54:44,426 - INFO - Solar PV model statistical analysis completed.
+2024-02-23 14:54:44,441 - INFO - Solar PV model statistical grouping completed.
+2024-02-23 14:54:44,441 - INFO - *******************
+2024-02-23 14:54:44,442 - INFO - Solar PV simulation and modelling completed.
+2024-02-23 14:54:44,442 - INFO - *******************
+2024-02-23 14:54:44,459 - INFO - Model saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-23 14:54:44,460 - INFO - *******************
+2024-02-23 14:54:44,474 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-23 14:54:44,475 - INFO - *******************
+2024-02-23 14:54:45,926 - INFO - Fetching TMY data for latitude: 54.60452, longitude: -5.9286
+2024-02-23 14:54:45,926 - INFO - TMY data obtained for: 54.60452, longitude: -5.9286
+2024-02-23 14:54:45,927 - INFO - *******************
+2024-02-23 14:54:45,928 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-23 14:54:45,928 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:45,929 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:45,929 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:45,929 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:45,930 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-23 14:54:45,930 - INFO - *******************
+2024-02-23 14:54:45,931 - INFO - Starting Solar PV model simulations.
+2024-02-23 14:54:45,931 - INFO - *******************
+2024-02-23 14:54:45,931 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-23 14:54:45,939 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-23 14:54:45,946 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-23 14:54:45,953 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-23 14:54:45,960 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-23 14:54:45,967 - INFO - *******************
+2024-02-23 14:54:45,967 - INFO - Solar PV model simulations completed.
+2024-02-23 14:54:45,995 - INFO - Solar PV model data aggregated.
+2024-02-23 14:54:46,003 - INFO - Solar PV model data summary complete.
+2024-02-23 14:54:46,005 - INFO - Solar PV model statistical analysis completed.
+2024-02-23 14:54:46,020 - INFO - Solar PV model statistical grouping completed.
+2024-02-23 14:54:46,021 - INFO - *******************
+2024-02-23 14:54:46,021 - INFO - Solar PV simulation and modelling completed.
+2024-02-23 14:54:46,022 - INFO - *******************
+2024-02-23 14:54:46,039 - INFO - Model saved successfully to 'c:\Users\djp12\Documents\Coding\Github_Repos\WiseWattage\WiseWattage\saved_models\Solar_Model_Results.wwm'
+2024-02-23 14:54:46,040 - INFO - *******************
+2024-02-23 14:54:46,053 - INFO - Model successfully loaded: saved_models/Solar_Model_Results.wwm
+2024-02-23 14:54:46,053 - INFO - *******************
