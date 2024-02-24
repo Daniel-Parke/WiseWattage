@@ -8,6 +8,10 @@
 
 ## Patch/Progress Notes:
 ### **23/02/2024:**
+- Updated codebase, combined functionality where possible.
+- Added column for combined total PV losses, made edits to existing functions to work with new columns
+
+### **23/02/2024:**
 - Updated docstrings, added documentation notes throughout functions, added typehints to all functions.
 - Further function caching, vectorisation and optimisation done to reduce modelling time by 20%. Model of 5 arrays went from original time of 100ms, to 80ms. Timed on local machine, user results may vary
 

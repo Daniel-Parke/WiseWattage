@@ -217,6 +217,7 @@ def calc_solar_model(data: pd.DataFrame, latitude: float, longitude: float, pv_k
     ll_pv_gen_kWh = pv_gen_kwh * ll_pv_eff
     low_light_loss_kWh = pv_gen_kwh - ll_pv_gen_kWh
     iam_loss_kWh = pv_gen_kwh * iam_loss_perc
+    total_loss_kwh = iam_loss_kWh + low_light_loss_kWh + pv_thermal_loss_kwh
 
     # Construct a new DataFrame from the calculated arrays
     results = pd.DataFrame({
@@ -242,7 +243,8 @@ def calc_solar_model(data: pd.DataFrame, latitude: float, longitude: float, pv_k
         "Array_Temp_C": Array_Temp_C,
         "PV_Gen_kWh": ll_pv_gen_kWh,
         "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh,
-        "Low_Light_Loss_kWh": low_light_loss_kWh
+        "Low_Light_Loss_kWh": low_light_loss_kWh,
+        "Total_PV_Losses_kWh": total_loss_kwh
     })
 
     return results
@@ -273,6 +275,7 @@ def combine_array_results(results: list) -> pd.DataFrame:
         "PV_Thermal_Loss_kWh",
         "Low_Light_Loss_kWh",
         "IAM_Loss_kWh",
+        "Total_PV_Losses_kWh",
     ]
     
     columns_to_add = ["AOI", "Zenith_Angle"]
@@ -339,6 +342,7 @@ def total_array_results(results: list) -> pd.DataFrame:
         "PV_Thermal_Loss_kWh",
         "Low_Light_Loss_kWh",
         "IAM_Loss_kWh",
+        "Total_PV_Losses_kWh",
     ]
 
     time_columns = [
@@ -391,6 +395,7 @@ def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
         "PV_Thermal_Loss_kWh_Total",
         "Low_Light_Loss_kWh_Total",
         "IAM_Loss_kWh_Total",
+        "Total_PV_Losses_kWh_Total",
     ]
 
     # Columns to calculate the mean
@@ -428,6 +433,7 @@ def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
     summary["E_Ground_kWm2_Annual"] = summary["E_Ground_kWm2_Avg"]
     summary["ET_HRad_kWm2_Annual"] = summary["ET_HRad_kWm2_Avg"]
     summary["Ambient_Temperature_C_Avg"] = summary["Ambient_Temperature_C"]
+    summary["Total_PV_Losses_kWh_Annual"] = summary["Total_PV_Losses_kWh_Total"]
 
     # Define the desired order of keys
     desired_order = [
@@ -438,6 +444,7 @@ def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
         "IAM_Loss_kWh_Annual",
         "PV_Thermal_Loss_kWh_Annual",
         "Low_Light_Loss_kWh_Annual",
+        "Total_PV_Losses_kWh_Annual",
         "E_Beam_kWm2_Annual",
         "E_Diffuse_kWm2_Annual",
         "E_Ground_kWm2_Annual",
@@ -495,6 +502,7 @@ def pv_stats_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
         "IAM_Loss_kWh_Total",
         "PV_Thermal_Loss_kWh_Total",
         "Low_Light_Loss_kWh_Total",
+        "Total_PV_Losses_kWh_Total",
         "E_Beam_kWm2_Avg",
         "E_Diffuse_kWm2_Avg",
         "E_Ground_kWm2_Avg",
