@@ -31,45 +31,20 @@ def cached_func(func: F) -> F:
     return cached_wrapper 
 
 
-def load_pv_model(name: str = "saved_models/Solar_Model_Results.wwm") -> Optional[Any]:
+class AttrDict(dict):
     """
-    Load a serialized PV model from a file using pickle.
+    AttrDict extends the standard Python dictionary to allow attribute-like access to its items.
 
     Parameters:
-        name (str): The path and name of the file to load the model from.
-                    Defaults to "saved_models/Solar_Model_Results.wwm".
-                    The file should have a '.wwm' extension.
-
-    Returns:
-        Optional[Any]: The deserialized model object if successful, None otherwise.
-
-    Raises:
-        FileNotFoundError: If the specified file does not exist.
-        Exception: For other errors that occur during model loading.
+    -----------
+    dict : *args, **kwargs
+        The constructor for AttrDict accepts the same arguments as the standard dict, allowing 
+        for flexible dictionary initialization with key-value pairs, iterable of key-value pairs, 
+        or keyword arguments.
     """
-    # Simple check if file is in the correct format
-    if not name.endswith(".wwm"):
-        logging.info(f"File being loaded is not in the correct format (.wwm): {name}")
-        logging.info("*******************")
-        return None
-
-    # Open model if possible, return error if not
-    try:
-        if not os.path.exists(name):
-            raise FileNotFoundError(f"The file '{name}' does not exist.")
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(f"Attribute {key} not found.")
         
-        with open(name, 'rb') as filehandler_open:
-            model = pickle.load(filehandler_open)
-            logging.info(f"Model successfully loaded: {name}")
-            logging.info("*******************")
-            return model
-            
-    except FileNotFoundError as e:
-        logging.info(f"Error: {e}")
-        logging.info("*******************")
-        return None
-
-    except Exception as e:
-        logging.info(f"Error loading model from '{name}': {e}")
-        logging.info("*******************")
-        return None

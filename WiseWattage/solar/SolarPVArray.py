@@ -28,7 +28,7 @@ class SolarPVArray:
         area_m2 (float): Area of the array in square meters.
     """
     pv_panel: SolarPVPanel = None
-    num_panels: int = None
+    num_panels: int = 1
     surface_pitch: float = 35
     surface_azimuth: float = 0
     albedo: float = 0.2

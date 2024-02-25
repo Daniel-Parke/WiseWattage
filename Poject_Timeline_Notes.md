@@ -7,6 +7,15 @@
 ###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br><br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. The idea for this project came from my own personal work as a student/energy researcher, and my final project for CS50x where I made a Solar PV calculator. The original code that contains those functions can be seen [here](/old_files/original_energy_modelling.py) if you are interested. <br><br>                                                                                                      If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try! 
 
 ## Patch/Progress Notes:
+### **25/02/2024:**
+- Implemented overarching project class, PV_Only implemented.
+- Enabled modelling of multiple sites, for multiple arrays.
+
+### **24/02/2024:**
+- Added project model to build template for hybrid system
+- Removed ability to save pickle object of models, also removed export to HTML
+- Added attributes to models stored in dictionaries for ".xxx" retrieval
+
 ### **23/02/2024:**
 - Updated codebase, combined functionality where possible.
 - Added column for combined total PV losses, made edits to existing functions to work with new columns

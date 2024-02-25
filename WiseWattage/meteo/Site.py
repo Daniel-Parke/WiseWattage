@@ -22,9 +22,9 @@ class Site:
     """
     latitude: float = 54.60452
     longitude: float = -5.92860
-    name: str = ""
+    name: str = "Belfast"
     address: str = ""
-    client: str = ""
+    client: str = "Wise Wattage"
     size: float = None
     tmz_hrs_east: int = 0
     timestep: int = 60

@@ -9,11 +9,12 @@
 
 ###### **MEDIUM PRIOIRTY**
 - Complete and finalise wind turbine modelling & datasets
+- Add grid class to model
+- Add battery storage to model
 
 ###### **LOW PRIOIRTY**.
-- Implement one-diode modelling method and compare to current methodology.
-- Consider spectral losses.
-- Implement full physical solar PV model, more to benchmark performance than model timeseries results.
+- 
+-
 
 
 <br><br>

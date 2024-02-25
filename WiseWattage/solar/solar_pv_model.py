@@ -74,7 +74,7 @@ def calc_cell_temp_coeff(e_poa: float, ambient_temp: float, wind_speed: float,
     return temp_coeff
 
 
-def iam_losses(aoi: float, refraction_index: float = 0.1) -> float:
+def iam_losses(aoi: float, refraction_index: float = 0.05) -> float:
     """
     Calculates the incident angle modifier (IAM) losses for solar panels based on the angle of incidence (AOI).
 
@@ -154,7 +154,7 @@ def calc_pv_power(pv_kwp: float, e_poa: float, ambient_temp: float, wind_speed: 
 def calc_solar_model(data: pd.DataFrame, latitude: float, longitude: float, pv_kwp: float = 1, 
                      surface_pitch: float = 35, surface_azimuth: float = 0, lifespan: int = 25, 
                      pv_derating: float = 0.88, albedo: float = 0.2, cell_temp_coeff: float = -0.0035,
-                     refraction_index: float = 0.1, e_poa_STC: float = 1000, cell_temp_STC: float = 25,
+                     refraction_index: float = 0.05, e_poa_STC: float = 1000, cell_temp_STC: float = 25,
                      timestep: int = 60, tmz_hrs_east: float = 0) -> pd.DataFrame:
     """
     Processes TMY data to simulate solar PV system performance over a typical meteorological year.
