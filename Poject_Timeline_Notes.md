@@ -8,8 +8,9 @@
 
 ## Patch/Progress Notes:
 ### **25/02/2024:**
-- Implemented overarching project class, PV_Only implemented.
-- Enabled modelling of multiple sites, for multiple arrays.
+- Implemented overarching project class, PV_Only implemented
+- Enabled modelling of multiple sites, for multiple arrays
+- Updated logging to store more information and record modelling progress more accurately
 
 ### **24/02/2024:**
 - Added project model to build template for hybrid system

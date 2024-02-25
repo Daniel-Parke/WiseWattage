@@ -22,7 +22,7 @@ class Site:
     """
     latitude: float = 54.60452
     longitude: float = -5.92860
-    name: str = "Belfast"
+    name: str = "Site"
     address: str = ""
     client: str = "Wise Wattage"
     size: float = None
@@ -35,10 +35,10 @@ class Site:
         Post-initialization method.
         Fetches TMY data for the site and logs a message.
         """
-        logging.info(f'Fetching TMY data for latitude: {self.latitude}, longitude: {self.longitude}') 
+        logging.info(f'Fetching TMY data for {self.name} at latitude: {self.latitude}, longitude: {self.longitude}') 
         # Fetch TMY data
         self.tmy_data = get_jrc_tmy(self.latitude, self.longitude)
-        logging.info(f'TMY data obtained for: {self.latitude}, longitude: {self.longitude}')
+        logging.info(f'TMY data obtained for {self.name} at latitude: {self.latitude}, longitude: {self.longitude}')
         logging.info("*******************")
 
 

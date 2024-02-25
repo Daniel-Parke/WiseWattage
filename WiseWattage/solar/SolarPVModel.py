@@ -56,7 +56,7 @@ class SolarPVModel:
         Method to perform solar PV modeling and generate model results.
         """
         logging.info("*******************")
-        logging.info("Starting Solar PV model simulations.")
+        logging.info(f"Starting Solar PV model simulations for {self.site.name}.")
         logging.info("*******************")
         models = []
         for array in self.arrays:
@@ -84,13 +84,13 @@ class SolarPVModel:
         
         # Arrange model results into class structure
         logging.info("*******************")
-        logging.info("Solar PV model simulations completed.")
+        logging.info(f"Solar PV model simulations for {self.site.name} completed.")
         self.models = models
         self.all_models = combine_array_results(models)
-        logging.info("Solar PV model data aggregated.")
+        logging.info(f"Solar PV model data aggregated.")
         self.combined_model = total_array_results(models)
-        logging.info("Solar PV model data summary complete.")
-        logging.info
+        logging.info(f"Solar PV model data summary for {self.site.name} complete.")
+        logging.info("      SUCCESS!      ")
 
 
     @cached_property
@@ -101,9 +101,10 @@ class SolarPVModel:
         Returns:
             pd.DataFrame: DataFrame containing summary of model results.
         """
-        logging.info("Generating Solar PV model statistical analysis.")
+        logging.info(f"Generating Solar PV model statistical analysis for {self.site.name}.")
         summary = pv_stats(self.all_models, self.arrays)
-        logging.info("Solar PV model statistical analysis completed.")
+        logging.info(f"Solar PV model statistical analysis for {self.site.name} completed.")
+        logging.info("*******************")
         return summary
     
 
@@ -115,9 +116,10 @@ class SolarPVModel:
         Returns:
             SummaryGrouped: Object containing grouped summary of model results.
         """
-        logging.info("Generating Solar PV model statistical grouping.")
+        logging.info(f"Generating Solar PV model statistical grouping for {self.site.name}.")
         summary_grouped = pv_stats_grouped(self.all_models)
-        logging.info("Solar PV model statistical grouping completed.")
+        logging.info(f"Solar PV model statistical grouping for {self.site.name} completed.")
+        logging.info("*******************")
         return summary_grouped
 
 
@@ -127,7 +129,7 @@ class SolarPVModel:
         """
         if self.all_models is not None:
             self.all_models.to_csv(f"Solar_Modelling_{self.site.name}_Combined.csv")
-            logging.info("Model data saved to csv file completed.")
+            logging.info(f"Model data for {self.site.name} saved to csv file completed.")
             logging.info("*******************")
         else:
             logging.info("Model data NOT saved, no model results found.")
