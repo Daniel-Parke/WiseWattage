@@ -207,3 +207,27 @@
 2024-02-25 01:08:12,292 - INFO - Generating Solar PV model statistical analysis for Abuja.
 2024-02-25 01:08:12,294 - INFO - Solar PV model statistical analysis for Abuja completed.
 2024-02-25 01:08:12,295 - INFO - *******************
+2024-02-25 01:08:32,099 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-02-25 01:08:33,093 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-25 01:08:33,436 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-02-25 01:08:33,436 - INFO - *******************
+2024-02-25 01:08:33,437 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-25 01:08:33,437 - INFO - *******************
+2024-02-25 01:08:33,438 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-25 01:08:33,439 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-25 01:08:33,439 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-25 01:08:33,440 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-25 01:08:33,441 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-25 01:08:33,441 - INFO - *******************
+2024-02-25 01:08:33,441 - INFO - Starting Solar PV model simulations for .
+2024-02-25 01:08:33,442 - INFO - *******************
+2024-02-25 01:08:33,442 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-02-25 01:08:33,450 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-02-25 01:08:33,456 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-25 01:08:33,463 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-02-25 01:08:33,469 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-02-25 01:08:33,476 - INFO - *******************
+2024-02-25 01:08:33,477 - INFO - Solar PV model simulations for  completed.
+2024-02-25 01:08:33,508 - INFO - Solar PV model data aggregated.
+2024-02-25 01:08:33,516 - INFO - Solar PV model data summary for  complete.
+2024-02-25 01:08:33,516 - INFO -       SUCCESS!      
