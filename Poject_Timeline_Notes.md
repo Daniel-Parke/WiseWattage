@@ -11,6 +11,7 @@
 - Implemented overarching project class, PV_Only implemented
 - Enabled modelling of multiple sites, for multiple arrays
 - Updated logging to store more information and record modelling progress more accurately
+- Updated PV_Only modelling approach to allow sensitivity analysis of nested list of array list, as well as sites.
 
 ### **24/02/2024:**
 - Added project model to build template for hybrid system
