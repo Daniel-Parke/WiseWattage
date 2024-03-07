@@ -1213,3 +1213,47 @@
 2024-02-25 14:05:43,888 - INFO - Solar PV model data aggregated.
 2024-02-25 14:05:43,888 - INFO - Solar PV model data summary for  complete.
 2024-02-25 14:05:43,888 - INFO -       SUCCESS!      
+2024-02-27 18:38:45,318 - INFO - Fetching TMY data for Site at latitude: 24.60452, longitude: -5.9286
+2024-02-27 18:38:46,740 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=24.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-27 18:38:47,486 - INFO - TMY data obtained for Site at latitude: 24.60452, longitude: -5.9286
+2024-02-27 18:38:47,487 - INFO - *******************
+2024-02-27 18:38:47,487 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-27 18:38:47,488 - INFO - *******************
+2024-02-27 18:38:47,488 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-27 18:38:47,488 - INFO - *******************
+2024-02-27 18:38:47,489 - INFO - Starting Solar PV model simulations for Site.
+2024-02-27 18:38:47,489 - INFO - *******************
+2024-02-27 18:38:47,490 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-27 18:38:47,498 - INFO - *******************
+2024-02-27 18:38:47,498 - INFO - Solar PV model simulations for Site completed.
+2024-02-27 18:38:47,524 - INFO - Solar PV model data aggregated.
+2024-02-27 18:38:47,529 - INFO - Solar PV model data summary for Site complete.
+2024-02-27 18:38:47,530 - INFO -       SUCCESS!      
+2024-02-27 18:38:47,530 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-02-27 18:38:47,532 - INFO - Solar PV model statistical analysis for Site completed.
+2024-02-27 18:38:47,533 - INFO - *******************
+2024-02-27 18:39:01,831 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-02-27 18:39:01,849 - INFO - Solar PV model statistical grouping for Site completed.
+2024-02-27 18:39:01,849 - INFO - *******************
+2024-02-27 18:39:27,966 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-02-27 18:39:29,105 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-02-27 18:39:29,533 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-02-27 18:39:29,533 - INFO - *******************
+2024-02-27 18:39:29,534 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-02-27 18:39:29,534 - INFO - *******************
+2024-02-27 18:39:29,535 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-02-27 18:39:29,535 - INFO - *******************
+2024-02-27 18:39:29,535 - INFO - Starting Solar PV model simulations for Site.
+2024-02-27 18:39:29,536 - INFO - *******************
+2024-02-27 18:39:29,537 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-02-27 18:39:29,544 - INFO - *******************
+2024-02-27 18:39:29,545 - INFO - Solar PV model simulations for Site completed.
+2024-02-27 18:39:29,565 - INFO - Solar PV model data aggregated.
+2024-02-27 18:39:29,570 - INFO - Solar PV model data summary for Site complete.
+2024-02-27 18:39:29,570 - INFO -       SUCCESS!      
+2024-02-27 18:39:29,571 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-02-27 18:39:29,573 - INFO - Solar PV model statistical analysis for Site completed.
+2024-02-27 18:39:29,573 - INFO - *******************
+2024-02-27 18:39:29,582 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-02-27 18:39:29,599 - INFO - Solar PV model statistical grouping for Site completed.
+2024-02-27 18:39:29,600 - INFO - *******************
