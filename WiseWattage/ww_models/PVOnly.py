@@ -9,14 +9,13 @@ class PV_Only:
     site: Union[Site, List[Site]]
     arrays: Union[SolarPVArray, List[SolarPVArray], List[List[SolarPVArray]]]  # Updated type hint to include nested lists
     name: str = ""
-    pv_models: Dict[str, SolarPVModel] = None
+    pv_models: Dict[str, Dict[str, SolarPVModel]] = None  # Updated type hint for nested dictionaries
 
     def __post_init__(self):
         self.site = [self.site] if not isinstance(self.site, list) else self.site
         self.arrays = [self.arrays] if not isinstance(self.arrays, list) else self.arrays
         
         self.pv_models = AttrDict()
-        site_name_counter = {}
 
         # Function to check if any element in the list is a list itself
         def is_nested(arrays):
@@ -24,6 +23,10 @@ class PV_Only:
 
         for site in self.site:
             base_key = site.name
+
+            # Initialize the nested dictionary for this site if not already present
+            if base_key not in self.pv_models:
+                self.pv_models[base_key] = AttrDict()
 
             # Check if arrays is nested and iterate accordingly
             if is_nested(self.arrays):
@@ -33,15 +36,9 @@ class PV_Only:
                     key = f"{base_key}_{idx}"
                     # Create SolarPVModel for each nested list
                     pv_model = SolarPVModel(site, array_set)
-                    self.pv_models[key] = pv_model
+                    self.pv_models[base_key][key] = pv_model  
             else:
                 # Handle non-nested (flat) list of arrays
-                key = base_key
-                if base_key in site_name_counter:
-                    site_name_counter[base_key] += 1
-                    key = f"{base_key}_{site_name_counter[base_key]}"
-                else:
-                    site_name_counter[base_key] = 1
-
+                key = f"{base_key}_1"  # Default to 1 if non-nested
                 pv_model = SolarPVModel(site, self.arrays)
-                self.pv_models[key] = pv_model
+                self.pv_models[base_key][key] = pv_model 
