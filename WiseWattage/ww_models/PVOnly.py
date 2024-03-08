@@ -7,12 +7,12 @@ from misc.util import AttrDict
 @dataclass
 class PV_Only:
     sites: Union[Site, List[Site]]
-    arrays: Union[SolarPVArray, List[SolarPVArray], List[List[SolarPVArray]]]  # Updated type hint to include nested lists
+    arrays: Union[SolarPVArray, List[SolarPVArray], List[List[SolarPVArray]]]
     name: str = ""
-    pv_models: Dict[str, Dict[str, SolarPVModel]] = None  # Updated type hint for nested dictionaries
+    pv_models: Dict[str, Dict[str, SolarPVModel]] = None
 
     def __post_init__(self):
-        self.site = [self.site] if not isinstance(self.site, list) else self.site
+        self.sites = [self.sites] if not isinstance(self.sites, list) else self.sites
         self.arrays = [self.arrays] if not isinstance(self.arrays, list) else self.arrays
         
         self.pv_models = AttrDict()
@@ -21,7 +21,7 @@ class PV_Only:
         def is_nested(arrays):
             return any(isinstance(i, list) for i in arrays)
 
-        for site in self.site:
+        for site in self.sites:
             base_key = site.name
 
             # Initialize the nested dictionary for this site if not already present
