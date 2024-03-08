@@ -2567,3 +2567,35 @@
 2024-03-07 23:59:54,637 - INFO - Generating Solar PV model statistical analysis for Abuja.
 2024-03-07 23:59:54,638 - INFO - Solar PV model statistical analysis for Abuja completed.
 2024-03-07 23:59:54,639 - INFO - *******************
+2024-03-08 00:05:39,566 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-03-08 00:05:43,218 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-03-08 00:05:43,983 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-03-08 00:05:43,984 - INFO - *******************
+2024-03-08 00:05:43,984 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-03-08 00:05:55,343 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=48.8562&lon=2.3477&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-03-08 00:05:56,025 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-03-08 00:05:56,026 - INFO - *******************
+2024-03-08 00:05:56,027 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-03-08 00:05:59,844 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=40.4202&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-03-08 00:06:00,552 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-03-08 00:06:00,553 - INFO - *******************
+2024-03-08 00:06:00,553 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-03-08 00:06:06,380 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=30.1098&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-03-08 00:06:07,095 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-03-08 00:06:07,096 - INFO - *******************
+2024-03-08 00:06:07,096 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-03-08 00:06:11,296 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=9.0591&lon=31.2235&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-03-08 00:06:12,002 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-03-08 00:06:12,003 - INFO - *******************
+2024-03-08 00:06:12,003 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-03-08 00:06:12,003 - INFO - *******************
+2024-03-08 00:06:12,004 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-03-08 00:06:12,004 - INFO - *******************
+2024-03-08 00:06:12,005 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,005 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,006 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,007 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,007 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,008 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,008 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-03-08 00:06:12,009 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
