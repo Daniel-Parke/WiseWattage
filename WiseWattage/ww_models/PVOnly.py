@@ -6,7 +6,7 @@ from misc.util import AttrDict
 
 @dataclass
 class PV_Only:
-    site: Union[Site, List[Site]]
+    sites: Union[Site, List[Site]]
     arrays: Union[SolarPVArray, List[SolarPVArray], List[List[SolarPVArray]]]  # Updated type hint to include nested lists
     name: str = ""
     pv_models: Dict[str, Dict[str, SolarPVModel]] = None  # Updated type hint for nested dictionaries
