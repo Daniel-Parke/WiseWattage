@@ -88,7 +88,7 @@ class SolarPVModel:
         logging.info(f"Solar PV model data aggregated.")
         self.combined_model = total_array_results(models)
         logging.info(f"Solar PV model data summary for {self.site.name} complete.")
-        logging.info("      SUCCESS!      ")
+        logging.info("      SUCCESS!      ") 
 
 
     @cached_property
@@ -126,7 +126,8 @@ class SolarPVModel:
         Method to save model results to a CSV file.
         """
         if self.all_models is not None:
-            self.all_models.to_csv(f"Solar_Modelling_{self.site.name}_Combined.csv")
+            self.all_models.to_csv(f"Solar_Modelling_{self.site.name}_All_Models.csv")
+            self.combined_model.to_csv(f"Solar_Modelling_{self.site.name}_Combined.csv")
             logging.info(f"Model data for {self.site.name} saved to csv file completed.")
             logging.info("*******************")
         else:

@@ -5,7 +5,7 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Add load profile to site, requires creation of new site to model different load
+- Create load profile class, this way a sensitivity analysis can be done on different load profiles.
 - Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
 methods are added.
 - When adding battery, ensure calculation of efficiences occurs at each stage to account for variation in peak power demand effects on eff.
@@ -13,7 +13,6 @@ methods are added.
 
 ###### **MEDIUM PRIOIRTY**
 - Complete and finalise wind turbine modelling & datasets
-- Add grid class to model
 - Add battery storage to model
 
 ###### **LOW PRIOIRTY**.

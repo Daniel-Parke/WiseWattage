@@ -26,7 +26,7 @@ class SolarPVArray:
         cell_temp_STC (float): Cell Temperature at STC.
         cost_per_kWp (float): Cost per kilowatt peak of the array.
         area_m2 (float): Area of the array in square meters.
-    """
+    """ 
     pv_panel: SolarPVPanel = None
     num_panels: int = 1
     surface_pitch: float = 35
