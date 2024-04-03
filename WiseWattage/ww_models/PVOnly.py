@@ -23,12 +23,11 @@ class PV_Only:
 
         for site in self.sites:
             base_key = site.name
-
             # Initialize the nested dictionary for this site if not already present
             if base_key not in self.pv_models:
                 self.pv_models[base_key] = AttrDict()
 
-            # Check if arrays is nested and iterate accordingly
+            # Check if arrays are nested and iterate accordingly
             if is_nested(self.arrays):
                 # Ensure we start indexing from 1 for nested lists
                 for idx, array_set in enumerate(self.arrays, start=1):

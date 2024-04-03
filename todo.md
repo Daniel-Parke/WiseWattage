@@ -5,7 +5,7 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Create load profile class, this way a sensitivity analysis can be done on different load profiles.
+- Create seperate class for each model type to be run i.e. Solar_Demand, Solar_Grid etc. Make class variable across all models that can be used to access summary of combined results, etc.
 - Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
 methods are added.
 - When adding battery, ensure calculation of efficiences occurs at each stage to account for variation in peak power demand effects on eff.

@@ -5046,3 +5046,799 @@
 2024-04-01 19:54:17,167 - INFO - Generating Solar PV model statistical analysis for Abuja.
 2024-04-01 19:54:17,169 - INFO - Solar PV model statistical analysis for Abuja completed.
 2024-04-01 19:54:17,169 - INFO - *******************
+2024-04-02 20:17:54,367 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-02 20:18:06,394 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-02 20:18:09,855 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-02 20:18:12,738 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-03 01:12:41,599 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:42,577 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:12:43,288 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:43,288 - INFO - *******************
+2024-04-03 01:12:43,289 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:12:43,289 - INFO - *******************
+2024-04-03 01:12:43,290 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:43,290 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:43,291 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:43,291 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:43,291 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:43,292 - INFO - *******************
+2024-04-03 01:12:43,292 - INFO - Starting Solar PV model simulations for .
+2024-04-03 01:12:43,293 - INFO - *******************
+2024-04-03 01:12:43,293 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:43,301 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:43,308 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:43,314 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:43,322 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:43,329 - INFO - *******************
+2024-04-03 01:12:43,330 - INFO - Solar PV model simulations for  completed.
+2024-04-03 01:12:43,361 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:43,370 - INFO - Solar PV model data summary for  complete.
+2024-04-03 01:12:43,371 - INFO -       SUCCESS!      
+2024-04-03 01:12:43,411 - INFO - Generating Solar PV model statistical analysis for .
+2024-04-03 01:12:43,414 - INFO - Solar PV model statistical analysis for  completed.
+2024-04-03 01:12:43,414 - INFO - *******************
+2024-04-03 01:12:43,422 - INFO - Generating Solar PV model statistical grouping for .
+2024-04-03 01:12:43,442 - INFO - Solar PV model statistical grouping for  completed.
+2024-04-03 01:12:43,442 - INFO - *******************
+2024-04-03 01:12:47,827 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-03 01:12:48,096 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:48,097 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:48,098 - INFO - *******************
+2024-04-03 01:12:48,098 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:12:49,216 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=48.8562&lon=2.3477&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:12:49,603 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:12:49,604 - INFO - *******************
+2024-04-03 01:12:49,604 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:12:50,527 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=40.4202&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:12:50,917 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:12:50,918 - INFO - *******************
+2024-04-03 01:12:50,918 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:12:52,370 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=30.1098&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:12:53,003 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:12:53,004 - INFO - *******************
+2024-04-03 01:12:53,004 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:12:54,284 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=9.0591&lon=31.2235&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:12:54,671 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:12:54,672 - INFO - *******************
+2024-04-03 01:12:54,672 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:12:54,673 - INFO - *******************
+2024-04-03 01:12:54,674 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:12:54,674 - INFO - *******************
+2024-04-03 01:12:54,675 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,675 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,676 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,676 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,677 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,677 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,677 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,678 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:54,678 - INFO - *******************
+2024-04-03 01:12:54,679 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:12:54,679 - INFO - *******************
+2024-04-03 01:12:54,679 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:54,687 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:54,694 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:54,701 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:54,708 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:54,714 - INFO - *******************
+2024-04-03 01:12:54,715 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:12:54,748 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:54,756 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:12:54,757 - INFO -       SUCCESS!      
+2024-04-03 01:12:54,757 - INFO - *******************
+2024-04-03 01:12:54,758 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:12:54,758 - INFO - *******************
+2024-04-03 01:12:54,759 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:54,766 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:54,773 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:54,781 - INFO - *******************
+2024-04-03 01:12:54,781 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:12:54,805 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:54,812 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:12:54,813 - INFO -       SUCCESS!      
+2024-04-03 01:12:54,814 - INFO - *******************
+2024-04-03 01:12:54,814 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:12:54,815 - INFO - *******************
+2024-04-03 01:12:54,815 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:54,823 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:54,830 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:54,837 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:54,844 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:54,852 - INFO - *******************
+2024-04-03 01:12:54,852 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:12:54,882 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:54,891 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:12:54,891 - INFO -       SUCCESS!      
+2024-04-03 01:12:54,891 - INFO - *******************
+2024-04-03 01:12:54,892 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:12:54,892 - INFO - *******************
+2024-04-03 01:12:54,893 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:54,901 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:54,909 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:54,916 - INFO - *******************
+2024-04-03 01:12:54,916 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:12:54,940 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:54,946 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:12:54,947 - INFO -       SUCCESS!      
+2024-04-03 01:12:54,947 - INFO - *******************
+2024-04-03 01:12:54,947 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:12:54,948 - INFO - *******************
+2024-04-03 01:12:54,948 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:54,956 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:54,963 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:54,969 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:54,977 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:54,984 - INFO - *******************
+2024-04-03 01:12:54,985 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:12:55,014 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,023 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:12:55,023 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,024 - INFO - *******************
+2024-04-03 01:12:55,025 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:12:55,025 - INFO - *******************
+2024-04-03 01:12:55,026 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,033 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,041 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,048 - INFO - *******************
+2024-04-03 01:12:55,049 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:12:55,073 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,080 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:12:55,080 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,081 - INFO - *******************
+2024-04-03 01:12:55,081 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:12:55,081 - INFO - *******************
+2024-04-03 01:12:55,082 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,090 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:55,099 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,107 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:55,116 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,124 - INFO - *******************
+2024-04-03 01:12:55,125 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:12:55,154 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,163 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:12:55,164 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,164 - INFO - *******************
+2024-04-03 01:12:55,165 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:12:55,165 - INFO - *******************
+2024-04-03 01:12:55,166 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,173 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,181 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,188 - INFO - *******************
+2024-04-03 01:12:55,189 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:12:55,214 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,221 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:12:55,221 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,222 - INFO - *******************
+2024-04-03 01:12:55,222 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:12:55,223 - INFO - *******************
+2024-04-03 01:12:55,223 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,231 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:55,238 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,245 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:55,252 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,259 - INFO - *******************
+2024-04-03 01:12:55,260 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:12:55,289 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,298 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:12:55,299 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,299 - INFO - *******************
+2024-04-03 01:12:55,299 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:12:55,300 - INFO - *******************
+2024-04-03 01:12:55,300 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,308 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,316 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,322 - INFO - *******************
+2024-04-03 01:12:55,323 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:12:55,346 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,352 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:12:55,353 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,354 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:12:55,355 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:12:55,356 - INFO - *******************
+2024-04-03 01:12:55,357 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:12:55,358 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:12:55,359 - INFO - *******************
+2024-04-03 01:12:55,359 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:12:55,361 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:12:55,362 - INFO - *******************
+2024-04-03 01:12:55,362 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:12:55,364 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:12:55,364 - INFO - *******************
+2024-04-03 01:12:55,364 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:12:55,366 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:12:55,367 - INFO - *******************
+2024-04-03 01:12:55,386 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:12:55,388 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:12:55,389 - INFO - *******************
+2024-04-03 01:12:55,390 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:12:55,392 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:12:55,392 - INFO - *******************
+2024-04-03 01:12:55,393 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:12:55,395 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:12:55,396 - INFO - *******************
+2024-04-03 01:12:55,397 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:12:55,399 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:12:55,399 - INFO - *******************
+2024-04-03 01:12:55,401 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:12:55,402 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:12:55,403 - INFO - *******************
+2024-04-03 01:12:55,420 - INFO - Generating Solar PV model statistical grouping for Belfast.
+2024-04-03 01:12:55,437 - INFO - Solar PV model statistical grouping for Belfast completed.
+2024-04-03 01:12:55,438 - INFO - *******************
+2024-04-03 01:12:55,474 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:55,475 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:55,475 - INFO - *******************
+2024-04-03 01:12:55,476 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:12:55,476 - INFO - *******************
+2024-04-03 01:12:55,477 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,477 - INFO - *******************
+2024-04-03 01:12:55,478 - INFO - Starting Solar PV model simulations for Site.
+2024-04-03 01:12:55,478 - INFO - *******************
+2024-04-03 01:12:55,479 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-03 01:12:55,487 - INFO - *******************
+2024-04-03 01:12:55,487 - INFO - Solar PV model simulations for Site completed.
+2024-04-03 01:12:55,507 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,512 - INFO - Solar PV model data summary for Site complete.
+2024-04-03 01:12:55,513 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,514 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-03 01:12:55,516 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-03 01:12:55,517 - INFO - *******************
+2024-04-03 01:12:55,524 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-04-03 01:12:55,541 - INFO - Solar PV model statistical grouping for Site completed.
+2024-04-03 01:12:55,542 - INFO - *******************
+2024-04-03 01:12:55,626 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:55,627 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:12:55,627 - INFO - *******************
+2024-04-03 01:12:55,638 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:12:55,638 - INFO - *******************
+2024-04-03 01:12:55,639 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,639 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,639 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,641 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,642 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:12:55,642 - INFO - *******************
+2024-04-03 01:12:55,642 - INFO - Starting Solar PV model simulations for .
+2024-04-03 01:12:55,643 - INFO - *******************
+2024-04-03 01:12:55,643 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:12:55,651 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:12:55,658 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:12:55,666 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:12:55,672 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:12:55,680 - INFO - *******************
+2024-04-03 01:12:55,681 - INFO - Solar PV model simulations for  completed.
+2024-04-03 01:12:55,711 - INFO - Solar PV model data aggregated.
+2024-04-03 01:12:55,720 - INFO - Solar PV model data summary for  complete.
+2024-04-03 01:12:55,721 - INFO -       SUCCESS!      
+2024-04-03 01:12:55,722 - INFO - Solar PV model simulations completed in 0.0838 seconds.
+2024-04-03 01:12:55,729 - INFO - Generating Solar PV model statistical grouping for .
+2024-04-03 01:12:55,746 - INFO - Solar PV model statistical grouping for  completed.
+2024-04-03 01:12:55,747 - INFO - *******************
+2024-04-03 01:12:56,001 - INFO - Generating Solar PV model statistical analysis for .
+2024-04-03 01:12:56,003 - INFO - Solar PV model statistical analysis for  completed.
+2024-04-03 01:12:56,003 - INFO - *******************
+2024-04-03 01:12:56,053 - INFO - Load Profile Generated: Daily Electricity Use: 14.269kWh, Annual Electricity Use: 5208.185kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-03 01:12:57,596 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-04-03 01:12:57,600 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-04-03 01:13:40,999 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0%, Hourly Variability: 0%
+2024-04-03 01:13:54,314 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-03 01:14:16,384 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 0.2%, Hourly Variability: 0.1%
+2024-04-03 01:14:28,895 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:29,942 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:14:30,302 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:30,302 - INFO - *******************
+2024-04-03 01:14:30,303 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:14:30,304 - INFO - *******************
+2024-04-03 01:14:30,304 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:30,305 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:30,305 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:30,306 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:30,306 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:30,307 - INFO - *******************
+2024-04-03 01:14:30,307 - INFO - Starting Solar PV model simulations for .
+2024-04-03 01:14:30,308 - INFO - *******************
+2024-04-03 01:14:30,308 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:30,315 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:30,322 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:30,329 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:30,335 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:30,342 - INFO - *******************
+2024-04-03 01:14:30,343 - INFO - Solar PV model simulations for  completed.
+2024-04-03 01:14:30,372 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:30,380 - INFO - Solar PV model data summary for  complete.
+2024-04-03 01:14:30,381 - INFO -       SUCCESS!      
+2024-04-03 01:14:30,422 - INFO - Generating Solar PV model statistical analysis for .
+2024-04-03 01:14:30,424 - INFO - Solar PV model statistical analysis for  completed.
+2024-04-03 01:14:30,425 - INFO - *******************
+2024-04-03 01:14:30,434 - INFO - Generating Solar PV model statistical grouping for .
+2024-04-03 01:14:30,451 - INFO - Solar PV model statistical grouping for  completed.
+2024-04-03 01:14:30,451 - INFO - *******************
+2024-04-03 01:14:31,142 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:14:31,399 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:31,399 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:31,400 - INFO - *******************
+2024-04-03 01:14:31,400 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:14:32,346 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=48.8562&lon=2.3477&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:14:32,695 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:14:32,696 - INFO - *******************
+2024-04-03 01:14:32,696 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:14:33,547 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=40.4202&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:14:33,886 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:14:33,886 - INFO - *******************
+2024-04-03 01:14:33,887 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:14:34,792 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=30.1098&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:14:35,149 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:14:35,149 - INFO - *******************
+2024-04-03 01:14:35,149 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:14:36,342 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=9.0591&lon=31.2235&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-03 01:14:36,729 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:14:36,729 - INFO - *******************
+2024-04-03 01:14:36,730 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:14:36,730 - INFO - *******************
+2024-04-03 01:14:36,730 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:14:36,732 - INFO - *******************
+2024-04-03 01:14:36,732 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,733 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,734 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,734 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,735 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,735 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,735 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,736 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:36,736 - INFO - *******************
+2024-04-03 01:14:36,738 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:14:36,738 - INFO - *******************
+2024-04-03 01:14:36,738 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:36,744 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:36,751 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:36,758 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:36,764 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:36,771 - INFO - *******************
+2024-04-03 01:14:36,772 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:14:36,799 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:36,807 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:14:36,808 - INFO -       SUCCESS!      
+2024-04-03 01:14:36,808 - INFO - *******************
+2024-04-03 01:14:36,809 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:14:36,809 - INFO - *******************
+2024-04-03 01:14:36,810 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:36,817 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:36,824 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:36,831 - INFO - *******************
+2024-04-03 01:14:36,831 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:14:36,853 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:36,860 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:14:36,861 - INFO -       SUCCESS!      
+2024-04-03 01:14:36,861 - INFO - *******************
+2024-04-03 01:14:36,861 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:14:36,861 - INFO - *******************
+2024-04-03 01:14:36,862 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:36,869 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:36,876 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:36,882 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:36,889 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:36,895 - INFO - *******************
+2024-04-03 01:14:36,895 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:14:36,923 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:36,932 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:14:36,933 - INFO -       SUCCESS!      
+2024-04-03 01:14:36,933 - INFO - *******************
+2024-04-03 01:14:36,934 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:14:36,934 - INFO - *******************
+2024-04-03 01:14:36,935 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:36,941 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:36,948 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:36,954 - INFO - *******************
+2024-04-03 01:14:36,955 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:14:36,977 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:36,983 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:14:36,984 - INFO -       SUCCESS!      
+2024-04-03 01:14:36,984 - INFO - *******************
+2024-04-03 01:14:36,985 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:14:36,985 - INFO - *******************
+2024-04-03 01:14:36,986 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:36,993 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:37,000 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,006 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:37,013 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,019 - INFO - *******************
+2024-04-03 01:14:37,019 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:14:37,047 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,055 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:14:37,056 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,056 - INFO - *******************
+2024-04-03 01:14:37,057 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:14:37,057 - INFO - *******************
+2024-04-03 01:14:37,057 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,064 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,070 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,076 - INFO - *******************
+2024-04-03 01:14:37,077 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:14:37,100 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,107 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:14:37,107 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,108 - INFO - *******************
+2024-04-03 01:14:37,108 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:14:37,108 - INFO - *******************
+2024-04-03 01:14:37,109 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,116 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:37,122 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,128 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:37,136 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,143 - INFO - *******************
+2024-04-03 01:14:37,143 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:14:37,170 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,178 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:14:37,178 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,179 - INFO - *******************
+2024-04-03 01:14:37,179 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:14:37,180 - INFO - *******************
+2024-04-03 01:14:37,180 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,188 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,194 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,201 - INFO - *******************
+2024-04-03 01:14:37,202 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:14:37,228 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,244 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:14:37,245 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,245 - INFO - *******************
+2024-04-03 01:14:37,246 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:14:37,247 - INFO - *******************
+2024-04-03 01:14:37,248 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,259 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:37,268 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,275 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:37,283 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,290 - INFO - *******************
+2024-04-03 01:14:37,291 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:14:37,319 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,329 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:14:37,329 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,329 - INFO - *******************
+2024-04-03 01:14:37,330 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:14:37,330 - INFO - *******************
+2024-04-03 01:14:37,331 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,337 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,344 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,350 - INFO - *******************
+2024-04-03 01:14:37,351 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:14:37,374 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,381 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:14:37,381 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,382 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:14:37,383 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:14:37,384 - INFO - *******************
+2024-04-03 01:14:37,384 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:14:37,386 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:14:37,386 - INFO - *******************
+2024-04-03 01:14:37,387 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:14:37,389 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:14:37,389 - INFO - *******************
+2024-04-03 01:14:37,389 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:14:37,391 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:14:37,392 - INFO - *******************
+2024-04-03 01:14:37,392 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:14:37,394 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:14:37,394 - INFO - *******************
+2024-04-03 01:14:37,413 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:14:37,415 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:14:37,416 - INFO - *******************
+2024-04-03 01:14:37,416 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:14:37,418 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:14:37,419 - INFO - *******************
+2024-04-03 01:14:37,420 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:14:37,422 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:14:37,422 - INFO - *******************
+2024-04-03 01:14:37,423 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:14:37,425 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:14:37,426 - INFO - *******************
+2024-04-03 01:14:37,427 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:14:37,428 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:14:37,429 - INFO - *******************
+2024-04-03 01:14:37,447 - INFO - Generating Solar PV model statistical grouping for Belfast.
+2024-04-03 01:14:37,465 - INFO - Solar PV model statistical grouping for Belfast completed.
+2024-04-03 01:14:37,466 - INFO - *******************
+2024-04-03 01:14:37,505 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:37,506 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:37,506 - INFO - *******************
+2024-04-03 01:14:37,507 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:14:37,507 - INFO - *******************
+2024-04-03 01:14:37,508 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,508 - INFO - *******************
+2024-04-03 01:14:37,508 - INFO - Starting Solar PV model simulations for Site.
+2024-04-03 01:14:37,510 - INFO - *******************
+2024-04-03 01:14:37,510 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-03 01:14:37,518 - INFO - *******************
+2024-04-03 01:14:37,519 - INFO - Solar PV model simulations for Site completed.
+2024-04-03 01:14:37,538 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,543 - INFO - Solar PV model data summary for Site complete.
+2024-04-03 01:14:37,544 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,545 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-03 01:14:37,547 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-03 01:14:37,548 - INFO - *******************
+2024-04-03 01:14:37,557 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-04-03 01:14:37,573 - INFO - Solar PV model statistical grouping for Site completed.
+2024-04-03 01:14:37,574 - INFO - *******************
+2024-04-03 01:14:37,658 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:37,659 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:14:37,659 - INFO - *******************
+2024-04-03 01:14:37,670 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:14:37,671 - INFO - *******************
+2024-04-03 01:14:37,671 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,672 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,672 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,672 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,673 - INFO - Solar PV array created: Size: 1.415kW, Size: 7.96m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:14:37,673 - INFO - *******************
+2024-04-03 01:14:37,674 - INFO - Starting Solar PV model simulations for .
+2024-04-03 01:14:37,674 - INFO - *******************
+2024-04-03 01:14:37,675 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:14:37,683 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:14:37,689 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:14:37,696 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:14:37,704 - INFO - Simulating model - PV Size: 1.415kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:14:37,710 - INFO - *******************
+2024-04-03 01:14:37,711 - INFO - Solar PV model simulations for  completed.
+2024-04-03 01:14:37,743 - INFO - Solar PV model data aggregated.
+2024-04-03 01:14:37,752 - INFO - Solar PV model data summary for  complete.
+2024-04-03 01:14:37,753 - INFO -       SUCCESS!      
+2024-04-03 01:14:37,754 - INFO - Solar PV model simulations completed in 0.0837 seconds.
+2024-04-03 01:14:37,760 - INFO - Generating Solar PV model statistical grouping for .
+2024-04-03 01:14:37,780 - INFO - Solar PV model statistical grouping for  completed.
+2024-04-03 01:14:37,785 - INFO - *******************
+2024-04-03 01:14:37,997 - INFO - Generating Solar PV model statistical analysis for .
+2024-04-03 01:14:38,000 - INFO - Solar PV model statistical analysis for  completed.
+2024-04-03 01:14:38,000 - INFO - *******************
+2024-04-03 01:14:38,053 - INFO - Load Profile Generated: Daily Electricity Use: 14.269kWh, Annual Electricity Use: 5208.185kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:14:39,497 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-04-03 01:14:39,502 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-04-03 01:27:27,929 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:27:27,930 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:27:27,930 - INFO - *******************
+2024-04-03 01:27:27,931 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:27:27,931 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:27:27,931 - INFO - *******************
+2024-04-03 01:27:27,932 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:27:27,932 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:27:27,933 - INFO - *******************
+2024-04-03 01:27:27,933 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:27:27,933 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:27:27,933 - INFO - *******************
+2024-04-03 01:27:27,934 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:27:27,934 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:27:27,934 - INFO - *******************
+2024-04-03 01:27:27,935 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:27:27,935 - INFO - *******************
+2024-04-03 01:27:27,935 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:27:27,936 - INFO - *******************
+2024-04-03 01:27:27,936 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,937 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,937 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,937 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,938 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,939 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,940 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,940 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:27:27,941 - INFO - *******************
+2024-04-03 01:27:27,942 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:27:27,942 - INFO - *******************
+2024-04-03 01:27:27,943 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:27:27,951 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:27:27,959 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:27:27,967 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:27:27,974 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:27:27,981 - INFO - *******************
+2024-04-03 01:27:27,982 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:27:28,014 - INFO - Solar PV model data aggregated.
+2024-04-03 01:27:28,022 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:27:28,023 - INFO -       SUCCESS!      
+2024-04-03 01:27:28,031 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:27:28,033 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:27:28,034 - INFO - *******************
+2024-04-03 01:29:12,510 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:29:12,511 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-04-03 01:29:12,511 - INFO - *******************
+2024-04-03 01:29:12,512 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:29:12,512 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-04-03 01:29:12,512 - INFO - *******************
+2024-04-03 01:29:12,513 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:29:12,513 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-04-03 01:29:12,513 - INFO - *******************
+2024-04-03 01:29:12,514 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:29:12,514 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-04-03 01:29:12,514 - INFO - *******************
+2024-04-03 01:29:12,515 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:29:12,516 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-04-03 01:29:12,516 - INFO - *******************
+2024-04-03 01:29:12,516 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:29:12,517 - INFO - *******************
+2024-04-03 01:29:12,517 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-03 01:29:12,518 - INFO - *******************
+2024-04-03 01:29:12,518 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,518 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,519 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,519 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,520 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,520 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,521 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,521 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-03 01:29:12,522 - INFO - *******************
+2024-04-03 01:29:12,522 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:29:12,523 - INFO - *******************
+2024-04-03 01:29:12,523 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,532 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:29:12,539 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,545 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:29:12,552 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,560 - INFO - *******************
+2024-04-03 01:29:12,561 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:29:12,590 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,599 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:29:12,599 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,600 - INFO - *******************
+2024-04-03 01:29:12,600 - INFO - Starting Solar PV model simulations for Belfast.
+2024-04-03 01:29:12,600 - INFO - *******************
+2024-04-03 01:29:12,601 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,608 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,615 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,622 - INFO - *******************
+2024-04-03 01:29:12,622 - INFO - Solar PV model simulations for Belfast completed.
+2024-04-03 01:29:12,646 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,653 - INFO - Solar PV model data summary for Belfast complete.
+2024-04-03 01:29:12,654 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,654 - INFO - *******************
+2024-04-03 01:29:12,654 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:29:12,654 - INFO - *******************
+2024-04-03 01:29:12,654 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,663 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:29:12,669 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,676 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:29:12,684 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,690 - INFO - *******************
+2024-04-03 01:29:12,691 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:29:12,730 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,740 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:29:12,741 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,741 - INFO - *******************
+2024-04-03 01:29:12,742 - INFO - Starting Solar PV model simulations for Paris.
+2024-04-03 01:29:12,743 - INFO - *******************
+2024-04-03 01:29:12,743 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,755 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,762 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,770 - INFO - *******************
+2024-04-03 01:29:12,770 - INFO - Solar PV model simulations for Paris completed.
+2024-04-03 01:29:12,798 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,805 - INFO - Solar PV model data summary for Paris complete.
+2024-04-03 01:29:12,806 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,806 - INFO - *******************
+2024-04-03 01:29:12,807 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:29:12,808 - INFO - *******************
+2024-04-03 01:29:12,808 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,816 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:29:12,824 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,832 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:29:12,842 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,851 - INFO - *******************
+2024-04-03 01:29:12,852 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:29:12,880 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,888 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:29:12,888 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,889 - INFO - *******************
+2024-04-03 01:29:12,889 - INFO - Starting Solar PV model simulations for Madrid.
+2024-04-03 01:29:12,890 - INFO - *******************
+2024-04-03 01:29:12,890 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,897 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,905 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,912 - INFO - *******************
+2024-04-03 01:29:12,912 - INFO - Solar PV model simulations for Madrid completed.
+2024-04-03 01:29:12,935 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:12,942 - INFO - Solar PV model data summary for Madrid complete.
+2024-04-03 01:29:12,944 - INFO -       SUCCESS!      
+2024-04-03 01:29:12,944 - INFO - *******************
+2024-04-03 01:29:12,944 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:29:12,945 - INFO - *******************
+2024-04-03 01:29:12,945 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:12,953 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:29:12,960 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:12,968 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:29:12,974 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:12,981 - INFO - *******************
+2024-04-03 01:29:12,982 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:29:13,010 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:13,018 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:29:13,018 - INFO -       SUCCESS!      
+2024-04-03 01:29:13,019 - INFO - *******************
+2024-04-03 01:29:13,019 - INFO - Starting Solar PV model simulations for Cairo.
+2024-04-03 01:29:13,020 - INFO - *******************
+2024-04-03 01:29:13,020 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:13,028 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:13,035 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:13,042 - INFO - *******************
+2024-04-03 01:29:13,043 - INFO - Solar PV model simulations for Cairo completed.
+2024-04-03 01:29:13,066 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:13,073 - INFO - Solar PV model data summary for Cairo complete.
+2024-04-03 01:29:13,074 - INFO -       SUCCESS!      
+2024-04-03 01:29:13,074 - INFO - *******************
+2024-04-03 01:29:13,074 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:29:13,075 - INFO - *******************
+2024-04-03 01:29:13,075 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:13,082 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-04-03 01:29:13,090 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:13,098 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-04-03 01:29:13,105 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:13,112 - INFO - *******************
+2024-04-03 01:29:13,113 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:29:13,141 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:13,150 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:29:13,151 - INFO -       SUCCESS!      
+2024-04-03 01:29:13,151 - INFO - *******************
+2024-04-03 01:29:13,152 - INFO - Starting Solar PV model simulations for Abuja.
+2024-04-03 01:29:13,152 - INFO - *******************
+2024-04-03 01:29:13,152 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-04-03 01:29:13,161 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-03 01:29:13,170 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-04-03 01:29:13,177 - INFO - *******************
+2024-04-03 01:29:13,178 - INFO - Solar PV model simulations for Abuja completed.
+2024-04-03 01:29:13,203 - INFO - Solar PV model data aggregated.
+2024-04-03 01:29:13,209 - INFO - Solar PV model data summary for Abuja complete.
+2024-04-03 01:29:13,210 - INFO -       SUCCESS!      
+2024-04-03 01:29:13,210 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:29:13,212 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:29:13,213 - INFO - *******************
+2024-04-03 01:29:13,214 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:29:13,215 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:29:13,215 - INFO - *******************
+2024-04-03 01:29:13,216 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:29:13,218 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:29:13,218 - INFO - *******************
+2024-04-03 01:29:13,219 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:29:13,221 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:29:13,221 - INFO - *******************
+2024-04-03 01:29:13,221 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:29:13,223 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:29:13,223 - INFO - *******************
+2024-04-03 01:29:13,689 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-04-03 01:29:13,691 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-04-03 01:29:13,691 - INFO - *******************
+2024-04-03 01:29:13,692 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-04-03 01:29:13,693 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-04-03 01:29:13,693 - INFO - *******************
+2024-04-03 01:29:13,694 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-04-03 01:29:13,695 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-04-03 01:29:13,696 - INFO - *******************
+2024-04-03 01:29:13,697 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-04-03 01:29:13,698 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-04-03 01:29:13,699 - INFO - *******************
+2024-04-03 01:29:13,700 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-04-03 01:29:13,702 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-04-03 01:29:13,702 - INFO - *******************
+2024-04-03 01:29:17,892 - INFO - Generating Solar PV model statistical grouping for Belfast.
+2024-04-03 01:29:17,908 - INFO - Solar PV model statistical grouping for Belfast completed.
+2024-04-03 01:29:17,908 - INFO - *******************
+2024-04-03 01:50:27,115 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:50:31,294 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:50:43,385 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:50:49,912 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:25,870 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:29,098 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:35,617 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:38,772 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:41,118 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:46,391 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:47,785 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:48,844 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:49,618 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:50,327 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:51,033 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:51,700 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:52,377 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:53,017 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:55,777 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:51:56,655 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:20,147 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:25,784 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 20.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:31,267 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 40.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:33,299 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 40.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:35,490 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 40.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:41,492 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 30.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:45,561 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 30.0%, Hourly Variability: 10.0%
+2024-04-03 01:52:47,540 - INFO - Load Profile Generated: Daily Electricity Use: 10kWh, Annual Electricity Use: 3650kWh, Daily Variability: 30.0%, Hourly Variability: 10.0%
