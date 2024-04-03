@@ -4,7 +4,7 @@ from dataclasses import dataclass
 class Grid:
     import_standard: float = 0.2982
     export_standard: float = 0.1422
-    emissions_kgCO2: float = 0.322
+    emissions_kgCO2: float = 0.322 
     day_night_tariff: bool = False
     import_day: float = 0.3378
     import_night: float = 0.1804

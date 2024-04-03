@@ -8,6 +8,9 @@
 
 ## Patch/Progress Notes:
 ### **02/04/2024:**
+- Updated SolarPV summaries and grouping to report more metrics, and renamed columns and classes for clarity.
+
+### **02/04/2024:**
 - Updated Grid class to more accurately reflect tariff options in UK/EU market
 - Added Load class and load_profile functionality to add load profile to dataframe, and to also
   adjust this for consumption values. Also added variability to load profile.

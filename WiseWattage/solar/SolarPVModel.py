@@ -12,7 +12,7 @@ from solar.solar_pv_model import (
     combine_array_results,
     total_array_results,
     pv_stats,
-    pv_stats_grouped,
+    pv_grouped,
     SummaryGrouped,
 )
 
@@ -107,7 +107,7 @@ class SolarPVModel:
     
 
     @cached_property
-    def summary_grouped(self) -> 'SummaryGrouped':
+    def grouped(self) -> 'SummaryGrouped':
         """
         Generates a grouped summary of model results the first time it is called and caches the result.
 
@@ -115,10 +115,10 @@ class SolarPVModel:
             SummaryGrouped: Object containing grouped summary of model results.
         """
         logging.info(f"Generating Solar PV model statistical grouping for {self.site.name}.")
-        summary_grouped = pv_stats_grouped(self.all_models)
+        grouped = pv_grouped(self.all_models)
         logging.info(f"Solar PV model statistical grouping for {self.site.name} completed.")
         logging.info("*******************")
-        return summary_grouped
+        return grouped
 
 
     def save_model_csv(self):

@@ -5,7 +5,8 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Create seperate class for each model type to be run i.e. Solar_Demand, Solar_Grid etc. Make class variable across all models that can be used to access summary of combined results, etc.
+- Create all in one class for models, create classes for each component being modelled
+- Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
 - Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
 methods are added.
 - When adding battery, ensure calculation of efficiences occurs at each stage to account for variation in peak power demand effects on eff.
