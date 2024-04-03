@@ -1,8 +1,7 @@
 from dataclasses import dataclass
-import logging
-import numpy as np
 
 from solar.SolarPVPanel import SolarPVPanel
+from solar.solar_pv_array import initialise_array
 
 
 # Solar PV Array Class
@@ -32,7 +31,7 @@ class SolarPVArray:
     surface_pitch: float = 35
     surface_azimuth: float = 0
     albedo: float = 0.2
-    cost_per_kWp: float = 1250
+    
     pv_kwp: float = 1
     area_m2: float = None
 
@@ -41,14 +40,6 @@ class SolarPVArray:
         Post-initialization method.
         Set's values if PVPanelList exists, and logs a message indicating the creation of the Solar PV Array.
         """
-        if self.pv_panel is not None:
-            self.pv_kwp = round(self.pv_panel.panel_kwp * self.num_panels, 3)
-            self.area_m2 = round(self.pv_panel.size_m2 * self.num_panels, 3)
-
-        logging.info(
-            f"Solar PV array created: Size: {self.pv_kwp}kW, Size: {self.area_m2}m2, "
-            f"Azimuth: {self.surface_azimuth}deg, Lifespan: {self.pv_panel.lifespan}yrs, "
-            f"Pitch: {self.surface_pitch}deg, Efficiency: {self.pv_panel.eff*100}%"
-        )
+        initialise_array(self)
 
 

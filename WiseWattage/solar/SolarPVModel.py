@@ -8,9 +8,7 @@ from meteo.Site import Site
 from solar.SolarPVPanel import SolarPVPanel
 from solar.SolarPVArray import SolarPVArray
 from solar.solar_pv_model import (
-    calc_solar_model,
-    combine_array_results,
-    total_array_results,
+    model_solar_pv,
     pv_stats,
     pv_grouped,
     SummaryGrouped,
@@ -46,49 +44,7 @@ class SolarPVModel:
             self.arrays = [self.arrays]
             
         # Run solar PV model
-        self.model_solar_pv()
-
-
-    def model_solar_pv(self):
-        """
-        Method to perform solar PV modeling and generate model results.
-        """
-        logging.info("*******************")
-        logging.info(f"Starting Solar PV model simulations for {self.site.name}.")
-        logging.info("*******************")
-        models = []
-        for array in self.arrays:
-            log_message = (f"Simulating model - PV Size: {array.pv_kwp}kWp, Pitch: {array.surface_pitch} degrees, "
-                           f"Azimuth {array.surface_azimuth} degrees WoS")
-            logging.info(log_message)
-            result = calc_solar_model(
-                self.site.tmy_data,
-                self.site.latitude,
-                self.site.longitude,
-                array.pv_kwp,
-                array.surface_pitch,
-                array.surface_azimuth,
-                array.pv_panel.lifespan,
-                array.pv_panel.pv_eol_derating,
-                array.albedo,
-                array.pv_panel.cell_temp_coeff,
-                array.pv_panel.refraction_index,
-                array.pv_panel.e_poa_STC,
-                array.pv_panel.cell_temp_STC,
-                self.site.timestep,
-                self.site.tmz_hrs_east,
-            )
-            models.append({"array_specs": array, "model_result": result})
-        
-        # Arrange model results into class structure
-        logging.info("*******************")
-        logging.info(f"Solar PV model simulations for {self.site.name} completed.")
-        self.models = models
-        self.all_models = combine_array_results(models)
-        logging.info(f"Solar PV model data aggregated.")
-        self.combined_model = total_array_results(models)
-        logging.info(f"Solar PV model data summary for {self.site.name} complete.")
-        logging.info("      SUCCESS!      ") 
+        model_solar_pv(self) 
 
 
     @cached_property

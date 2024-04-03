@@ -1,4 +1,6 @@
 """Import functionality required to model Solar PV performance"""
+import logging
+
 from collections import OrderedDict
 
 import pandas as pd
@@ -151,105 +153,6 @@ def calc_pv_power(pv_kwp: float, e_poa: float, ambient_temp: float, wind_speed: 
     return pv_power, temp_diff
 
 
-def calc_solar_model(data: pd.DataFrame, latitude: float, longitude: float, pv_kwp: float = 1, 
-                     surface_pitch: float = 35, surface_azimuth: float = 0, lifespan: int = 25, 
-                     pv_derating: float = 0.88, albedo: float = 0.2, cell_temp_coeff: float = -0.0035,
-                     refraction_index: float = 0.05, e_poa_STC: float = 1000, cell_temp_STC: float = 25,
-                     timestep: int = 60, tmz_hrs_east: float = 0) -> pd.DataFrame:
-    """
-    Processes TMY data to simulate solar PV system performance over a typical meteorological year.
-
-    Parameters:
-        data (pd.DataFrame): TMY data including irradiance and temperature.
-        latitude (float): Site latitude.
-        longitude (float): Site longitude.
-        pv_kwp (float): Rated power of the PV system in kWp.
-        surface_pitch (float): Tilt angle of the PV panel from the horizontal plane.
-        surface_azimuth (float): Orientation of the PV panel from true north.
-        lifespan (int): Estimated lifespan of the PV system in years.
-        pv_derating (float): Derating factor of the PV system to account for end-of-life performance.
-        albedo (float): Ground reflectance factor.
-        cell_temp_coeff (float): Temperature coefficient of the PV cell per degree Celsius.
-        refraction_index (float): Refractive index of the panel's cover.
-        e_poa_STC (float): Plane of array irradiance under standard test conditions.
-        cell_temp_STC (float): Cell temperature under standard test conditions.
-        timestep (int): Time interval for calculations in minutes.
-        tmz_hrs_east (float): Time zone offset from GMT in hours.
-
-    Returns:
-        pd.DataFrame: Enhanced TMY data with added columns for solar radiation calculations and PV system performance metrics.
-    """
-    # Convert required DataFrame columns to numpy arrays for calculations
-    hour_of_day = data['Hour_of_Day'].to_numpy()
-    day_of_year = data['Day_of_Year'].to_numpy()
-    week_of_year = data['Week_of_Year'].to_numpy()
-    month_of_year = data['Month_of_Year'].to_numpy()
-    Gb_n = data['Gb(n)'].to_numpy()
-    Gd_h = data['Gd(h)'].to_numpy()
-    G_h = data['G(h)'].to_numpy()
-    Ambient_Temperature_C = data['T2m'].to_numpy()
-    wind_speed = data["WS10m"].to_numpy()
-
-    # Perform calculations using numpy arrays
-    declination_angle = sr.calc_declination(day_of_year)
-    solar_time = sr.calc_solar_time(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
-    hour_angle = sr.calc_hour_angle(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
-    aoi = sr.calc_aoi(day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
-    zenith_angle = sr.calc_zenith(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
-    e_beam_w_m2 = sr.calc_beam_radiation(Gb_n, day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
-    e_diffuse_w_m2 = sr.calc_diffuse_radiation(Gd_h, G_h, surface_pitch, latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
-    e_ground_w_m2 = sr.calc_ground_radiation(G_h, surface_pitch, albedo)
-    e_poa_w_m2 = e_beam_w_m2 + e_diffuse_w_m2 + e_ground_w_m2
-
-    # Assuming iam_losses function exists and can operate on numpy arrays
-    panel_poa_w_m2 = e_beam_w_m2 * iam_losses(aoi, refraction_index) + e_diffuse_w_m2 + e_ground_w_m2
-    iam_loss_perc = np.divide((e_poa_w_m2 - panel_poa_w_m2), e_poa_w_m2, where=e_poa_w_m2!=0)
-
-    et_hrad_w_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
-    pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
-    Array_Temp_C = calc_array_temp_sandia(panel_poa_w_m2, Ambient_Temperature_C, wind_speed)
-
-    # Calculate low light efficiency
-    ll_pv_eff = calc_low_light_losses(1, panel_poa_w_m2)
-
-    # Assuming calc_pv_power returns two arrays or can be adapted to do so
-    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_w_m2, Ambient_Temperature_C, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
-    ll_pv_gen_kWh = pv_gen_kwh * ll_pv_eff
-    low_light_loss_kWh = pv_gen_kwh - ll_pv_gen_kWh
-    iam_loss_kWh = pv_gen_kwh * iam_loss_perc
-    total_loss_kwh = iam_loss_kWh + low_light_loss_kWh + pv_thermal_loss_kwh
-
-    # Construct a new DataFrame from the calculated arrays
-    results = pd.DataFrame({
-        "Hour_of_Day": hour_of_day,
-        "Day_of_Year": day_of_year,
-        "Week_of_Year": week_of_year,
-        "Month_of_Year": month_of_year,
-        "Wind_Speed_ms": wind_speed,
-        "Ambient_Temperature_C": Ambient_Temperature_C,
-        "Declination_Angle": declination_angle,
-        "Solar_Time": solar_time,
-        "Hour_Angle": hour_angle,
-        "AOI": aoi,
-        "Zenith_Angle": zenith_angle,
-        "E_Beam_kWm2": e_beam_w_m2 / 1000,                   # Convert to kW
-        "E_Diffuse_kWm2": e_diffuse_w_m2 / 1000,             # Convert to kW
-        "E_Ground_kWm2": e_ground_w_m2 / 1000,               # Convert to kW
-        "E_POA_kWm2": e_poa_w_m2 / 1000,                     # Convert to kW
-        "Panel_POA_kWm2": panel_poa_w_m2 / 1000,             # Convert to kW
-        "IAM_Loss_kWh": iam_loss_kWh,                       # Convert to kW
-        "ET_HRad_kWm2": et_hrad_w_m2 / 1000,                 # Convert to kW
-        "PV_Derated_Eff": pv_derated_eff,
-        "Array_Temp_C": Array_Temp_C,
-        "PV_Gen_kWh": ll_pv_gen_kWh,
-        "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh,
-        "Low_Light_Loss_kWh": low_light_loss_kWh,
-        "Combined_PV_Losses_kWh": total_loss_kwh
-    })
-
-    return results
-
-
 def combine_array_results(results: list) -> pd.DataFrame:
     """
     Combines array results into a single DataFrame with averaged and summed columns.
@@ -370,6 +273,147 @@ def total_array_results(results: list) -> pd.DataFrame:
         combined_df[time_col] = results[0]["model_result"][time_col]
 
     return combined_df
+
+
+def calc_solar_model(data: pd.DataFrame, latitude: float, longitude: float, pv_kwp: float = 1, 
+                     surface_pitch: float = 35, surface_azimuth: float = 0, lifespan: int = 25, 
+                     pv_derating: float = 0.88, albedo: float = 0.2, cell_temp_coeff: float = -0.0035,
+                     refraction_index: float = 0.05, e_poa_STC: float = 1000, cell_temp_STC: float = 25,
+                     timestep: int = 60, tmz_hrs_east: float = 0) -> pd.DataFrame:
+    """
+    Processes TMY data to simulate solar PV system performance over a typical meteorological year.
+
+    Parameters:
+        data (pd.DataFrame): TMY data including irradiance and temperature.
+        latitude (float): Site latitude.
+        longitude (float): Site longitude.
+        pv_kwp (float): Rated power of the PV system in kWp.
+        surface_pitch (float): Tilt angle of the PV panel from the horizontal plane.
+        surface_azimuth (float): Orientation of the PV panel from true north.
+        lifespan (int): Estimated lifespan of the PV system in years.
+        pv_derating (float): Derating factor of the PV system to account for end-of-life performance.
+        albedo (float): Ground reflectance factor.
+        cell_temp_coeff (float): Temperature coefficient of the PV cell per degree Celsius.
+        refraction_index (float): Refractive index of the panel's cover.
+        e_poa_STC (float): Plane of array irradiance under standard test conditions.
+        cell_temp_STC (float): Cell temperature under standard test conditions.
+        timestep (int): Time interval for calculations in minutes.
+        tmz_hrs_east (float): Time zone offset from GMT in hours.
+
+    Returns:
+        pd.DataFrame: Enhanced TMY data with added columns for solar radiation calculations and PV system performance metrics.
+    """
+    # Convert required DataFrame columns to numpy arrays for calculations
+    hour_of_day = data['Hour_of_Day'].to_numpy()
+    day_of_year = data['Day_of_Year'].to_numpy()
+    week_of_year = data['Week_of_Year'].to_numpy()
+    month_of_year = data['Month_of_Year'].to_numpy()
+    Gb_n = data['Gb(n)'].to_numpy()
+    Gd_h = data['Gd(h)'].to_numpy()
+    G_h = data['G(h)'].to_numpy()
+    Ambient_Temperature_C = data['T2m'].to_numpy()
+    wind_speed = data["WS10m"].to_numpy()
+
+    # Perform calculations using numpy arrays
+    declination_angle = sr.calc_declination(day_of_year)
+    solar_time = sr.calc_solar_time(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
+    hour_angle = sr.calc_hour_angle(day_of_year, hour_of_day, longitude, timestep, tmz_hrs_east)
+    aoi = sr.calc_aoi(day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
+    zenith_angle = sr.calc_zenith(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    e_beam_w_m2 = sr.calc_beam_radiation(Gb_n, day_of_year, hour_of_day, latitude, longitude, surface_azimuth, surface_pitch, timestep, tmz_hrs_east)
+    e_diffuse_w_m2 = sr.calc_diffuse_radiation(Gd_h, G_h, surface_pitch, latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    e_ground_w_m2 = sr.calc_ground_radiation(G_h, surface_pitch, albedo)
+    e_poa_w_m2 = e_beam_w_m2 + e_diffuse_w_m2 + e_ground_w_m2
+
+    # Assuming iam_losses function exists and can operate on numpy arrays
+    panel_poa_w_m2 = e_beam_w_m2 * iam_losses(aoi, refraction_index) + e_diffuse_w_m2 + e_ground_w_m2
+    iam_loss_perc = np.divide((e_poa_w_m2 - panel_poa_w_m2), e_poa_w_m2, where=e_poa_w_m2!=0)
+
+    et_hrad_w_m2 = sr.calc_et_horizontal_radiation(latitude, longitude, day_of_year, hour_of_day, timestep, tmz_hrs_east)
+    pv_derated_eff = calc_pv_derating(day_of_year, hour_of_day, pv_derating, lifespan, year=1)  # Assuming this function can handle numpy arrays
+    Array_Temp_C = calc_array_temp_sandia(panel_poa_w_m2, Ambient_Temperature_C, wind_speed)
+
+    # Calculate low light efficiency
+    ll_pv_eff = calc_low_light_losses(1, panel_poa_w_m2)
+
+    # Assuming calc_pv_power returns two arrays or can be adapted to do so
+    pv_gen_kwh, pv_thermal_loss_kwh = calc_pv_power(pv_kwp, panel_poa_w_m2, Ambient_Temperature_C, wind_speed, pv_derated_eff, cell_temp_coeff, e_poa_STC, cell_temp_STC)
+    ll_pv_gen_kWh = pv_gen_kwh * ll_pv_eff
+    low_light_loss_kWh = pv_gen_kwh - ll_pv_gen_kWh
+    iam_loss_kWh = pv_gen_kwh * iam_loss_perc
+    total_loss_kwh = iam_loss_kWh + low_light_loss_kWh + pv_thermal_loss_kwh
+
+    # Construct a new DataFrame from the calculated arrays
+    results = pd.DataFrame({
+        "Hour_of_Day": hour_of_day,
+        "Day_of_Year": day_of_year,
+        "Week_of_Year": week_of_year,
+        "Month_of_Year": month_of_year,
+        "Wind_Speed_ms": wind_speed,
+        "Ambient_Temperature_C": Ambient_Temperature_C,
+        "Declination_Angle": declination_angle,
+        "Solar_Time": solar_time,
+        "Hour_Angle": hour_angle,
+        "AOI": aoi,
+        "Zenith_Angle": zenith_angle,
+        "E_Beam_kWm2": e_beam_w_m2 / 1000,                   # Convert to kW
+        "E_Diffuse_kWm2": e_diffuse_w_m2 / 1000,             # Convert to kW
+        "E_Ground_kWm2": e_ground_w_m2 / 1000,               # Convert to kW
+        "E_POA_kWm2": e_poa_w_m2 / 1000,                     # Convert to kW
+        "Panel_POA_kWm2": panel_poa_w_m2 / 1000,             # Convert to kW
+        "IAM_Loss_kWh": iam_loss_kWh,                       # Convert to kW
+        "ET_HRad_kWm2": et_hrad_w_m2 / 1000,                 # Convert to kW
+        "PV_Derated_Eff": pv_derated_eff,
+        "Array_Temp_C": Array_Temp_C,
+        "PV_Gen_kWh": ll_pv_gen_kWh,
+        "PV_Thermal_Loss_kWh": pv_thermal_loss_kwh,
+        "Low_Light_Loss_kWh": low_light_loss_kWh,
+        "Combined_PV_Losses_kWh": total_loss_kwh
+    })
+
+    return results
+
+
+def model_solar_pv(self):
+        """
+        Method to perform solar PV modeling and generate model results.
+        """
+        logging.info("*******************")
+        logging.info(f"Starting Solar PV model simulations for {self.site.name}.")
+        logging.info("*******************")
+        models = []
+        for array in self.arrays:
+            log_message = (f"Simulating model - PV Size: {array.pv_kwp}kWp, Pitch: {array.surface_pitch} degrees, "
+                           f"Azimuth {array.surface_azimuth} degrees WoS")
+            logging.info(log_message)
+            result = calc_solar_model(
+                self.site.tmy_data,
+                self.site.latitude,
+                self.site.longitude,
+                array.pv_kwp,
+                array.surface_pitch,
+                array.surface_azimuth,
+                array.pv_panel.lifespan,
+                array.pv_panel.pv_eol_derating,
+                array.albedo,
+                array.pv_panel.cell_temp_coeff,
+                array.pv_panel.refraction_index,
+                array.pv_panel.e_poa_STC,
+                array.pv_panel.cell_temp_STC,
+                self.site.timestep,
+                self.site.tmz_hrs_east,
+            )
+            models.append({"array_specs": array, "model_result": result})
+        
+        # Arrange model results into class structure
+        logging.info("*******************")
+        logging.info(f"Solar PV model simulations for {self.site.name} completed.")
+        self.models = models
+        self.all_models = combine_array_results(models)
+        logging.info(f"Solar PV model data aggregated.")
+        self.combined_model = total_array_results(models)
+        logging.info(f"Solar PV model data summary for {self.site.name} complete.")
+        logging.info("      SUCCESS!      ")
 
 
 def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
@@ -550,3 +594,5 @@ def pv_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
 
     # Return an instance of SummaryGrouped with summaries as attributes
     return SummaryGrouped(summaries)
+
+

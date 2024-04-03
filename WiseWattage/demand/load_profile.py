@@ -1,6 +1,7 @@
+import logging
+
 import pandas as pd
 import numpy as np
-import plotly.express as px
 
 def calc_load_profile(daily_demand: float = 9.91, daily_std: float = 0.2, hourly_std: float = 0.1,
                       profile: str = "Domestic", country: str = "UK"):
@@ -37,6 +38,26 @@ def calc_load_profile(daily_demand: float = 9.91, daily_std: float = 0.2, hourly
     load_data['Adjusted_Energy_Use_kWh'] = load_data['Energy_Use_kWh'] * load_data["Variability_Factor"]
 
     # Drop the extra columns to leave only the adjusted load
-    # load_data = load_data.drop(columns=['Daily_Deviation', 'Hourly_Deviation'], inplace = True)
+    load_data = load_data.drop(columns=['Daily_Deviation', 'Hourly_Deviation'])
 
     return load_data
+
+
+# Model annual load profile incorporating variablity, save these values to daily and annual demand values.
+def initialise_load(self):
+    # Calculate Load Profile and return dataframe
+    self.load_profile = calc_load_profile(daily_demand = self.daily_electric,
+                                              daily_std = self.daily_variablity,
+                                              hourly_std = self.timestep_variability,
+                                              profile = self.profile,
+                                              country = self.country)
+        
+    # Set new daily and annual values to reflect variability calculations updating values
+    self.daily_electric = round(self.load_profile.Adjusted_Energy_Use_kWh.sum()/365, 3)
+    self.annual_electric = self.daily_electric * 365
+    
+    logging.info(
+        f"Load Profile Generated: Daily Electricity Use: {self.daily_electric}kWh, "
+        f"Annual Electricity Use: {self.annual_electric}kWh, Daily Variability: {self.daily_variablity*100}%, "
+        f"Hourly Variability: {self.timestep_variability*100}%"
+    )

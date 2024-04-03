@@ -9,6 +9,8 @@
 ## Patch/Progress Notes:
 ### **02/04/2024:**
 - Updated SolarPV summaries and grouping to report more metrics, and renamed columns and classes for clarity.
+- Added WW_Model to represent combined model structure, began framing this
+- Refactored class methods so that initialisation code is found in relevant .py function file. This should make it clearer to adjust and add class specific methods later.
 
 ### **02/04/2024:**
 - Updated Grid class to more accurately reflect tariff options in UK/EU market
