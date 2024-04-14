@@ -5,17 +5,21 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
-- Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
-methods are added. ???Potentially using net columns instead???
+- Add documentation to newly added code throughout, update readme and start main walkthrough/guide now that most of the modelling structure is finished.
+- Add summaries, graphs and other grouping functions to main WW_Model
+- Add financial parameter input and calculations to overall project/model
+- Add additional functions to run multiple models to perform sensitivity analysis
+- Add optimisation functions to allow user to input range of parameters that returns models based on optimised results
 
 
 ###### **MEDIUM PRIOIRTY**
-- Complete and finalise wind turbine modelling & datasets
-
+- Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
+- Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
+methods are added. ???Potentially using net columns and tracking each component individually instead???
+- Add wind turbines, AC/DC fuel generators
 
 ###### **LOW PRIOIRTY**.
-- 
+- Add heat demand to modelling
 -
 
 
