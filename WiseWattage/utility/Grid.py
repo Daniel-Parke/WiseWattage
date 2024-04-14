@@ -17,3 +17,5 @@ class Grid:
     tariff_name: str = "Power_NI"
     import_allow: bool = True
     export_allow: bool = True
+    import_limit:float = 99999999
+    export_limit:float = 99999999

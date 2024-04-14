@@ -11,7 +11,6 @@ from solar.solar_pv_model import (
     model_solar_pv,
     pv_stats,
     pv_grouped,
-    
     SummaryGrouped,
 )
 

@@ -27,12 +27,12 @@ class SolarPVArray:
         area_m2 (float): Area of the array in square meters.
     """ 
     pv_panel: SolarPVPanel = None
-    num_panels: int = 1
+    num_panels: int = 3
     surface_pitch: float = 35
     surface_azimuth: float = 0
     albedo: float = 0.2
     
-    pv_kwp: float = 1
+    pv_kwp: float = None
     area_m2: float = None
 
     def __post_init__(self):

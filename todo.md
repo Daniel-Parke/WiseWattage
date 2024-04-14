@@ -5,16 +5,14 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**
-- Create all in one class for models, create classes for each component being modelled
 - Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
 - Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
-methods are added.
-- When adding battery, ensure calculation of efficiences occurs at each stage to account for variation in peak power demand effects on eff.
+methods are added. ???Potentially using net columns instead???
 
 
 ###### **MEDIUM PRIOIRTY**
 - Complete and finalise wind turbine modelling & datasets
-- Add battery storage to model
+
 
 ###### **LOW PRIOIRTY**.
 - 

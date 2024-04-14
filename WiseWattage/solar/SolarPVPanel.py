@@ -28,7 +28,7 @@ class SolarPVPanel:
     """
 
     panel_kwp: float = 0.3538
-    size_m2: float = 1.990
+    size_m2: float = 2.0
     eff: float = 0.2237
     cell_temp_coeff: float = -0.004
     cell_NOCT: float = 48
@@ -41,8 +41,8 @@ class SolarPVPanel:
     V_mp: float = 41.60
     material: str = "Mono-crystalline"
     bifacial: bool = False
-    length_m: float = None
-    width_m: float = None
+    length_m: float = 1.65
+    width_m: float = 1.21
     e_poa_STC: float = 1000
     cell_temp_STC: float = 25
 
