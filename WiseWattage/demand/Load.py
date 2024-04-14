@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 import pandas as pd
 
-from demand.load_profile import calc_load_profile, initialise_load
+from demand.load_profile import initialise_load
 
 @dataclass
 class Load:
@@ -11,6 +11,7 @@ class Load:
     profile: str = "Domestic"
     country: str = "UK"
     annual_electric: float = None
+    load_profile_path: str = None
     load_profile: pd.DataFrame = field(default=None, init=True)
 
     def __post_init__(self):

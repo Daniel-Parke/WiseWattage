@@ -9,6 +9,7 @@
 ## Patch/Progress Notes:
 ### **14/04/2024:**
 - Added feature to arrange custom smart meter data into format required
+- Tidied up feature for custom meter data, enabling file path to be passed directly into Load class.
 
 ### **13/04/2024:**
 - Added Battery and Inverter classes, updated existing classes to have more refinded parameters.
