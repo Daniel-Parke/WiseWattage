@@ -81,21 +81,6 @@ def drop_leap_days(data):
     return data
 
 
-# Converts 30 min smart meter data into hourly table
-def convert_to_hourly_table(data):
-    data_hourly = pd.DataFrame()
-    data_hourly["Date"] = data["Date"]
-    for i in range(1, len(data.columns), 2):
-        data_hourly[f'Hour {i//2}'] = data.iloc[:, i] + data.iloc[:, i+1]
-
-    data_hourly['Date'] = pd.to_datetime(data_hourly['Date'], format='mixed')
-    data_hourly.set_index('Date', inplace=True)
-
-    data_hourly = drop_leap_days(data_hourly)
-    data_hourly.sort_index(inplace=True)
-
-    return data_hourly
-
 # Converts 30 min smart meter data into hourly series
 def convert_to_hourly(data):
     data_hourly = pd.DataFrame()
@@ -117,7 +102,11 @@ def convert_to_hourly(data):
 
     melted_data['DateTime'] = melted_data['Date'] + melted_data['Hour']
     melted_data.set_index('DateTime', inplace=True)
-    melted_data.drop(columns=['Date', 'Hour'], inplace=True)
-    melted_data.sort_index(inplace=True)
+
+    # Arrange dataframe into annual values instead of chronological
+    melted_data['Month_Day'] = melted_data.index.strftime('%m-%d')
+    melted_data.sort_values('Month_Day', inplace=True)
+    melted_data.drop(columns=['Month_Day', 'Date', 'Hour'], inplace=True)
+    melted_data.reset_index(inplace=True)
 
     return melted_data
