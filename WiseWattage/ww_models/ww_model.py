@@ -35,9 +35,9 @@ def initialise_model(self):
     if self.arrays is not None:
         self.pv_model = SolarPVModel(self.site, self.arrays)
 
-    self.model = self.load.load_profile
-    self.model["Net_Energy_kWh"] = -self.model["Energy_Use_kWh"]
-    self.model["Net_Energy_Demand_kWh"] = self.model["Energy_Use_kWh"]
+    self.model = self.load.load_profile.copy()
+    self.model["Net_Energy_kWh"] = -self.load.load_profile["Energy_Use_kWh"]
+    self.model["Net_Energy_Demand_kWh"] = self.load.load_profile["Energy_Use_kWh"]
     self.model["Renewable_Energy_Use_kWh"] = 0
 
     self.model["Inverter_Losses_kWh"] = 0

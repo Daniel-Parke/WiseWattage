@@ -8,6 +8,9 @@
 
 ## Patch/Progress Notes:
 ### **14/04/2024:**
+- Began working on feature to add custom meter data
+
+### **13/04/2024:**
 - Added Battery and Inverter classes, updated existing classes to have more refinded parameters.
 - Added main methods to WW_Model and created data structure. Models will be called sequentially if they exist rather than being required.
 - Added ability to set import and export limits for grid

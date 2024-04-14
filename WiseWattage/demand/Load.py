@@ -11,7 +11,7 @@ class Load:
     profile: str = "Domestic"
     country: str = "UK"
     annual_electric: float = None
-    load_profile: pd.DataFrame = field(default=None, init=False)
+    load_profile: pd.DataFrame = field(default=None, init=True)
 
     def __post_init__(self):
         """

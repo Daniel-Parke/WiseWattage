@@ -36134,3 +36134,487 @@
 2024-04-14 03:32:59,743 - INFO - Solar PV model data aggregated.
 2024-04-14 03:32:59,752 - INFO - Solar PV model data summary for Site complete.
 2024-04-14 03:32:59,754 - INFO -       SUCCESS!      
+2024-04-14 03:56:04,536 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 03:56:05,488 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 03:56:06,186 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 03:56:06,187 - INFO - *******************
+2024-04-14 03:56:06,188 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 03:56:06,188 - INFO - *******************
+2024-04-14 03:56:06,189 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 03:56:06,225 - INFO - Load Profile Generated: Daily Electricity Use: 50.126kWh, Annual Electricity Use: 18295.989999999998kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 03:56:06,227 - INFO - *******************
+2024-04-14 03:56:06,228 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 03:56:06,228 - INFO - *******************
+2024-04-14 03:56:06,229 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 03:56:06,241 - INFO - *******************
+2024-04-14 03:56:06,242 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 03:56:06,270 - INFO - Solar PV model data aggregated.
+2024-04-14 03:56:06,279 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 03:56:06,280 - INFO -       SUCCESS!      
+2024-04-14 03:56:23,749 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 03:56:24,893 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 03:56:25,395 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 03:56:25,397 - INFO - *******************
+2024-04-14 03:56:25,398 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 03:56:25,398 - INFO - *******************
+2024-04-14 03:56:25,399 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 03:56:25,423 - INFO - Load Profile Generated: Daily Electricity Use: 50.005kWh, Annual Electricity Use: 18251.825kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 03:56:25,424 - INFO - *******************
+2024-04-14 03:56:25,424 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 03:56:25,425 - INFO - *******************
+2024-04-14 03:56:25,425 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 03:56:25,432 - INFO - *******************
+2024-04-14 03:56:25,433 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 03:56:25,454 - INFO - Solar PV model data aggregated.
+2024-04-14 03:56:25,458 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 03:56:25,459 - INFO -       SUCCESS!      
+2024-04-14 04:07:47,460 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:07:48,413 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:07:49,180 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:07:49,180 - INFO - *******************
+2024-04-14 04:07:49,181 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:07:49,181 - INFO - *******************
+2024-04-14 04:07:49,181 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:08:12,851 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:08:13,926 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:08:14,307 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:08:14,308 - INFO - *******************
+2024-04-14 04:08:14,308 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:08:14,308 - INFO - *******************
+2024-04-14 04:08:14,310 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:08:14,343 - INFO - Load Profile Generated: Daily Electricity Use: 50.763kWh, Annual Electricity Use: 18528.495kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:08:14,344 - INFO - *******************
+2024-04-14 04:08:14,345 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:08:14,345 - INFO - *******************
+2024-04-14 04:08:14,346 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:08:14,354 - INFO - *******************
+2024-04-14 04:08:14,354 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:08:14,376 - INFO - Solar PV model data aggregated.
+2024-04-14 04:08:14,382 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:08:14,382 - INFO -       SUCCESS!      
+2024-04-14 04:08:47,160 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:08:48,236 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:08:48,615 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:08:48,615 - INFO - *******************
+2024-04-14 04:08:48,616 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:08:48,616 - INFO - *******************
+2024-04-14 04:08:48,617 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:08:48,644 - INFO - Load Profile Generated: Daily Electricity Use: 50.048kWh, Annual Electricity Use: 18267.52kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:08:48,645 - INFO - *******************
+2024-04-14 04:08:48,645 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:08:48,645 - INFO - *******************
+2024-04-14 04:08:48,646 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:08:48,654 - INFO - *******************
+2024-04-14 04:08:48,654 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:08:48,676 - INFO - Solar PV model data aggregated.
+2024-04-14 04:08:48,681 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:08:48,681 - INFO -       SUCCESS!      
+2024-04-14 04:12:14,023 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:12:15,044 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:12:15,500 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:12:15,501 - INFO - *******************
+2024-04-14 04:12:15,501 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:12:15,502 - INFO - *******************
+2024-04-14 04:12:15,502 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:12:15,527 - INFO - Load Profile Generated: Daily Electricity Use: 50.162kWh, Annual Electricity Use: 18309.13kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:12:15,528 - INFO - *******************
+2024-04-14 04:12:15,528 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:12:15,528 - INFO - *******************
+2024-04-14 04:12:15,529 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:12:15,536 - INFO - *******************
+2024-04-14 04:12:15,538 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:12:15,559 - INFO - Solar PV model data aggregated.
+2024-04-14 04:12:15,564 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:12:15,565 - INFO -       SUCCESS!      
+2024-04-14 04:13:51,443 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:13:52,397 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:13:52,797 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:13:52,798 - INFO - *******************
+2024-04-14 04:13:52,799 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:13:52,800 - INFO - *******************
+2024-04-14 04:13:52,801 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:13:52,834 - INFO - Load Profile Generated: Daily Electricity Use: 49.436kWh, Annual Electricity Use: 18044.14kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:13:52,835 - INFO - *******************
+2024-04-14 04:13:52,836 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:13:52,836 - INFO - *******************
+2024-04-14 04:13:52,837 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:13:52,844 - INFO - *******************
+2024-04-14 04:13:52,845 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:13:52,875 - INFO - Solar PV model data aggregated.
+2024-04-14 04:13:52,880 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:13:52,881 - INFO -       SUCCESS!      
+2024-04-14 04:13:53,854 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:14:01,416 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:15:25,657 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:00,002 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:00,004 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:00,004 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:00,005 - INFO - *******************
+2024-04-14 04:16:00,005 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:16:00,006 - INFO - *******************
+2024-04-14 04:16:00,007 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:16:00,032 - INFO - Load Profile Generated: Daily Electricity Use: 50.456kWh, Annual Electricity Use: 18416.440000000002kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:00,033 - INFO - *******************
+2024-04-14 04:16:00,034 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:16:00,034 - INFO - *******************
+2024-04-14 04:16:00,035 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:16:00,042 - INFO - *******************
+2024-04-14 04:16:00,043 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:16:00,062 - INFO - Solar PV model data aggregated.
+2024-04-14 04:16:00,069 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:16:00,070 - INFO -       SUCCESS!      
+2024-04-14 04:16:07,432 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:07,432 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:07,433 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:07,434 - INFO - *******************
+2024-04-14 04:16:07,434 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:16:07,434 - INFO - *******************
+2024-04-14 04:16:07,435 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:16:07,459 - INFO - Load Profile Generated: Daily Electricity Use: 50.371kWh, Annual Electricity Use: 18385.415kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:07,460 - INFO - *******************
+2024-04-14 04:16:07,461 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:16:07,461 - INFO - *******************
+2024-04-14 04:16:07,461 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:16:07,468 - INFO - *******************
+2024-04-14 04:16:07,469 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:16:07,488 - INFO - Solar PV model data aggregated.
+2024-04-14 04:16:07,494 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:16:07,495 - INFO -       SUCCESS!      
+2024-04-14 04:16:09,837 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:09,838 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:09,840 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:16:09,840 - INFO - *******************
+2024-04-14 04:16:09,840 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:16:09,841 - INFO - *******************
+2024-04-14 04:16:09,842 - INFO - Solar PV array created: Size: 110.032kW, Size: 622.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:16:09,875 - INFO - Load Profile Generated: Daily Electricity Use: 49.587kWh, Annual Electricity Use: 18099.255kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:16:09,877 - INFO - *******************
+2024-04-14 04:16:09,878 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:16:09,879 - INFO - *******************
+2024-04-14 04:16:09,879 - INFO - Simulating model - PV Size: 110.032kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:16:09,890 - INFO - *******************
+2024-04-14 04:16:09,891 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:16:09,911 - INFO - Solar PV model data aggregated.
+2024-04-14 04:16:09,919 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:16:09,920 - INFO -       SUCCESS!      
+2024-04-14 04:17:03,101 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-14 04:17:03,103 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-14 04:17:03,104 - INFO - *******************
+2024-04-14 04:17:09,160 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:09,161 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:09,161 - INFO - *******************
+2024-04-14 04:17:09,162 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:09,163 - INFO - *******************
+2024-04-14 04:17:09,163 - INFO - Solar PV array created: Size: 113.216kW, Size: 640.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:09,189 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:09,190 - INFO - *******************
+2024-04-14 04:17:09,190 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:09,191 - INFO - *******************
+2024-04-14 04:17:09,191 - INFO - Simulating model - PV Size: 113.216kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:09,200 - INFO - *******************
+2024-04-14 04:17:09,201 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:09,221 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:09,227 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:09,228 - INFO -       SUCCESS!      
+2024-04-14 04:17:09,343 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-14 04:17:09,345 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-14 04:17:09,346 - INFO - *******************
+2024-04-14 04:17:12,937 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:12,937 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:12,938 - INFO - *******************
+2024-04-14 04:17:12,938 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:12,939 - INFO - *******************
+2024-04-14 04:17:12,939 - INFO - Solar PV array created: Size: 123.83kW, Size: 700.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:12,964 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:12,966 - INFO - *******************
+2024-04-14 04:17:12,966 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:12,967 - INFO - *******************
+2024-04-14 04:17:12,967 - INFO - Simulating model - PV Size: 123.83kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:12,974 - INFO - *******************
+2024-04-14 04:17:12,975 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:12,995 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:13,000 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:13,001 - INFO -       SUCCESS!      
+2024-04-14 04:17:13,098 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-14 04:17:13,100 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-14 04:17:13,100 - INFO - *******************
+2024-04-14 04:17:17,371 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:17,372 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:17,372 - INFO - *******************
+2024-04-14 04:17:17,373 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:17,374 - INFO - *******************
+2024-04-14 04:17:17,374 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:17,401 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:17,402 - INFO - *******************
+2024-04-14 04:17:17,402 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:17,402 - INFO - *******************
+2024-04-14 04:17:17,403 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:17,410 - INFO - *******************
+2024-04-14 04:17:17,411 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:17,432 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:17,440 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:17,441 - INFO -       SUCCESS!      
+2024-04-14 04:17:17,530 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-04-14 04:17:17,532 - INFO - Solar PV model statistical analysis for Site completed.
+2024-04-14 04:17:17,533 - INFO - *******************
+2024-04-14 04:17:35,604 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:35,605 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:35,605 - INFO - *******************
+2024-04-14 04:17:35,606 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:35,606 - INFO - *******************
+2024-04-14 04:17:35,607 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:35,633 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:35,634 - INFO - *******************
+2024-04-14 04:17:35,634 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:35,635 - INFO - *******************
+2024-04-14 04:17:35,636 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:35,645 - INFO - *******************
+2024-04-14 04:17:35,647 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:35,673 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:35,678 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:35,680 - INFO -       SUCCESS!      
+2024-04-14 04:17:42,094 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:42,095 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:42,095 - INFO - *******************
+2024-04-14 04:17:42,096 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:42,096 - INFO - *******************
+2024-04-14 04:17:42,097 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:42,123 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:42,124 - INFO - *******************
+2024-04-14 04:17:42,124 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:42,125 - INFO - *******************
+2024-04-14 04:17:42,125 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:42,132 - INFO - *******************
+2024-04-14 04:17:42,133 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:42,153 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:42,159 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:42,160 - INFO -       SUCCESS!      
+2024-04-14 04:17:48,784 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:48,785 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:17:48,786 - INFO - *******************
+2024-04-14 04:17:48,786 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:17:48,787 - INFO - *******************
+2024-04-14 04:17:48,787 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:17:48,813 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:17:48,815 - INFO - *******************
+2024-04-14 04:17:48,815 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:17:48,815 - INFO - *******************
+2024-04-14 04:17:48,816 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:17:48,823 - INFO - *******************
+2024-04-14 04:17:48,824 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:17:48,848 - INFO - Solar PV model data aggregated.
+2024-04-14 04:17:48,854 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:17:48,854 - INFO -       SUCCESS!      
+2024-04-14 04:20:37,613 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:20:38,747 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:20:39,124 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:20:39,125 - INFO - *******************
+2024-04-14 04:20:39,125 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:20:39,125 - INFO - *******************
+2024-04-14 04:20:39,126 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:20:39,126 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:20:39,127 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:20:39,152 - INFO - Load Profile Generated: Daily Electricity Use: 9.857kWh, Annual Electricity Use: 3597.805kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:20:39,153 - INFO - *******************
+2024-04-14 04:20:39,153 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:20:39,154 - INFO - *******************
+2024-04-14 04:20:39,154 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:20:39,170 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:20:39,177 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:20:39,185 - INFO - *******************
+2024-04-14 04:20:39,186 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:20:39,211 - INFO - Solar PV model data aggregated.
+2024-04-14 04:20:39,217 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:20:39,218 - INFO -       SUCCESS!      
+2024-04-14 04:21:22,729 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:21:22,730 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:21:22,730 - INFO - *******************
+2024-04-14 04:21:22,731 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:21:22,732 - INFO - *******************
+2024-04-14 04:21:22,732 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:21:22,758 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:21:22,759 - INFO - *******************
+2024-04-14 04:21:22,759 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:21:22,760 - INFO - *******************
+2024-04-14 04:21:22,760 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:21:22,767 - INFO - *******************
+2024-04-14 04:21:22,768 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:21:22,788 - INFO - Solar PV model data aggregated.
+2024-04-14 04:21:22,794 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:21:22,794 - INFO -       SUCCESS!      
+2024-04-14 04:21:29,093 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:21:29,094 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:21:29,095 - INFO - *******************
+2024-04-14 04:21:29,095 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:21:29,096 - INFO - *******************
+2024-04-14 04:21:29,096 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:21:29,097 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:21:29,097 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:21:29,122 - INFO - Load Profile Generated: Daily Electricity Use: 9.861kWh, Annual Electricity Use: 3599.2650000000003kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:21:29,123 - INFO - *******************
+2024-04-14 04:21:29,124 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:21:29,124 - INFO - *******************
+2024-04-14 04:21:29,124 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:21:29,132 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:21:29,139 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:21:29,146 - INFO - *******************
+2024-04-14 04:21:29,147 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:21:29,172 - INFO - Solar PV model data aggregated.
+2024-04-14 04:21:29,178 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:21:29,179 - INFO -       SUCCESS!      
+2024-04-14 04:21:41,625 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:21:41,626 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:21:41,626 - INFO - *******************
+2024-04-14 04:21:41,627 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:21:41,627 - INFO - *******************
+2024-04-14 04:21:41,628 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:21:41,654 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:21:41,654 - INFO - *******************
+2024-04-14 04:21:41,655 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:21:41,655 - INFO - *******************
+2024-04-14 04:21:41,656 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:21:41,663 - INFO - *******************
+2024-04-14 04:21:41,664 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:21:41,683 - INFO - Solar PV model data aggregated.
+2024-04-14 04:21:41,688 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:21:41,689 - INFO -       SUCCESS!      
+2024-04-14 04:22:19,119 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:19,120 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:19,120 - INFO - *******************
+2024-04-14 04:22:19,121 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:22:19,121 - INFO - *******************
+2024-04-14 04:22:19,121 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:19,122 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:19,122 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:19,149 - INFO - Load Profile Generated: Daily Electricity Use: 9.914kWh, Annual Electricity Use: 3618.6099999999997kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:22:19,150 - INFO - *******************
+2024-04-14 04:22:19,151 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:22:19,152 - INFO - *******************
+2024-04-14 04:22:19,153 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:22:19,168 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:22:19,179 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:22:19,188 - INFO - *******************
+2024-04-14 04:22:19,189 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:22:19,216 - INFO - Solar PV model data aggregated.
+2024-04-14 04:22:19,223 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:22:19,224 - INFO -       SUCCESS!      
+2024-04-14 04:22:25,641 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:25,641 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:25,642 - INFO - *******************
+2024-04-14 04:22:25,643 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:22:25,643 - INFO - *******************
+2024-04-14 04:22:25,644 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:25,644 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:25,645 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:25,670 - INFO - Load Profile Generated: Daily Electricity Use: 9.894kWh, Annual Electricity Use: 3611.31kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:22:25,671 - INFO - *******************
+2024-04-14 04:22:25,671 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:22:25,672 - INFO - *******************
+2024-04-14 04:22:25,672 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:22:25,679 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:22:25,686 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:22:25,693 - INFO - *******************
+2024-04-14 04:22:25,694 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:22:25,719 - INFO - Solar PV model data aggregated.
+2024-04-14 04:22:25,725 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:22:25,726 - INFO -       SUCCESS!      
+2024-04-14 04:22:52,208 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:53,201 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:22:53,756 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:22:53,756 - INFO - *******************
+2024-04-14 04:22:53,757 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:22:53,757 - INFO - *******************
+2024-04-14 04:22:53,758 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:53,759 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:53,759 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:22:53,786 - INFO - Load Profile Generated: Daily Electricity Use: 9.898kWh, Annual Electricity Use: 3612.77kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:22:53,786 - INFO - *******************
+2024-04-14 04:22:53,787 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:22:53,787 - INFO - *******************
+2024-04-14 04:22:53,787 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:22:53,795 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:22:53,802 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:22:53,809 - INFO - *******************
+2024-04-14 04:22:53,809 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:22:53,836 - INFO - Solar PV model data aggregated.
+2024-04-14 04:22:53,842 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:22:53,843 - INFO -       SUCCESS!      
+2024-04-14 04:23:00,077 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:23:00,999 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-04-14 04:23:01,460 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:23:01,460 - INFO - *******************
+2024-04-14 04:23:01,461 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:23:01,462 - INFO - *******************
+2024-04-14 04:23:01,462 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:14,260 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:23:14,260 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:23:14,261 - INFO - *******************
+2024-04-14 04:23:14,261 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:23:14,262 - INFO - *******************
+2024-04-14 04:23:14,262 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:14,290 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:23:14,292 - INFO - *******************
+2024-04-14 04:23:14,292 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:23:14,293 - INFO - *******************
+2024-04-14 04:23:14,293 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:23:14,304 - INFO - *******************
+2024-04-14 04:23:14,305 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:23:14,333 - INFO - Solar PV model data aggregated.
+2024-04-14 04:23:14,338 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:23:14,339 - INFO -       SUCCESS!      
+2024-04-14 04:23:32,224 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:23:32,224 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:23:32,225 - INFO - *******************
+2024-04-14 04:23:32,225 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:23:32,226 - INFO - *******************
+2024-04-14 04:23:32,226 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:32,227 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:32,228 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:32,253 - INFO - Load Profile Generated: Daily Electricity Use: 9.973kWh, Annual Electricity Use: 3640.1450000000004kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:23:32,254 - INFO - *******************
+2024-04-14 04:23:32,255 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:23:32,255 - INFO - *******************
+2024-04-14 04:23:32,255 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:23:32,262 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:23:32,270 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:23:32,277 - INFO - *******************
+2024-04-14 04:23:32,278 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:23:32,302 - INFO - Solar PV model data aggregated.
+2024-04-14 04:23:32,309 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:23:32,309 - INFO -       SUCCESS!      
+2024-04-14 04:23:52,770 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:23:52,770 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-04-14 04:23:52,771 - INFO - *******************
+2024-04-14 04:23:52,772 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:23:52,772 - INFO - *******************
+2024-04-14 04:23:52,773 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:52,773 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:52,773 - INFO - Solar PV array created: Size: 1.061kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:23:52,800 - INFO - Load Profile Generated: Daily Electricity Use: 9.788kWh, Annual Electricity Use: 3572.62kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:23:52,801 - INFO - *******************
+2024-04-14 04:23:52,801 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:23:52,802 - INFO - *******************
+2024-04-14 04:23:52,802 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-04-14 04:23:52,810 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-04-14 04:23:52,817 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-04-14 04:23:52,824 - INFO - *******************
+2024-04-14 04:23:52,825 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:23:52,852 - INFO - Solar PV model data aggregated.
+2024-04-14 04:23:52,859 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:23:52,860 - INFO -       SUCCESS!      
+2024-04-14 04:24:33,225 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:24:33,225 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-04-14 04:24:33,226 - INFO - *******************
+2024-04-14 04:24:33,226 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 2.0m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-04-14 04:24:33,227 - INFO - *******************
+2024-04-14 04:24:33,228 - INFO - Solar PV array created: Size: 120.292kW, Size: 680.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-04-14 04:24:33,254 - INFO - Load Profile Generated: Daily Electricity Use: 625.019kWh, Annual Electricity Use: 228131.935kWh, Daily Variability: 15.0%, Hourly Variability: 10.0%
+2024-04-14 04:24:33,254 - INFO - *******************
+2024-04-14 04:24:33,255 - INFO - Starting Solar PV model simulations for Site.
+2024-04-14 04:24:33,255 - INFO - *******************
+2024-04-14 04:24:33,256 - INFO - Simulating model - PV Size: 120.292kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-04-14 04:24:33,264 - INFO - *******************
+2024-04-14 04:24:33,265 - INFO - Solar PV model simulations for Site completed.
+2024-04-14 04:24:33,284 - INFO - Solar PV model data aggregated.
+2024-04-14 04:24:33,289 - INFO - Solar PV model data summary for Site complete.
+2024-04-14 04:24:33,290 - INFO -       SUCCESS!      

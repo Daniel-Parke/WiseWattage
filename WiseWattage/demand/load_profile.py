@@ -48,11 +48,12 @@ def calc_load_profile(daily_demand: float = 9.91, daily_std: float = 0.2, hourly
 # Model annual load profile incorporating variablity, save these values to daily and annual demand values.
 def initialise_load(self):
     # Calculate Load Profile and return dataframe
-    self.load_profile = calc_load_profile(daily_demand = self.daily_electric,
-                                              daily_std = self.daily_variablity,
-                                              hourly_std = self.timestep_variability,
-                                              profile = self.profile,
-                                              country = self.country)
+    if self.load_profile is None:
+        self.load_profile = calc_load_profile(daily_demand = self.daily_electric,
+                                                daily_std = self.daily_variablity,
+                                                hourly_std = self.timestep_variability,
+                                                profile = self.profile,
+                                                country = self.country)
         
     # Set new daily and annual values to reflect variability calculations updating values
     self.daily_electric = round(self.load_profile.Energy_Use_kWh.sum()/365, 3)
