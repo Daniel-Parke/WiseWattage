@@ -68,6 +68,7 @@ def initialise_load(self):
         f"Annual Electricity Use: {self.annual_electric}kWh, Daily Variability: {self.daily_variablity*100}%, "
         f"Hourly Variability: {self.timestep_variability*100}%"
     )
+    logging.info("*******************")
 
 
 

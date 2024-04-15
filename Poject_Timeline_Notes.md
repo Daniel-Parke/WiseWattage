@@ -8,6 +8,12 @@
 
 ## Patch/Progress Notes:
 ### **14/04/2024:**
+- Added ability to load modules from csv sheet by passing module name into class init function
+- Updated class inheritance so that later features are built from previously declared components
+- Added logging to new functions to aid with troubleshooting
+
+
+### **14/04/2024:**
 - Added feature to arrange custom smart meter data into format required
 - Tidied up feature for custom meter data, enabling file path to be passed directly into Load class.
 - Further optimisations tested and added, full model runtime with all componenets currently 100ms +-20

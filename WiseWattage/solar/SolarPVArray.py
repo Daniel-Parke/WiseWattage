@@ -34,6 +34,10 @@ class SolarPVArray:
     
     pv_kwp: float = None
     area_m2: float = None
+    I_sc: float = None
+    V_oc: float = None
+    I_mp: float = None
+    V_mp: float = None
 
     def __post_init__(self):
         """

@@ -1,3 +1,4 @@
+import logging
 import pandas as pd
 import numpy as np
 
@@ -48,6 +49,11 @@ def initialise_model(self):
     self.model["Import_Limited"] = 0
     self.model["Export_Limited"] = 0
     self.model["Unused_Energy_kWh"] = 0
+
+    logging.info(
+            f"Main Model Successfully Initialised"
+        )
+    logging.info("*******************")
     
 
         
@@ -79,22 +85,27 @@ def calc_solar_energy_flow(self, pv_model_variables=pv_model_variables, mo=99999
                                                             - self.model["Excess_Solar_kWh"])
             
             self.model["Renewable_Energy_Use_kWh"] += self.model["Consumed_Solar_kWh"]
+
+            logging.info(
+            f"Solar PV simulation & energy flow calculations completed"
+            )
+            logging.info("*******************")
         
             
 
 def calc_battery_energy_flow_old(self):
-    if self.storage is not None:
+    if self.battery is not None:
         # Initialize the state of charge of the battery
-        current_soc = self.storage.useable_capacity * self.storage.initial_charge
+        current_soc = self.battery.useable_capacity * self.battery.initial_charge
         self.model["Battery_SoC_kWh"] = 0.0
         self.model["Battery_Charge_kWh"] = 0.0
         self.model["Battery_Discharge_kWh"] = 0.0
         self.model["Battery_Losses_kWh"] = 0.0
 
-        max_discharge = self.storage.max_discharge_kW
-        max_charge = self.storage.max_charge_kW
+        max_discharge = self.battery.max_discharge_kW
+        max_charge = self.battery.max_charge_kW
         eff = self.inverter.inverter_eff
-        max_cap = self.storage.useable_capacity
+        max_cap = self.battery.useable_capacity
         
         for index, row in self.model.iterrows():
             # If there's demand, we might need to discharge the battery
@@ -142,6 +153,11 @@ def calc_battery_energy_flow_old(self):
             # Ensure the Battery SoC does not exceed the usable capacity or drop below the minimum SoC
             current_soc = min(current_soc, max_cap)
 
+            logging.info(
+            f"Battery simulation & energy flow calculations completed"
+            )
+            logging.info("*******************")
+
 
 from numba import jit
 
@@ -182,7 +198,7 @@ def calc_battery_state(n, net_demand, net_energy, initial_soc, max_discharge, ma
     return soc_series, charge_amount, discharge_amount, losses, net_demand, net_energy, renewable_cons
 
 def calc_battery_energy_flow(self):
-    if self.storage is not None:
+    if self.battery is not None:
         # Extract the values to numpy arrays for numba acceleration
         n = len(self.model)
         net_demand = self.model["Net_Energy_Demand_kWh"].values.copy()
@@ -194,11 +210,11 @@ def calc_battery_energy_flow(self):
             n, 
             net_demand, 
             net_energy, 
-            self.storage.useable_capacity * self.storage.initial_charge,
-            self.storage.max_discharge_kW,
-            self.storage.max_charge_kW,
+            self.battery.useable_capacity * self.battery.initial_charge,
+            self.battery.max_discharge_kW,
+            self.battery.max_charge_kW,
             self.inverter.inverter_eff,
-            self.storage.useable_capacity,
+            self.battery.useable_capacity,
             renewable_cons
         )
 
@@ -210,6 +226,11 @@ def calc_battery_energy_flow(self):
         self.model["Net_Energy_Demand_kWh"] = results[4]
         self.model["Net_Energy_kWh"] = results[5]
         self.model["Renewable_Energy_Use_kWh"] = results[6]
+
+        logging.info(
+            f"Battery simulation & energy flow calculations completed"
+        )
+        logging.info("*******************")
 
 
 def calc_grid_energy_flow(self):
@@ -234,6 +255,11 @@ def calc_grid_energy_flow(self):
         self.model["Unused_Energy_kWh"] -= self.model["Grid_Exports_kWh"]
         self.model["Net_Energy_kWh"] -= self.model["Grid_Exports_kWh"]
 
+        logging.info(
+        f"Grid simulation & energy flow calculations completed"
+            )
+        logging.info("*******************")
+
 
 def sort_columns(self, columns_to_keep=columns_to_keep, columns_to_drop=columns_to_drop):
         # First, drop specified columns if any are given and they exist in the DataFrame
@@ -243,3 +269,8 @@ def sort_columns(self, columns_to_keep=columns_to_keep, columns_to_drop=columns_
         # Reorder columns by filtering the list to include only those that are present in the DataFrame
         filtered_columns = [col for col in columns_to_keep if col in self.model.columns]
         self.model = round(self.model[filtered_columns], 3)
+
+        logging.info(
+        f"Model aggregation completed successfully"
+            )
+        logging.info("*******************")

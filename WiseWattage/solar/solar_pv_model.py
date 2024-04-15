@@ -406,7 +406,6 @@ def model_solar_pv(self):
             models.append({"array_specs": array, "model_result": result})
         
         # Arrange model results into class structure
-        logging.info("*******************")
         logging.info(f"Solar PV model simulations for {self.site.name} completed.")
         self.models = models
         self.all_models = combine_array_results(models)
@@ -414,6 +413,7 @@ def model_solar_pv(self):
         self.combined_model = total_array_results(models)
         logging.info(f"Solar PV model data summary for {self.site.name} complete.")
         logging.info("      SUCCESS!      ")
+        logging.info("*******************")
 
 
 def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:

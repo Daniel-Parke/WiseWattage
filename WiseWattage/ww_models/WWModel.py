@@ -17,11 +17,11 @@ from ww_models.ww_model import (initialise_model, calc_solar_energy_flow,
 @dataclass
 class Model:
     site: 'Site'
-    arrays: Union['SolarPVArray', List['SolarPVArray']] = None
-    storage: 'Battery' = None
     load: 'Load' = None
     grid: 'Grid' = None
+    arrays: Union['SolarPVArray', List['SolarPVArray']] = None
     inverter: 'Inverter' = None
+    battery: 'Battery' = None
     pv_model: SolarPVModel = None
     name: str = ""
     model: pd.DataFrame = field(default=None, init=False)

@@ -1,5 +1,8 @@
-from dataclasses import dataclass
 import logging
+from dataclasses import dataclass
+
+from solar.solar_pv_panel import initialise_class
+
 
 
 @dataclass
@@ -26,7 +29,6 @@ class SolarPVPanel:
         e_poa_STC (float): POA Irradiance at Standard Test Conditions (STC).
         cell_temp_STC (float): Cell Temperature at STC.
     """
-
     panel_kwp: float = 0.3538
     size_m2: float = 2.0
     eff: float = 0.2237
@@ -45,16 +47,9 @@ class SolarPVPanel:
     width_m: float = 1.21
     e_poa_STC: float = 1000
     cell_temp_STC: float = 25
+    load_panel_name: str = None
 
     def __post_init__(self):
-        """
-        Post-initialization method.
-        Logs a message indicating the creation of the Solar PV Panel.
-        """
-        logging.info(
-            f"Solar PV Panel created: Size: {self.panel_kwp}kW, Size: {self.size_m2}m2,"
-            f" Efficiency: {self.eff*100}%, Lifespan: {self.lifespan}yrs"
-        )
-        logging.info("*******************")
+        initialise_class(self)
 
 
