@@ -6,7 +6,20 @@ from typing import Callable, TypeVar
 
 
 def timer(func):
-    def wrapper (*args, **kwargs):
+    """
+    Decorator function to time the execution of another function.
+
+    Parameters:
+        func: The function to be timed
+
+    Returns:
+        wrapper: A wrapped version of the input function with timing functionality added.
+    """
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        """
+        Wrapper function that calculates the time the function takes to execute.
+        """
         start_time = time.time()
         result = func(*args, **kwargs)
         end_time = time.time()
@@ -20,6 +33,7 @@ def timer(func):
 
         return result
     return wrapper
+
 
 
 # Create a type variable that can be any callable

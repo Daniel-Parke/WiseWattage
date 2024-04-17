@@ -5,7 +5,7 @@
 
 #### **TO DO LIST:**
 ###### **HIGH PRIOIRTY**.
-- Add documentation to newly added code throughout, update readme and start main walkthrough/guide now that most of the modelling structure is finished.
+- Update readme and start main walkthrough/guide now that most of the modelling structure is finished.
 - Add summaries, graphs and other grouping functions to main WW_Model
 - Add financial parameter input and calculations to overall project/model
 - Add additional functions to run multiple models to perform sensitivity analysis

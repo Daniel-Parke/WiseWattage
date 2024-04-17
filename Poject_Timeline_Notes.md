@@ -7,7 +7,10 @@
 ###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br><br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. The idea for this project came from my own personal work as a student/energy researcher, and my final project for CS50x where I made a Solar PV calculator. The original code that contains those functions can be seen [here](/old_files/original_energy_modelling.py) if you are interested. <br><br>                                                                                                      If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try! 
 
 ## Patch/Progress Notes:
-### **14/04/2024:**
+### **17/04/2024:**
+- Updated docstrings and function comments throughout newly added code to aid with readability
+
+### **15/04/2024:**
 - Added ability to load modules from csv sheet by passing module name into class init function
 - Updated class inheritance so that later features are built from previously declared components
 - Added logging to new functions to aid with troubleshooting
