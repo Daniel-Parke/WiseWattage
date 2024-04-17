@@ -1,10 +1,26 @@
-import os
-import pickle
-import logging
+import time
 from typing import Any, Optional
 
 from functools import lru_cache, wraps
 from typing import Callable, TypeVar
+
+
+def timer(func):
+    def wrapper (*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        time_took = end_time - start_time
+
+        # Format time to more readable units
+        if time_took < 1:
+            print(f"Processing took: {time_took * 1000:.2f} milliseconds")
+        elif time_took >= 1:
+            print(f"Processing took: {end_time - start_time:.4f} seconds")
+
+        return result
+    return wrapper
+
 
 # Create a type variable that can be any callable
 F = TypeVar('F', bound=Callable[..., Any])

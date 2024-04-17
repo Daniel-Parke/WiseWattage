@@ -12,6 +12,8 @@ from storage.Battery import Battery
 from ww_models.ww_model import (initialise_model, calc_solar_energy_flow, 
                                 calc_battery_energy_flow, calc_grid_energy_flow, sort_columns)
 
+from misc.util import timer
+
 
 
 @dataclass
@@ -26,7 +28,7 @@ class Model:
     name: str = ""
     model: pd.DataFrame = field(default=None, init=False)
 
-
+    @timer
     def __post_init__(self):
         initialise_model(self)
         calc_solar_energy_flow(self)
