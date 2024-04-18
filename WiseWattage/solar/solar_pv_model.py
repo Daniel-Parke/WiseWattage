@@ -383,6 +383,11 @@ def model_solar_pv(self):
         logging.info("*******************")
         models = []
         for array in self.arrays:
+            if array.cost is not None:
+                self.cost += array.cost
+            if array.weight_kg is not None:
+                self.weight_kg += array.weight_kg
+
             log_message = (f"Simulating model - PV Size: {array.pv_kwp}kWp, Pitch: {array.surface_pitch} degrees, "
                            f"Azimuth {array.surface_azimuth} degrees WoS")
             logging.info(log_message)
@@ -404,6 +409,7 @@ def model_solar_pv(self):
                 self.site.tmz_hrs_east,
             )
             models.append({"array_specs": array, "model_result": result})
+        logging.info("*******************")
         
         # Arrange model results into class structure
         logging.info(f"Solar PV model simulations for {self.site.name} completed.")
@@ -467,6 +473,8 @@ def pv_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
 
     pv_capacity = 0 
     total_area = 0
+
+
     for i in range(len(arrays)):
         pv_capacity += arrays[i].pv_panel.panel_kwp * arrays[i].num_panels
         total_area += arrays[i].pv_panel.size_m2 * arrays[i].num_panels

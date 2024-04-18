@@ -1,6 +1,8 @@
 import logging
 import numpy as np
+import pandas as pd
 
+from collections import OrderedDict
 from numba import jit
 
 from solar.SolarPVModel import SolarPVModel
@@ -18,7 +20,9 @@ columns_to_keep = ['Energy_Use_kWh', "Renewable_Energy_Use_kWh", 'Grid_Imports_k
                    'PV_Gen_kWh_Total', 'PV_AC_Output_kWh', 'Consumed_Solar_kWh', 'Excess_Solar_kWh',
                    "Battery_SoC_kWh", "Battery_Charge_kWh", "Battery_Discharge_kWh",
                    'Unused_Energy_kWh', 'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
-                   'Battery_Losses_kWh', "Inverter_Limited_kWh", "Import_Limited", "Export_Limited"]
+                   'Battery_Losses_kWh', "Inverter_Limited_kWh", "Import_Limited", "Export_Limited",
+                   "Grid_Imports_£", "Grid_Exports_£",
+                   "Hour_of_Day", "Day_of_Year", "Week_of_Year", "Month_of_Year"]
 
 
 def initialise_model(self):
@@ -66,11 +70,12 @@ def initialise_model(self):
     self.model["Inverter_Losses_kWh"] = 0
     self.model["Inverter_Limited_kWh"] = 0
 
-    self.model["Grid_Imports_kWh"] = 0
-    self.model["Grid_Exports_kWh"] = 0
-    self.model["Import_Limited"] = 0
-    self.model["Export_Limited"] = 0
     self.model["Unused_Energy_kWh"] = 0
+
+    self.model["Hour_of_Day"] = self.site.tmy_data["Hour_of_Day"]
+    self.model["Day_of_Year"] = self.site.tmy_data["Day_of_Year"]
+    self.model["Week_of_Year"] = self.site.tmy_data["Week_of_Year"]
+    self.model["Month_of_Year"] = self.site.tmy_data["Month_of_Year"]
 
     # Run SolarPVModel, save entire results and add required values to model.model datafarme
     if self.arrays is not None:
@@ -143,7 +148,7 @@ def calc_solar_energy_flow(self, pv_model_variables=pv_model_variables, mo=99999
 
 @jit(nopython=True)
 def calc_battery_state(n, net_demand, net_energy, initial_soc, max_discharge, max_charge, eff, max_cap,
-                        renewable_cons):
+                        renewable_cons, unused_energy):
     """
     Calculates the state of charge of a battery over time given a set of inputs.
 
@@ -216,12 +221,14 @@ def calc_battery_state(n, net_demand, net_energy, initial_soc, max_discharge, ma
             charge_amount[i] = charge_power
             current_soc += actual_charge
             net_energy[i] -= charge_power
+            unused_energy[i] -= charge_power
 
         # Ensure SoC does not fall below zero or exceed maximum capacity after each operation
         current_soc = max(min(current_soc, max_cap), 0)
         soc_series[i] = current_soc
 
-    return soc_series, charge_amount, discharge_amount, losses, net_demand, net_energy, renewable_cons
+    return soc_series, charge_amount, discharge_amount, losses, net_demand, net_energy, renewable_cons, unused_energy
+
 
 def calc_battery_energy_flow(self):
     """
@@ -235,6 +242,7 @@ def calc_battery_energy_flow(self):
         net_demand = self.model["Net_Energy_Demand_kWh"].values.copy()
         net_energy = self.model["Net_Energy_kWh"].values.copy()
         renewable_cons = self.model["Renewable_Energy_Use_kWh"].values.copy()
+        unused_energy = self.model["Unused_Energy_kWh"].values.copy()
 
         # Call the numba-accelerated function
         results = calc_battery_state(
@@ -246,7 +254,8 @@ def calc_battery_energy_flow(self):
             self.battery.max_charge_kW,
             self.inverter.inverter_eff,
             self.battery.useable_capacity,
-            renewable_cons
+            renewable_cons,
+            unused_energy
         )
 
         # Update DataFrame columns with the results
@@ -257,6 +266,7 @@ def calc_battery_energy_flow(self):
         self.model["Net_Energy_Demand_kWh"] = results[4]
         self.model["Net_Energy_kWh"] = results[5]
         self.model["Renewable_Energy_Use_kWh"] = results[6]
+        self.model["Unused_Energy_kWh"] = results[7]
 
         logging.info(
             "Battery simulation & energy flow calculations completed"
@@ -269,37 +279,252 @@ def calc_grid_energy_flow(self):
     Simulates the energy flow of the grid and updates the DataFrame
     with the resulting grid imports, exports, and unused energy.
     """
+    
+    # Calculate grid imports
     if self.grid.import_allow == True:
+        # Initialise grid import values to 0
+        self.model["Grid_Imports_kWh"] = 0
+        self.model["Grid_Imports_£"] = 0
+        self.model["Import_Limited"] = 0
+        
         # Calculate grid imports where net energy demand is positive
-        self.model["Grid_Imports_kWh"] = np.where(self.model["Net_Energy_Demand_kWh"] > 0,
-                                                np.minimum(self.grid.import_limit, 
-                                                           self.model["Net_Energy_Demand_kWh"]), 
-                                                0)
+        self.model["Grid_Imports_kWh"] = np.where(
+             self.model["Net_Energy_Demand_kWh"] > 0, 
+             np.minimum(self.grid.import_limit, 
+                        self.model["Net_Energy_Demand_kWh"]), 
+             0)
+
+        # Calculate import limited energy
         self.model["Import_Limited"] = self.model["Net_Energy_Demand_kWh"] - self.model["Grid_Imports_kWh"]
+
+        # Update net energy demand and total energy used
         self.model["Net_Energy_Demand_kWh"] -= self.model["Grid_Imports_kWh"]
         self.model["Net_Energy_kWh"] += self.model["Grid_Imports_kWh"]
-        
-        # Calculate unused energy in case of excess grid imports
-        self.model["Unused_Energy_kWh"] += self.model["Grid_Imports_kWh"]
 
-    # Calculate grid exports where net energy demand is negative
+        # Calculate grid import amount paid
+        if self.grid.day_night_tariff == True:
+            if self.model["Hour_of_Day"].between(1, 8).any():
+                self.model["Grid_Imports_£"] = self.model["Grid_Imports_kWh"] * self.grid.import_night
+            else:
+                self.model["Grid_Imports_£"] = self.model["Grid_Imports_kWh"] * self.grid.import_day
+        elif self.grid.day_night_tariff == False:
+            self.model["Grid_Imports_£"] = self.model["Grid_Imports_kWh"] * self.grid.import_standard
+
+    # Calculate grid exports
     if self.grid.export_allow == True:
+        # Initialise grid export values to 0
+        self.model["Grid_Exports_kWh"] = 0
+        self.model["Grid_Exports_£"] = 0
+        self.model["Export_Limited"] = 0
+
+        # Calculate grid exports where net energy is positive
         self.model["Grid_Exports_kWh"] = np.where(
-             self.model["Net_Energy_kWh"] > 0, np.minimum(
-                  self.grid.export_limit, self.model["Net_Energy_kWh"]), 
-                  0)
-        
+             self.model["Net_Energy_kWh"] > 0, 
+             np.minimum(self.grid.export_limit, 
+                        self.model["Net_Energy_kWh"]), 
+             0)
+
+        # Calculate export limited energy
         self.model["Export_Limited"] = self.model["Net_Energy_kWh"] - self.model["Grid_Exports_kWh"]
+
+        # Update unused energy and total energy used
         self.model["Unused_Energy_kWh"] -= self.model["Grid_Exports_kWh"]
         self.model["Net_Energy_kWh"] -= self.model["Grid_Exports_kWh"]
+
+        # Calculate grid export amount paid
+        if self.grid.day_night_tariff == True:
+            if self.model["Hour_of_Day"].between(1, 8).any():
+                self.model["Grid_Exports_£"] = self.model["Grid_Exports_kWh"] * self.grid.export_day
+            else:
+                self.model["Grid_Exports_£"] = self.model["Grid_Exports_kWh"] * self.grid.export_night
+        elif self.grid.day_night_tariff == False:
+            self.model["Grid_Exports_£"] = self.model["Grid_Exports_kWh"] * self.grid.export_standard
+
         
-        # Calculate unused energy in case of excess grid exports
-        self.model["Unused_Energy_kWh"] += self.model["Grid_Exports_kWh"]
 
         logging.info(
-        f"Grid simulation & energy flow calculations completed"
+        "Grid simulation & energy flow calculations completed"
             )
         logging.info("*******************")
+
+
+
+def model_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
+    """
+    Generates a summary of key PV performance metrics over the specified period.
+
+    Parameters:
+        model_results (pd.DataFrame): DataFrame containing model results.
+        arrays (list): List of PV array configurations used in the model.
+
+    Returns:
+        pd.Series: Series with summarized PV performance metrics.
+    """
+    # Columns to sum
+    columns_to_sum = ['Energy_Use_kWh', 'Renewable_Energy_Use_kWh', 'Grid_Imports_kWh',
+       'Grid_Exports_kWh', 'PV_Gen_kWh_Total', 'PV_AC_Output_kWh',
+       'Consumed_Solar_kWh', 'Excess_Solar_kWh',
+       'Battery_Charge_kWh', 'Battery_Discharge_kWh', 'Unused_Energy_kWh',
+       'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
+       'Battery_Losses_kWh', 'Inverter_Limited_kWh', 'Import_Limited',
+       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£']
+
+    # Columns to calculate the mean
+    columns_to_mean = ["Battery_SoC_kWh"]
+
+    # Initialize a dictionary to hold the summary
+    summary = {}
+
+    # Sum the specified columns
+    for col in columns_to_sum:
+        summary[col] = model_results[col].sum()
+
+    # Calculate the mean for the specified columns
+    for col in columns_to_mean:
+        summary[col] = model_results[col].mean()
+
+    lifespan = arrays[0].pv_panel.lifespan
+    eol_derating = arrays[0].pv_panel.pv_eol_derating
+    yearly_derating = (1 - eol_derating) / lifespan
+    total_gen = 0
+
+    for i in range(lifespan):
+        gen = (1 - (yearly_derating * (i + 1))) * summary["PV_Gen_kWh_Total"]
+        total_gen += gen
+
+    pv_capacity = 0 
+    total_area = 0
+
+
+    for i in range(len(arrays)):
+        pv_capacity += arrays[i].pv_panel.panel_kwp * arrays[i].num_panels
+        total_area += arrays[i].pv_panel.size_m2 * arrays[i].num_panels
+
+    pv_capacity = round(pv_capacity, 3)
+    total_area = round(total_area, 3)
+
+    kWh_kWp_annual = summary["PV_Gen_kWh_Total"] / pv_capacity
+    kWh_m2_annual = summary["PV_Gen_kWh_Total"] / total_area
+
+    summary["Energy_Use_kWh_Annual"] = summary["Energy_Use_kWh"]
+    summary["Renewable_Energy_Use_kWh_Annual"] = summary["Renewable_Energy_Use_kWh"]
+    summary["Grid_Imports_kWh_Annual"] = summary["Grid_Imports_kWh"]
+    summary["Grid_Imports_£_Annual"] = summary["Grid_Imports_£"]
+    summary["Grid_Exports_kWh_Annual"] = summary["Grid_Exports_kWh"]
+    summary["Grid_Exports_£_Annual"] = summary["Grid_Exports_£"]
+    summary["PV_DC_Output_kWh_Annual"] = summary["PV_Gen_kWh_Total"]
+    summary["PV_AC_Output_kWh_Annual"] = summary["PV_AC_Output_kWh"]
+    summary["Consumed_Solar_kWh_Annual"] = summary["Consumed_Solar_kWh"]
+    summary["Excess_Solar_kWh_Annual"] = summary["Excess_Solar_kWh"]
+    summary["Battery_SoC_Avg_kWh"] = summary["Battery_SoC_kWh"]
+    summary["Battery_Charge_kWh_Annual"] = summary["Battery_Charge_kWh"]
+    summary["Battery_Discharge_kWh_Annual"] = summary["Battery_Discharge_kWh"]
+    summary["Unused_Energy_kWh_Annual"] = summary["Unused_Energy_kWh"]
+    summary["Combined_PV_Losses_kWh_Annual"] = summary["Combined_PV_Losses_kWh_Total"]
+    summary["Inverter_Losses_kWh_Annual"] = summary["Inverter_Losses_kWh"]
+    summary["Battery_Losses_kWh_Annual"] = summary["Battery_Losses_kWh"]
+    summary["Inverter_Limited_kWh_Annual"] = summary["Inverter_Limited_kWh"]
+    summary["Import_Limited_Annual"] = summary["Import_Limited"]
+    summary["Export_Limited_Annual"] = summary["Export_Limited"]
+
+
+    # Define the desired order of keys
+    desired_order = [
+        'Energy_Use_kWh_Annual', 
+        'Renewable_Energy_Use_kWh_Annual', 
+        'Grid_Imports_kWh_Annual',
+        'Grid_Imports_£_Annual',
+        'Grid_Exports_kWh_Annual', 
+        'Grid_Exports_£_Annual',
+        'PV_DC_Output_kWh_Annual', 
+        'PV_AC_Output_kWh_Annual',
+        'Consumed_Solar_kWh_Annual', 
+        'Excess_Solar_kWh_Annual', 
+        "Battery_SoC_Avg_kWh",
+        'Battery_Charge_kWh_Annual', 
+        'Battery_Discharge_kWh_Annual', 
+        'Unused_Energy_kWh_Annual',
+        'Combined_PV_Losses_kWh_Annual', 
+        'Inverter_Losses_kWh_Annual',
+        'Battery_Losses_kWh_Annual', 
+        'Inverter_Limited_kWh_Annual', 
+        'Import_Limited_Annual',
+        'Export_Limited_Annual',
+        ]
+
+    # Create an OrderedDict with items in the desired order
+    ordered_summary = OrderedDict((k, summary[k]) for k in desired_order)
+
+    # Convert to pandas Series and round the values
+    summary_series = pd.Series(ordered_summary).round(3)
+
+    return summary_series
+
+
+class SummaryGrouped:
+    """
+    Organizes grouped summary statistics of PV system performance.
+    
+    Parameters:
+        summaries (dict): Dictionary with time grouping as keys and summary statistics DataFrames as values.
+    """
+
+    def __init__(self, summaries):
+        for key, df in summaries.items():
+            setattr(self, key.lower(), df)
+
+
+def model_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
+    """
+    Generates grouped statistics of PV performance over different time frames.
+
+    Parameters:
+        model_results (pd.DataFrame): DataFrame containing model results.
+
+    Returns:
+        SummaryGrouped: Object containing DataFrames of grouped statistics.
+    """
+    # Define the groupings for different human timeframes
+    groupings = {
+        "Hourly": "Hour_of_Day",
+        "Daily": "Day_of_Year",
+        "Weekly": "Week_of_Year",
+        "Monthly": "Month_of_Year",
+        "Quarterly": model_results["Month_of_Year"].apply(lambda x: (x - 1) // 3 + 1),
+    }
+
+    # Columns to sum and to calculate the mean
+    columns_to_sum = ['Energy_Use_kWh', 'Renewable_Energy_Use_kWh', 'Grid_Imports_kWh',
+       'Grid_Exports_kWh', 'PV_Gen_kWh_Total', 'PV_AC_Output_kWh',
+       'Consumed_Solar_kWh', 'Excess_Solar_kWh',
+       'Battery_Charge_kWh', 'Battery_Discharge_kWh', 'Unused_Energy_kWh',
+       'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
+       'Battery_Losses_kWh', 'Inverter_Limited_kWh', 'Import_Limited',
+       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£']
+    
+    columns_to_mean = ["Battery_SoC_kWh"]
+
+    summaries = {}
+
+    # Gets Hourly and Hour of Day from .items() tuple list
+    for timeframe, group_by in groupings.items():
+        grouped = model_results.groupby(group_by)
+
+        # Summing specified columns and rounding
+        summed = round(grouped[columns_to_sum].sum(), 3)
+
+        # Calculating the mean for specified columns and rounding
+        meaned = round(grouped[columns_to_mean].mean(), 3)
+
+        # Combine the summed and meaned results into a single DataFrame
+        summary_df = pd.concat([summed, meaned], axis=1)
+
+        # Adds summary dataframe to dictionary with timeframe key
+        summaries[timeframe] = summary_df
+
+    # Return an instance of SummaryGrouped with summaries as attributes
+    return SummaryGrouped(summaries)
+
 
 
 def sort_columns(self, columns_to_keep=columns_to_keep, columns_to_drop=columns_to_drop):

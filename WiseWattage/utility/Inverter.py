@@ -15,6 +15,9 @@ class Inverter:
     min_voltage_in: float = None
     max_voltage_in: float = None
     voltage_out: float = 240
+    lifespan: float = 10
+    cost_per_kw: float = 200
+    cost: float = None
     load_inverter_name: str = None
 
 

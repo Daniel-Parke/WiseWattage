@@ -26,6 +26,12 @@ def initialise_array(self):
     
     self.I_mp = self.pv_panel.I_mp
     self.V_mp = round(self.pv_panel.V_mp * self.num_panels, 3)
+
+    if self.pv_panel.cost is not None:
+        self.cost = round(self.pv_panel.cost * self.num_panels, 2)
+
+    if self.pv_panel.weight_kg is not None:
+        self.weight_kg = round(self.pv_panel.weight_kg * self.num_panels, 2)
     
     logging.info(
             "Solar PV array created: "

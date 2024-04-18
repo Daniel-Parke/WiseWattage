@@ -17,6 +17,7 @@ class Battery:
     initial_charge:float = 0.5
     life_cycles:int = 5000
     exports_allowed:bool = False
+    cost: float = None
     load_battery_name: str = None
 
     def __post_init__(self):

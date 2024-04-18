@@ -39,6 +39,9 @@ class SolarPVArray:
     I_mp: float = None
     V_mp: float = None
 
+    cost: float = None
+    weight_kg: float = None
+
     def __post_init__(self):
         """
         Post-initialization method.

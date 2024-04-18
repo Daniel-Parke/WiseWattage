@@ -34,6 +34,9 @@ class SolarPVModel:
     all_models: pd.DataFrame = field(default=None, init=False)
     combined_model: pd.DataFrame = field(default=None, init=False)
 
+    cost: float = 0
+    weight_kg: float = 0
+
     def __post_init__(self):
         """
         Post-initialization method.

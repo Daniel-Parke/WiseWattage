@@ -24,12 +24,17 @@ def timer(func):
         result = func(*args, **kwargs)
         end_time = time.time()
         time_took = end_time - start_time
+        print("")
 
         # Format time to more readable units
         if time_took < 1:
+            print("*******************")
             print(f"Processing took: {time_took * 1000:.2f} milliseconds")
+            print("*******************")
         elif time_took >= 1:
+            print("*******************")
             print(f"Processing took: {end_time - start_time:.4f} seconds")
+            print("*******************")
 
         return result
     return wrapper

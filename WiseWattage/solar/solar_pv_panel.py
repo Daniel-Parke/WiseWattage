@@ -6,12 +6,6 @@ def initialise_class(self):
     Initialisation method.
     Loads PV panel data from module_data/pv_module_list.csv if a name is specified,
     and logs a message indicating the creation of the Solar PV Panel.
-
-    Args:
-        None
-
-    Returns:
-        None
     """
     if self.load_panel_name is not None:
         load_solar_panel_data(self)
@@ -29,14 +23,8 @@ def load_solar_panel_data(self):
     """
     Loads PV panel data from module_data/pv_module_list.csv and assigns
     values to class attributes.
-
-    Args:
-        None
-
-    Returns:
-        None
     """
-    pv_data = pd.read_csv("module_data/pv_module_list.csv")
+    pv_data = pd.read_csv("module_data/pv_module_list.csv", encoding='iso-8859-1')
 
     # Select PV module from data based on name
     pv_panel = pv_data[pv_data["Name"] == self.load_panel_name]
@@ -53,6 +41,8 @@ def load_solar_panel_data(self):
     self.I_mp = pv_panel["I_mp"].iloc[0]
     self.V_mp = pv_panel["V_mp"].iloc[0]
 
-    self.material = pv_panel["Material"].iloc[0]
+    self.material = pv_panel["Technology"].iloc[0]
     self.length_m = pv_panel["Length_m"].iloc[0]
     self.width_m = pv_panel["Width_m"].iloc[0]
+    self.weight_kg = pv_panel["Weight_kg"].iloc[0]
+    self.cost = pv_panel["Cost_£"].iloc[0]

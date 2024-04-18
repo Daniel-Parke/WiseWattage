@@ -15,8 +15,12 @@ def initialise_class(self):
             # Set the standing power to 0.3% of the max output if not already set
             if self.standing_power_kW is None:
                 self.standing_power_kW = self.max_output * 0.003
+
     if self.load_inverter_name is not None:
         load_inverter_data(self)
+
+    if self.cost is None and self.max_output is not None:
+         self.cost = self.cost_per_kw * self.max_output
 
     logging.info(
             "Inverter Created: "
@@ -39,12 +43,6 @@ def load_inverter_data(self):
 
     If the inverter is not a PV & Battery inverter, the battery charging status
     is set to False.
-
-    Args:
-        None
-
-    Returns:
-        None
     """
     inv_data = pd.read_csv("module_data/battery_inverter_list.csv")
     inverter = inv_data[inv_data["Name"] == self.load_inverter_name]
@@ -55,6 +53,8 @@ def load_inverter_data(self):
     self.min_voltage_in = inverter["Vdc_Minimum"].iloc[0]
     self.max_voltage_in = inverter["Vdc_Maximum"].iloc[0]
     self.voltage_out = inverter["Vac_Nominal"].iloc[0]
+    self.cost = inverter["Cost_£"].iloc[0]
+    self.cost_per_kw = self.cost / self.max_output
 
     if inverter["PV_and_Battery"].iloc[0] == "N":
         self.battery_charging = False

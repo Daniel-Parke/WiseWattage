@@ -47,6 +47,8 @@ class SolarPVPanel:
     width_m: float = 1.21
     e_poa_STC: float = 1000
     cell_temp_STC: float = 25
+    cost: float = None
+    weight_kg: float = None
     load_panel_name: str = None
 
     def __post_init__(self):
