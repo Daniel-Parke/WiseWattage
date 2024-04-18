@@ -14,8 +14,7 @@
 
 ###### **MEDIUM PRIOIRTY**
 - Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
-- Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation 
-methods are added. ???Potentially using net columns and tracking each component individually instead???
+- Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation methods are added. ???Potentially using net columns and tracking each component individually instead???
 - Add wind turbines, AC/DC fuel generators
 
 ###### **LOW PRIOIRTY**.

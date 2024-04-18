@@ -12,6 +12,7 @@
 - Updated model to include grid price flows to account for variable and flexible electric tariffs. Current implementation allows for night/day import and export tariffs.
 - Added ability to load and calculate costs from default csv files, passing values up as model is generated
 - Added ability to summarise annual model results and perform group by function to aggregate data
+- Fixed bugs and added check for columns existing before trying to save to dataframe
 
 ### **17/04/2024:**
 - Updated docstrings and function comments throughout newly added code to aid with readability
