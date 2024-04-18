@@ -14,14 +14,14 @@ from utility.Inverter import Inverter
 pv_model_variables = ["PV_Gen_kWh_Total", "Combined_PV_Losses_kWh_Total"]
 
 columns_to_drop = ["Energy_Use_kWh_Base", "Variability_Factor",
-                   "Net_Energy_kWh", "Net_Energy_Demand_kWh"]
+                   "Net_Energy_kWh"]
 
 columns_to_keep = ['Energy_Use_kWh', "Renewable_Energy_Use_kWh", 'Grid_Imports_kWh', 'Grid_Exports_kWh', 
                    'PV_Gen_kWh_Total', 'PV_AC_Output_kWh', 'Consumed_Solar_kWh', 'Excess_Solar_kWh',
                    "Battery_SoC_kWh", "Battery_Charge_kWh", "Battery_Discharge_kWh",
                    'Unused_Energy_kWh', 'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
                    'Battery_Losses_kWh', "Inverter_Limited_kWh", "Import_Limited", "Export_Limited",
-                   "Grid_Imports_£", "Grid_Exports_£",
+                   "Grid_Imports_£", "Grid_Exports_£", "Net_Energy_Demand_kWh",
                    "Hour_of_Day", "Day_of_Year", "Week_of_Year", "Month_of_Year"]
 
 
@@ -281,7 +281,7 @@ def calc_grid_energy_flow(self):
     """
     
     # Calculate grid imports
-    if self.grid.import_allow == True:
+    if self.grid.import_allow == True and self.grid.offgrid == False:
         # Initialise grid import values to 0
         self.model["Grid_Imports_kWh"] = 0
         self.model["Grid_Imports_£"] = 0
@@ -311,7 +311,7 @@ def calc_grid_energy_flow(self):
             self.model["Grid_Imports_£"] = self.model["Grid_Imports_kWh"] * self.grid.import_standard
 
     # Calculate grid exports
-    if self.grid.export_allow == True:
+    if self.grid.export_allow == True and self.grid.offgrid == False:
         # Initialise grid export values to 0
         self.model["Grid_Exports_kWh"] = 0
         self.model["Grid_Exports_£"] = 0
@@ -348,6 +348,10 @@ def calc_grid_energy_flow(self):
         logging.info("*******************")
 
 
+def safe_get(data, key):
+    """ Safely get a value from a dictionary, returning None if the key is not present. """
+    return data.get(key, None)
+
 
 def model_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
     """
@@ -361,72 +365,55 @@ def model_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
         pd.Series: Series with summarized PV performance metrics.
     """
     # Columns to sum
-    columns_to_sum = ['Energy_Use_kWh', 'Renewable_Energy_Use_kWh', 'Grid_Imports_kWh',
+    columns_to_sum = {'Energy_Use_kWh', 'Renewable_Energy_Use_kWh', 'Grid_Imports_kWh',
        'Grid_Exports_kWh', 'PV_Gen_kWh_Total', 'PV_AC_Output_kWh',
        'Consumed_Solar_kWh', 'Excess_Solar_kWh',
        'Battery_Charge_kWh', 'Battery_Discharge_kWh', 'Unused_Energy_kWh',
        'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
        'Battery_Losses_kWh', 'Inverter_Limited_kWh', 'Import_Limited',
-       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£']
+       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£', "Net_Energy_Demand_kWh"}
 
     # Columns to calculate the mean
-    columns_to_mean = ["Battery_SoC_kWh"]
+    columns_to_mean = {'Battery_SoC_kWh'}
+
+    # Check which columns exist in the DataFrame
+    existing_sum_columns = columns_to_sum.intersection(model_results.columns)
+    existing_mean_columns = columns_to_mean.intersection(model_results.columns)
 
     # Initialize a dictionary to hold the summary
     summary = {}
 
-    # Sum the specified columns
-    for col in columns_to_sum:
+    # Sum the existing specified columns
+    for col in existing_sum_columns:
         summary[col] = model_results[col].sum()
 
-    # Calculate the mean for the specified columns
-    for col in columns_to_mean:
+    # Calculate the mean for the existing specified columns
+    for col in existing_mean_columns:
         summary[col] = model_results[col].mean()
 
-    lifespan = arrays[0].pv_panel.lifespan
-    eol_derating = arrays[0].pv_panel.pv_eol_derating
-    yearly_derating = (1 - eol_derating) / lifespan
-    total_gen = 0
 
-    for i in range(lifespan):
-        gen = (1 - (yearly_derating * (i + 1))) * summary["PV_Gen_kWh_Total"]
-        total_gen += gen
-
-    pv_capacity = 0 
-    total_area = 0
-
-
-    for i in range(len(arrays)):
-        pv_capacity += arrays[i].pv_panel.panel_kwp * arrays[i].num_panels
-        total_area += arrays[i].pv_panel.size_m2 * arrays[i].num_panels
-
-    pv_capacity = round(pv_capacity, 3)
-    total_area = round(total_area, 3)
-
-    kWh_kWp_annual = summary["PV_Gen_kWh_Total"] / pv_capacity
-    kWh_m2_annual = summary["PV_Gen_kWh_Total"] / total_area
-
-    summary["Energy_Use_kWh_Annual"] = summary["Energy_Use_kWh"]
-    summary["Renewable_Energy_Use_kWh_Annual"] = summary["Renewable_Energy_Use_kWh"]
-    summary["Grid_Imports_kWh_Annual"] = summary["Grid_Imports_kWh"]
-    summary["Grid_Imports_£_Annual"] = summary["Grid_Imports_£"]
-    summary["Grid_Exports_kWh_Annual"] = summary["Grid_Exports_kWh"]
-    summary["Grid_Exports_£_Annual"] = summary["Grid_Exports_£"]
-    summary["PV_DC_Output_kWh_Annual"] = summary["PV_Gen_kWh_Total"]
-    summary["PV_AC_Output_kWh_Annual"] = summary["PV_AC_Output_kWh"]
-    summary["Consumed_Solar_kWh_Annual"] = summary["Consumed_Solar_kWh"]
-    summary["Excess_Solar_kWh_Annual"] = summary["Excess_Solar_kWh"]
-    summary["Battery_SoC_Avg_kWh"] = summary["Battery_SoC_kWh"]
-    summary["Battery_Charge_kWh_Annual"] = summary["Battery_Charge_kWh"]
-    summary["Battery_Discharge_kWh_Annual"] = summary["Battery_Discharge_kWh"]
-    summary["Unused_Energy_kWh_Annual"] = summary["Unused_Energy_kWh"]
-    summary["Combined_PV_Losses_kWh_Annual"] = summary["Combined_PV_Losses_kWh_Total"]
-    summary["Inverter_Losses_kWh_Annual"] = summary["Inverter_Losses_kWh"]
-    summary["Battery_Losses_kWh_Annual"] = summary["Battery_Losses_kWh"]
-    summary["Inverter_Limited_kWh_Annual"] = summary["Inverter_Limited_kWh"]
-    summary["Import_Limited_Annual"] = summary["Import_Limited"]
-    summary["Export_Limited_Annual"] = summary["Export_Limited"]
-
+    # Use the safe_get function to handle potentially missing entries in the summary
+    summary["Energy_Use_kWh_Annual"] = safe_get(summary, "Energy_Use_kWh")
+    summary["Renewable_Energy_Use_kWh_Annual"] = safe_get(summary, "Renewable_Energy_Use_kWh")
+    summary["Grid_Imports_kWh_Annual"] = safe_get(summary, "Grid_Imports_kWh")
+    summary["Grid_Imports_£_Annual"] = safe_get(summary, "Grid_Imports_£")
+    summary["Grid_Exports_kWh_Annual"] = safe_get(summary, "Grid_Exports_kWh")
+    summary["Grid_Exports_£_Annual"] = safe_get(summary, "Grid_Exports_£")
+    summary["PV_DC_Output_kWh_Annual"] = safe_get(summary, "PV_Gen_kWh_Total")
+    summary["PV_AC_Output_kWh_Annual"] = safe_get(summary, "PV_AC_Output_kWh")
+    summary["Consumed_Solar_kWh_Annual"] = safe_get(summary, "Consumed_Solar_kWh")
+    summary["Excess_Solar_kWh_Annual"] = safe_get(summary, "Excess_Solar_kWh")
+    summary["Battery_SoC_Avg_kWh"] = safe_get(summary, "Battery_SoC_kWh")
+    summary["Battery_Charge_kWh_Annual"] = safe_get(summary, "Battery_Charge_kWh")
+    summary["Battery_Discharge_kWh_Annual"] = safe_get(summary, "Battery_Discharge_kWh")
+    summary["Unused_Energy_kWh_Annual"] = safe_get(summary, "Unused_Energy_kWh")
+    summary["Combined_PV_Losses_kWh_Annual"] = safe_get(summary, "Combined_PV_Losses_kWh_Total")
+    summary["Inverter_Losses_kWh_Annual"] = safe_get(summary, "Inverter_Losses_kWh")
+    summary["Battery_Losses_kWh_Annual"] = safe_get(summary, "Battery_Losses_kWh")
+    summary["Inverter_Limited_kWh_Annual"] = safe_get(summary, "Inverter_Limited_kWh")
+    summary["Import_Limited_Annual"] = safe_get(summary, "Import_Limited")
+    summary["Export_Limited_Annual"] = safe_get(summary, "Export_Limited")
+    summary["Net_Energy_Demand_kWh_Annual"] = safe_get(summary, "Net_Energy_Demand_kWh")
 
     # Define the desired order of keys
     desired_order = [
@@ -450,10 +437,11 @@ def model_stats(model_results: pd.DataFrame, arrays: list) -> pd.Series:
         'Inverter_Limited_kWh_Annual', 
         'Import_Limited_Annual',
         'Export_Limited_Annual',
+        "Net_Energy_Demand_kWh_Annual"
         ]
 
-    # Create an OrderedDict with items in the desired order
-    ordered_summary = OrderedDict((k, summary[k]) for k in desired_order)
+    # Create an OrderedDict filtering out None values
+    ordered_summary = OrderedDict((k, summary[k]) for k in desired_order if summary[k] is not None)
 
     # Convert to pandas Series and round the values
     summary_series = pd.Series(ordered_summary).round(3)
@@ -484,13 +472,17 @@ def model_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
     Returns:
         SummaryGrouped: Object containing DataFrames of grouped statistics.
     """
+     # Add a column for Quarterly grouping based on 'Month_of_Year'
+    if "Month_of_Year" in model_results.columns:
+        model_results['Quarter_of_Year'] = model_results["Month_of_Year"].apply(lambda x: (x - 1) // 3 + 1)
+    
     # Define the groupings for different human timeframes
     groupings = {
         "Hourly": "Hour_of_Day",
         "Daily": "Day_of_Year",
         "Weekly": "Week_of_Year",
         "Monthly": "Month_of_Year",
-        "Quarterly": model_results["Month_of_Year"].apply(lambda x: (x - 1) // 3 + 1),
+        "Quarterly": "Quarter_of_Year"  # Use the new column for Quarterly grouping
     }
 
     # Columns to sum and to calculate the mean
@@ -500,7 +492,7 @@ def model_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
        'Battery_Charge_kWh', 'Battery_Discharge_kWh', 'Unused_Energy_kWh',
        'Combined_PV_Losses_kWh_Total', 'Inverter_Losses_kWh',
        'Battery_Losses_kWh', 'Inverter_Limited_kWh', 'Import_Limited',
-       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£']
+       'Export_Limited', 'Grid_Imports_£', 'Grid_Exports_£', "Net_Energy_Demand_kWh"]
     
     columns_to_mean = ["Battery_SoC_kWh"]
 
@@ -508,19 +500,20 @@ def model_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
 
     # Gets Hourly and Hour of Day from .items() tuple list
     for timeframe, group_by in groupings.items():
-        grouped = model_results.groupby(group_by)
+        if group_by and group_by in model_results.columns:
+            grouped = model_results.groupby(group_by)
 
-        # Summing specified columns and rounding
-        summed = round(grouped[columns_to_sum].sum(), 3)
+            # Summing specified columns and rounding
+            summed = round(grouped[columns_to_sum].sum(), 3)
 
-        # Calculating the mean for specified columns and rounding
-        meaned = round(grouped[columns_to_mean].mean(), 3)
+            # Calculating the mean for specified columns and rounding
+            meaned = round(grouped[columns_to_mean].mean(), 3)
 
-        # Combine the summed and meaned results into a single DataFrame
-        summary_df = pd.concat([summed, meaned], axis=1)
+            # Combine the summed and meaned results into a single DataFrame
+            summary_df = pd.concat([summed, meaned], axis=1)
 
-        # Adds summary dataframe to dictionary with timeframe key
-        summaries[timeframe] = summary_df
+            # Adds summary dataframe to dictionary with timeframe key
+            summaries[timeframe] = summary_df
 
     # Return an instance of SummaryGrouped with summaries as attributes
     return SummaryGrouped(summaries)
@@ -535,7 +528,6 @@ def sort_columns(self, columns_to_keep=columns_to_keep, columns_to_drop=columns_
         # Reorder columns by filtering the list to include only those that are present in the DataFrame
         filtered_columns = [col for col in columns_to_keep if col in self.model.columns]
         self.model = round(self.model[filtered_columns], 3)
-
         logging.info(
         f"Model aggregation completed successfully"
             )

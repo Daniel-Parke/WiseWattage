@@ -15,6 +15,7 @@ class Grid:
     standing_charge: float = 0.0958
     connection_fee: float = 0    # No fee if system already has grid connection 
     tariff_name: str = "Power_NI"
+    offgrid:bool = False
     import_allow: bool = True
     export_allow: bool = True
     import_limit:float = 99999999
