@@ -40,7 +40,10 @@ class SolarPVArray:
     V_mp: float = None
 
     cost: float = None
+    panel_cost: float = None
+    mount_cost: float = None
     weight_kg: float = None
+    mount_cost_per_panel: float = 125
 
     def __post_init__(self):
         """

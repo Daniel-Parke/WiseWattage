@@ -7,6 +7,11 @@
 ###### **Author Note (17/02/2024 @ 23:54 GMT+00:00):** <br><br> At the time of this project's inception, I have just completed CS50x and have been "regularly" programming following online tutorials for around 6 months. I thought it would be a good idea to record my progress and (hopefully) improvements as the project develops. The idea for this project came from my own personal work as a student/energy researcher, and my final project for CS50x where I made a Solar PV calculator. The original code that contains those functions can be seen [here](/old_files/original_energy_modelling.py) if you are interested. <br><br>                                                                                                      If you have any feedback, or there are any features that you would like implemented please let me know. The more challenging and/or interesting it is, the more likely it will be that I will give it a try! 
 
 ## Patch/Progress Notes:
+### **21/04/2024:**
+- Added solar PV mounting cost variable, set default at £125.
+- Added function to total all costs from each component modelled in WW_Model and save to capex variable
+- Began working on financial cost functionality, basic implementation of CAPEX, Replacement, OPEX and NPC values
+
 ### **18/04/2024:**
 - Fixed bugs around battery energy flow calculations, updated unused energy to reflect total energy that remains on site available for use, rather than also including exports to grid.
 - Updated model to include grid price flows to account for variable and flexible electric tariffs. Current implementation allows for night/day import and export tariffs.

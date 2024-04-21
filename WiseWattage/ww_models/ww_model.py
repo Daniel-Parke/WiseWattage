@@ -532,3 +532,59 @@ def sort_columns(self, columns_to_keep=columns_to_keep, columns_to_drop=columns_
         f"Model aggregation completed successfully"
             )
         logging.info("*******************")
+
+
+
+def calculate_capex(self):
+    # Caluclate inverter CAPEX and replacement costs
+    if self.inverter is not None:
+        if self.inverter.cost is None:
+            if self.pv_model is not None:
+                self.inverter.cost = (self.inverter.cost_per_kw * self.pv_model.summary.Total_PV_Capacity_kWp)
+
+        if self.inverter.cost is not None:
+            self.capex += self.inverter.cost
+            self.replacement_capex = np.maximum(round(self.inverter.cost * (
+                (self.project_lifespan / self.inverter.lifespan) - 1), 2), 0)
+
+    # Calculate Battery CAPEX and replacement costs
+    if self.battery is not None and self.battery.cost is not None:
+        self.capex += self.battery.cost
+        lifetime_throughput = (
+            self.summary.Battery_Charge_kWh_Annual + self.summary.Battery_Charge_kWh_Annual) * self.project_lifespan
+        lifespan_throughput = (self.battery.life_cycles * self.battery.max_capacity)
+
+        self.replacement_capex += np.maximum(round(self.battery.cost * (
+            (lifetime_throughput / lifespan_throughput) - 1), 2), 0)
+
+    # Calculate Solar PV CAPEX and Replacement costs
+    if self.pv_model is not None and self.pv_model.cost is not None:
+        self.capex += self.pv_model.cost 
+        self.replacement_capex += np.maximum(round(self.pv_model.cost * (
+            (self.project_lifespan / self.pv_model.arrays[0].pv_panel.lifespan) - 1), 2), 0)
+
+
+def calculate_operation_costs(self):
+    if self.grid is not None:
+        # Calculate lifetime degradation factor
+        if self.pv_model is not None:
+            degrade_factor = self.pv_model.summary.PV_Gen_kWh_Lifetime / (
+                self.pv_model.summary.PV_Gen_kWh_Annual * self.project_lifespan
+                )
+            
+        elif self.pv_model is None:
+            degrade_factor = 1
+        
+        total_imports_value = self.summary['Grid_Imports_£_Annual'] * self.project_lifespan / degrade_factor
+
+        if self.summary.Grid_Imports_kWh_Annual > 0:
+            total_exports_value = self.summary['Grid_Exports_£_Annual'] * self.project_lifespan * degrade_factor
+        if self.summary.Grid_Imports_kWh_Annual == 0:
+            total_exports_value = 0
+
+        self.opex_cost = round(total_imports_value, 2)
+        self.export_value = round(total_exports_value, 2)
+
+
+def calculate_npc(self):
+    self.npc = round(self.capex + self.opex_cost + self.replacement_capex - self.export_value, 2)

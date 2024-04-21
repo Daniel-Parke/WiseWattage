@@ -28,7 +28,9 @@ def initialise_array(self):
     self.V_mp = round(self.pv_panel.V_mp * self.num_panels, 3)
 
     if self.pv_panel.cost is not None:
-        self.cost = round(self.pv_panel.cost * self.num_panels, 2)
+        self.panel_cost = round(self.pv_panel.cost * self.num_panels, 2)
+        self.mount_cost = round(self.mount_cost_per_panel * self.num_panels, 2)
+        self.cost = self.panel_cost + self.mount_cost
 
     if self.pv_panel.weight_kg is not None:
         self.weight_kg = round(self.pv_panel.weight_kg * self.num_panels, 2)

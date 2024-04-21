@@ -13,7 +13,8 @@ from storage.Battery import Battery
 
 from ww_models.ww_model import (
     initialise_model, calc_solar_energy_flow, calc_battery_energy_flow, 
-    calc_grid_energy_flow, sort_columns, model_stats, model_grouped, SummaryGrouped)
+    calc_grid_energy_flow, sort_columns, model_stats, model_grouped, SummaryGrouped,
+    calculate_capex, calculate_operation_costs, calculate_npc)
 
 from misc.util import timer
 
@@ -29,7 +30,14 @@ class Model:
     battery: 'Battery' = None
     pv_model: SolarPVModel = None
     name: str = ""
+    project_lifespan: int = 25
     model: pd.DataFrame = field(default=None, init=False)
+
+    capex: float = 0
+    replacement_capex: float = 0
+    opex_cost: float = 0
+    export_value: float = 0
+    npc: float = 0
 
     @timer
     def __post_init__(self):
@@ -38,6 +46,9 @@ class Model:
         calc_battery_energy_flow(self)
         calc_grid_energy_flow(self)
         sort_columns(self)
+        calculate_capex(self)
+        calculate_operation_costs(self)
+        calculate_npc(self)
             
 
     @cached_property

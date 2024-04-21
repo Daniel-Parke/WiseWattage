@@ -29,26 +29,26 @@ class SolarPVPanel:
         e_poa_STC (float): POA Irradiance at Standard Test Conditions (STC).
         cell_temp_STC (float): Cell Temperature at STC.
     """
-    panel_kwp: float = 0.3538
+    panel_kwp: float = 0.42
     size_m2: float = 2.0
-    eff: float = 0.2237
-    cell_temp_coeff: float = -0.004
-    cell_NOCT: float = 48
+    eff: float = 0.2102
+    cell_temp_coeff: float = -0.003
+    cell_NOCT: float = 45
     lifespan: int = 25
     pv_eol_derating: float = 0.88
     refraction_index: float = 0.05
-    I_sc: float = 11.21
-    V_oc: float = 48.30
-    I_mp: float = 10.70
-    V_mp: float = 41.60
+    I_sc: float = 13.51
+    V_oc: float = 38.74
+    I_mp: float = 13.06
+    V_mp: float = 32.16
     material: str = "Mono-crystalline"
     bifacial: bool = False
-    length_m: float = 1.65
-    width_m: float = 1.21
+    length_m: float = 1.762
+    width_m: float = 1.134
     e_poa_STC: float = 1000
     cell_temp_STC: float = 25
-    cost: float = None
-    weight_kg: float = None
+    cost: float = 70
+    weight_kg: float = 22
     load_panel_name: str = None
 
     def __post_init__(self):
