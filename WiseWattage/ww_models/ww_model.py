@@ -120,22 +120,25 @@ def calc_solar_energy_flow(self, pv_model_variables=pv_model_variables, mo=99999
 
         self.model["PV_AC_Output_kWh"] = np.minimum(mo, (self.model["PV_Gen_kWh_Total"]
                                         * self.inverter.inverter_eff))
-        self.model["Inverter_Losses_kWh"] += (self.model["PV_AC_Output_kWh"]
-                                        * (1-(self.inverter.inverter_eff)))
+        self.model["Inverter_Losses_kWh"] += (self.model["PV_Gen_kWh_Total"]
+                                        - self.model["PV_AC_Output_kWh"])
         self.model["Inverter_Limited_kWh"] = (self.model["PV_Gen_kWh_Total"]
                                         * self.inverter.inverter_eff) - self.model["PV_AC_Output_kWh"]
 
         # Update Net Energy Flows
         self.model["Net_Energy_kWh"] += self.model["PV_AC_Output_kWh"]
+
+        self.model["Consumed_Solar_kWh"] = self.model["Net_Energy_Demand_kWh"] - (
+            np.maximum(0, self.model["Net_Energy_Demand_kWh"] - self.model["PV_AC_Output_kWh"]))
+        
         self.model["Net_Energy_Demand_kWh"] = np.maximum(0, self.model["Net_Energy_Demand_kWh"]
                                                         - self.model["PV_AC_Output_kWh"])
         
         self.model["Excess_Solar_kWh"] = np.maximum(0, self.model["PV_AC_Output_kWh"] - 
-                                                    self.model["Energy_Use_kWh"])
+                                                    self.model["Consumed_Solar_kWh"])
+        
         self.model["Unused_Energy_kWh"] += self.model["Excess_Solar_kWh"]
         
-        self.model["Consumed_Solar_kWh"] = np.maximum(0, self.model["PV_AC_Output_kWh"]
-                                                        - self.model["Excess_Solar_kWh"])
         
         self.model["Renewable_Energy_Use_kWh"] += self.model["Consumed_Solar_kWh"]
         
@@ -218,6 +221,7 @@ def calc_battery_state(n, net_demand, net_energy, initial_soc, max_discharge, ma
             charge_power = min(net_energy[i], max_cap - current_soc, max_charge)
             # Account for inverter efficiency during charging
             actual_charge = charge_power * eff
+            losses[i] = charge_power - actual_charge
             charge_amount[i] = charge_power
             current_soc += actual_charge
             net_energy[i] -= charge_power
@@ -551,11 +555,16 @@ def calculate_capex(self):
     if self.battery is not None and self.battery.cost is not None:
         self.capex += self.battery.cost
         lifetime_throughput = (
-            self.summary.Battery_Charge_kWh_Annual + self.summary.Battery_Charge_kWh_Annual) * self.project_lifespan
+            self.summary.Battery_Charge_kWh_Annual * self.project_lifespan)
         lifespan_throughput = (self.battery.life_cycles * self.battery.max_capacity)
+        throughput_factor = ((lifetime_throughput / lifespan_throughput) - 1)
+        lifespan_factor = ((self.project_lifespan / self.battery.lifespan) - 1)
 
-        self.replacement_capex += np.maximum(round(self.battery.cost * (
-            (lifetime_throughput / lifespan_throughput) - 1), 2), 0)
+        # First, calculate the maximum of the two factors
+        max_cost_factor = max(round(self.battery.cost * throughput_factor, 2), 
+                            round(self.battery.cost * lifespan_factor, 2))
+        # Ensure the value is not negative
+        self.replacement_capex += max(max_cost_factor, 0)
 
     # Calculate Solar PV CAPEX and Replacement costs
     if self.pv_model is not None and self.pv_model.cost is not None:

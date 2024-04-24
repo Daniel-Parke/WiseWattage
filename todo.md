@@ -13,13 +13,15 @@
 
 
 ###### **MEDIUM PRIOIRTY**
-- Create energy storage options as layers of classes i.e. Cell --> Battery--> Storage
-- Create AC/DC generation and demand columns in model dataframe, ensures correct format when new generation methods are added. ???Potentially using net columns and tracking each component individually instead???
+- Add ability to calculate finance repayments in tandem with grid exports, bill payments etc.
+- Create finance class to handle all these calculations based on final model results
 - Add wind turbines, AC/DC fuel generators
 
 ###### **LOW PRIOIRTY**.
 - Add heat demand to modelling
--
+- Consider energy storage options as layers of classes i.e. Cell --> Battery--> Storage
+
+- Add inverter standing power parasitic load to net energy
 
 
 <br><br>

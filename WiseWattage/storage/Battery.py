@@ -16,6 +16,7 @@ class Battery:
     chemistry: str = "LiFePO4"
     initial_charge:float = 0.5
     life_cycles:int = 5000
+    lifespan: float = 12.5
     exports_allowed:bool = False
     cost: float = 2204
     load_battery_name: str = None
