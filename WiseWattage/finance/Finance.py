@@ -2,12 +2,6 @@ import pandas as pd
 
 from dataclasses import dataclass, field
 
-from solar.SolarPVModel import SolarPVModel
-from demand.Load import Load
-from utility.Grid import Grid
-from utility.Inverter import Inverter
-from storage.Battery import Battery
-
 from finance.financial import initialise_finance, calc_cashflow
 
 @dataclass
@@ -16,6 +10,7 @@ class Finance:
     apr: float = 0.079
     payments_per_year: int = 12
     loan_years: int = 5
+    annual_interval:int = 365
     fees: float = 0
     upfront_fees: bool = True
 
