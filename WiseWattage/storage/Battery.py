@@ -19,6 +19,7 @@ class Battery:
     lifespan: float = 12.5
     exports_allowed:bool = False
     cost: float = 2204
+    cost_per_kWh: float = 250
     load_battery_name: str = None
 
     def __post_init__(self):

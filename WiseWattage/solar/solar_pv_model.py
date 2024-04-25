@@ -385,6 +385,8 @@ def model_solar_pv(self):
         for array in self.arrays:
             if array.cost is not None:
                 self.cost += array.cost
+            if array.cost is None:
+                self.cost += self.cost_per_kWh * array.pv_kwp
             if array.weight_kg is not None:
                 self.weight_kg += array.weight_kg
 
@@ -410,6 +412,7 @@ def model_solar_pv(self):
             )
             models.append({"array_specs": array, "model_result": result})
         logging.info("*******************")
+
         
         # Arrange model results into class structure
         logging.info(f"Solar PV model simulations for {self.site.name} completed.")

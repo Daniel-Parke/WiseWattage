@@ -10,7 +10,7 @@
 
 ### **24/04/2024:**
 - Began development of financial class, added in interest, fees and principal calculations. 
-- Began integration of financial class with WW_Model
+- Began integration of financial class with WW_Model, added ability to esimtate component value if no values provided when classes initiated.  
 
 ### **24/04/2024:**
 - Add lifespan variable to battery capex calculations

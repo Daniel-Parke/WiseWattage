@@ -35,6 +35,7 @@ class SolarPVModel:
     combined_model: pd.DataFrame = field(default=None, init=False)
 
     cost: float = 0
+    cost_per_kWh: float = 1000
     weight_kg: float = 0
 
     def __post_init__(self):

@@ -20,6 +20,8 @@ class Finance:
     upfront_fees: bool = True
 
     finance_model: pd.DataFrame = field(default=None, init=False)
+    project_cashflow: pd.DataFrame = field(default=None, init=False)
+
 
     def __post_init__(self):
         initialise_finance(self)

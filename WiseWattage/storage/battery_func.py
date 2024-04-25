@@ -22,6 +22,10 @@ def initialise_class(self):
         # If a battery name is provided, load the data from the battery list
         load_battery_data(self)
 
+    if self.cost is None:
+        self.cost = self.cost_per_kWh * self.max_capacity
+
+
     logging.info(
         """Battery Storage Created: Useable Capacity: %skWh, Max Discharge: %skW, Chemistry: %s""" % (self.useable_capacity, self.max_discharge_kW, self.chemistry)
     )

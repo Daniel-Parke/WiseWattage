@@ -9,6 +9,7 @@ from solar.SolarPVModel import SolarPVModel
 from demand.Load import Load
 from utility.Grid import Grid
 from utility.Inverter import Inverter
+from finance.Finance import Finance
 
 
 # Initialise list of variables to be used later
@@ -61,6 +62,9 @@ def initialise_model(self):
     # Initialise Energy Demand if not provided and update Energy Flows
     if self.load is None:
         self.load = Load()
+
+    if self.finance is None:
+        self.finance = Finance()
 
     self.model = self.load.load_profile.copy()
 
