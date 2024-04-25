@@ -15,7 +15,7 @@ from finance.Finance import Finance
 from ww_models.ww_model import (
     initialise_model, calc_solar_energy_flow, calc_battery_energy_flow, 
     calc_grid_energy_flow, sort_columns, model_stats, model_grouped, SummaryGrouped,
-    calculate_capex, calculate_operation_costs, calculate_npc, calc_finance_model)
+    calculate_capex, calculate_operation_costs, calculate_npc)
 
 from misc.util import timer
 
@@ -47,7 +47,6 @@ class Model:
         calc_solar_energy_flow(self)
         calc_battery_energy_flow(self)
         calc_grid_energy_flow(self)
-        calc_finance_model(self)
         sort_columns(self)
         calculate_capex(self)
         calculate_operation_costs(self)

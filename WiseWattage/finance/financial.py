@@ -39,8 +39,10 @@ def calc_cashflow(self):
     ))
 
     # Create DataFrame
-    columns = ['Month', 'Monthly Payment', 'Interest Payment', 'Principal Payment', 'Remaining Balance', 'Remaining Principal', 'Remaining Interest']
-    df = pd.DataFrame(data, columns=columns).set_index("Month").round(2)
+    columns = ['Interval', 'Monthly Payment', 'Interest Payment', 'Principal Payment', 'Remaining Balance', 'Remaining Principal', 'Remaining Interest']
+    df = pd.DataFrame(data, columns=columns)
+    df["Interval"] = df["Interval"].round(0).astype(int)
+    df = df.set_index("Interval").round(2)
     
     # Return the DataFrame
     return df

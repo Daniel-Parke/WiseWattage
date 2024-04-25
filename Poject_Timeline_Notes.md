@@ -9,7 +9,8 @@
 ## Patch/Progress Notes:
 
 ### **24/04/2024:**
-- Began development of financial class, added in interest, fees and principal calculations
+- Began development of financial class, added in interest, fees and principal calculations. 
+- Began integration of financial class with WW_Model
 
 ### **24/04/2024:**
 - Add lifespan variable to battery capex calculations
