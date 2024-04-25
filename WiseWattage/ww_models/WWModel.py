@@ -10,11 +10,12 @@ from demand.Load import Load
 from utility.Grid import Grid
 from utility.Inverter import Inverter
 from storage.Battery import Battery
+from finance.Finance import Finance
 
 from ww_models.ww_model import (
     initialise_model, calc_solar_energy_flow, calc_battery_energy_flow, 
     calc_grid_energy_flow, sort_columns, model_stats, model_grouped, SummaryGrouped,
-    calculate_capex, calculate_operation_costs, calculate_npc)
+    calculate_capex, calculate_operation_costs, calculate_npc, calc_finance_model)
 
 from misc.util import timer
 
@@ -28,7 +29,8 @@ class Model:
     arrays: Union['SolarPVArray', List['SolarPVArray']] = None
     inverter: 'Inverter' = None
     battery: 'Battery' = None
-    pv_model: SolarPVModel = None
+    pv_model: 'SolarPVModel' = None
+    finance: 'Finance' = None   
     name: str = ""
     project_lifespan: int = 25
     model: pd.DataFrame = field(default=None, init=False)
@@ -45,6 +47,7 @@ class Model:
         calc_solar_energy_flow(self)
         calc_battery_energy_flow(self)
         calc_grid_energy_flow(self)
+        calc_finance_model(self)
         sort_columns(self)
         calculate_capex(self)
         calculate_operation_costs(self)

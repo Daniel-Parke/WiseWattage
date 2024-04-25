@@ -9,6 +9,8 @@ from solar.SolarPVModel import SolarPVModel
 from demand.Load import Load
 from utility.Grid import Grid
 from utility.Inverter import Inverter
+from finance.Finance import Finance
+
 
 # Initialise list of variables to be used later
 pv_model_variables = ["PV_Gen_kWh_Total", "Combined_PV_Losses_kWh_Total"]
@@ -521,6 +523,13 @@ def model_grouped(model_results: pd.DataFrame) -> SummaryGrouped:
 
     # Return an instance of SummaryGrouped with summaries as attributes
     return SummaryGrouped(summaries)
+
+
+def calc_finance_model(self):
+    """
+    Calculates the finance model for the energy system.
+    """
+    self.finance = Finance()
 
 
 

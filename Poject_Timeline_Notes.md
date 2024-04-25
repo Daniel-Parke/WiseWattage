@@ -9,6 +9,9 @@
 ## Patch/Progress Notes:
 
 ### **24/04/2024:**
+- Began development of financial class, added in interest, fees and principal calculations
+
+### **24/04/2024:**
 - Add lifespan variable to battery capex calculations
 - Cleaned up code methods and calculations, renamed some columns to help readability
 
