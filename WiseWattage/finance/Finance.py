@@ -20,4 +20,3 @@ class Finance:
 
     def __post_init__(self):
         initialise_finance(self)
-        calc_cashflow(self)
