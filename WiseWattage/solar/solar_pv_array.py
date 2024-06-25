@@ -38,6 +38,6 @@ def initialise_array(self):
     logging.info(
             "Solar PV array created: "
             f"Size: {self.pv_kwp}kW, Size: {self.area_m2}m2, "
-            f"Azimuth: {self.surface_azimuth}deg, Lifespan: {self.pv_panel.lifespan}yrs, "
-            f"Pitch: {self.surface_pitch}deg, Efficiency: {self.pv_panel.eff*100}%"
+            f"Azimuth Degrees: {self.surface_azimuth}, Lifespan: {self.pv_panel.lifespan}yrs, "
+            f"Pitch Degrees: {self.surface_pitch}, Efficiency: {self.pv_panel.eff*100}%"
         )

@@ -107,9 +107,9 @@ def initialise_load(self):
     self.annual_electric = self.daily_electric * 365
     
     logging.info(
-        f"Load Profile Generated: Daily Electricity Use: {self.daily_electric}kWh"
-        f"Annual Electricity Use: {self.annual_electric}kWh, Daily Variability: {self.daily_variablity*100}%"
-        f"Hourly Variability: {self.timestep_variability*100}%"
+        f"Load Profile Generated: Daily Electricity Use: {self.daily_electric}kWh, "
+        f"Annual Electricity Use: {self.annual_electric}kWh, Daily Variability: {self.daily_variablity*100}%, "
+        f"Hourly Variability: {self.timestep_variability*100}% "
     )
     logging.info("*******************")
 

@@ -29,7 +29,7 @@ class SolarPVArray:
     pv_panel: SolarPVPanel = None
     num_panels: int = 3
     surface_pitch: float = 35
-    surface_azimuth: float = 0
+    surface_azimuth: float = None
     albedo: float = 0.2
     
     pv_kwp: float = None

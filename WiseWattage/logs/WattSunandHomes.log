@@ -1317,3 +1317,1470 @@
 2024-06-19 15:03:39,465 - INFO - *******************
 2024-06-19 15:03:40,740 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2024-06-19 15:03:40,745 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-06-25 11:31:20,014 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:28,773 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:30,093 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:33,550 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:33,551 - INFO - *******************
+2024-06-25 11:31:33,602 - INFO - Load Profile Generated: Daily Electricity Use: 9.946kWhAnnual Electricity Use: 3630.29kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 11:31:33,603 - INFO - *******************
+2024-06-25 11:31:33,604 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 11:31:33,605 - INFO - *******************
+2024-06-25 11:31:33,606 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:33,608 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:33,609 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:33,610 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 11:31:33,611 - INFO - *******************
+2024-06-25 11:31:33,612 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 11:31:33,613 - INFO - *******************
+2024-06-25 11:31:33,624 - INFO - *******************
+2024-06-25 11:31:33,624 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 11:31:33,625 - INFO - *******************
+2024-06-25 11:31:33,627 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 11:31:33,638 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:33,648 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 11:31:33,658 - INFO - *******************
+2024-06-25 11:31:33,659 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 11:31:33,703 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:33,717 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 11:31:33,717 - INFO -       SUCCESS!      
+2024-06-25 11:31:33,718 - INFO - *******************
+2024-06-25 11:31:33,720 - INFO - Main Model Successfully Initialised
+2024-06-25 11:31:33,720 - INFO - *******************
+2024-06-25 11:31:33,730 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 11:31:33,731 - INFO - *******************
+2024-06-25 11:31:35,238 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 11:31:35,239 - INFO - *******************
+2024-06-25 11:31:35,245 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 11:31:35,246 - INFO - *******************
+2024-06-25 11:31:35,250 - INFO - Model aggregation completed successfully
+2024-06-25 11:31:35,251 - INFO - *******************
+2024-06-25 11:31:35,252 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 11:31:35,255 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 11:31:35,256 - INFO - *******************
+2024-06-25 11:31:35,256 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 11:31:35,260 - INFO - Model statistical analysis for Site completed.
+2024-06-25 11:31:35,262 - INFO - *******************
+2024-06-25 11:31:35,416 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 11:31:35,452 - INFO - Model statistical grouping for Site completed.
+2024-06-25 11:31:35,462 - INFO - *******************
+2024-06-25 11:31:35,606 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:35,608 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:35,609 - INFO - *******************
+2024-06-25 11:31:35,640 - INFO - Load Profile Generated: Daily Electricity Use: 9.76kWhAnnual Electricity Use: 3562.4kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 11:31:35,642 - INFO - *******************
+2024-06-25 11:31:35,695 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 2102.0%, Lifespan: 25yrs
+2024-06-25 11:31:35,695 - INFO - *******************
+2024-06-25 11:31:35,696 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 11:31:35,698 - INFO - Solar PV array created: Size: 0.84kW, Size: 4.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 11:31:35,699 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 11:31:35,722 - INFO - Inverter Created: Max Output: 5.0kW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 11:31:35,723 - INFO - *******************
+2024-06-25 11:31:35,738 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 14.336kW, Chemistry: LiFePO4
+2024-06-25 11:31:35,738 - INFO - *******************
+2024-06-25 11:31:35,746 - INFO - *******************
+2024-06-25 11:31:35,747 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 11:31:35,747 - INFO - *******************
+2024-06-25 11:31:35,748 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 11:31:35,760 - INFO - Simulating model - PV Size: 0.84kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:35,768 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 11:31:35,778 - INFO - *******************
+2024-06-25 11:31:35,779 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 11:31:35,811 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:35,823 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 11:31:35,828 - INFO -       SUCCESS!      
+2024-06-25 11:31:35,829 - INFO - *******************
+2024-06-25 11:31:35,834 - INFO - Main Model Successfully Initialised
+2024-06-25 11:31:35,837 - INFO - *******************
+2024-06-25 11:31:35,847 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 11:31:35,858 - INFO - *******************
+2024-06-25 11:31:35,862 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 11:31:35,863 - INFO - *******************
+2024-06-25 11:31:35,869 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 11:31:35,871 - INFO - *******************
+2024-06-25 11:31:35,878 - INFO - Model aggregation completed successfully
+2024-06-25 11:31:35,879 - INFO - *******************
+2024-06-25 11:31:35,880 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 11:31:35,883 - INFO - Model statistical analysis for Site completed.
+2024-06-25 11:31:35,884 - INFO - *******************
+2024-06-25 11:31:35,885 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 11:31:35,888 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 11:31:35,889 - INFO - *******************
+2024-06-25 11:31:35,923 - INFO - Fetching TMY data for Site at latitude: 54.8183, longitude: -7.4741
+2024-06-25 11:31:37,042 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.8183&lon=-7.4741&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:37,585 - INFO - TMY data obtained for Site at latitude: 54.8183, longitude: -7.4741
+2024-06-25 11:31:37,586 - INFO - *******************
+2024-06-25 11:31:37,642 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 2102.0%, Lifespan: 25yrs
+2024-06-25 11:31:37,643 - INFO - *******************
+2024-06-25 11:31:37,644 - INFO - Solar PV array created: Size: 120.12kW, Size: 572.0m2, Azimuth: -30deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 11:31:37,771 - INFO - Load Profile Generated: Daily Electricity Use: 312.51kWhAnnual Electricity Use: 114066.15kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 11:31:37,771 - INFO - *******************
+2024-06-25 11:31:37,773 - INFO - Inverter Created: Max Output: 12kW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 11:31:37,775 - INFO - *******************
+2024-06-25 11:31:37,777 - INFO - Battery Storage Created: Useable Capacity: 80.0kWh, Max Discharge: 80.0kW, Chemistry: LiFePO4
+2024-06-25 11:31:37,778 - INFO - *******************
+2024-06-25 11:31:37,787 - INFO - *******************
+2024-06-25 11:31:37,787 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 11:31:37,788 - INFO - *******************
+2024-06-25 11:31:37,789 - INFO - Simulating model - PV Size: 120.12kWp, Pitch: 35 degrees, Azimuth -30 degrees WoS
+2024-06-25 11:31:37,800 - INFO - *******************
+2024-06-25 11:31:37,801 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 11:31:37,835 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:37,847 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 11:31:37,848 - INFO -       SUCCESS!      
+2024-06-25 11:31:37,849 - INFO - *******************
+2024-06-25 11:31:37,849 - INFO - Main Model Successfully Initialised
+2024-06-25 11:31:37,850 - INFO - *******************
+2024-06-25 11:31:37,860 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 11:31:37,861 - INFO - *******************
+2024-06-25 11:31:37,863 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 11:31:37,864 - INFO - *******************
+2024-06-25 11:31:37,869 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 11:31:37,869 - INFO - *******************
+2024-06-25 11:31:37,877 - INFO - Model aggregation completed successfully
+2024-06-25 11:31:37,878 - INFO - *******************
+2024-06-25 11:31:37,879 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 11:31:37,882 - INFO - Model statistical analysis for Site completed.
+2024-06-25 11:31:37,883 - INFO - *******************
+2024-06-25 11:31:37,884 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 11:31:37,888 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 11:31:37,888 - INFO - *******************
+2024-06-25 11:31:38,063 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 11:31:38,100 - INFO - Model statistical grouping for Site completed.
+2024-06-25 11:31:38,101 - INFO - *******************
+2024-06-25 11:31:38,279 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-06-25 11:31:38,316 - INFO - Solar PV model statistical grouping for Site completed.
+2024-06-25 11:31:38,317 - INFO - *******************
+2024-06-25 11:31:38,356 - INFO - Fetching TMY data for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:38,358 - INFO - TMY data obtained for Belfast at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:38,359 - INFO - *******************
+2024-06-25 11:31:38,360 - INFO - Fetching TMY data for Paris at latitude: 48.8562, longitude: 2.3477
+2024-06-25 11:31:39,485 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=48.8562&lon=2.3477&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:40,008 - INFO - TMY data obtained for Paris at latitude: 48.8562, longitude: 2.3477
+2024-06-25 11:31:40,009 - INFO - *******************
+2024-06-25 11:31:40,011 - INFO - Fetching TMY data for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-06-25 11:31:41,087 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=40.4202&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:41,547 - INFO - TMY data obtained for Madrid at latitude: 40.4202, longitude: -3.6988
+2024-06-25 11:31:41,548 - INFO - *******************
+2024-06-25 11:31:41,549 - INFO - Fetching TMY data for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-06-25 11:31:43,019 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=30.1098&lon=-3.6988&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:43,848 - INFO - TMY data obtained for Cairo at latitude: 30.1098, longitude: -3.6988
+2024-06-25 11:31:43,849 - INFO - *******************
+2024-06-25 11:31:43,850 - INFO - Fetching TMY data for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-06-25 11:31:45,349 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=9.0591&lon=31.2235&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 11:31:46,199 - INFO - TMY data obtained for Abuja at latitude: 9.0591, longitude: 31.2235
+2024-06-25 11:31:46,201 - INFO - *******************
+2024-06-25 11:31:46,202 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 11:31:46,203 - INFO - *******************
+2024-06-25 11:31:46,204 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 11:31:46,204 - INFO - *******************
+2024-06-25 11:31:46,205 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,206 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,207 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,207 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,208 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,208 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,209 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,210 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:46,211 - INFO - *******************
+2024-06-25 11:31:46,211 - INFO - Starting Solar PV model simulations for Belfast.
+2024-06-25 11:31:46,212 - INFO - *******************
+2024-06-25 11:31:46,212 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,227 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:46,236 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,246 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:46,257 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,267 - INFO - *******************
+2024-06-25 11:31:46,268 - INFO - Solar PV model simulations for Belfast completed.
+2024-06-25 11:31:46,317 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,328 - INFO - Solar PV model data summary for Belfast complete.
+2024-06-25 11:31:46,329 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,330 - INFO - *******************
+2024-06-25 11:31:46,330 - INFO - *******************
+2024-06-25 11:31:46,332 - INFO - Starting Solar PV model simulations for Belfast.
+2024-06-25 11:31:46,333 - INFO - *******************
+2024-06-25 11:31:46,333 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,342 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,351 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,360 - INFO - *******************
+2024-06-25 11:31:46,361 - INFO - Solar PV model simulations for Belfast completed.
+2024-06-25 11:31:46,436 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,450 - INFO - Solar PV model data summary for Belfast complete.
+2024-06-25 11:31:46,451 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,452 - INFO - *******************
+2024-06-25 11:31:46,453 - INFO - *******************
+2024-06-25 11:31:46,454 - INFO - Starting Solar PV model simulations for Paris.
+2024-06-25 11:31:46,455 - INFO - *******************
+2024-06-25 11:31:46,455 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,467 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:46,475 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,484 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:46,494 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,503 - INFO - *******************
+2024-06-25 11:31:46,504 - INFO - Solar PV model simulations for Paris completed.
+2024-06-25 11:31:46,540 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,552 - INFO - Solar PV model data summary for Paris complete.
+2024-06-25 11:31:46,553 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,553 - INFO - *******************
+2024-06-25 11:31:46,554 - INFO - *******************
+2024-06-25 11:31:46,554 - INFO - Starting Solar PV model simulations for Paris.
+2024-06-25 11:31:46,556 - INFO - *******************
+2024-06-25 11:31:46,557 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,567 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,575 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,585 - INFO - *******************
+2024-06-25 11:31:46,585 - INFO - Solar PV model simulations for Paris completed.
+2024-06-25 11:31:46,617 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,626 - INFO - Solar PV model data summary for Paris complete.
+2024-06-25 11:31:46,627 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,628 - INFO - *******************
+2024-06-25 11:31:46,629 - INFO - *******************
+2024-06-25 11:31:46,629 - INFO - Starting Solar PV model simulations for Madrid.
+2024-06-25 11:31:46,631 - INFO - *******************
+2024-06-25 11:31:46,632 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,640 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:46,651 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,659 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:46,668 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,678 - INFO - *******************
+2024-06-25 11:31:46,678 - INFO - Solar PV model simulations for Madrid completed.
+2024-06-25 11:31:46,713 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,725 - INFO - Solar PV model data summary for Madrid complete.
+2024-06-25 11:31:46,726 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,727 - INFO - *******************
+2024-06-25 11:31:46,727 - INFO - *******************
+2024-06-25 11:31:46,728 - INFO - Starting Solar PV model simulations for Madrid.
+2024-06-25 11:31:46,729 - INFO - *******************
+2024-06-25 11:31:46,729 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,739 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,749 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,758 - INFO - *******************
+2024-06-25 11:31:46,758 - INFO - Solar PV model simulations for Madrid completed.
+2024-06-25 11:31:46,789 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,799 - INFO - Solar PV model data summary for Madrid complete.
+2024-06-25 11:31:46,799 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,801 - INFO - *******************
+2024-06-25 11:31:46,802 - INFO - *******************
+2024-06-25 11:31:46,803 - INFO - Starting Solar PV model simulations for Cairo.
+2024-06-25 11:31:46,804 - INFO - *******************
+2024-06-25 11:31:46,805 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,814 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:46,823 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,832 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:46,841 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,852 - INFO - *******************
+2024-06-25 11:31:46,853 - INFO - Solar PV model simulations for Cairo completed.
+2024-06-25 11:31:46,887 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,899 - INFO - Solar PV model data summary for Cairo complete.
+2024-06-25 11:31:46,900 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,900 - INFO - *******************
+2024-06-25 11:31:46,902 - INFO - *******************
+2024-06-25 11:31:46,903 - INFO - Starting Solar PV model simulations for Cairo.
+2024-06-25 11:31:46,904 - INFO - *******************
+2024-06-25 11:31:46,905 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:46,914 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:46,923 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,933 - INFO - *******************
+2024-06-25 11:31:46,933 - INFO - Solar PV model simulations for Cairo completed.
+2024-06-25 11:31:46,963 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:46,972 - INFO - Solar PV model data summary for Cairo complete.
+2024-06-25 11:31:46,973 - INFO -       SUCCESS!      
+2024-06-25 11:31:46,974 - INFO - *******************
+2024-06-25 11:31:46,974 - INFO - *******************
+2024-06-25 11:31:46,975 - INFO - Starting Solar PV model simulations for Abuja.
+2024-06-25 11:31:46,976 - INFO - *******************
+2024-06-25 11:31:46,977 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:46,987 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:46,997 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:47,006 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:47,015 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:47,023 - INFO - *******************
+2024-06-25 11:31:47,024 - INFO - Solar PV model simulations for Abuja completed.
+2024-06-25 11:31:47,059 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:47,073 - INFO - Solar PV model data summary for Abuja complete.
+2024-06-25 11:31:47,074 - INFO -       SUCCESS!      
+2024-06-25 11:31:47,074 - INFO - *******************
+2024-06-25 11:31:47,075 - INFO - *******************
+2024-06-25 11:31:47,076 - INFO - Starting Solar PV model simulations for Abuja.
+2024-06-25 11:31:47,077 - INFO - *******************
+2024-06-25 11:31:47,078 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:47,087 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:47,096 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:47,107 - INFO - *******************
+2024-06-25 11:31:47,107 - INFO - Solar PV model simulations for Abuja completed.
+2024-06-25 11:31:47,140 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:47,150 - INFO - Solar PV model data summary for Abuja complete.
+2024-06-25 11:31:47,152 - INFO -       SUCCESS!      
+2024-06-25 11:31:47,153 - INFO - *******************
+2024-06-25 11:31:47,154 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-06-25 11:31:47,157 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-06-25 11:31:47,159 - INFO - *******************
+2024-06-25 11:31:47,160 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-06-25 11:31:47,163 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-06-25 11:31:47,164 - INFO - *******************
+2024-06-25 11:31:47,165 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-06-25 11:31:47,168 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-06-25 11:31:47,168 - INFO - *******************
+2024-06-25 11:31:47,169 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-06-25 11:31:47,171 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-06-25 11:31:47,172 - INFO - *******************
+2024-06-25 11:31:47,173 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-06-25 11:31:47,176 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-06-25 11:31:47,177 - INFO - *******************
+2024-06-25 11:31:47,204 - INFO - Generating Solar PV model statistical analysis for Belfast.
+2024-06-25 11:31:47,207 - INFO - Solar PV model statistical analysis for Belfast completed.
+2024-06-25 11:31:47,208 - INFO - *******************
+2024-06-25 11:31:47,211 - INFO - Generating Solar PV model statistical analysis for Paris.
+2024-06-25 11:31:47,214 - INFO - Solar PV model statistical analysis for Paris completed.
+2024-06-25 11:31:47,216 - INFO - *******************
+2024-06-25 11:31:47,218 - INFO - Generating Solar PV model statistical analysis for Madrid.
+2024-06-25 11:31:47,221 - INFO - Solar PV model statistical analysis for Madrid completed.
+2024-06-25 11:31:47,221 - INFO - *******************
+2024-06-25 11:31:47,224 - INFO - Generating Solar PV model statistical analysis for Cairo.
+2024-06-25 11:31:47,227 - INFO - Solar PV model statistical analysis for Cairo completed.
+2024-06-25 11:31:47,228 - INFO - *******************
+2024-06-25 11:31:47,231 - INFO - Generating Solar PV model statistical analysis for Abuja.
+2024-06-25 11:31:47,236 - INFO - Solar PV model statistical analysis for Abuja completed.
+2024-06-25 11:31:47,237 - INFO - *******************
+2024-06-25 11:31:47,258 - INFO - Generating Solar PV model statistical grouping for Belfast.
+2024-06-25 11:31:47,287 - INFO - Solar PV model statistical grouping for Belfast completed.
+2024-06-25 11:31:47,289 - INFO - *******************
+2024-06-25 11:31:47,349 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:47,350 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:47,351 - INFO - *******************
+2024-06-25 11:31:47,352 - INFO - Solar PV Panel created: Size: 0.3538kW, Size: 1.99m2, Efficiency: 22.37%, Lifespan: 25yrs
+2024-06-25 11:31:47,352 - INFO - *******************
+2024-06-25 11:31:47,354 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-06-25 11:31:47,355 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-06-25 11:31:47,356 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-06-25 11:31:47,357 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-06-25 11:31:47,359 - INFO - Solar PV array created: Size: 1.061kW, Size: 5.97m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 22.37%
+2024-06-25 11:31:47,360 - INFO - *******************
+2024-06-25 11:31:47,360 - INFO - Starting Solar PV model simulations for .
+2024-06-25 11:31:47,361 - INFO - *******************
+2024-06-25 11:31:47,362 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:47,377 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:47,391 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:47,403 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:47,413 - INFO - Simulating model - PV Size: 1.061kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:47,427 - INFO - *******************
+2024-06-25 11:31:47,427 - INFO - Solar PV model simulations for  completed.
+2024-06-25 11:31:47,477 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:47,501 - INFO - Solar PV model data summary for  complete.
+2024-06-25 11:31:47,502 - INFO -       SUCCESS!      
+2024-06-25 11:31:47,503 - INFO - *******************
+2024-06-25 11:31:47,550 - INFO - Generating Solar PV model statistical analysis for .
+2024-06-25 11:31:47,553 - INFO - Solar PV model statistical analysis for  completed.
+2024-06-25 11:31:47,554 - INFO - *******************
+2024-06-25 11:31:47,565 - INFO - Generating Solar PV model statistical grouping for .
+2024-06-25 11:31:47,596 - INFO - Solar PV model statistical grouping for  completed.
+2024-06-25 11:31:47,598 - INFO - *******************
+2024-06-25 11:31:47,856 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:47,857 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:47,858 - INFO - *******************
+2024-06-25 11:31:47,860 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 11:31:47,861 - INFO - *******************
+2024-06-25 11:31:47,862 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:47,863 - INFO - *******************
+2024-06-25 11:31:47,865 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 11:31:47,865 - INFO - *******************
+2024-06-25 11:31:47,866 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 11:31:47,883 - INFO - *******************
+2024-06-25 11:31:47,884 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 11:31:47,924 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:47,934 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 11:31:47,935 - INFO -       SUCCESS!      
+2024-06-25 11:31:47,936 - INFO - *******************
+2024-06-25 11:31:47,938 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 11:31:47,941 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 11:31:47,943 - INFO - *******************
+2024-06-25 11:31:47,954 - INFO - Generating Solar PV model statistical grouping for Site.
+2024-06-25 11:31:47,983 - INFO - Solar PV model statistical grouping for Site completed.
+2024-06-25 11:31:47,984 - INFO - *******************
+2024-06-25 11:31:49,851 - INFO - Fetching TMY data for  at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:49,852 - INFO - TMY data obtained for  at latitude: 54.60452, longitude: -5.9286
+2024-06-25 11:31:49,853 - INFO - *******************
+2024-06-25 11:31:49,866 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 11:31:49,867 - INFO - *******************
+2024-06-25 11:31:49,868 - INFO - Solar PV array created: Size: 1.68kW, Size: 8.0m2, Azimuth: -90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:49,869 - INFO - Solar PV array created: Size: 1.68kW, Size: 8.0m2, Azimuth: -45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:49,870 - INFO - Solar PV array created: Size: 1.68kW, Size: 8.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:49,871 - INFO - Solar PV array created: Size: 1.68kW, Size: 8.0m2, Azimuth: 45deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:49,872 - INFO - Solar PV array created: Size: 1.68kW, Size: 8.0m2, Azimuth: 90deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 11:31:49,873 - INFO - *******************
+2024-06-25 11:31:49,873 - INFO - Starting Solar PV model simulations for .
+2024-06-25 11:31:49,874 - INFO - *******************
+2024-06-25 11:31:49,875 - INFO - Simulating model - PV Size: 1.68kWp, Pitch: 35 degrees, Azimuth -90 degrees WoS
+2024-06-25 11:31:49,885 - INFO - Simulating model - PV Size: 1.68kWp, Pitch: 35 degrees, Azimuth -45 degrees WoS
+2024-06-25 11:31:49,893 - INFO - Simulating model - PV Size: 1.68kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 11:31:49,903 - INFO - Simulating model - PV Size: 1.68kWp, Pitch: 35 degrees, Azimuth 45 degrees WoS
+2024-06-25 11:31:49,910 - INFO - Simulating model - PV Size: 1.68kWp, Pitch: 35 degrees, Azimuth 90 degrees WoS
+2024-06-25 11:31:49,920 - INFO - *******************
+2024-06-25 11:31:49,921 - INFO - Solar PV model simulations for  completed.
+2024-06-25 11:31:49,956 - INFO - Solar PV model data aggregated.
+2024-06-25 11:31:49,968 - INFO - Solar PV model data summary for  complete.
+2024-06-25 11:31:49,968 - INFO -       SUCCESS!      
+2024-06-25 11:31:49,969 - INFO - *******************
+2024-06-25 11:31:49,971 - INFO - Solar PV model simulations completed in 0.1052 seconds.
+2024-06-25 11:31:49,981 - INFO - Generating Solar PV model statistical grouping for .
+2024-06-25 11:31:50,003 - INFO - Solar PV model statistical grouping for  completed.
+2024-06-25 11:31:50,004 - INFO - *******************
+2024-06-25 11:31:50,220 - INFO - Generating Solar PV model statistical analysis for .
+2024-06-25 11:31:50,223 - INFO - Solar PV model statistical analysis for  completed.
+2024-06-25 11:31:50,224 - INFO - *******************
+2024-06-25 11:31:50,289 - INFO - Load Profile Generated: Daily Electricity Use: 10.003kWhAnnual Electricity Use: 3651.0950000000003kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 11:31:50,289 - INFO - *******************
+2024-06-25 11:31:51,717 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-06-25 11:31:51,723 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2024-06-25 12:14:47,249 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:14:48,385 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 12:14:49,158 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:14:49,159 - INFO - *******************
+2024-06-25 12:14:49,196 - INFO - Load Profile Generated: Daily Electricity Use: 9.903kWhAnnual Electricity Use: 3614.5950000000003kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 12:14:49,197 - INFO - *******************
+2024-06-25 12:14:49,197 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 12:14:49,198 - INFO - *******************
+2024-06-25 12:14:49,199 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:14:49,200 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:14:49,200 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:14:49,201 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 12:14:49,202 - INFO - *******************
+2024-06-25 12:14:49,202 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 12:14:49,203 - INFO - *******************
+2024-06-25 12:14:49,213 - INFO - *******************
+2024-06-25 12:14:49,214 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 12:14:49,214 - INFO - *******************
+2024-06-25 12:14:49,215 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 12:14:49,224 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 12:14:49,231 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 12:14:49,239 - INFO - *******************
+2024-06-25 12:14:49,241 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 12:14:49,276 - INFO - Solar PV model data aggregated.
+2024-06-25 12:14:49,284 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 12:14:49,285 - INFO -       SUCCESS!      
+2024-06-25 12:14:49,285 - INFO - *******************
+2024-06-25 12:14:49,286 - INFO - Main Model Successfully Initialised
+2024-06-25 12:14:49,287 - INFO - *******************
+2024-06-25 12:14:49,297 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 12:14:49,298 - INFO - *******************
+2024-06-25 12:14:50,277 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 12:14:50,278 - INFO - *******************
+2024-06-25 12:14:50,282 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 12:14:50,282 - INFO - *******************
+2024-06-25 12:14:50,287 - INFO - Model aggregation completed successfully
+2024-06-25 12:14:50,287 - INFO - *******************
+2024-06-25 12:14:50,288 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 12:14:50,293 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 12:14:50,294 - INFO - *******************
+2024-06-25 12:14:50,295 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 12:14:50,298 - INFO - Model statistical analysis for Site completed.
+2024-06-25 12:14:50,298 - INFO - *******************
+2024-06-25 12:15:50,721 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:15:52,030 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 12:15:52,498 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:15:52,499 - INFO - *******************
+2024-06-25 12:15:52,536 - INFO - Load Profile Generated: Daily Electricity Use: 9.941kWhAnnual Electricity Use: 3628.465kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 12:15:52,545 - INFO - *******************
+2024-06-25 12:15:52,545 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 12:15:52,546 - INFO - *******************
+2024-06-25 12:15:52,547 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:15:52,548 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:15:52,549 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:15:52,550 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 12:15:52,551 - INFO - *******************
+2024-06-25 12:15:52,552 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 12:15:52,553 - INFO - *******************
+2024-06-25 12:15:52,562 - INFO - *******************
+2024-06-25 12:15:52,562 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 12:15:52,563 - INFO - *******************
+2024-06-25 12:15:52,564 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 12:15:52,574 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 12:15:52,581 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 12:15:52,590 - INFO - *******************
+2024-06-25 12:15:52,590 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 12:15:52,624 - INFO - Solar PV model data aggregated.
+2024-06-25 12:15:52,632 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 12:15:52,633 - INFO -       SUCCESS!      
+2024-06-25 12:15:52,635 - INFO - *******************
+2024-06-25 12:15:52,635 - INFO - Main Model Successfully Initialised
+2024-06-25 12:15:52,637 - INFO - *******************
+2024-06-25 12:15:52,643 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 12:15:52,644 - INFO - *******************
+2024-06-25 12:15:53,481 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 12:15:53,482 - INFO - *******************
+2024-06-25 12:15:53,489 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 12:15:53,490 - INFO - *******************
+2024-06-25 12:15:53,496 - INFO - Model aggregation completed successfully
+2024-06-25 12:15:53,497 - INFO - *******************
+2024-06-25 12:15:53,498 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 12:15:53,502 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 12:15:53,503 - INFO - *******************
+2024-06-25 12:15:53,505 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 12:15:53,510 - INFO - Model statistical analysis for Site completed.
+2024-06-25 12:15:53,510 - INFO - *******************
+2024-06-25 12:16:14,987 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:14,988 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:14,989 - INFO - *******************
+2024-06-25 12:16:15,033 - INFO - Load Profile Generated: Daily Electricity Use: 9.797kWhAnnual Electricity Use: 3575.905kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 12:16:15,034 - INFO - *******************
+2024-06-25 12:16:15,035 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 12:16:15,036 - INFO - *******************
+2024-06-25 12:16:15,037 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:15,038 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:15,039 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:15,041 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 12:16:15,043 - INFO - *******************
+2024-06-25 12:16:15,044 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 12:16:15,045 - INFO - *******************
+2024-06-25 12:16:15,056 - INFO - *******************
+2024-06-25 12:16:15,057 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 12:16:15,058 - INFO - *******************
+2024-06-25 12:16:15,060 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 12:16:15,074 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 12:16:15,089 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 12:16:15,101 - INFO - *******************
+2024-06-25 12:16:15,102 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 12:16:15,156 - INFO - Solar PV model data aggregated.
+2024-06-25 12:16:15,170 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 12:16:15,171 - INFO -       SUCCESS!      
+2024-06-25 12:16:15,171 - INFO - *******************
+2024-06-25 12:16:15,173 - INFO - Main Model Successfully Initialised
+2024-06-25 12:16:15,174 - INFO - *******************
+2024-06-25 12:16:15,182 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 12:16:15,183 - INFO - *******************
+2024-06-25 12:16:15,188 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 12:16:15,189 - INFO - *******************
+2024-06-25 12:16:15,196 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 12:16:15,198 - INFO - *******************
+2024-06-25 12:16:15,207 - INFO - Model aggregation completed successfully
+2024-06-25 12:16:15,246 - INFO - *******************
+2024-06-25 12:16:15,251 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 12:16:15,255 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 12:16:15,257 - INFO - *******************
+2024-06-25 12:16:15,258 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 12:16:15,263 - INFO - Model statistical analysis for Site completed.
+2024-06-25 12:16:15,270 - INFO - *******************
+2024-06-25 12:16:47,030 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:48,288 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 12:16:49,295 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:49,296 - INFO - *******************
+2024-06-25 12:16:49,327 - INFO - Load Profile Generated: Daily Electricity Use: 9.92kWhAnnual Electricity Use: 3620.8kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 12:16:49,327 - INFO - *******************
+2024-06-25 12:16:49,328 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 12:16:49,329 - INFO - *******************
+2024-06-25 12:16:49,330 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:49,331 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:49,333 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 12:16:49,333 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 12:16:49,334 - INFO - *******************
+2024-06-25 12:16:49,336 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 12:16:49,336 - INFO - *******************
+2024-06-25 12:16:49,346 - INFO - *******************
+2024-06-25 12:16:49,347 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 12:16:49,347 - INFO - *******************
+2024-06-25 12:16:49,348 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 12:16:49,357 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 12:16:49,366 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 12:16:49,375 - INFO - *******************
+2024-06-25 12:16:49,376 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 12:16:49,410 - INFO - Solar PV model data aggregated.
+2024-06-25 12:16:49,421 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 12:16:49,422 - INFO -       SUCCESS!      
+2024-06-25 12:16:49,422 - INFO - *******************
+2024-06-25 12:16:49,423 - INFO - Main Model Successfully Initialised
+2024-06-25 12:16:49,424 - INFO - *******************
+2024-06-25 12:16:49,430 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 12:16:49,430 - INFO - *******************
+2024-06-25 12:16:50,203 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 12:16:50,204 - INFO - *******************
+2024-06-25 12:16:50,208 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 12:16:50,208 - INFO - *******************
+2024-06-25 12:16:50,213 - INFO - Model aggregation completed successfully
+2024-06-25 12:16:50,213 - INFO - *******************
+2024-06-25 12:16:50,214 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 12:16:50,217 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 12:16:50,217 - INFO - *******************
+2024-06-25 12:16:50,219 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 12:16:50,223 - INFO - Model statistical analysis for Site completed.
+2024-06-25 12:16:50,224 - INFO - *******************
+2024-06-25 12:16:51,977 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 12:16:52,032 - INFO - Model statistical grouping for Site completed.
+2024-06-25 12:16:52,056 - INFO - *******************
+2024-06-25 12:16:53,391 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:53,392 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 12:16:53,393 - INFO - *******************
+2024-06-25 12:16:53,431 - INFO - Load Profile Generated: Daily Electricity Use: 10.037kWhAnnual Electricity Use: 3663.505kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 12:16:53,432 - INFO - *******************
+2024-06-25 12:16:53,490 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 2102.0%, Lifespan: 25yrs
+2024-06-25 12:16:53,491 - INFO - *******************
+2024-06-25 12:16:53,491 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 12:16:53,492 - INFO - Solar PV array created: Size: 0.84kW, Size: 4.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 12:16:53,493 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 12:16:53,518 - INFO - Inverter Created: Max Output: 5.0kW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 12:16:53,519 - INFO - *******************
+2024-06-25 12:16:53,535 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 14.336kW, Chemistry: LiFePO4
+2024-06-25 12:16:53,536 - INFO - *******************
+2024-06-25 12:16:53,544 - INFO - *******************
+2024-06-25 12:16:53,545 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 12:16:53,546 - INFO - *******************
+2024-06-25 12:16:53,547 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 12:16:53,556 - INFO - Simulating model - PV Size: 0.84kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 12:16:53,567 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 12:16:53,577 - INFO - *******************
+2024-06-25 12:16:53,578 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 12:16:53,620 - INFO - Solar PV model data aggregated.
+2024-06-25 12:16:53,631 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 12:16:53,632 - INFO -       SUCCESS!      
+2024-06-25 12:16:53,634 - INFO - *******************
+2024-06-25 12:16:53,635 - INFO - Main Model Successfully Initialised
+2024-06-25 12:16:53,636 - INFO - *******************
+2024-06-25 12:16:53,645 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 12:16:53,646 - INFO - *******************
+2024-06-25 12:16:53,650 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 12:16:53,652 - INFO - *******************
+2024-06-25 12:16:53,657 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 12:16:53,657 - INFO - *******************
+2024-06-25 12:16:53,666 - INFO - Model aggregation completed successfully
+2024-06-25 12:16:53,667 - INFO - *******************
+2024-06-25 12:16:53,668 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 12:16:53,672 - INFO - Model statistical analysis for Site completed.
+2024-06-25 12:16:53,673 - INFO - *******************
+2024-06-25 12:16:53,673 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 12:16:53,677 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 12:16:53,678 - INFO - *******************
+2024-06-25 14:10:30,672 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:10:30,672 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:10:30,676 - INFO - *******************
+2024-06-25 14:10:30,752 - INFO - Load Profile Generated: Daily Electricity Use: 9.935kWhAnnual Electricity Use: 3626.275kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:10:30,752 - INFO - *******************
+2024-06-25 14:10:30,752 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:10:30,756 - INFO - *******************
+2024-06-25 14:10:30,760 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:10:30,760 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:10:30,764 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:10:30,768 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:10:30,772 - INFO - *******************
+2024-06-25 14:10:30,772 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:10:30,772 - INFO - *******************
+2024-06-25 14:10:30,792 - INFO - *******************
+2024-06-25 14:10:30,796 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:10:30,796 - INFO - *******************
+2024-06-25 14:10:30,796 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:10:30,816 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:10:30,836 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:10:30,856 - INFO - *******************
+2024-06-25 14:10:30,860 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:10:30,932 - INFO - Solar PV model data aggregated.
+2024-06-25 14:10:30,956 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:10:30,960 - INFO -       SUCCESS!      
+2024-06-25 14:10:30,960 - INFO - *******************
+2024-06-25 14:10:30,960 - INFO - Main Model Successfully Initialised
+2024-06-25 14:10:30,964 - INFO - *******************
+2024-06-25 14:10:30,980 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:10:30,980 - INFO - *******************
+2024-06-25 14:10:30,988 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:10:30,988 - INFO - *******************
+2024-06-25 14:10:30,996 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:10:30,996 - INFO - *******************
+2024-06-25 14:10:31,012 - INFO - Model aggregation completed successfully
+2024-06-25 14:10:31,012 - INFO - *******************
+2024-06-25 14:10:31,012 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:10:31,020 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:10:31,020 - INFO - *******************
+2024-06-25 14:10:31,020 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:10:31,028 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:10:31,032 - INFO - *******************
+2024-06-25 14:14:03,686 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:14:03,686 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:14:03,690 - INFO - *******************
+2024-06-25 14:14:04,090 - INFO - Load Profile Generated: Daily Electricity Use: 15.32kWhAnnual Electricity Use: 5591.8kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:14:04,094 - INFO - *******************
+2024-06-25 14:14:04,094 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:14:04,098 - INFO - *******************
+2024-06-25 14:14:04,098 - INFO - Solar PV array created: Size: 3.36kW, Size: 16.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:14:04,102 - INFO - Solar PV array created: Size: 3.36kW, Size: 16.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:14:04,106 - INFO - Solar PV array created: Size: 3.36kW, Size: 16.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:14:04,106 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:14:04,110 - INFO - *******************
+2024-06-25 14:14:04,110 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:14:04,114 - INFO - *******************
+2024-06-25 14:14:04,134 - INFO - *******************
+2024-06-25 14:14:04,134 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:14:04,138 - INFO - *******************
+2024-06-25 14:14:04,142 - INFO - Simulating model - PV Size: 3.36kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:14:04,174 - INFO - Simulating model - PV Size: 3.36kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:14:04,202 - INFO - Simulating model - PV Size: 3.36kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:14:04,230 - INFO - *******************
+2024-06-25 14:14:04,234 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:14:04,350 - INFO - Solar PV model data aggregated.
+2024-06-25 14:14:04,374 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:14:04,374 - INFO -       SUCCESS!      
+2024-06-25 14:14:04,374 - INFO - *******************
+2024-06-25 14:14:04,378 - INFO - Main Model Successfully Initialised
+2024-06-25 14:14:04,378 - INFO - *******************
+2024-06-25 14:14:04,398 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:14:04,402 - INFO - *******************
+2024-06-25 14:14:04,410 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:14:04,414 - INFO - *******************
+2024-06-25 14:14:04,430 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:14:04,430 - INFO - *******************
+2024-06-25 14:14:04,446 - INFO - Model aggregation completed successfully
+2024-06-25 14:14:04,446 - INFO - *******************
+2024-06-25 14:14:04,450 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:14:04,458 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:14:04,458 - INFO - *******************
+2024-06-25 14:14:04,458 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:14:04,470 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:14:04,470 - INFO - *******************
+2024-06-25 14:14:50,876 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:14:50,932 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:14:50,932 - INFO - *******************
+2024-06-25 14:16:12,580 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:12,584 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:12,584 - INFO - *******************
+2024-06-25 14:16:12,644 - INFO - Load Profile Generated: Daily Electricity Use: 9.841kWhAnnual Electricity Use: 3591.9649999999997kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:16:12,644 - INFO - *******************
+2024-06-25 14:16:12,644 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:16:12,644 - INFO - *******************
+2024-06-25 14:16:12,648 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:12,648 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:12,652 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:12,656 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:16:12,656 - INFO - *******************
+2024-06-25 14:16:12,660 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:16:12,660 - INFO - *******************
+2024-06-25 14:16:12,684 - INFO - *******************
+2024-06-25 14:16:12,684 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:16:12,684 - INFO - *******************
+2024-06-25 14:16:12,688 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:16:12,708 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:16:12,724 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:16:12,740 - INFO - *******************
+2024-06-25 14:16:12,740 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:16:12,844 - INFO - Solar PV model data aggregated.
+2024-06-25 14:16:12,864 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:16:12,864 - INFO -       SUCCESS!      
+2024-06-25 14:16:12,864 - INFO - *******************
+2024-06-25 14:16:12,868 - INFO - Main Model Successfully Initialised
+2024-06-25 14:16:12,868 - INFO - *******************
+2024-06-25 14:16:12,884 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:16:12,884 - INFO - *******************
+2024-06-25 14:16:12,888 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:16:12,892 - INFO - *******************
+2024-06-25 14:16:12,900 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:16:12,900 - INFO - *******************
+2024-06-25 14:16:12,908 - INFO - Model aggregation completed successfully
+2024-06-25 14:16:12,908 - INFO - *******************
+2024-06-25 14:16:12,912 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:16:12,916 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:16:12,916 - INFO - *******************
+2024-06-25 14:16:12,920 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:16:12,928 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:16:12,968 - INFO - *******************
+2024-06-25 14:16:13,857 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:16:13,917 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:16:13,921 - INFO - *******************
+2024-06-25 14:16:15,333 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:15,333 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:15,337 - INFO - *******************
+2024-06-25 14:16:15,389 - INFO - Load Profile Generated: Daily Electricity Use: 9.851kWhAnnual Electricity Use: 3595.6150000000002kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:16:15,393 - INFO - *******************
+2024-06-25 14:16:15,477 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 2102.0%, Lifespan: 25yrs
+2024-06-25 14:16:15,477 - INFO - *******************
+2024-06-25 14:16:15,477 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:15,481 - INFO - Solar PV array created: Size: 0.84kW, Size: 4.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:15,481 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:15,509 - INFO - Inverter Created: Max Output: 5.0kW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:16:15,509 - INFO - *******************
+2024-06-25 14:16:15,521 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 14.336kW, Chemistry: LiFePO4
+2024-06-25 14:16:15,521 - INFO - *******************
+2024-06-25 14:16:15,541 - INFO - *******************
+2024-06-25 14:16:15,545 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:16:15,549 - INFO - *******************
+2024-06-25 14:16:15,549 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:16:15,573 - INFO - Simulating model - PV Size: 0.84kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:16:15,593 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:16:15,621 - INFO - *******************
+2024-06-25 14:16:15,625 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:16:15,741 - INFO - Solar PV model data aggregated.
+2024-06-25 14:16:15,785 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:16:15,789 - INFO -       SUCCESS!      
+2024-06-25 14:16:15,793 - INFO - *******************
+2024-06-25 14:16:15,793 - INFO - Main Model Successfully Initialised
+2024-06-25 14:16:15,797 - INFO - *******************
+2024-06-25 14:16:15,813 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:16:15,817 - INFO - *******************
+2024-06-25 14:16:15,825 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:16:15,825 - INFO - *******************
+2024-06-25 14:16:15,837 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:16:15,841 - INFO - *******************
+2024-06-25 14:16:15,857 - INFO - Model aggregation completed successfully
+2024-06-25 14:16:15,857 - INFO - *******************
+2024-06-25 14:16:15,861 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:16:15,865 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:16:15,869 - INFO - *******************
+2024-06-25 14:16:15,869 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:16:15,873 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:16:15,873 - INFO - *******************
+2024-06-25 14:16:29,073 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:29,077 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:29,077 - INFO - *******************
+2024-06-25 14:16:29,141 - INFO - Load Profile Generated: Daily Electricity Use: 9.968kWhAnnual Electricity Use: 3638.32kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:16:29,141 - INFO - *******************
+2024-06-25 14:16:29,145 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:16:29,145 - INFO - *******************
+2024-06-25 14:16:29,145 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:29,149 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:29,149 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:16:29,149 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:16:29,153 - INFO - *******************
+2024-06-25 14:16:29,153 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:16:29,153 - INFO - *******************
+2024-06-25 14:16:29,177 - INFO - *******************
+2024-06-25 14:16:29,177 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:16:29,181 - INFO - *******************
+2024-06-25 14:16:29,181 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:16:29,205 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:16:29,217 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:16:29,229 - INFO - *******************
+2024-06-25 14:16:29,233 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:16:29,297 - INFO - Solar PV model data aggregated.
+2024-06-25 14:16:29,313 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:16:29,317 - INFO -       SUCCESS!      
+2024-06-25 14:16:29,317 - INFO - *******************
+2024-06-25 14:16:29,317 - INFO - Main Model Successfully Initialised
+2024-06-25 14:16:29,321 - INFO - *******************
+2024-06-25 14:16:29,333 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:16:29,333 - INFO - *******************
+2024-06-25 14:16:29,337 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:16:29,341 - INFO - *******************
+2024-06-25 14:16:29,349 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:16:29,353 - INFO - *******************
+2024-06-25 14:16:29,361 - INFO - Model aggregation completed successfully
+2024-06-25 14:16:29,361 - INFO - *******************
+2024-06-25 14:16:29,361 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:16:29,369 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:16:29,369 - INFO - *******************
+2024-06-25 14:16:29,373 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:16:29,377 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:16:29,381 - INFO - *******************
+2024-06-25 14:16:30,519 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:16:30,567 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:16:30,567 - INFO - *******************
+2024-06-25 14:16:31,987 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:31,987 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:16:31,991 - INFO - *******************
+2024-06-25 14:16:32,063 - INFO - Load Profile Generated: Daily Electricity Use: 9.879kWhAnnual Electricity Use: 3605.835kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:16:32,063 - INFO - *******************
+2024-06-25 14:16:32,183 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 2102.0%, Lifespan: 25yrs
+2024-06-25 14:16:32,183 - INFO - *******************
+2024-06-25 14:16:32,187 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:32,187 - INFO - Solar PV array created: Size: 0.84kW, Size: 4.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:32,191 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 2102.0%
+2024-06-25 14:16:32,211 - INFO - Inverter Created: Max Output: 5.0kW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:16:32,211 - INFO - *******************
+2024-06-25 14:16:32,223 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 14.336kW, Chemistry: LiFePO4
+2024-06-25 14:16:32,227 - INFO - *******************
+2024-06-25 14:16:32,243 - INFO - *******************
+2024-06-25 14:16:32,243 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:16:32,243 - INFO - *******************
+2024-06-25 14:16:32,247 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:16:32,263 - INFO - Simulating model - PV Size: 0.84kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:16:32,279 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:16:32,299 - INFO - *******************
+2024-06-25 14:16:32,299 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:16:32,359 - INFO - Solar PV model data aggregated.
+2024-06-25 14:16:32,379 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:16:32,379 - INFO -       SUCCESS!      
+2024-06-25 14:16:32,379 - INFO - *******************
+2024-06-25 14:16:32,383 - INFO - Main Model Successfully Initialised
+2024-06-25 14:16:32,383 - INFO - *******************
+2024-06-25 14:16:32,395 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:16:32,395 - INFO - *******************
+2024-06-25 14:16:32,403 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:16:32,403 - INFO - *******************
+2024-06-25 14:16:32,411 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:16:32,415 - INFO - *******************
+2024-06-25 14:16:32,423 - INFO - Model aggregation completed successfully
+2024-06-25 14:16:32,423 - INFO - *******************
+2024-06-25 14:16:32,427 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:16:32,431 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:16:32,431 - INFO - *******************
+2024-06-25 14:16:32,435 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:16:32,439 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:16:32,443 - INFO - *******************
+2024-06-25 14:17:49,018 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:17:49,018 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:17:49,022 - INFO - *******************
+2024-06-25 14:17:49,078 - INFO - Load Profile Generated: Daily Electricity Use: 9.943kWhAnnual Electricity Use: 3629.1949999999997kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:17:49,082 - INFO - *******************
+2024-06-25 14:17:49,082 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:17:49,086 - INFO - *******************
+2024-06-25 14:17:49,086 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:17:49,086 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:17:49,090 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:17:49,094 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:17:49,094 - INFO - *******************
+2024-06-25 14:17:49,098 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:17:49,102 - INFO - *******************
+2024-06-25 14:17:49,134 - INFO - *******************
+2024-06-25 14:17:49,134 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:17:49,134 - INFO - *******************
+2024-06-25 14:17:49,138 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:17:49,166 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:17:49,194 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:17:49,218 - INFO - *******************
+2024-06-25 14:17:49,222 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:17:49,302 - INFO - Solar PV model data aggregated.
+2024-06-25 14:17:49,322 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:17:49,326 - INFO -       SUCCESS!      
+2024-06-25 14:17:49,326 - INFO - *******************
+2024-06-25 14:17:49,326 - INFO - Main Model Successfully Initialised
+2024-06-25 14:17:49,330 - INFO - *******************
+2024-06-25 14:17:49,342 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:17:49,342 - INFO - *******************
+2024-06-25 14:17:49,346 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:17:49,350 - INFO - *******************
+2024-06-25 14:17:49,358 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:17:49,358 - INFO - *******************
+2024-06-25 14:17:49,366 - INFO - Model aggregation completed successfully
+2024-06-25 14:17:49,370 - INFO - *******************
+2024-06-25 14:17:49,370 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:17:49,374 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:17:49,374 - INFO - *******************
+2024-06-25 14:17:49,378 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:17:49,382 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:17:49,382 - INFO - *******************
+2024-06-25 14:20:33,319 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:20:33,379 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:20:33,379 - INFO - *******************
+2024-06-25 14:28:13,332 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:28:15,341 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 14:28:17,058 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:28:17,058 - INFO - *******************
+2024-06-25 14:28:17,114 - INFO - Load Profile Generated: Daily Electricity Use: 10.05kWhAnnual Electricity Use: 3668.2500000000005kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:28:17,114 - INFO - *******************
+2024-06-25 14:28:17,118 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:28:17,118 - INFO - *******************
+2024-06-25 14:28:17,118 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:28:17,122 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:28:17,122 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:28:17,126 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:28:17,126 - INFO - *******************
+2024-06-25 14:28:17,126 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:28:17,130 - INFO - *******************
+2024-06-25 14:28:17,150 - INFO - *******************
+2024-06-25 14:28:17,150 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:28:17,154 - INFO - *******************
+2024-06-25 14:28:17,154 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:28:17,170 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:28:17,190 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:28:17,210 - INFO - *******************
+2024-06-25 14:28:17,210 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:28:17,286 - INFO - Solar PV model data aggregated.
+2024-06-25 14:28:17,306 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:28:17,310 - INFO -       SUCCESS!      
+2024-06-25 14:28:17,310 - INFO - *******************
+2024-06-25 14:28:17,310 - INFO - Main Model Successfully Initialised
+2024-06-25 14:28:17,314 - INFO - *******************
+2024-06-25 14:28:17,326 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:28:17,326 - INFO - *******************
+2024-06-25 14:28:19,870 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:28:19,874 - INFO - *******************
+2024-06-25 14:28:19,882 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:28:19,882 - INFO - *******************
+2024-06-25 14:28:19,894 - INFO - Model aggregation completed successfully
+2024-06-25 14:28:19,894 - INFO - *******************
+2024-06-25 14:28:19,894 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:28:19,902 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:28:19,902 - INFO - *******************
+2024-06-25 14:28:19,902 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:28:19,910 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:28:19,910 - INFO - *******************
+2024-06-25 14:29:23,797 - INFO - Fetching TMY data for Site at latitude: -54.60452, longitude: -5.9286
+2024-06-25 14:29:24,741 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:29:38,587 - INFO - Fetching TMY data for Site at latitude: -24.60452, longitude: -5.9286
+2024-06-25 14:29:39,855 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-24.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:29:46,936 - INFO - Fetching TMY data for Site at latitude: -14.60452, longitude: -5.9286
+2024-06-25 14:29:48,033 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-14.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:29:54,353 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -5.9286
+2024-06-25 14:29:55,589 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-4.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:30:27,956 - INFO - Fetching TMY data for Site at latitude: -74.60452, longitude: -5.9286
+2024-06-25 14:30:28,704 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-74.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:30:43,152 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -15.9286
+2024-06-25 14:30:44,260 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-4.60452&lon=-15.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:31:09,673 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -35.9286
+2024-06-25 14:31:10,742 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-4.60452&lon=-35.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:31:25,697 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:27,602 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-4.60452&lon=-45.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 14:31:28,219 - INFO - TMY data obtained for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:28,223 - INFO - *******************
+2024-06-25 14:31:28,343 - INFO - Load Profile Generated: Daily Electricity Use: 9.865kWhAnnual Electricity Use: 3600.725kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:31:28,347 - INFO - *******************
+2024-06-25 14:31:28,351 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:31:28,355 - INFO - *******************
+2024-06-25 14:31:28,355 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:28,359 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:28,363 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:28,367 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:31:28,375 - INFO - *******************
+2024-06-25 14:31:28,379 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:31:28,383 - INFO - *******************
+2024-06-25 14:31:28,423 - INFO - *******************
+2024-06-25 14:31:28,423 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:31:28,427 - INFO - *******************
+2024-06-25 14:31:28,431 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:28,471 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:28,523 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:28,559 - INFO - *******************
+2024-06-25 14:31:28,563 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:31:28,743 - INFO - Solar PV model data aggregated.
+2024-06-25 14:31:28,787 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:31:28,787 - INFO -       SUCCESS!      
+2024-06-25 14:31:28,791 - INFO - *******************
+2024-06-25 14:31:28,795 - INFO - Main Model Successfully Initialised
+2024-06-25 14:31:28,799 - INFO - *******************
+2024-06-25 14:31:28,835 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:31:28,835 - INFO - *******************
+2024-06-25 14:31:28,851 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:31:28,851 - INFO - *******************
+2024-06-25 14:31:28,871 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:31:28,875 - INFO - *******************
+2024-06-25 14:31:28,899 - INFO - Model aggregation completed successfully
+2024-06-25 14:31:28,903 - INFO - *******************
+2024-06-25 14:31:28,907 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:31:28,919 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:31:28,919 - INFO - *******************
+2024-06-25 14:31:28,923 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:31:28,939 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:31:28,943 - INFO - *******************
+2024-06-25 14:31:38,372 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:38,376 - INFO - TMY data obtained for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:38,376 - INFO - *******************
+2024-06-25 14:31:38,468 - INFO - Load Profile Generated: Daily Electricity Use: 9.944kWhAnnual Electricity Use: 3629.5600000000004kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:31:38,468 - INFO - *******************
+2024-06-25 14:31:38,472 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:31:38,476 - INFO - *******************
+2024-06-25 14:31:38,480 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:38,480 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:38,484 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:38,484 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:31:38,488 - INFO - *******************
+2024-06-25 14:31:38,492 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:31:38,492 - INFO - *******************
+2024-06-25 14:31:38,516 - INFO - *******************
+2024-06-25 14:31:38,520 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:31:38,520 - INFO - *******************
+2024-06-25 14:31:38,524 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:38,556 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:38,576 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:38,596 - INFO - *******************
+2024-06-25 14:31:38,596 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:31:38,680 - INFO - Solar PV model data aggregated.
+2024-06-25 14:31:38,696 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:31:38,700 - INFO -       SUCCESS!      
+2024-06-25 14:31:38,700 - INFO - *******************
+2024-06-25 14:31:38,704 - INFO - Main Model Successfully Initialised
+2024-06-25 14:31:38,704 - INFO - *******************
+2024-06-25 14:31:38,720 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:31:38,720 - INFO - *******************
+2024-06-25 14:31:38,728 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:31:38,728 - INFO - *******************
+2024-06-25 14:31:38,740 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:31:38,740 - INFO - *******************
+2024-06-25 14:31:38,748 - INFO - Model aggregation completed successfully
+2024-06-25 14:31:38,752 - INFO - *******************
+2024-06-25 14:31:38,752 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:31:38,756 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:31:38,760 - INFO - *******************
+2024-06-25 14:31:38,760 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:31:38,768 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:31:38,772 - INFO - *******************
+2024-06-25 14:31:42,127 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:42,127 - INFO - TMY data obtained for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:31:42,131 - INFO - *******************
+2024-06-25 14:31:42,183 - INFO - Load Profile Generated: Daily Electricity Use: 9.873kWhAnnual Electricity Use: 3603.645kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:31:42,183 - INFO - *******************
+2024-06-25 14:31:42,183 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:31:42,187 - INFO - *******************
+2024-06-25 14:31:42,187 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:42,191 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:42,191 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:31:42,191 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:31:42,195 - INFO - *******************
+2024-06-25 14:31:42,195 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:31:42,199 - INFO - *******************
+2024-06-25 14:31:42,215 - INFO - *******************
+2024-06-25 14:31:42,215 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:31:42,215 - INFO - *******************
+2024-06-25 14:31:42,219 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:42,235 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:42,251 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 180 degrees WoS
+2024-06-25 14:31:42,271 - INFO - *******************
+2024-06-25 14:31:42,271 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:31:42,339 - INFO - Solar PV model data aggregated.
+2024-06-25 14:31:42,359 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:31:42,359 - INFO -       SUCCESS!      
+2024-06-25 14:31:42,359 - INFO - *******************
+2024-06-25 14:31:42,363 - INFO - Main Model Successfully Initialised
+2024-06-25 14:31:42,363 - INFO - *******************
+2024-06-25 14:31:42,375 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:31:42,379 - INFO - *******************
+2024-06-25 14:31:42,383 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:31:42,383 - INFO - *******************
+2024-06-25 14:31:42,391 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:31:42,391 - INFO - *******************
+2024-06-25 14:31:42,399 - INFO - Model aggregation completed successfully
+2024-06-25 14:31:42,403 - INFO - *******************
+2024-06-25 14:31:42,403 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:31:42,407 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:31:42,411 - INFO - *******************
+2024-06-25 14:31:42,411 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:31:42,419 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:31:42,419 - INFO - *******************
+2024-06-25 14:32:23,292 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:32:23,292 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:32:23,296 - INFO - *******************
+2024-06-25 14:32:23,360 - INFO - Load Profile Generated: Daily Electricity Use: 10.001kWhAnnual Electricity Use: 3650.365kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:32:23,364 - INFO - *******************
+2024-06-25 14:32:23,364 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:32:23,368 - INFO - *******************
+2024-06-25 14:32:23,368 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:23,372 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:23,376 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:23,376 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:32:23,380 - INFO - *******************
+2024-06-25 14:32:23,380 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:32:23,384 - INFO - *******************
+2024-06-25 14:32:23,400 - INFO - *******************
+2024-06-25 14:32:23,404 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:32:23,404 - INFO - *******************
+2024-06-25 14:32:23,408 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:32:23,424 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:32:23,444 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:32:23,464 - INFO - *******************
+2024-06-25 14:32:23,464 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:32:23,536 - INFO - Solar PV model data aggregated.
+2024-06-25 14:32:23,560 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:32:23,560 - INFO -       SUCCESS!      
+2024-06-25 14:32:23,564 - INFO - *******************
+2024-06-25 14:32:23,564 - INFO - Main Model Successfully Initialised
+2024-06-25 14:32:23,568 - INFO - *******************
+2024-06-25 14:32:23,584 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:32:23,584 - INFO - *******************
+2024-06-25 14:32:23,588 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:32:23,592 - INFO - *******************
+2024-06-25 14:32:23,600 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:32:23,604 - INFO - *******************
+2024-06-25 14:32:23,612 - INFO - Model aggregation completed successfully
+2024-06-25 14:32:23,616 - INFO - *******************
+2024-06-25 14:32:23,616 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:32:23,624 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:32:23,624 - INFO - *******************
+2024-06-25 14:32:23,624 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:32:23,632 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:32:23,632 - INFO - *******************
+2024-06-25 14:32:41,744 - INFO - Fetching TMY data for Site at latitude: -54.60452, longitude: -45.9286
+2024-06-25 14:32:42,556 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=-54.60452&lon=-45.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 400 BAD REQUEST"
+2024-06-25 14:32:50,165 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:32:50,169 - INFO - TMY data obtained for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:32:50,169 - INFO - *******************
+2024-06-25 14:32:50,237 - INFO - Load Profile Generated: Daily Electricity Use: 9.961kWhAnnual Electricity Use: 3635.7650000000003kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:32:50,241 - INFO - *******************
+2024-06-25 14:32:50,241 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:32:50,245 - INFO - *******************
+2024-06-25 14:32:50,245 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:50,249 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:50,249 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:32:50,253 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:32:50,253 - INFO - *******************
+2024-06-25 14:32:50,257 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:32:50,257 - INFO - *******************
+2024-06-25 14:32:50,277 - INFO - *******************
+2024-06-25 14:32:50,281 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:32:50,281 - INFO - *******************
+2024-06-25 14:32:50,281 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:32:50,305 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:32:50,329 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:32:50,353 - INFO - *******************
+2024-06-25 14:32:50,353 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:32:50,437 - INFO - Solar PV model data aggregated.
+2024-06-25 14:32:50,453 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:32:50,457 - INFO -       SUCCESS!      
+2024-06-25 14:32:50,457 - INFO - *******************
+2024-06-25 14:32:50,457 - INFO - Main Model Successfully Initialised
+2024-06-25 14:32:50,461 - INFO - *******************
+2024-06-25 14:32:50,473 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:32:50,473 - INFO - *******************
+2024-06-25 14:32:50,481 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:32:50,481 - INFO - *******************
+2024-06-25 14:32:50,493 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:32:50,497 - INFO - *******************
+2024-06-25 14:32:50,505 - INFO - Model aggregation completed successfully
+2024-06-25 14:32:50,509 - INFO - *******************
+2024-06-25 14:32:50,509 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:32:50,517 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:32:50,517 - INFO - *******************
+2024-06-25 14:32:50,517 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:32:50,529 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:32:50,529 - INFO - *******************
+2024-06-25 14:33:15,568 - INFO - Fetching TMY data for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:33:15,572 - INFO - TMY data obtained for Site at latitude: -4.60452, longitude: -45.9286
+2024-06-25 14:33:15,572 - INFO - *******************
+2024-06-25 14:33:15,644 - INFO - Load Profile Generated: Daily Electricity Use: 9.953kWhAnnual Electricity Use: 3632.845kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:33:15,644 - INFO - *******************
+2024-06-25 14:33:15,644 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:33:15,648 - INFO - *******************
+2024-06-25 14:33:15,648 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 0deg, Efficiency: 21.02%
+2024-06-25 14:33:15,652 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 0deg, Efficiency: 21.02%
+2024-06-25 14:33:15,656 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 0deg, Efficiency: 21.02%
+2024-06-25 14:33:15,660 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:33:15,660 - INFO - *******************
+2024-06-25 14:33:15,664 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:33:15,664 - INFO - *******************
+2024-06-25 14:33:15,688 - INFO - *******************
+2024-06-25 14:33:15,692 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:33:15,692 - INFO - *******************
+2024-06-25 14:33:15,692 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 0 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:33:15,716 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 0 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:33:15,732 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 0 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:33:15,748 - INFO - *******************
+2024-06-25 14:33:15,748 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:33:15,832 - INFO - Solar PV model data aggregated.
+2024-06-25 14:33:15,852 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:33:15,856 - INFO -       SUCCESS!      
+2024-06-25 14:33:15,856 - INFO - *******************
+2024-06-25 14:33:15,856 - INFO - Main Model Successfully Initialised
+2024-06-25 14:33:15,860 - INFO - *******************
+2024-06-25 14:33:15,876 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:33:15,876 - INFO - *******************
+2024-06-25 14:33:15,880 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:33:15,884 - INFO - *******************
+2024-06-25 14:33:15,892 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:33:15,892 - INFO - *******************
+2024-06-25 14:33:15,900 - INFO - Model aggregation completed successfully
+2024-06-25 14:33:15,900 - INFO - *******************
+2024-06-25 14:33:15,904 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:33:15,908 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:33:15,912 - INFO - *******************
+2024-06-25 14:33:15,912 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:33:15,920 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:33:15,924 - INFO - *******************
+2024-06-25 14:34:22,783 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:34:22,839 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:34:22,839 - INFO - *******************
+2024-06-25 14:35:33,329 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:35:33,329 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:35:33,333 - INFO - *******************
+2024-06-25 14:35:33,393 - INFO - Load Profile Generated: Daily Electricity Use: 9.792kWhAnnual Electricity Use: 3574.08kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:35:33,393 - INFO - *******************
+2024-06-25 14:35:33,397 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:35:33,397 - INFO - *******************
+2024-06-25 14:35:33,401 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:35:33,401 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:35:33,405 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:35:33,409 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:35:33,409 - INFO - *******************
+2024-06-25 14:35:33,409 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:35:33,413 - INFO - *******************
+2024-06-25 14:35:33,437 - INFO - *******************
+2024-06-25 14:35:33,437 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:35:33,441 - INFO - *******************
+2024-06-25 14:35:33,441 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:35:33,465 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:35:33,489 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:35:33,509 - INFO - *******************
+2024-06-25 14:35:33,513 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:35:33,605 - INFO - Solar PV model data aggregated.
+2024-06-25 14:35:33,629 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:35:33,629 - INFO -       SUCCESS!      
+2024-06-25 14:35:33,633 - INFO - *******************
+2024-06-25 14:35:33,633 - INFO - Main Model Successfully Initialised
+2024-06-25 14:35:33,633 - INFO - *******************
+2024-06-25 14:35:33,649 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:35:33,653 - INFO - *******************
+2024-06-25 14:35:33,657 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:35:33,661 - INFO - *******************
+2024-06-25 14:35:33,677 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:35:33,681 - INFO - *******************
+2024-06-25 14:35:33,693 - INFO - Model aggregation completed successfully
+2024-06-25 14:35:33,697 - INFO - *******************
+2024-06-25 14:35:33,697 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:35:33,705 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:35:33,705 - INFO - *******************
+2024-06-25 14:35:33,709 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:35:33,713 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:35:33,717 - INFO - *******************
+2024-06-25 14:35:34,066 - INFO - Generating Model statistical grouping for Site.
+2024-06-25 14:35:34,142 - INFO - Model statistical grouping for Site completed.
+2024-06-25 14:35:34,146 - INFO - *******************
+2024-06-25 14:43:49,146 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:43:49,148 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:43:49,149 - INFO - *******************
+2024-06-25 14:43:49,182 - INFO - Load Profile Generated: Daily Electricity Use: 10.0kWhAnnual Electricity Use: 3650.0kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:43:49,183 - INFO - *******************
+2024-06-25 14:43:49,183 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:43:49,184 - INFO - *******************
+2024-06-25 14:43:49,185 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:43:49,186 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:43:49,188 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: -97deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:43:49,188 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:43:49,189 - INFO - *******************
+2024-06-25 14:43:49,190 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:43:49,191 - INFO - *******************
+2024-06-25 14:43:49,203 - INFO - *******************
+2024-06-25 14:43:49,204 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:43:49,205 - INFO - *******************
+2024-06-25 14:43:49,206 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:43:49,216 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:43:49,233 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth -97 degrees WoS
+2024-06-25 14:43:49,271 - INFO - *******************
+2024-06-25 14:43:49,272 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:43:49,359 - INFO - Solar PV model data aggregated.
+2024-06-25 14:43:49,370 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:43:49,371 - INFO -       SUCCESS!      
+2024-06-25 14:43:49,372 - INFO - *******************
+2024-06-25 14:43:49,373 - INFO - Main Model Successfully Initialised
+2024-06-25 14:43:49,374 - INFO - *******************
+2024-06-25 14:43:49,382 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:43:49,384 - INFO - *******************
+2024-06-25 14:43:49,388 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:43:49,390 - INFO - *******************
+2024-06-25 14:43:49,398 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:43:49,399 - INFO - *******************
+2024-06-25 14:43:49,405 - INFO - Model aggregation completed successfully
+2024-06-25 14:43:49,405 - INFO - *******************
+2024-06-25 14:43:49,406 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:43:49,409 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:43:49,409 - INFO - *******************
+2024-06-25 14:43:49,410 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:43:49,414 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:43:49,416 - INFO - *******************
+2024-06-25 14:45:33,019 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:45:33,019 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:45:33,020 - INFO - *******************
+2024-06-25 14:45:33,058 - INFO - Load Profile Generated: Daily Electricity Use: 10.011kWhAnnual Electricity Use: 3654.015kWh, Daily Variability: 15.0%Hourly Variability: 10.0%
+2024-06-25 14:45:33,060 - INFO - *******************
+2024-06-25 14:45:33,061 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:45:33,063 - INFO - *******************
+2024-06-25 14:45:33,064 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:45:33,065 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:45:33,066 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:45:33,069 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:45:33,070 - INFO - *******************
+2024-06-25 14:45:33,071 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:45:33,073 - INFO - *******************
+2024-06-25 14:45:33,085 - INFO - *******************
+2024-06-25 14:45:33,086 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:45:33,087 - INFO - *******************
+2024-06-25 14:45:33,088 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:45:33,104 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:45:33,115 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:45:33,128 - INFO - *******************
+2024-06-25 14:45:33,130 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:45:33,178 - INFO - Solar PV model data aggregated.
+2024-06-25 14:45:33,191 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:45:33,192 - INFO -       SUCCESS!      
+2024-06-25 14:45:33,192 - INFO - *******************
+2024-06-25 14:45:33,193 - INFO - Main Model Successfully Initialised
+2024-06-25 14:45:33,194 - INFO - *******************
+2024-06-25 14:45:33,203 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:45:33,204 - INFO - *******************
+2024-06-25 14:45:33,208 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:45:33,210 - INFO - *******************
+2024-06-25 14:45:33,216 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:45:33,217 - INFO - *******************
+2024-06-25 14:45:33,223 - INFO - Model aggregation completed successfully
+2024-06-25 14:45:33,223 - INFO - *******************
+2024-06-25 14:45:33,224 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:45:33,227 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:45:33,229 - INFO - *******************
+2024-06-25 14:45:33,230 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:45:33,236 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:45:33,237 - INFO - *******************
+2024-06-25 14:46:13,780 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:46:14,944 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 14:46:15,986 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:46:15,987 - INFO - *******************
+2024-06-25 14:46:16,017 - INFO - Load Profile Generated: Daily Electricity Use: 9.915kWh Annual Electricity Use: 3618.975kWh, Daily Variability: 15.0% Hourly Variability: 10.0% 
+2024-06-25 14:46:16,017 - INFO - *******************
+2024-06-25 14:46:16,018 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:46:16,018 - INFO - *******************
+2024-06-25 14:46:16,019 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:46:16,020 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:46:16,020 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:46:16,021 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:46:16,021 - INFO - *******************
+2024-06-25 14:46:16,022 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:46:16,023 - INFO - *******************
+2024-06-25 14:46:16,032 - INFO - *******************
+2024-06-25 14:46:16,033 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:46:16,034 - INFO - *******************
+2024-06-25 14:46:16,034 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:46:16,045 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:46:16,053 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:46:16,061 - INFO - *******************
+2024-06-25 14:46:16,062 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:46:16,098 - INFO - Solar PV model data aggregated.
+2024-06-25 14:46:16,108 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:46:16,108 - INFO -       SUCCESS!      
+2024-06-25 14:46:16,109 - INFO - *******************
+2024-06-25 14:46:16,110 - INFO - Main Model Successfully Initialised
+2024-06-25 14:46:16,111 - INFO - *******************
+2024-06-25 14:46:16,161 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:46:16,163 - INFO - *******************
+2024-06-25 14:46:16,984 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:46:16,984 - INFO - *******************
+2024-06-25 14:46:16,989 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:46:16,990 - INFO - *******************
+2024-06-25 14:46:16,996 - INFO - Model aggregation completed successfully
+2024-06-25 14:46:16,997 - INFO - *******************
+2024-06-25 14:46:16,998 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:46:17,002 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:46:17,003 - INFO - *******************
+2024-06-25 14:46:17,004 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:46:17,008 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:46:17,009 - INFO - *******************
+2024-06-25 14:47:06,149 - INFO - Fetching TMY data for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:47:07,255 - INFO - HTTP Request: GET https://re.jrc.ec.europa.eu/api/tmy?lat=54.60452&lon=-5.9286&startyear=2005&endyear=2015&outputformat=json "HTTP/1.1 200 OK"
+2024-06-25 14:47:07,885 - INFO - TMY data obtained for Site at latitude: 54.60452, longitude: -5.9286
+2024-06-25 14:47:07,886 - INFO - *******************
+2024-06-25 14:47:07,932 - INFO - Load Profile Generated: Daily Electricity Use: 9.919kWh, Annual Electricity Use: 3620.4350000000004kWh, Daily Variability: 15.0%, Hourly Variability: 10.0% 
+2024-06-25 14:47:07,933 - INFO - *******************
+2024-06-25 14:47:07,934 - INFO - Solar PV Panel created: Size: 0.42kW, Size: 2.0m2, Efficiency: 21.02%, Lifespan: 25yrs
+2024-06-25 14:47:07,935 - INFO - *******************
+2024-06-25 14:47:07,936 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 83deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:47:07,937 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: 0deg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:47:07,938 - INFO - Solar PV array created: Size: 1.26kW, Size: 6.0m2, Azimuth: Nonedeg, Lifespan: 25yrs, Pitch: 35deg, Efficiency: 21.02%
+2024-06-25 14:47:07,939 - INFO - Inverter Created: Max Output: NonekW, Inverter Efficiency: 0.95%, Battery Charging: True
+2024-06-25 14:47:07,940 - INFO - *******************
+2024-06-25 14:47:07,942 - INFO - Battery Storage Created: Useable Capacity: 11.469kWh, Max Discharge: 11.469kW, Chemistry: LiFePO4
+2024-06-25 14:47:07,942 - INFO - *******************
+2024-06-25 14:47:07,954 - INFO - *******************
+2024-06-25 14:47:07,955 - INFO - Starting Solar PV model simulations for Site.
+2024-06-25 14:47:07,955 - INFO - *******************
+2024-06-25 14:47:07,956 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 83 degrees WoS
+2024-06-25 14:47:07,968 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:47:07,976 - INFO - Simulating model - PV Size: 1.26kWp, Pitch: 35 degrees, Azimuth 0 degrees WoS
+2024-06-25 14:47:07,988 - INFO - *******************
+2024-06-25 14:47:07,989 - INFO - Solar PV model simulations for Site completed.
+2024-06-25 14:47:08,064 - INFO - Solar PV model data aggregated.
+2024-06-25 14:47:08,087 - INFO - Solar PV model data summary for Site complete.
+2024-06-25 14:47:08,088 - INFO -       SUCCESS!      
+2024-06-25 14:47:08,088 - INFO - *******************
+2024-06-25 14:47:08,089 - INFO - Main Model Successfully Initialised
+2024-06-25 14:47:08,090 - INFO - *******************
+2024-06-25 14:47:08,102 - INFO - Solar PV simulation & energy flow calculations completed
+2024-06-25 14:47:08,103 - INFO - *******************
+2024-06-25 14:47:08,903 - INFO - Battery simulation & energy flow calculations completed
+2024-06-25 14:47:08,904 - INFO - *******************
+2024-06-25 14:47:08,908 - INFO - Grid simulation & energy flow calculations completed
+2024-06-25 14:47:08,909 - INFO - *******************
+2024-06-25 14:47:08,915 - INFO - Model aggregation completed successfully
+2024-06-25 14:47:08,916 - INFO - *******************
+2024-06-25 14:47:08,916 - INFO - Generating Solar PV model statistical analysis for Site.
+2024-06-25 14:47:08,919 - INFO - Solar PV model statistical analysis for Site completed.
+2024-06-25 14:47:08,920 - INFO - *******************
+2024-06-25 14:47:08,920 - INFO - Generating Model statistical analysis for Site.
+2024-06-25 14:47:08,923 - INFO - Model statistical analysis for Site completed.
+2024-06-25 14:47:08,923 - INFO - *******************

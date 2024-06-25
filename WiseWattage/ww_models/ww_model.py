@@ -577,7 +577,7 @@ def calculate_capex(self):
             (self.project_lifespan / self.pv_model.arrays[0].pv_panel.lifespan) - 1), 2), 0)
 
 
-def calculate_operation_costs(self):
+def calculate_grid_costs(self):
     if self.grid is not None:
         # Calculate lifetime degradation factor
         if self.pv_model is not None:
@@ -595,9 +595,9 @@ def calculate_operation_costs(self):
         if self.summary.Grid_Imports_kWh_Annual == 0:
             total_exports_value = 0
 
-        self.opex_cost = round(total_imports_value, 2)
+        self.import_value = round(total_imports_value, 2)
         self.export_value = round(total_exports_value, 2)
 
 
 def calculate_npc(self):
-    self.npc = round(self.capex + self.opex_cost + self.replacement_capex - self.export_value, 2)
+    self.npc = round(self.capex + self.import_value + self.replacement_capex - self.export_value, 2)

@@ -21,7 +21,6 @@
 - Add heat demand to modelling
 - Consider energy storage options as layers of classes i.e. Cell --> Battery--> Storage
 
-- Add inverter standing power parasitic load to net energy
 
 
 <br><br>
@@ -34,4 +33,4 @@
 
 
 ###### **LOW PRIOIRTY**
-- Rename columns and class variables to simplify and make easier to read/interpret
+- Rename columns and class variables to simplify and make easier to read/interpret 

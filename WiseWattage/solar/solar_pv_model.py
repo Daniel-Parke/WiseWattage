@@ -390,6 +390,12 @@ def model_solar_pv(self):
             if array.weight_kg is not None:
                 self.weight_kg += array.weight_kg
 
+            if array.surface_azimuth == None:
+                if self.site.latitude >= 0:
+                    array.surface_azimuth = 0
+                else:
+                    array.surface_azimuth = 180
+
             log_message = (f"Simulating model - PV Size: {array.pv_kwp}kWp, Pitch: {array.surface_pitch} degrees, "
                            f"Azimuth {array.surface_azimuth} degrees WoS")
             logging.info(log_message)

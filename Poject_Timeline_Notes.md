@@ -8,16 +8,20 @@
 
 ## Patch/Progress Notes:
 
+### **25/06/2024:**
+- Edited WW_model to set azimuth to north or south if not specified already, and dependant on site latitude.
+- Updated WW_model calculation terminology to allow further breakdown of functions aggregating costs.
+
 ### **24/04/2024:**
 - Began development of financial class, added in interest, fees and principal calculations. 
-- Began integration of financial class with WW_Model, added ability to esimtate component value if no values provided when classes initiated.  
+- Began integration of financial class with WW_Model, added ability to esimtate component value if no values provided when classes initiated. 
 
 ### **24/04/2024:**
 - Add lifespan variable to battery capex calculations
 - Cleaned up code methods and calculations, renamed some columns to help readability
 
 ### **21/04/2024:**
-- Added solar PV mounting cost variable, set default at £125.
+- Added solar PV mounting cost variable, set default at £125 per panel.
 - Added function to total all costs from each component modelled in WW_Model and save to capex variable
 - Began working on financial cost functionality, basic implementation of CAPEX, Replacement, OPEX and NPC values
 
@@ -40,7 +44,7 @@
 ### **14/04/2024:**
 - Added feature to arrange custom smart meter data into format required
 - Tidied up feature for custom meter data, enabling file path to be passed directly into Load class.
-- Further optimisations tested and added, full model runtime with all componenets currently 100ms +-20
+- Further optimisations tested and added, full model runtime with all componenets currently 100ms +-20ms
 
 ### **13/04/2024:**
 - Added Battery and Inverter classes, updated existing classes to have more refinded parameters.

@@ -15,7 +15,7 @@ from finance.Finance import Finance
 from ww_models.ww_model import (
     initialise_model, calc_solar_energy_flow, calc_battery_energy_flow, 
     calc_grid_energy_flow, sort_columns, model_stats, model_grouped, SummaryGrouped,
-    calculate_capex, calculate_operation_costs, calculate_npc)
+    calculate_capex, calculate_grid_costs, calculate_npc)
 
 from misc.util import timer
 
@@ -37,7 +37,7 @@ class Model:
 
     capex: float = 0
     replacement_capex: float = 0
-    opex_cost: float = 0
+    import_value: float = 0
     export_value: float = 0
     npc: float = 0
 
@@ -49,7 +49,7 @@ class Model:
         calc_grid_energy_flow(self)
         sort_columns(self)
         calculate_capex(self)
-        calculate_operation_costs(self)
+        calculate_grid_costs(self)
         calculate_npc(self)
             
 
